@@ -1,0 +1,39 @@
+header {
+	width: 100%;
+}
+.wrapp_header {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	background-color: #000;
+	width: 100%;
+	.logo {
+		flex-basis: 100%;
+		width: 100%;
+		img {
+			margin: 0 auto;
+		}
+	}
+	.menu_categories {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-basis: 100%;
+		li {
+			padding: 20px 0;
+			text-transform: uppercase;
+			a {
+				color: #fff;
+			}
+			&:first-child {
+				padding-left: 30px;
+			}
+			&:last-child {
+				padding-right: 30px;
+			}
+		}
+	}
+}

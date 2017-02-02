@@ -40,7 +40,7 @@ h1 { font-size: 6rem; font-family: 'Aria'}
 h2 { font-size: 4rem; font-family: 'Aria'}
 h3 { font-size: 3rem; font-family: 'Aria' }
 h4 { font-size: 2rem; font-family: 'Aria' }
-p,li { font-size: 2rem;  font-family: 'Aria'}
+p,li { font-size: 1.4rem;  font-family: 'Aria'}
 ul { list-style-type: none; }
 a {text-decoration: none;}
 a:visited { color: $main_blue;}
@@ -54,6 +54,7 @@ a:visited { color: $main_blue;}
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	align-items: center;
 	padding: 20px 50px 0;
 }
 .hidden { display: none !important; }
@@ -133,8 +134,6 @@ a:visited { color: $main_blue;}
 	align-items: flex-start;
 	.wrapp-img {
 		flex-basis: 40%;
-		// overflow: hidden;
-		// height: 100%;
 		img {
 			max-width: 100%;
 		}
@@ -150,7 +149,7 @@ a:visited { color: $main_blue;}
 	justify-content: space-between;
 	align-items: flex-start;
 }
-.wrapp_card {
+.wrapp_cards {
 	flex-basis: 75%;
 	width: 74%;
 	display: flex;
