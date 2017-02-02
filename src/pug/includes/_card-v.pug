@@ -1,10 +1,21 @@
-mixin card-vertical(className)
-	div(class=className)
-		div.wrapp-img
-			img(src='img/5.jpg' alt='')
-		p.card-category Зож
-		p.card-title 
-			a(href='#') Как подготовиться к фарафону: история минчанки
-		p.card-date_like 6 октября 2016 / 
-			span 159
-			span 28	
+mixin card-vertical(className,type)
+	-if(type == 1) {
+		div(class=className)
+			div.wrapp-img
+				img(src='img/5.jpg' alt='')
+			p.card-category Зож
+			p.card-title 
+				a(href='#') Как подготовиться к фарафону: история минчанки
+			p.card-date_like 6 октября 2016 / 
+				span 159
+				span 28	
+	-}
+	-if(type == 2) {
+		div(class=className style='background-image: url("../img/test.jpg");')
+			p.card-category Зож
+			p.card-title 
+				a(href='#') Как подготовиться к фарафону: история минчанки
+			p.card-date_like 6 октября 2016 / 
+				span 159
+				span 28	
+	-}

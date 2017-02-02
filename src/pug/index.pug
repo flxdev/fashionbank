@@ -6,6 +6,7 @@ block title
 block content
 	include includes/_header
 	include includes/_card-v
+	include includes/_card-h
 
 	div.wrapp_page
 		div.wrapp_first-screen
@@ -17,11 +18,10 @@ block content
 					p.card-date_like 6 октября 2016 / 
 						span 159
 						span 28	
-				
-				+card-vertical('card card-vertical text-center')
-				+card-vertical('card card-vertical text-center')
-				+card-vertical('card card-vertical text-center')
-				+card-vertical('card card-vertical card-full_bg text-center')
+				+card-vertical('card card-vertical text-center', 1)
+				+card-vertical('card card-vertical text-center', 1)
+				+card-vertical('card card-vertical text-center', 1)
+				+card-vertical('card card-vertical card-full_bg text-center', 2)
 				
 
 
@@ -29,8 +29,9 @@ block content
 				div.card.card-vertical
 				h4.text-uppercase Самое обсуждаемое
 				div.wrapp_top-news
-					div.card-horizontal
-					div.card-horizontal
-					div.card-horizontal
-					div.card-horizontal
+					+card-horizont('card card-horizontal')
+					+card-horizont('card card-horizontal')
+					+card-horizont('card card-horizontal')
+					+card-horizont('card card-horizontal')
+					
 
