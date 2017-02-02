@@ -1,3 +1,7 @@
+$card-margin: 10px;
+$card-height-vertical: 400px;
+$main_blue: blue;
+$grey: grey;
 * {
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
@@ -6,13 +10,13 @@ html {
 	height: 100%;
 }
 body {
-  	font-family: 'Aria';
-  	font-weight: 500;
-  	min-width: 320px;
-  	// max-width: 1024px;
-  	position: relative;
-  	line-height: 1.6;
-  	background-color: #fff;
+	font-family: 'Aria';
+	font-weight: 500;
+	min-width: 320px;
+	// max-width: 1024px;
+	position: relative;
+	line-height: 1.6;
+	background-color: #fff;
 	padding: 0;
 	margin: 0;
 	display: flex;
@@ -33,11 +37,13 @@ h1,h2,h3,h4,h5,ul,p,ol,input,textarea,a {
 	font-family: 'Aria', sans-serif;
 }
 h1 { font-size: 6rem; font-family: 'Aria'}
-h2 { font-size: 4.5rem; font-family: 'Aria'}
-h3 { font-size: 3.1rem; font-family: 'Aria' }
-h4 { font-size: 2.7rem; font-family: 'Aria' }
+h2 { font-size: 4rem; font-family: 'Aria'}
+h3 { font-size: 3rem; font-family: 'Aria' }
+h4 { font-size: 2rem; font-family: 'Aria' }
 p,li { font-size: 2rem;  font-family: 'Aria'}
 ul { list-style-type: none; }
+a {text-decoration: none;}
+a:visited { color: $main_blue;}
 
 .overflow-hidden, .overflow-hidden-1, .overflow-hidden-2 {
 	overflow: hidden;
@@ -46,52 +52,128 @@ ul { list-style-type: none; }
 	width: 100%;
 	min-height: 100vh;    
 	display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 20px 50px 0;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 20px 50px 0;
 }
 .hidden { display: none !important; }
 .text-center { text-align: center; }
 .text-right { text-align: right; }
 .text-left { text-align: left;}
+.text-uppercase { text-transform: uppercase; }
 
 
 .card {
-	padding: 20px;
-	margin: 10px;
+	margin: $card-margin;
+	.card-category {
+		text-transform: uppercase;
+		letter-spacing: 2.5px;
+		font-size: 1.4rem;
+		padding-top: 10px;
+		color: $grey;
+	}
+	.card-title {
+		font-size: 2rem;
+		padding: 10px 0;
+		a {
+			color: #000;
+		}
+		a:hover {
+			color: $main_blue;
+		}
+	}
+	.card-date_like {
+		font-size: 1.3rem;
+		text-transform: uppercase;
+		letter-spacing: 2.5px;
+		color: $grey;
+		span {
+			padding: 0 5px;
+		}
+	}
 }
 .card-big {
-	width: 49%; 
-	flex-basis: 52%;
-	height: 500px; 
-	background-color: red;
-	flex-grow: 2;
+	min-height: $card-height-vertical; 
+	max-height: $card-height-vertical; 
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	padding: 170px 20px 0;
+	.card-title {
+		font-size: 3rem;
+	}
+	
 }
 .card-vertical {
-	width: 24%; 
-	flex-basis: 25%;
-	height: 500px; 
-	background-color: green;
-	flex-grow: 1;
+	min-height: $card-height-vertical; 
+	max-height: $card-height-vertical; 
+	// padding: 0 20px;
+	.wrapp-img {
+		max-height: $card-height-vertical/1.8;
+		overflow: hidden;
+		img {
+			max-width: 100%;
+		}
+	}
 }
 
 .wrapp_first-screen {
 	display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
 }
 .wrapp_card {
 	flex-basis: 75%;
 	width: 74%;
 	display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: wrap; 
-
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-wrap: wrap; 
+	.wrapp_whats-up {
+		min-height: 70px;
+		flex-basis: 100%;
+	}
+	.card-big {
+		flex-basis: 52%;
+		flex-grow: 2;
+	}
+	.card-vertical {
+		flex-basis: 25%;
+		flex-grow: 1;
+	}
 }
 .wrapp_sidebar {
 	flex-basis: 25%;
-	width: 24%
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
+	flex-wrap: wrap; 
+	h4 {
+		min-height: 70px;
+		max-height: 70px;
+		overflow: hidden;
+		margin: $card-margin;
+	}
+	.wrapp_top-news {
+		margin: 10px ;
+		.card-horizontal {
+			border-bottom: 1px solid red;
+			padding: 10px 0;
+			&:first-child {
+				padding-top: 0;
+			}
+			&:last-child {
+				border-bottom: none;
+				padding-bottom: 0;
+			}
+		}
+	}
+	.card-horizontal {
+		max-height: $card-height-vertical/4;
+		min-height: $card-height-vertical/4;
+		
+	}
 }

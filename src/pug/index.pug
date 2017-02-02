@@ -5,15 +5,32 @@ block title
 
 block content
 	include includes/_header
+	include includes/_card-v
 
 	div.wrapp_page
 		div.wrapp_first-screen
 			div.wrapp_card
-				div.card.card-big
-				div.card.card-vertical
-				div.card.card-vertical
-				div.card.card-vertical
-				div.card.card-vertical.card-full-bg
+				div.wrapp_whats-up.card
+				div.card.card-big(style='background-image: url("../img/test.jpg");')
+					p.card-category Спорт
+					p.card-title Как подготовиться к фарафону: история минчанки
+					p.card-date_like 6 октября 2016 / 
+						span 159
+						span 28	
+				
+				+card-vertical('card card-vertical text-center')
+				+card-vertical('card card-vertical text-center')
+				+card-vertical('card card-vertical text-center')
+				+card-vertical('card card-vertical card-full_bg text-center')
+				
+
+
 			div.wrapp_sidebar
-				aside
-					
+				div.card.card-vertical
+				h4.text-uppercase Самое обсуждаемое
+				div.wrapp_top-news
+					div.card-horizontal
+					div.card-horizontal
+					div.card-horizontal
+					div.card-horizontal
+
