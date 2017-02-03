@@ -9,30 +9,39 @@ block content
 	div.wrapp_page
 		div.wrapp_first-screen
 			div.wrapp_cards
-				ul.wrapp_whats-up.card
-					li Экспертный портал о моде красоте и здоровье
-					li Экспертный портал о моде красоте и здоровье
-					li Экспертный портал о моде красоте и здоровье
-				div.card.card-big(style='background-image: url("../img/test.jpg");')
-					p.card-category Спорт
-					p.card-title Как подготовиться к фарафону: история минчанки
-					p.card-date_like 6 октября 2016 / 
+				ul.wrapp_whats-up
+					li 
+						img(src='img/pre_3.png' alt='')
+						p Экспертный портал о моде красоте и здоровье
+					li 
+						img(src='img/pre_2.png' alt='')
+						p Эксклюзивный, свежий и топовый материал
+					li 
+						img(src='img/pre_1.png' alt='')
+						p Все самое новое и интересное на наших страницах
+				div.card.card-big.text-black(style='background-image: url("../img/1.jpg");')
+					p.card-category 
+						a(href='#') Спорт
+					p.card-title 
+						a(href='#') Как подготовиться к фарафону: история минчанки
+					p.card-date_like  6 октября 2016 / 
 						span 159
 						span 28	
-				+card-vertical('card card-vertical text-center', 1)
-				+card-vertical('card card-vertical text-center', 1)
-				+card-vertical('card card-vertical text-center', 1)
-				+card-vertical('card card-vertical card-full_bg text-center', 2)
+				+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1)
+				+card-vertical('card card-vertical text-center text-black','img/3.jpg', 1)
+				+card-vertical('card card-vertical text-center text-black','img/4.jpg', 1)
+				+card-vertical('card card-vertical card-full_bg text-center text-white','img/5.jpg', 2)
 				
 
 
 			div.wrapp_sidebar
-				div.card.card-vertical
+				div.card.card-vertical.banner
+					img(src='img/banner.jpg' alt='')
 				h4.text-uppercase Самое обсуждаемое
 				div.wrapp_top-news
-					+card-horizont('card card-horizontal')
-					+card-horizont('card card-horizontal')
-					+card-horizont('card card-horizontal')
-					+card-horizont('card card-horizontal')
+					+card-horizont('card card-horizontal text-black')
+					+card-horizont('card card-horizontal text-black')
+					+card-horizont('card card-horizontal text-black')
+					+card-horizont('card card-horizontal text-black')
 					
 

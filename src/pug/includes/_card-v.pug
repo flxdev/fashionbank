@@ -1,9 +1,11 @@
-mixin card-vertical(className,type)
+mixin card-vertical(className,img,type)
 	-if(type == 1) {
 		div(class=className)
 			div.wrapp-img
-				img(src='img/5.jpg' alt='')
-			p.card-category Зож
+				a(href='#')
+					img(src=img alt='')
+			p.card-category 
+				a(href='#') Зож
 			p.card-title 
 				a(href='#') Как подготовиться к фарафону: история минчанки
 			p.card-date_like 6 октября 2016 / 
@@ -11,11 +13,15 @@ mixin card-vertical(className,type)
 				span 28	
 	-}
 	-if(type == 2) {
-		div(class=className style='background-image: url("../img/test.jpg");')
-			p.card-category Зож
-			p.card-title 
-				a(href='#') Как подготовиться к фарафону: история минчанки
-			p.card-date_like 6 октября 2016 / 
-				span 159
-				span 28	
+		-var strImg = 'background-image: url("' + img + '");'
+		-console.log(strImg);
+		div(class=className style=strImg)
+			p.card-category 
+				a(href='#') Зож
+			div.wrapp-title
+				p.card-title
+					a(href='#') Как подготовиться к фарафону: история минчанки
+				p.card-date_like 6 октября 2016 / 
+					span 159
+					span 28	
 	-}

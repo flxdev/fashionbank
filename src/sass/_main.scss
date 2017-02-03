@@ -1,7 +1,3 @@
-$card-margin: 10px;
-$card-height-vertical: 400px;
-$main_blue: blue;
-$grey: grey;
 * {
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
@@ -10,10 +6,9 @@ html {
 	height: 100%;
 }
 body {
-	font-family: 'Aria';
+	font-family: $font_r;
 	font-weight: 500;
 	min-width: 320px;
-	// max-width: 1024px;
 	position: relative;
 	line-height: 1.6;
 	background-color: #fff;
@@ -34,13 +29,13 @@ h1,h2,h3,h4,h5,ul,p,ol,input,textarea,a {
 	padding:0;
 	font-weight: 500;
 	outline: none;
-	font-family: 'Aria', sans-serif;
+	font-family: $font_r;
 }
-h1 { font-size: 6rem; font-family: 'Aria'}
-h2 { font-size: 4rem; font-family: 'Aria'}
-h3 { font-size: 3rem; font-family: 'Aria' }
-h4 { font-size: 2rem; font-family: 'Aria' }
-p,li { font-size: 1.4rem;  font-family: 'Aria'}
+h1 { font-size: 6rem; font-family: $font_r}
+h2 { font-size: 4rem; font-family: $font_r}
+h3 { font-size: 3rem; font-family: $font_r }
+h4 { font-size: 2rem; font-family: $font_r }
+p,li { font-size: 1.5rem;  font-family: $font_r}
 ul { list-style-type: none; }
 a {text-decoration: none;}
 a:visited { color: $main_blue;}
@@ -55,13 +50,20 @@ a:visited { color: $main_blue;}
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	padding: 20px 50px 0;
+	padding: 20px 0 0 0;
+	max-width: 1300px;
 }
 .hidden { display: none !important; }
 .text-center { text-align: center; }
 .text-right { text-align: right; }
 .text-left { text-align: left;}
 .text-uppercase { text-transform: uppercase; }
+.text-black { 
+	a {color: #000;}
+}
+.text-white { 
+	a {color: #fff;}
+}
 
 
 .card {
@@ -70,14 +72,18 @@ a:visited { color: $main_blue;}
 		text-transform: uppercase;
 		letter-spacing: 2.5px;
 		font-size: 1.4rem;
-		padding-top: 10px;
-		color: $grey;
+		padding: 25px 0;
+		a {
+			color: $grey;
+		}
 	}
 	.card-title {
-		font-size: 2rem;
-		padding: 10px 0;
+		font-size: 2.8rem;
+		padding: 0 0 25px;
+		line-height: 1;
 		a {
-			color: #000;
+			font-family: $font_phil;
+			transition: all 0.1s ease-out;
 		}
 		a:hover {
 			color: $main_blue;
@@ -99,9 +105,13 @@ a:visited { color: $main_blue;}
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
-	padding: 170px 20px 0;
+	padding: 0 40px 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: stretch;
 	.card-title {
-		font-size: 3rem;
+		font-size: 5rem;
 	}
 }
 
@@ -121,10 +131,13 @@ a:visited { color: $main_blue;}
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
-	.card-title { 
-		a{
-			color: #fff;
-		}
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: stretch;
+	padding-bottom: 40px;
+	.card-date_like {
+		color: $grey_dop;
 	}
 }
 .card-horizontal {
@@ -140,6 +153,9 @@ a:visited { color: $main_blue;}
 	}
 	.wrapp-content {
 		flex-basis: 60%;
+		padding-left: 20px;
+
+		
 	}
 }
 
@@ -148,18 +164,32 @@ a:visited { color: $main_blue;}
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: flex-start;
+	margin: 0 -15px;
 }
 .wrapp_cards {
 	flex-basis: 75%;
-	width: 74%;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
 	align-items: flex-start;
 	flex-wrap: wrap; 
 	.wrapp_whats-up {
-		min-height: 70px;
 		flex-basis: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: no-wrap;
+		margin: 40px 15px 25px;
+		max-height: 50px;
+		li {
+			padding-right: 25px;
+			img {
+				max-width: 50px;
+				float: left;
+				margin-right: 15px;
+			}
+		}
 	}
 	.card-big {
 		flex-basis: 52%;
@@ -178,11 +208,16 @@ a:visited { color: $main_blue;}
 	justify-content: flex-start;
 	align-items: stretch;
 	flex-wrap: wrap; 
+	.banner {
+		img {
+			width: 100%;
+		}
+	}
 	h4 {
-		min-height: 70px;
-		max-height: 70px;
-		overflow: hidden;
-		margin: $card-margin;
+		margin: 55px $card-margin 40px;
+		font-family: $font_bb;
+		font-size: 1.8rem;
+   		letter-spacing: 4px;
 	}
 	.wrapp_top-news {
 		margin: 10px ;
@@ -208,10 +243,10 @@ a:visited { color: $main_blue;}
 			}
 			.wrapp-content {
 				.card-title  {
-					font-size: 1.3rem;
+					font-size: 1.5rem;
 				}
 				.card-date_like  {
-					font-size: 1.1rem;
+					font-size: 1rem;
 				}
 			}
 		}
