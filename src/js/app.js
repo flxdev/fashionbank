@@ -1,2 +1,3 @@
-//=include lib/head.js
-//=include common.js
+// =include lib/jquery.min.js
+// =include lib/slick.min.js
+// =include common.js

@@ -7,41 +7,69 @@ block content
 	include includes/_header
 
 	div.wrapp_page
-		div.wrapp_first-screen
-			div.wrapp_cards
-				ul.wrapp_whats-up
-					li 
-						img(src='img/pre_3.png' alt='')
-						p Экспертный портал о моде красоте и здоровье
-					li 
-						img(src='img/pre_2.png' alt='')
-						p Эксклюзивный, свежий и топовый материал
-					li 
-						img(src='img/pre_1.png' alt='')
-						p Все самое новое и интересное на наших страницах
-				div.card.card-big.text-black(style='background-image: url("../img/1.jpg");')
-					p.card-category 
-						a(href='#') Спорт
-					p.card-title 
-						a(href='#') Как подготовиться к фарафону: история минчанки
-					p.card-date_like  6 октября 2016 / 
-						span 159
-						span 28	
-				+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1)
-				+card-vertical('card card-vertical text-center text-black','img/3.jpg', 1)
-				+card-vertical('card card-vertical text-center text-black','img/4.jpg', 1)
-				+card-vertical('card card-vertical card-full_bg text-center text-white','img/5.jpg', 2)
-				
+		section(title='first-screen')
+			div.max-width-1300
+				div.wrapp_first-screen
+					div.wrapp_cards
+						ul.wrapp_whats-up
+							li 
+								img(src='img/pre_3.png' alt='')
+								p Экспертный портал о моде красоте и здоровье
+							li 
+								img(src='img/pre_2.png' alt='')
+								p Эксклюзивный, свежий и топовый материал
+							li 
+								img(src='img/pre_1.png' alt='')
+								p Все самое новое и интересное на наших страницах
+						
+						a(href="#").card.card-big.text-black
+							div.card-bg(style='background-image: url("../img/1.jpg");')
+							p.card-category 
+								object
+									a(href='#') Спорт
+							p.card-title Как подготовиться к фарафону: история минчанки
+							p.card-date_like  6 октября 2016 / 
+								span.eyes <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"	 viewBox="0 5.7 406.7 286.8" enable-background="new 0 5.7 406.7 286.8" xml:space="preserve"><path d="M405.1,138.9C292.9-38.7,115.3-38.7,3.1,138.9c-4.1,6.1-4.1,14.3,0,20.4c112.3,177.6,289.8,177.6,402.1,0		C407.2,153.2,407.2,145,405.1,138.9z M203.1,251.1c-57.1,0-102-44.9-102-102s44.9-102,102-102s102,44.9,102,102S260.2,251.1,203.1,251.1z"/>	<circle cx="203.1" cy="149.1" r="61.2"/></svg> 159
+								span.comment <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"	 viewBox="259.1 79.1 352.1 352.1" enable-background="new 259.1 79.1 352.1 352.1" xml:space="preserve"><path d="M259.1,79.1h352.1v264.1h-88v88l-88-88h-176V79.1z"/></svg> 28	
+						+card-vertical('card card-vertical text-center ','img/2.jpg', 1)
+						+card-vertical('card card-vertical text-center text-black','img/3.jpg', 1)
+						+card-vertical('card card-vertical text-center text-black','img/4.jpg', 1)
+						+card-vertical('card card-vertical card-full_bg text-center text-white','img/5.jpg', 2)
+					div.wrapp_sidebar
+						div.card.card-vertical.banner
+							img(src='img/banner.jpg' alt='')
+						h4.text-uppercase Самое обсуждаемое
+						div.wrapp_top-news
+							+card-horizont('card card-horizontal text-black','img/5.jpg','Кастинг моделей: как себя вести. Истории из мира моды','','',true,false)
+							+card-horizont('card card-horizontal text-black','img/5.jpg','Кастинг моделей: как себя вести. Истории из мира моды','','',true,false)
+							+card-horizont('card card-horizontal text-black','img/5.jpg','Кастинг моделей: как себя вести. Истории из мира моды','','',true,false)
+							+card-horizont('card card-horizontal text-black','img/5.jpg','Кастинг моделей: как себя вести. Истории из мира моды','','',true,false)
+		section(title='slider-categories')
+			div.wrapp_slider-categories-bg-grey.full-width
+				div.max-width-1300
+					div.wrapp_slider
+						div.wrapp_tabs-categories
+							ul.tabs-categories.js-tabs-categories
+								li(data-tab='tab1') Заведения
+								li(data-tab='tab2') Специалисты
+								li(data-tab='tab3') Магазины
+							p.all Все заведения
+						div.wrapp_tabs-content
+							div.wrapp_slider-conten
+								div.js-slider-init(data-tab-content='tab1')
+									+card-horizont('card card-horizontal text-black','img/5.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Зож',false,false)
+									+card-horizont('card card-horizontal text-black','img/5.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Красота',false,false)
+									+card-horizont('card card-horizontal text-black','img/5.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Мода и стиль',false,false)
+									+card-horizont('card card-horizontal text-black','img/5.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Мода и стиль',false,false)
+									+card-horizont('card card-horizontal card-horizontal-full_bg text-white','img/5.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Зож',false,true)
+									+card-horizont('card card-horizontal card-horizontal-full_bg text-white','img/5.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Красота',false,true)
+									+card-horizont('card card-horizontal card-horizontal-full_bg text-white','img/5.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Мода и стиль',false,true)
+									+card-horizont('card card-horizontal card-horizontal-full_bg text-white','img/5.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Мода и стиль',false,true)
+							div.slider(data-tab-content='tab2')
+							div.slider(data-tab-content='tab3')
 
 
-			div.wrapp_sidebar
-				div.card.card-vertical.banner
-					img(src='img/banner.jpg' alt='')
-				h4.text-uppercase Самое обсуждаемое
-				div.wrapp_top-news
-					+card-horizont('card card-horizontal text-black')
-					+card-horizont('card card-horizontal text-black')
-					+card-horizont('card card-horizontal text-black')
-					+card-horizont('card card-horizontal text-black')
-					
+
+
+
 
