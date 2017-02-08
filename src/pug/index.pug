@@ -29,12 +29,12 @@ block content
 									a(href='#') Спорт
 							p.card-title Как подготовиться к фарафону: история минчанки
 							p.card-date_like  6 октября 2016 / 
-								span.eyes <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"	 viewBox="0 5.7 406.7 286.8" enable-background="new 0 5.7 406.7 286.8" xml:space="preserve"><path d="M405.1,138.9C292.9-38.7,115.3-38.7,3.1,138.9c-4.1,6.1-4.1,14.3,0,20.4c112.3,177.6,289.8,177.6,402.1,0		C407.2,153.2,407.2,145,405.1,138.9z M203.1,251.1c-57.1,0-102-44.9-102-102s44.9-102,102-102s102,44.9,102,102S260.2,251.1,203.1,251.1z"/>	<circle cx="203.1" cy="149.1" r="61.2"/></svg> 159
+								span.eyes <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"	 viewBox="0 5.7 406.7 286.8" enable-background="new 0 5.7 406.7 286.8" xml:space="preserve"><path d="M405.1,138.9C292.9-38.7,115.3-38.7,3.1,138.9c-4.1,6.1-4.1,14.3,0,20.4c112.3,177.6,289.8,177.6,402.1,0C407.2,153.2,407.2,145,405.1,138.9z M203.1,251.1c-57.1,0-102-44.9-102-102s44.9-102,102-102s102,44.9,102,102S260.2,251.1,203.1,251.1z"/>	<circle cx="203.1" cy="149.1" r="61.2"/></svg> 159
 								span.comment <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"	 viewBox="259.1 79.1 352.1 352.1" enable-background="new 259.1 79.1 352.1 352.1" xml:space="preserve"><path d="M259.1,79.1h352.1v264.1h-88v88l-88-88h-176V79.1z"/></svg> 28	
-						+card-vertical('card card-vertical text-center ','img/2.jpg', 1)
-						+card-vertical('card card-vertical text-center text-black','img/3.jpg', 1)
-						+card-vertical('card card-vertical text-center text-black','img/4.jpg', 1)
-						+card-vertical('card card-vertical card-full_bg text-center text-white','img/5.jpg', 2)
+						+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+						+card-vertical('card card-vertical text-center text-black','img/3.jpg', 1, true, false)
+						+card-vertical('card card-vertical text-center text-black','img/4.jpg', 1, true, false)
+						+card-vertical('card card-vertical card-full_bg text-center text-white','img/5.jpg', 2, true, false)
 					div.wrapp_sidebar
 						div.card.card-vertical.banner
 							img(src='img/banner.jpg' alt='')
@@ -50,26 +50,68 @@ block content
 					div.wrapp_slider
 						div.wrapp_tabs-categories
 							ul.tabs-categories.js-tabs-categories
-								li(data-tab='tab1') Заведения
+								li.active(data-tab='tab1') Заведения
 								li(data-tab='tab2') Специалисты
 								li(data-tab='tab3') Магазины
 							p.all Все заведения
 						div.wrapp_tabs-content
-							div.wrapp_slider-conten
-								div.js-slider-init(data-tab-content='tab1')
-									+card-horizont('card card-horizontal text-black','img/5.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Зож',false,false)
-									+card-horizont('card card-horizontal text-black','img/5.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Красота',false,false)
-									+card-horizont('card card-horizontal text-black','img/5.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Мода и стиль',false,false)
-									+card-horizont('card card-horizontal text-black','img/5.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Мода и стиль',false,false)
-									+card-horizont('card card-horizontal card-horizontal-full_bg text-white','img/5.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Зож',false,true)
-									+card-horizont('card card-horizontal card-horizontal-full_bg text-white','img/5.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Красота',false,true)
-									+card-horizont('card card-horizontal card-horizontal-full_bg text-white','img/5.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Мода и стиль',false,true)
-									+card-horizont('card card-horizontal card-horizontal-full_bg text-white','img/5.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Мода и стиль',false,true)
-							div.slider(data-tab-content='tab2')
-							div.slider(data-tab-content='tab3')
-
-
-
-
-
-
+							div.wrapp_slider-content.js-slider-init(data-tab-content='tab1')
+								+card-horizont('card card-horizontal text-black','img/5.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Зож',false,false)
+								+card-horizont('card card-horizontal text-black','img/5.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Красота',false,false)
+								+card-horizont('card card-horizontal text-black','img/5.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Мода и стиль',false,false)
+								+card-horizont('card card-horizontal text-black','img/5.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Мода и стиль',false,false)
+								+card-horizont('card card-horizontal card-horizontal-full_bg text-white','img/5.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Зож',false,true)
+								+card-horizont('card card-horizontal card-horizontal-full_bg text-white','img/5.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Красота',false,true)
+								+card-horizont('card card-horizontal card-horizontal-full_bg text-white','img/5.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Мода и стиль',false,true)
+								+card-horizont('card card-horizontal card-horizontal-full_bg text-white','img/5.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Мода и стиль',false,true)
+							div.wrapp_slider-content.js-slider-init(data-tab-content='tab2')
+							div.wrapp_slider-content.js-slider-init(data-tab-content='tab3')
+		section(title='cards-block-1')
+			div.max-width-1300
+				diw.wrapp_cards-block-1
+					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+					+card-vertical('card card-vertical text-center card-full_bg text-white','img/5.jpg', 2, true, false)
+					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+					+card-vertical('card card-vertical text-center card-full_bg text-white','img/5.jpg', 2, true, false)
+					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+		section(title='slider-video')
+			div.wrapp_slider-video-bg-black.full-width
+				div.max-width-1300
+					div.wrapp_slider
+						div.wrapp_slider-title
+							p.rubric Рубрика видео
+							p.all Все заведения
+						div.wrapp_slider-content.js-slider-init-video
+							a(href="#").card.card-big.text-white
+								div.card-bg(style='background-image: url("../img/video_title.jpg");')
+								img.video-play(src='img/video_play.png' alt='')
+								p.card-title Как подготовиться к фарафону: 
+								p.card-date_like  6 октября 2016 / 
+									span.eyes <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"	 viewBox="0 5.7 406.7 286.8" enable-background="new 0 5.7 406.7 286.8" xml:space="preserve"><path d="M405.1,138.9C292.9-38.7,115.3-38.7,3.1,138.9c-4.1,6.1-4.1,14.3,0,20.4c112.3,177.6,289.8,177.6,402.1,0C407.2,153.2,407.2,145,405.1,138.9z M203.1,251.1c-57.1,0-102-44.9-102-102s44.9-102,102-102s102,44.9,102,102S260.2,251.1,203.1,251.1z"/>	<circle cx="203.1" cy="149.1" r="61.2"/></svg> 159
+									span.comment <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"	 viewBox="259.1 79.1 352.1 352.1" enable-background="new 259.1 79.1 352.1 352.1" xml:space="preserve"><path d="M259.1,79.1h352.1v264.1h-88v88l-88-88h-176V79.1z"/></svg> 28	
+							+card-vertical('card card-vertical text-center text-white','img/2.jpg', 1, false, true)
+							+card-vertical('card card-vertical text-center text-white','img/3.jpg', 1, false, true)
+							+card-vertical('card card-vertical text-center text-white','img/4.jpg', 1, false, true)
+							+card-vertical('card card-vertical text-center text-white','img/4.jpg', 1, false, true)
+							+card-vertical('card card-vertical text-center text-white','img/4.jpg', 1, false, true)
+							+card-vertical('card card-vertical text-center text-white','img/4.jpg', 1, false, true)
+							+card-vertical('card card-vertical text-center text-white','img/4.jpg', 1, false, true)
+		section(title='cards-block-2')
+			div.max-width-1300
+				diw.wrapp_cards-block-1
+					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+					+card-vertical('card card-vertical text-center card-full_bg text-white','img/5.jpg', 2, true, false)
+					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+					+card-vertical('card card-vertical text-center card-full_bg text-white','img/5.jpg', 2, true, false)
+					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+					div.load_more
+						a(href='') + 
+							span Показать ещё
+			a.go_top(href='#')
+				<svg width="135" height="78" viewBox='0 0 135 78' xmlns="http://www.w3.org/2000/svg"><polygon id="svg_15" points="68.0047607421875,1.33746337890625 1.3332672119140625,69.97676086425781 10.269989013671875,78.66026306152344 68.0047607421875,19.217376708984375 125.738037109375,78.66255187988281 134.666748046875,69.97676086425781 "/></svg>
