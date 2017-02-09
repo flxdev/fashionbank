@@ -1,0 +1,30 @@
+.input-type-1 {
+	background-color: transparent;
+	border: 1px solid #4e4e4e;
+	color: #000;
+	font-family: $font_phil;
+	padding: 10px 38px 10px 15px;
+}
+.input-type-1:focus {
+	border: 1px solid $main_blue;
+}
+
+
+.social_links {
+	li {
+		display: inline-block;
+		padding-right: 30px;
+		a.vk {
+			svg {
+				width: 20px;
+				fill: #fff;
+			}
+		}
+		a.fb {
+			svg {
+				width: 7px;
+				fill: #fff;
+			}
+		}
+	}
+}

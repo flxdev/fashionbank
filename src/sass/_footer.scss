@@ -1,0 +1,96 @@
+.wrapp_footer-bg-black {
+	background-color: #000;
+}
+.wrapp_footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
+	// flex-wrap: wrap;
+	min-height: 400px;
+	a {
+		color: #fff;
+	}
+	.footer-menu {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		padding: 65px 0 80px;
+		.footer-menu_logo {
+			img {
+				max-width: 100px;
+				margin-right: 60px;
+			}
+		}
+		.footer-menu_categories {
+			column-count:2;  
+			column-gap: 5px;  
+			padding-right: 50px;
+			a {
+				text-transform: uppercase;
+				font-size: 1.4rem;
+				letter-spacing: 1px;
+				font-family: $font_m;
+			}
+			li {
+				padding-bottom: 20px;
+			}
+		}
+		.footer-menu_main-info {
+			padding-right: 100px;
+			a {
+				font-size: 1.4rem;
+				letter-spacing: 1px;
+			}
+			li {
+				padding-bottom: 20px;
+			}
+		}
+		.email {
+			padding-right: 60px;
+			.email-title {
+				font-size: 1.4rem;
+				color: #fff;
+				padding-bottom: 20px;
+			}
+			.email-input {
+				color: #fff;
+				font-family: $font_r;
+				width: 220px;
+				background-image: url(../img/svg/uEA02-email-grey.svg);
+				background-size: 10%;
+				background-position: 95%;
+				background-repeat: no-repeat;
+			}
+			.email-input:focus {
+				background-image: url(../img/svg/uEA01-email-blue.svg);
+			}
+		}
+	}
+	.footer-info {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		padding-bottom: 95px;
+		p {
+			color: #4e4e4e;
+			font-size: 1.4rem;
+		}
+		a {
+			color: #fff;
+		}
+		.block-info {
+			padding-right: 190px;
+			flex-grow:1;
+			flex-basis:58%;
+		}
+		.copyrat {
+			flex-basis:29%;
+		}
+		.made-in {
+			flex-basis:13%;
+		}
+	}
+}

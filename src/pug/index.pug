@@ -1,12 +1,21 @@
+//- 1. Футур
+//- 2. Кнопка to top
+//- 3. Мобильная версия
+//- 4. Табы
+//- 5. Фишка с планшетной версией на десктопе
+//- 6. Бургер
+//- 7. Панель User
+
 extends _layout
 
 block title
 	title Title of template
 
 block content
-	include includes/_header
+	
 
 	div.wrapp_page
+		include includes/_header
 		section(title='first-screen')
 			div.max-width-1300
 				div.wrapp_first-screen
@@ -113,5 +122,8 @@ block content
 					div.load_more
 						a(href='') + 
 							span Показать ещё
-			a.go_top(href='#')
-				<svg width="135" height="78" viewBox='0 0 135 78' xmlns="http://www.w3.org/2000/svg"><polygon id="svg_15" points="68.0047607421875,1.33746337890625 1.3332672119140625,69.97676086425781 10.269989013671875,78.66026306152344 68.0047607421875,19.217376708984375 125.738037109375,78.66255187988281 134.666748046875,69.97676086425781 "/></svg>
+		include includes/elements/_go_top			
+		include includes/_footer
+	//- include includes/_menu-1
+			
+
