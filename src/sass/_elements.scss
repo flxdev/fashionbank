@@ -26,5 +26,8 @@
 				fill: #fff;
 			}
 		}
+		&:last-child {
+			padding-right: 0;
+		}
 	}
 }

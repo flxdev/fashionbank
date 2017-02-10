@@ -66,11 +66,11 @@ a {text-decoration: none;}
 	width: 45px;
 	height: 45px;
 	padding-top: 13px;
-    padding-left: 11px;
-    position: fixed;
-    bottom: 80px;
-    z-index: 101;
-    left: 75px;
+	padding-left: 11px;
+	position: fixed;
+	bottom: 80px;
+	z-index: 101;
+	left: 75px;
 	svg {
 		width: 20px;
 		height: 15px;
@@ -91,7 +91,7 @@ a {text-decoration: none;}
 	.card-bg {
 		position: absolute;
 		width: 100%;
-		height: 100%;
+		height: 99%;
 		background-size: cover;
 		background-position: 50%;
 		top: 0;
@@ -115,6 +115,8 @@ a {text-decoration: none;}
 		font-family: $font_phil;
 		transition: all 0.1s ease-out;
 		color: #000;
+		padding-left: 10px;
+		padding-right: 10px;
 		&:hover {
 			color: $main_blue;
 		}
@@ -343,6 +345,7 @@ a {text-decoration: none;}
 	align-items: flex-start;
 	margin: 0 -15px;
 	padding-bottom: 50px;
+	position: relative;
 }
 .wrapp_cards {
 	flex-basis: 75%;
@@ -361,10 +364,15 @@ a {text-decoration: none;}
 		margin: 40px 15px 35px;
 		max-height: 50px;
 		li {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: flex-start;
+			flex-wrap: no-wrap;
 			padding-right: 25px;
 			img {
 				max-width: 50px;
-				float: left;
+				// float: left;
 				margin-right: 15px;
 			}
 			p {
@@ -380,7 +388,19 @@ a {text-decoration: none;}
 		flex-basis: 25%;
 		flex-grow: 1;
 	}
+	a.card:last-of-type {
+		flex-grow: 0;
+		position: absolute;
+		width: 29.5%;
+		bottom: 0;
+		right: 10px;
+		margin-top: -51px;
+		margin-bottom: 65px;
+		display: none;
+	}
+	
 }
+
 .wrapp_sidebar {
 	flex-basis: 25%;
 	display: flex;
@@ -406,7 +426,7 @@ a {text-decoration: none;}
 			border-bottom: 1px solid $grey_dop;
 			padding: 20px 0;
 			margin: 0;
-			&:first-child {
+			&:nth-child(2) {
 				padding-top: 0;
 			}
 			&:last-child {
@@ -448,6 +468,7 @@ a {text-decoration: none;}
 		.card-horizontal{
 			min-height: 190px;
 			max-height: 190px;
+			padding-right: 23px;
 			// margin: 15px 0;
 			// padding: 0 15px;
 			.wrapp-img {
@@ -478,6 +499,7 @@ a {text-decoration: none;}
 		}
 		.card-horizontal-full_bg {
 			min-height: 190px;
+			max-height: 190px;
 			.wrapp-content {
 				width: 100%;
 				.card-category {
@@ -531,7 +553,7 @@ a {text-decoration: none;}
 //hack chrome size arrows slider
 @media all and (-webkit-min-device-pixel-ratio:0) {
    .wrapp_slider .slider_arrow { width: 10px; }
-    .wrapp_slider .slider_arrow-next:before { right: 30px; }
+	.wrapp_slider .slider_arrow-next:before { right: 30px; }
 }
 
 //end slider all style
@@ -609,22 +631,24 @@ a {text-decoration: none;}
 		flex-grow: 1;
 	}
 	//cards-block-2
-	.load_more {
-		flex-basis: 100%;
-		text-align: center;
-		padding: 80px 0; 
-		a {
-			text-transform: uppercase;
-			color: $main_blue;
-			font-size: 1.4rem;
-			letter-spacing: 2px;
-			font-weight: bold;
-			span {
-				font-family: $font_m;
-			}
+	
+
+	//end cards-block-2
+}
+.load_more {
+	flex-basis: 100%;
+	text-align: center;
+	padding: 55px 0px 80px 0;
+	a {
+		text-transform: uppercase;
+		color: $main_blue;
+		font-size: 1.4rem;
+		letter-spacing: 2px;
+		font-weight: bold;
+		span {
+			font-family: $font_m;
 		}
 	}
-	//end cards-block-2
 }
 
 //end cards-block-1
@@ -661,7 +685,7 @@ a {text-decoration: none;}
 			.video-play {
 				width: 60px;
 				margin: auto;
- 				top: 0; left: 0; bottom: 0; right: 0;
+				top: 0; left: 0; bottom: 0; right: 0;
 			}
 		}
 		.card-vertical {
@@ -675,8 +699,8 @@ a {text-decoration: none;}
 			.video-play {
 				width: 35px;
 				left: 50%;
-    			margin-left: -13px;
-    			top: 70px;
+				margin-left: -13px;
+				top: 70px;
 			}
 		}
 		.slider_arrow {

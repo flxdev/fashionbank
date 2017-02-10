@@ -14,7 +14,7 @@
 	.footer-menu {
 		display: flex;
 		flex-direction: row;
-		justify-content: flex-start;
+		justify-content: space-between;
 		align-items: flex-start;
 		padding: 65px 0 80px;
 		.footer-menu_logo {
@@ -24,9 +24,9 @@
 			}
 		}
 		.footer-menu_categories {
-			column-count:2;  
-			column-gap: 5px;  
-			padding-right: 50px;
+			// column-count:2;  
+			// column-gap: 5px;  
+			padding-right: 40px;
 			a {
 				text-transform: uppercase;
 				font-size: 1.4rem;
@@ -38,7 +38,7 @@
 			}
 		}
 		.footer-menu_main-info {
-			padding-right: 100px;
+			padding-right: 60px;
 			a {
 				font-size: 1.4rem;
 				letter-spacing: 1px;

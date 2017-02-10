@@ -1,0 +1,89 @@
+.brands_page {
+	
+
+	//header
+	max-width: 1024px;
+	header {
+		padding: 0 20px;
+	}
+	.wrapp_header .menu_categories li:first-child {
+		padding-left: 25px;
+	}
+	.wrapp_header .menu_categories li:last-child {
+		padding-right: 25px;
+	}
+	.wrapp_header .menu_categories li {
+		font-size: 1.3rem;
+	}
+	//end header
+	
+	//-------------------------------------------------
+
+	//footer
+	.wrapp_footer {
+		padding: 0 20px;
+	}
+	.wrapp_footer .footer-menu .footer-menu_logo {
+		display: none;
+	}
+	.wrapp_footer .footer-menu .email {
+		padding-right: 20px;
+	}
+	.wrapp_footer .footer-menu .email .email-input {
+		width: 200px;
+	}
+	.wrapp_footer .footer-info .copyrat {
+		flex-basis: 20%;
+	}
+	.wrapp_footer .footer-info .block-info {
+		flex-basis: 65%;
+		padding-right: 40px;
+	}
+	.wrapp_footer .footer-info .made-in {
+		flex-basis: 15%;
+	}
+
+	//end footer
+
+//MAIN PAGE
+
+	//first-screen
+	.wrapp_cards {
+		flex-basis: 67%;
+		.card-vertical {
+			flex-basis: 33%;
+		}
+		a.card:last-of-type { 
+			display: block;
+		}	
+	}
+	.wrapp_cards .card-big {
+		flex-basis: 100%;
+	}
+	.wrapp_sidebar {
+		flex-basis: 33%;
+	}
+
+	//end first-screen
+
+	//-------------------------------------------------
+	
+	//cards-block-1
+	.wrapp_cards-block-1 {
+		.card {
+			flex-basis: 30%;
+			flex-grow: 1;
+			&:last-child {
+				display: none;
+			}
+			&:nth-last-child(2) {
+				display: none;
+			}
+		}
+	}
+	//end cards-block-1
+
+	//-------------------------------------------------
+
+	
+}
