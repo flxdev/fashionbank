@@ -9,6 +9,13 @@ header {
 	flex-wrap: wrap;
 	background-color: #000;
 	width: 100%;
+	position: relative;
+	.burger {
+		position: absolute;
+		z-index: 100;
+		top: 50px;
+		left: 35px;
+	}
 	.logo {
 		flex-basis: 100%;
 		.wrapp_svg {

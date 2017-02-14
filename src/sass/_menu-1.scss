@@ -53,9 +53,9 @@
 		}
 		.wrapp_close {
 			position: absolute;
-		    top: 20px;
-		    right: 20px;
-		    cursor: pointer;
+			top: 20px;
+			right: 20px;
+			cursor: pointer;
 			svg {
 				fill: #000;
 				width: 20px;
@@ -76,4 +76,33 @@
 			}
 		}
 	}
+}
+
+.artclose {
+	height: 30px;
+	width: 33px;
+	cursor: pointer;
+}
+
+.burgx, .burgx2, .burgx3 {
+	margin-top: 3px;
+	background: #fff;
+	width: 33px;
+	height: 4px;
+	position: absolute;
+	-webkit-transform: rotate(-180deg);
+	transform: rotate(-180deg);
+	-moz-transform: rotate(-180deg);
+	-o-transform: rotate(-180deg);
+}
+
+.burgx2 {
+	margin-top: 13px;
+}
+.burgx3 {
+	margin-top: 23px;
+ 	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
 }

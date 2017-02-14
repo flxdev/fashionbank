@@ -14,18 +14,33 @@
 	li {
 		display: inline-block;
 		padding-right: 30px;
+		font-size: 0;
+		line-height: 0;
 		a.vk {
 			svg {
-				width: 20px;
+				width: 25px;
 				fill: #fff;
 			}
 		}
 		a.fb {
 			svg {
-				width: 7px;
+				width: 10px;
 				fill: #fff;
 			}
 		}
+		a.yt {
+			svg {
+				width: 20px;
+				fill: #fff;
+			}
+		}
+		a.inst {
+			svg {
+				width: 19px;
+				fill: #fff;
+			}
+		}
+
 		&:last-child {
 			padding-right: 0;
 		}
