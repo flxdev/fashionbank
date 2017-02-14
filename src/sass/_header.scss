@@ -16,6 +16,23 @@ header {
 		top: 50px;
 		left: 35px;
 	}
+	.user_panel  {
+		position: absolute;
+		right: 35px;
+		top: 60px;
+		z-index: 100;
+		svg {
+			display: inline-block;
+			width: 20px;
+			fill: #fff;
+			margin-left: 40px;
+			cursor:pointer;
+			transition: all 0.3s ease;
+			&:hover {
+				fill: $orange;
+			}
+		}
+	}
 	.logo {
 		flex-basis: 100%;
 		.wrapp_svg {

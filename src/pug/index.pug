@@ -1,9 +1,13 @@
-//- 1. Мобильная версия ?++  проверить мелкие баги, отступы
-//- 2. Табы  - сделать
-//- 3. Фишка с планшетной версией на десктопе по дабовлению .brands пересчитывать js плагинов
-//- 4. Бургер 
-//- 5. Панель User
-//- 6. Мобильное меню
+
+//- 2. Табы  - анимация
+//- 4. Бургер - анимация + добавить overflow на body
+//- 5. Панель User ++++
+//- 6. Мобильное меню большое
+
+
+//- 0. Фишка с планшетной версией на десктопе по дабовлению .brands пересчитывать js плагинов
+
+
 
 extends _layout
 
@@ -65,7 +69,7 @@ block content
 									li(data-tab='tab2') Специалисты
 									li(data-tab='tab3') Магазины
 								p.all Все заведения
-						div.wrapp_tabs-content
+						div.wrapp_tabs-content.js-tabs-content
 							div.wrapp_slider-content.js-slider-init(data-tab-content='tab1')
 								+card-horizont('card card-horizontal text-black','img/9.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Зож',false,false)
 								+card-horizont('card card-horizontal text-black','img/11.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Красота',false,false)
@@ -75,8 +79,24 @@ block content
 								+card-horizont('card card-horizontal text-black','img/10.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Мода и стиль',false,false)
 								+card-horizont('card card-horizontal card-horizontal-full_bg text-white','img/5.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Мода и стиль',false,true)
 								+card-horizont('card card-horizontal card-horizontal-full_bg text-white','img/5.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Мода и стиль',false,true)
-							div.wrapp_slider-content.js-slider-init(data-tab-content='tab2')
-							div.wrapp_slider-content.js-slider-init(data-tab-content='tab3')
+							div.wrapp_slider-content.js-slider-init.hidden(data-tab-content='tab2')
+								+card-horizont('card card-horizontal card-horizontal-full_bg text-white','img/13.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Красота',false,true)
+								+card-horizont('card card-horizontal text-black','img/10.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Мода и стиль',false,false)
+								+card-horizont('card card-horizontal card-horizontal-full_bg text-white','img/5.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Мода и стиль',false,true)
+								+card-horizont('card card-horizontal card-horizontal-full_bg text-white','img/5.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Мода и стиль',false,true)
+								+card-horizont('card card-horizontal text-black','img/9.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Зож',false,false)
+								+card-horizont('card card-horizontal text-black','img/11.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Красота',false,false)
+								+card-horizont('card card-horizontal text-black','img/12.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Мода и стиль',false,false)
+								+card-horizont('card card-horizontal text-black','img/10.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Мода и стиль',false,false)
+							div.wrapp_slider-content.js-slider-init.hidden(data-tab-content='tab3')
+								+card-horizont('card card-horizontal text-black','img/12.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Мода и стиль',false,false)
+								+card-horizont('card card-horizontal text-black','img/10.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Мода и стиль',false,false)
+								+card-horizont('card card-horizontal card-horizontal-full_bg text-white','img/13.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Красота',false,true)
+								+card-horizont('card card-horizontal text-black','img/9.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Зож',false,false)
+								+card-horizont('card card-horizontal text-black','img/11.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Красота',false,false)
+								+card-horizont('card card-horizontal text-black','img/10.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Мода и стиль',false,false)
+								+card-horizont('card card-horizontal card-horizontal-full_bg text-white','img/5.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Мода и стиль',false,true)
+								+card-horizont('card card-horizontal card-horizontal-full_bg text-white','img/5.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Мода и стиль',false,true)
 		section(title='cards-block-1')
 			div.max-width-1300
 				div.wrapp_cards-block-1
@@ -122,10 +142,11 @@ block content
 					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
 					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
 				div.load_more
-					a(href='') + 
+					a(href='#') + 
 						span Показать ещё
 		include includes/elements/_go_top			
 		include includes/_footer
-	//- include includes/_menu-1
+	include includes/_menu-1
+	include includes/_popup
 			
 

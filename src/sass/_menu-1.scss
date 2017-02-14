@@ -9,11 +9,13 @@
 	left: 0;
 	.burger_menu {
 		min-width:320px;
-		width: 23%;
+		width: 33%;
 		background-color: #fff;
 		height: 100vh;
 		padding: 14vh 10px 0 65px;
 		position: relative;
+		left: 0;
+		// transform: translateX(-500px);
 		ul {
 			li {
 				a {
@@ -64,12 +66,7 @@
 	}
 	.social_links {
 		li {
-			a.vk {
-				svg {
-					fill: #000;
-				}
-			}
-			a.fb {
+			a {
 				svg {
 					fill: #000;
 				}

@@ -47,15 +47,57 @@ function initSliderVideo() {
 	});
 }
 
+function swichTabs() {
+	$(this).addClass("active").siblings().removeClass("active");
+	var currTab = $(".js-tabs-content").find("[data-tab-content='" + $(this).data("tab") + "']");
+	currTab.removeClass("hidden").siblings().addClass("hidden");
+	currTab.slick('setPosition');
+}
+
 function shadowScroll(scrollContainer, scrolling, add) {
 	if ($(scrolling).position().left < 0)  $(add).addClass('shadow_left');
 	else $(add).removeClass('shadow_left');
 	if ($(scrolling).position().left + $(scrolling).width() > $(scrollContainer).width()) $(add).addClass('shadow_right');
 	else $(add).removeClass('shadow_right');
 }
+
+function initBurger() {
+	$('.js-burger').on('click', function() {
+		$('.js-burger-menu').removeClass('hidden');
+
+		//не работает анимация
+		$('#burger_menu').animate({
+			left: '+= 200px'
+		}, 'slow', 'linear');
+	});
+
+	$('.js-burger-close').on('click', function() {
+		$('.js-burger-menu').addClass('hidden');
+	});
+
+	$('.js-burger-menu').on('click', function(e) {
+		console.log(e);
+		console.log(e.target);
+		if (!$(e.target).closest("#burger_menu").length) {
+			$('.js-burger-menu').addClass('hidden');
+		}
+	});
+}
+
+function initForm() {
+	$('.js-form input').on( "focusout", function() {
+		if(this.value.length != 0) {
+			$(this).addClass('input-border-bottom-value');
+		}
+		else $(this).removeClass('input-border-bottom-value');
+	})
+}
+
 $( document ).ready(function() {
 	if ($('.js-slider-init').length) initSlider();
+
 	if ($('.js-slider-init-video').length) initSliderVideo();
+
 	if ($('.js-scroll-content').length) {
 		shadowScroll('.js-scroll-container', '.js-scroll-content', '.js-scroll-opasity');
 		$('.js-scroll-container').on( 'scroll', function(){
@@ -65,5 +107,24 @@ $( document ).ready(function() {
 			shadowScroll('.js-scroll-container', '.js-scroll-content' , '.js-scroll-opasity');
 		});
 	}
+
+	$('.js-tabs-categories li').on('click', function() {
+		swichTabs.call(this);
+	});
 	
+	initBurger();
+	initForm();
+
+	// добавить стили классу
+	// console.log(document.styleSheets[0].rules[260]);
+	// console.log(document.styleSheets[0].rules[260].media);
+	// for( var i = 0; i < document.styleSheets[0].rules.length; i++ ) {
+	// 	if (document.styleSheets[0].rules[i].conditionText == '(max-width: 1330px)') {
+	// 		var k;
+	// 	}
+	// }
+
+
+
+
 });

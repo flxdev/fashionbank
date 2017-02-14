@@ -119,6 +119,12 @@
 		}
 	}
 	//end footer
+
+	.wrapp_burger_menu {
+		.burger_menu {
+			width: 100%;
+		}
+	}
 }
 
 @media (max-width: 1000px) {
@@ -136,7 +142,7 @@
 	.wrapp_sidebar {
 		flex-direction: row;
 		.wrapp_baner {
-			flex-basis: 46%;
+			flex-basis: 48%;
 			.banner {
 				max-height: none;
 			}
@@ -151,13 +157,43 @@
 	}
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
 	.wrapp_slider .wrapp_slider-content .card-horizontal-full_bg .wrapp-content .card-category {
 		padding: 25px 0 50px;
 	}
+	.wrapp_footer{
+		.social_links {
+			text-align: right;
+			li {
+				display: block;
+				padding: 10px 0 10px 10px;
+			}
+		}
+	}
+	
 }
 
 @media (max-width: 700px) {
+	.wrapp_page {
+		padding-top: 0;
+	}
+	header {
+    	padding: 0;
+	}
+	.wrapp_header {
+    	.burger {
+			right: 20px;
+			left: auto;
+			top: 22px;
+		}
+		.logo {
+			.wrapp_svg {
+				width: 60%;
+    			margin: 20px;
+			}
+		}
+		
+	}
 	.card-vertical {
 		margin-top: 30px;
 		margin-bottom: 30px;
@@ -165,6 +201,21 @@
 		.wrapp-img {
 			max-height: none !important; 
 		}
+	}
+
+	.wrapp_footer{
+		.social_links {
+			text-align: center;
+			li {
+				display: inline-block;
+				padding: 0 30px 0 0;
+			}
+		}
+	}
+	
+	.wrapp_cards .card-big {
+		min-height: 330px;
+		padding: 0 24px 15px;
 	}
 	.wrapp_cards .wrapp_whats-up, .wrapp_slider-video-bg-black .wrapp_slider-title .all {
 		display: none;

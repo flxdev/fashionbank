@@ -9,6 +9,67 @@
 	border: 1px solid $main_blue;
 }
 
+.input-border-bottom {
+	background-color: rgba(0,0,0,0);
+	border-bottom: 1px solid $grey_dop;
+	padding: 15px 0;
+	font-size: 1.4rem;
+	position: relative;
+	z-index: 1010;
+	transition: all 0.3s ease;
+	margin: 15px 0;
+}
+.input-border-bottom + label {
+	position: absolute;
+	z-index: 1001;
+	font-size: 1.4rem;
+	margin-top: -50px;
+	color: $grey;
+	transition: all 0.3s ease;
+	span {
+		color: red;
+	}
+}
+.input-border-bottom:focus {
+	border-bottom: 1px solid $main_blue;
+}
+.input-border-bottom:focus + label {
+	margin-top: -70px;
+	font-size: 1.2rem;
+}
+.input-border-bottom-value {
+	border-bottom: 1px solid #000;
+}
+.input-border-bottom-value + label {
+	margin-top: -70px;
+	font-size: 1.2rem;
+}
+.btn {
+	background-color: rgba(0,0,0,0);
+	border: none;
+	border-radius: 0;
+	text-align: center;
+}
+.btn-size-225 {
+	width: 225px;
+	padding: 15px 0;
+}
+.btn-black {
+	background-color: #000;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	letter-spacing: 1px;
+	transition: all 0.3s ease;
+}
+.btn-black:hover {
+	background-color: $main_blue;
+	color: #fff;
+}
+//end form
+
+
+
 
 .social_links {
 	li {
