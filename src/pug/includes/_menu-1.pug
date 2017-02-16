@@ -1,23 +1,47 @@
 div.wrapp_burger_menu.hidden.js-burger-menu
-	div.burger_menu#burger_menu
-		div.wrapp_close.js-burger-close
-			<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.3 54.4" enable-background="new 0 0 54.3 54.4" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.7,4.8l2.5-2.5l48.8,48.8l-2.5,2.5L0.7,4.8z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M3.2,2.3L5.5,0l48.8,48.8l-2.3,2.3L3.2,2.3z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M49.2,0.4l2.5,2.5L2.5,52.1L0,49.6L49.2,0.4z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M51.6,2.9L54,5.2L4.8,54.4l-2.4-2.4L51.6,2.9z"/></svg>
-		ul.burger_menu-big
-			li
-				a(href='#') О проекте
-			li
-				a(href='#') Партнёрам
-			li
-				a(href='#') Контакты
-			li
-				a(href='#') Карта сайта
-		ul.burger_menu-small
-			li
-				a(href='#') Подписаться на рассылку
-			li
-				a(href='#') Личный кабинет
-			li
-				a(href='#') Поиск
-			li
-				a(href='#') Обратная связь
-		include _social-links
+	div.wrapp_burger_menu-content
+		div.burger_menu#burger_menu
+			div.wrapp_close.js-burger-close
+				<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.3 54.4" enable-background="new 0 0 54.3 54.4" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.7,4.8l2.5-2.5l48.8,48.8l-2.5,2.5L0.7,4.8z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M3.2,2.3L5.5,0l48.8,48.8l-2.3,2.3L3.2,2.3z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M49.2,0.4l2.5,2.5L2.5,52.1L0,49.6L49.2,0.4z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M51.6,2.9L54,5.2L4.8,54.4l-2.4-2.4L51.6,2.9z"/></svg>
+			div.user_panel
+				div
+					<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="251.4 20.4 380.1 380.1" enable-background="new 251.4 20.4 380.1 380.1" xml:space="preserve"><path d="M631.5,365.1l-93.7-93.7c44.9-61.9,39.5-148.9-16.3-204.7c-30.9-30.9-71.4-46.3-111.9-46.3s-81,15.4-111.9,46.3c-61.8,61.8-61.8,162,0,223.7c30.9,30.9,71.4,46.3,111.9,46.3c32.6,0,65.2-10,92.8-30.1l93.7,93.7L631.5,365.1z M322.5,265.8c-48-48-48-126.2,0-174.3c23.3-23.3,54.2-36.1,87.1-36.1s63.9,12.8,87.1,36.1c48,48,48,126.2,0,174.3c-23.3,23.3-54.2,36.1-87.1,36.1C376.7,301.9,345.8,289,322.5,265.8z"/></svg>
+				div.js-popup-open(data-open-popup = 'popup-create-account')
+					<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="280.4 41.8 309.4 325.1" enable-background="new 280.4 41.8 309.4 325.1" xml:space="preserve"><path d="M295.5,367h52.7h173.9h52.7c8.6,0,15.1-6.9,15.1-15.1v-18.4c0-15.9-7.3-31-20-40.8c-36.7-29-73.9-47.8-81.6-51.4c-0.8-0.4-1.6-1.2-1.6-2.4c0-4.1,0-15.1,0-26.1c4.1-8.2,6.1-16.7,7.8-24.5c3.7,2.4,9.4,1.2,15.9-21.6c5.3-18.4,2-24.9-2.4-26.1C522.5,69.8,489,67.4,489,67.4s-4.9-9.8-18.4-17.1c-9-5.3-21.2-9.4-38-8.2c-5.3,0.4-10.2,1.2-15.1,2.9l0,0c-6.1,2-11.4,4.9-16.7,8.6c-6.1,4.1-11.8,8.6-17.1,14.3c-8.2,8.2-15.5,19.2-18.4,32.2c-2.9,11.4-2.9,23.7,1.6,35.9c-6.1-0.4-13.1,2.9-6.5,26.5c4.9,17.6,9.4,22,13.1,22.5c1.6,9.8,4.5,20.8,10.6,31v22.9c0,1.2-0.4,2-1.6,2.4c-8.2,4.1-45.3,22.9-82,51.4c-12.7,9.8-20,24.9-20,40.8v18.4C280.4,360,286.9,367,295.5,367z"/></svg>
+		
+			ul.burger_menu-big-mobile
+				li
+					a(href='#') Мода и стиль
+				li 
+					a(href='#') Красота
+				li 
+					a(href='#') Спорт
+				li 
+					a(href='#') Зож
+				li 
+					a(href='#') Эстетическая медицина
+				li 
+					a(href='#') Дети
+				li 
+					a(href='#') Модельный бизнес
+				li 
+					a(href='#') Афиша	
+			ul.burger_menu-big
+				li
+					a(href='#') О проекте
+				li
+					a(href='#') Партнёрам
+				li
+					a(href='#') Контакты
+				li
+					a(href='#') Карта сайта
+			ul.burger_menu-small
+				li
+					a(href='#') Подписаться на рассылку
+				li
+					a(href='#') Личный кабинет
+				li
+					a(href='#') Поиск
+				li
+					a(href='#') Обратная связь
+			include _social-links

@@ -62,6 +62,7 @@ function shadowScroll(scrollContainer, scrolling, add) {
 }
 
 function initBurger() {
+	// $('.js-burger').off('click.burger').on('click.burger', function() {
 	$('.js-burger').on('click', function() {
 		$('.js-burger-menu').removeClass('hidden');
 		$('body').addClass('overflow-hidden');
@@ -113,9 +114,31 @@ function initPopup() {
 		if (!$(e.target).closest('.wrapp_popup_window').length) {
 			$('.js-popup').fadeOut(250);
 			$('body').removeClass('overflow-hidden');
-		}1
+		}
 	});
 
+}
+
+function initMenu() {
+	$('.js-menu-category').on( 'mouseover', function(e){
+		if ($(e.target).data('index') == undefined ) e.preventDefault();
+		else {
+			$('.js-menu-category-content').find("[data-index='" + $(e.target).data('index') + "']").fadeIn(250).siblings().fadeOut(250);
+		}
+	});
+	$('.js-menu-category').on( 'mouseout', function(e){
+		if ($(e.target).data('index') == undefined ) e.preventDefault();
+		else {
+			$('.js-menu-category-content-item').fadeOut(0);
+		}
+	});
+	$('.js-menu-category-content-item').on( 'mouseover', function(e){
+		$(this).fadeIn(0).siblings().fadeOut(0);
+	});
+	$('.js-menu-category-content-item').on( 'mouseout', function(e){
+		$(this).fadeOut(0).siblings().fadeOut(0);
+	});
+	
 }
 
 $( document ).ready(function() {
@@ -141,6 +164,7 @@ $( document ).ready(function() {
 	initBurger();
 	initPopup();
 	initForm();
+	initMenu();
 
 	// добавить стили классу
 	// console.log(document.styleSheets[0].rules[260]);

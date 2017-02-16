@@ -1,0 +1,49 @@
+include _card-h
+
+mixin menu-2(index, content)
+	div.menu_categories-content.js-menu-category-content-item(data-index=index)
+			ul.menu-left
+				li
+					a(href='#') Статьи 
+				li
+					a(href='#') Компании 
+				li
+					a(href='#') Специалисты
+				li
+					a(href='#') Магазины
+
+			div.menu-center
+				ul
+					li
+						a(href='#') Все статьи 
+					li
+						a(href='#') Фитнес-клуб
+					li
+						a(href='#') Спортивное питание
+					li
+						a(href='#') Упражнения для ног
+					li
+						a(href='#') Пресс
+					li
+						a(href='#') Тренажёрный зал
+					li
+						a(href='#') Лишний вес
+				ul
+					li
+						a(href='#') Кроссфит
+					li
+						a(href='#') Фитнес для мам 
+					li
+						a(href='#') Бег
+					li
+						a(href='#') Самооборона
+					li
+						a(href='#') Красивое тело к лету
+					li
+						a(href='#') Фитнес к лету
+					li
+						a(href='#') ...
+			
+			div.menu-right
+				+card-horizont('card card-horizontal text-white','img/12.jpg','Массажный салон BonJoli',false ,'Мода и стиль',true,false)
+				+card-horizont('card card-horizontal text-white','img/10.jpg','Массажный салон BonJoli',false ,'Мода и стиль',true,false)

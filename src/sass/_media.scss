@@ -32,6 +32,7 @@
 			}
 		}
 	}
+
 	header {
 		padding: 0 20px;
 	}
@@ -123,6 +124,29 @@
 	.wrapp_burger_menu {
 		.burger_menu {
 			width: 100%;
+			text-align: center;
+			padding-left: 10px;
+			.burger_menu-big-mobile {
+				display: block;
+			}
+			.burger_menu-small {
+				display: none;
+			}
+			.burger_menu-big {
+				padding-bottom: 60px;
+				li {
+					padding-bottom: 25px;
+					a {
+						font-size: 2rem;
+						letter-spacing: 1px;
+						color: #000;
+						font-family: $font_m;
+					}
+					&:last-child {
+						padding-bottom: 0;
+					}
+				}
+			}
 		}
 	}
 }
@@ -191,6 +215,10 @@
 				width: 60%;
     			margin: 20px;
 			}
+		}
+		.user_panel {
+			z-index: -100;
+			left: 0;
 		}
 		
 	}
