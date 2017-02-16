@@ -21,15 +21,17 @@ header {
 		right: 35px;
 		top: 60px;
 		z-index: 100;
-		svg {
+		div {
 			display: inline-block;
-			width: 20px;
-			fill: #fff;
-			margin-left: 40px;
-			cursor:pointer;
-			transition: all 0.3s ease;
-			&:hover {
-				fill: $orange;
+			svg {
+				width: 20px;
+				fill: #fff;
+				margin-left: 40px;
+				cursor:pointer;
+				transition: all 0.3s ease;
+				&:hover {
+					fill: $orange;
+				}
 			}
 		}
 	}

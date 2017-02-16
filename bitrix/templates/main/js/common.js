@@ -64,7 +64,7 @@ function shadowScroll(scrollContainer, scrolling, add) {
 function initBurger() {
 	$('.js-burger').on('click', function() {
 		$('.js-burger-menu').removeClass('hidden');
-
+		$('body').addClass('overflow-hidden');
 		//не работает анимация
 		$('#burger_menu').animate({
 			left: '+= 200px'
@@ -73,13 +73,13 @@ function initBurger() {
 
 	$('.js-burger-close').on('click', function() {
 		$('.js-burger-menu').addClass('hidden');
+		$('body').removeClass('overflow-hidden');
 	});
 
 	$('.js-burger-menu').on('click', function(e) {
-		console.log(e);
-		console.log(e.target);
 		if (!$(e.target).closest("#burger_menu").length) {
 			$('.js-burger-menu').addClass('hidden');
+			$('body').removeClass('overflow-hidden');
 		}
 	});
 }
@@ -91,6 +91,31 @@ function initForm() {
 		}
 		else $(this).removeClass('input-border-bottom-value');
 	})
+}
+
+function initPopup() {
+	$('.js-popup-open').on('click', function () {
+		var __h = '.js-'+$(this).data('open-popup');
+		console.log(__h);
+		$('.js-popup').fadeIn(250);
+		$(__h).fadeIn(250).siblings().fadeOut(250);
+		$('body').addClass('overflow-hidden');
+	})
+
+	$('.js-popup-close').on('click', function() {
+		var __h = '.js-'+$(this).data('close-popup');
+		$(__h).fadeOut(250);
+		$('.js-popup').fadeOut(250);
+		$('body').removeClass('overflow-hidden');
+	});
+
+	$('.js-popup').on('click', function(e) {
+		if (!$(e.target).closest('.wrapp_popup_window').length) {
+			$('.js-popup').fadeOut(250);
+			$('body').removeClass('overflow-hidden');
+		}1
+	});
+
 }
 
 $( document ).ready(function() {
@@ -112,7 +137,9 @@ $( document ).ready(function() {
 		swichTabs.call(this);
 	});
 	
+
 	initBurger();
+	initPopup();
 	initForm();
 
 	// добавить стили классу
