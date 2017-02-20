@@ -50,7 +50,7 @@ function initSliderVideo() {
 function swichTabs() {
 	$(this).addClass("active").siblings().removeClass("active");
 	var currTab = $(".js-tabs-content").find("[data-tab-content='" + $(this).data("tab") + "']");
-	currTab.removeClass("hidden").siblings().addClass("hidden");
+	currTab.fadeIn(250).siblings().fadeOut(0);
 	currTab.slick('setPosition');
 }
 
@@ -97,7 +97,6 @@ function initForm() {
 function initPopup() {
 	$('.js-popup-open').on('click', function () {
 		var __h = '.js-'+$(this).data('open-popup');
-		console.log(__h);
 		$('.js-popup').fadeIn(250);
 		$(__h).fadeIn(250).siblings().fadeOut(250);
 		$('body').addClass('overflow-hidden');
@@ -108,12 +107,14 @@ function initPopup() {
 		$(__h).fadeOut(250);
 		$('.js-popup').fadeOut(250);
 		$('body').removeClass('overflow-hidden');
+		resetForm($('.js-popup').find('.js-form'));
 	});
 
 	$('.js-popup').on('click', function(e) {
 		if (!$(e.target).closest('.wrapp_popup_window').length) {
 			$('.js-popup').fadeOut(250);
 			$('body').removeClass('overflow-hidden');
+			resetForm($('.js-popup').find('.js-form'));
 		}
 	});
 
@@ -141,6 +142,24 @@ function initMenu() {
 	
 }
 
+function initSearch() {
+	$('.js-search-open').on('click', function() {
+		$('.js-search').fadeIn(250);
+		$('body').addClass('overflow-hidden');
+		
+	});
+	$('.js-search-close').on('click', function() {
+		$('.js-search').fadeOut(250);
+		$('body').removeClass('overflow-hidden');
+		resetForm($('.js-search').find('.js-form'));
+	});
+}
+
+function resetForm(form) {
+	$(form).trigger("reset");
+	$(form).find('input').removeClass('input-border-bottom-value');
+}
+
 $( document ).ready(function() {
 	if ($('.js-slider-init').length) initSlider();
 
@@ -165,6 +184,7 @@ $( document ).ready(function() {
 	initPopup();
 	initForm();
 	initMenu();
+	initSearch();
 
 	// добавить стили классу
 	// console.log(document.styleSheets[0].rules[260]);

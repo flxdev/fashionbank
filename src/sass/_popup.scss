@@ -1,3 +1,13 @@
+.wrapp_close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	cursor: pointer;
+	svg {
+		fill: #000;
+		width: 20px;
+	}
+}
 .wrapp_popup {
 	position: fixed;
 	width: 100%;
@@ -14,7 +24,7 @@
 		height: 100%;
 		font-size: 0;
 		overflow: auto;
-		padding: 50px;
+		// padding: 50px;
 		&:before {
 			content:'';
 			height: 100%;
@@ -51,16 +61,7 @@
     	.sing_in_social {
     		margin-bottom: 30px;
     	}
-    	.wrapp_close {
-			position: absolute;
-			top: 20px;
-			right: 20px;
-			cursor: pointer;
-			svg {
-				fill: #000;
-				width: 20px;
-			}
-		}
+    	
 		form {
 			width: 100%;
 			padding: 0 50px;

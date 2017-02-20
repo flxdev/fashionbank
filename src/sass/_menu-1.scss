@@ -40,9 +40,16 @@
 			}
 		}
 		.user_panel {
+			position: absolute;
+			right: auto;
+			top: 20px;
+			z-index: 101;
+			left: 0;
+			display: none;
 			div {
 				svg {
 					fill: #000;
+					margin-left: 20px;
 				}
 			}
 		}

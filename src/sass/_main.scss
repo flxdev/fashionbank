@@ -533,6 +533,14 @@ a {text-decoration: none;}
 		background-color: transparent;
 		position: absolute;
 		top: -60px;
+		svg {
+			transition: all $time-animation ease-out;
+		}
+		&:hover {
+			svg {
+				fill: $main_blue;
+			}
+		}
 	}
 	.slider_arrow-next {
 		right: 0;
@@ -585,10 +593,17 @@ a {text-decoration: none;}
 				font-family: $font_b;
 				color: #9e9e9e;
 				letter-spacing: 2px;
+				transition: all $time-animation ease-out;
+				&:hover {
+					color: $main_blue;
+				}
 			}
 			li.active {
 				font-family: $font_bb;
 				color: #000;
+				&:hover {
+					color: $main_blue;
+				}
 			}
 		}
 
@@ -599,6 +614,10 @@ a {text-decoration: none;}
 			letter-spacing: 2px;
 			cursor: pointer;
 			margin-right: 85px;
+			transition: all $time-animation ease-out;
+			&:hover {
+				color:$main_blue;
+			}
 		}
 	}
 	
@@ -699,6 +718,9 @@ a {text-decoration: none;}
 			position:relative;
 			.card-title {
 				font-size: 2.8rem;
+				&:hover {
+					color: $orange;
+				}
 			}
 			.video-play {
 				position: absolute;
@@ -732,8 +754,12 @@ a {text-decoration: none;}
 			}
 		}
 		.slider_arrow {
+			top: -55px;
 			svg {
 				fill: #fff;
+				&:hover {
+					fill: $orange;
+				}
 			}
 		}
 	
@@ -758,6 +784,10 @@ a {text-decoration: none;}
 			letter-spacing: 2px;
 			cursor: pointer;
 			margin-right: 85px;
+			transition: all $time-animation ease-out;
+			&:hover {
+				color: $orange;
+			}
 		}
 	}
 }

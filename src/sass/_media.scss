@@ -204,6 +204,13 @@
 	header {
     	padding: 0;
 	}
+	.wrapp_burger_menu {
+		.burger_menu {
+			.user_panel {
+				display: block;
+			}
+		}
+	}
 	.wrapp_header {
     	.burger {
 			right: 20px;
@@ -217,8 +224,7 @@
 			}
 		}
 		.user_panel {
-			z-index: -100;
-			left: 0;
+			display: none;
 		}
 		
 	}
@@ -397,4 +403,21 @@
 	.wrapp_first-screen {
 		flex-wrap: wrap;
 	}
+	.wrapp_popup {
+		.wrapp_popup_window { 
+			h3 {
+				padding: 0 20px;
+			}
+			.text-note {
+				padding: 40px 20px 20px;
+			}
+			form  {
+				padding: 0 20px;
+				label {
+					left: 20px;
+				}
+			}
+		}
+		
+	}	
 }
