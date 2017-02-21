@@ -1,0 +1,120 @@
+.filters-wrapp {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	padding-top: 20px;
+	h2 {
+		font-family: $font_m;
+	}
+	.filters-li {
+		padding-top: 10px;
+		padding-left: 200px;
+		li {
+			display: inline-block;
+			margin-right: 30px;
+			font-size: 1.4rem;
+			cursor:pointer;
+			position: relative;
+			color: $grey;
+		}
+		li.active {
+			font-family: $font_b;
+			color: #000;
+		}
+		li.active:after {
+			content: '.';
+			position: absolute;
+			width: 100%;
+			left: 0;
+			text-align: center;
+			top: 30px;
+			font-size: 4rem;
+			line-height: 0;
+		}
+	}
+}
+
+.cards-block-sport {
+	.load_more {
+		padding: 60px 0 0;
+	}
+	.block-title {
+		flex-basis: 100%;
+		padding: 40px 0 25px;
+		margin: 0 15px;
+		border-top: 4px solid #000;
+		h3 {
+			float: left;
+			font-size: 1.8rem;
+			font-family: $font_bb;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+
+		}
+		p {
+			float: right;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			font-size: 1.1rem;
+			font-family: $font_m;
+			padding-top: 6px;
+			a {
+				color: $grey;
+				transition: all 0.3s ease-out;
+			}
+			a:hover {
+				color: $main_blue;
+			}
+		}
+	}
+	.card-horizontal {
+		flex-basis: 30%;
+		.wrapp-img {
+			flex-basis: 43%;
+		}
+		.wrapp-content {
+			padding-left: 25px; 
+			.card-category {
+				padding: 10px 0 20px 0;
+			}
+			.card-title {
+				padding: 0 0 5px 0;
+				font-size: 2.4rem;
+			}
+		}
+		.wrapp-bg {
+			width: 100%;
+		}
+		
+	}
+	.card-horizontal-full_bg {
+		.wrapp-content {
+			flex-basis: 100%;
+			.card-category {
+				padding: 25px 0 55px 0;
+			}
+			.card-description {
+				padding-bottom: 20px;
+			}
+		}
+		
+	}
+}
+
+.specialists {
+	.card-horizontal {
+		.wrapp-img {
+			img {
+				border-radius: 50%;
+				border: 7px solid $grey_dop;
+			}
+		}
+	}
+	.card-horizontal.vip {
+		img {
+			border: 2px solid #000;
+			padding: 5px;
+		}
+	}
+}

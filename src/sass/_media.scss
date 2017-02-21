@@ -395,6 +395,22 @@
 			}
 		}
 	}
+	.search-wrapp  {
+		.search-content {
+			.search-pop  {
+				ul {
+					display: block;
+					width: 100%;
+				}
+			}
+			form {
+				input[type=radio]+label {
+					width: 50%;
+    				display: inline-block;
+				}
+			}
+		}
+	}
 	
 }
 
@@ -420,4 +436,35 @@
 		}
 		
 	}	
+	.search-wrapp  {
+		.search-content {
+			form {
+				margin-top: 30px;
+				.input-border-bottom {
+					font-size: 2.8rem;
+					padding: 7px 0;
+					// margin: 25px 0;
+				}
+				.input-border-bottom+label {
+					font-size: 2.8rem;
+					margin-top: -60px;
+				}
+				.input-border-bottom:focus + label {
+					margin-top: -85px;
+					font-size: 1.8rem;
+				}
+				.input-border-bottom-value + label {
+					margin-top: -85px;
+					font-size: 1.8rem;
+				}
+			}
+		}
+	}
+
+}
+
+@media (max-width: 325px) {
+	.wrapp_footer .footer-menu .email .email-input {
+		max-width: 290px;
+	}
 }

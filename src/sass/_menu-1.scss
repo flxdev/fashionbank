@@ -23,6 +23,7 @@
 	}
 	.burger_menu {
 		min-width:320px;
+		// max-width: 600px;
 		width: 33%;
 		background-color: #fff;
 		min-height: 100%;
@@ -30,8 +31,10 @@
 		display: inline-block;
 		vertical-align: middle;
 		position: relative;
-		left: 0;
-		// transform: translateX(-500px);
+		// left: -100%;
+		transition: all 0.5s ease-out;
+		transform: translateX(-600px);
+		will-change: transform;
 		ul {
 			li {
 				a {
@@ -109,6 +112,9 @@
 				width: 20px;
 			}
 		}
+	}
+	.burger-animate {
+		transform: translateX(0);
 	}
 	.social_links {
 		li {

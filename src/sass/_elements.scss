@@ -103,7 +103,31 @@
 		}
 
 		&:last-child {
-			padding-right: 0;
+			padding-right: 10px;
 		}
 	}
+}
+
+.breadcrumbs {
+	padding-top: 15px;
+	li {
+		display: inline-block;
+		text-transform: uppercase;
+		color: $grey;
+		font-size: 1rem;
+		letter-spacing: 2px;
+		a {
+			color: $grey;
+		}
+		a:hover {
+			color: $main_blue;
+		}
+		&:after {
+			content:'/';
+		}
+		&:last-child:after {
+			content:'';
+		}
+	}
+	
 }

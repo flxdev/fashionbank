@@ -38,6 +38,7 @@ p,li { font-size: 1.5rem;  font-family: $font_r}
 ul { list-style-type: none; }
 a {text-decoration: none;}
 
+
 .overflow-hidden {
 	overflow: hidden;
 } 
@@ -232,6 +233,9 @@ a {text-decoration: none;}
 			color: #fff;
 		}
 	}
+	.card-description {
+		color: #fff;
+	}
 	.card-date_like {
 		color: $grey_dop;
 		span {
@@ -336,6 +340,19 @@ a {text-decoration: none;}
 		font-family: $font_r;
 		color: #000;
 		line-height: 1.3;
+	}
+	.wrapp-bg {
+		background-size: cover;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 93%;
+		height: 100%;
+		background-size: cover;
+		background-position: 50%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		// margin-left: 15px;
 	}
 }
 

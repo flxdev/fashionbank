@@ -88,21 +88,20 @@ function initBurger() {
 	$('.js-burger').on('click', function() {
 		$('.js-burger-menu').removeClass('hidden');
 		$('body').addClass('overflow-hidden');
-		//не работает анимация
-		$('#burger_menu').animate({
-			left: '+= 200px'
-		}, 'slow', 'linear');
+		setTimeout( function() { $('#burger_menu').toggleClass('burger-animate') } , 1)
 	});
 
 	$('.js-burger-close').on('click', function() {
-		$('.js-burger-menu').addClass('hidden');
+		setTimeout( function() { $('.js-burger-menu').addClass('hidden'); } , 500)
 		$('body').removeClass('overflow-hidden');
+		$('#burger_menu').toggleClass('burger-animate')
 	});
 
 	$('.js-burger-menu').on('click', function(e) {
 		if (!$(e.target).closest("#burger_menu").length) {
-			$('.js-burger-menu').addClass('hidden');
+			setTimeout( function() { $('.js-burger-menu').addClass('hidden'); } , 500)
 			$('body').removeClass('overflow-hidden');
+			$('#burger_menu').toggleClass('burger-animate')
 		}
 	});
 }
@@ -146,7 +145,7 @@ function initMenu() {
 	$('.js-menu-category').on( 'mouseover', function(e){
 		if ($(e.target).data('index') == undefined ) e.preventDefault();
 		else {
-			$('.js-menu-category-content').find("[data-index='" + $(e.target).data('index') + "']").fadeIn(250).siblings().fadeOut(250);
+			$('.js-menu-category-content').find("[data-index='" + $(e.target).data('index') + "']").fadeIn(500).siblings().fadeOut(500);
 		}
 	});
 	$('.js-menu-category').on( 'mouseout', function(e){
