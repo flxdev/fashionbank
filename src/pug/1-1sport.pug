@@ -1,0 +1,95 @@
+//- hover на карточки.
+//- стелочки.
+//- выбор в дропдауне.
+//- выбор в меню.
+
+
+extends _layout
+
+block title
+	title Title of template
+
+block content
+	div.wrapp_page
+		include includes/_card-h-2
+		include includes/_header
+		nav
+			div.max-width-1300
+				ul.breadcrumbs
+					li 
+						a(href='#') Главная 
+					li 
+						a(href='#') Спорт
+					li 
+						a(href='#') Статьи
+
+		section(title='filters')
+			div.max-width-1300
+				div.filters-wrapp
+					h2 Всё о спорте
+					ul.filters-li
+						li Обзор
+						li.active Статьи
+						li Компании
+						li Специалисты
+						li Магазины
+					div.dropdown
+						p Сначала 
+							span новые
+						ul.dropdown-list
+							li Новые
+							li Популярные
+							li Обсуждаемые
+							
+
+		section(title='cards-block-sport-1')
+			div.max-width-1300
+				div.wrapp_cards-block-1.cards-block-sport.cards-block-sport-articles.odd-last-child
+
+					div.block-title
+						ul.tags
+							li.active # Все 
+								span 248
+							li # Все 
+								span 248
+							li # Все 
+								span 248
+							li # Все 
+								span 248
+							li # Все 
+								span 248
+							li # Все 
+								span 248
+							li # Все 
+								span 248
+							li # Все 
+								span 248
+							li # Все 
+								span 248
+							li # Все 
+								span 248
+							li # Все 
+								span 248
+							
+					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+					+card-vertical('card card-vertical text-center card-full_bg text-white','img/4.jpg', 2, true, false)
+					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+					+card-vertical('card card-vertical text-center card-full_bg text-white','img/4.jpg', 2, true, false)
+					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+					+card-vertical('card card-vertical text-center card-full_bg text-white','img/4.jpg', 2, true, false)
+					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+					+card-vertical('card card-vertical text-center card-full_bg text-white','img/4.jpg', 2, true, false)
+					div.load_more
+						a(href='#') + 
+							span Показать ещё
+		
+		include includes/elements/_go_top
+		include includes/_footer

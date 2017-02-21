@@ -1,5 +1,5 @@
 @media (max-width: 1330px) {
-	.wrapp_first-screen, .wrapp_slider, .wrapp_cards-block-1{
+	.wrapp_first-screen, .wrapp_slider, .wrapp_cards-block-1, .filters-wrapp, .breadcrumbs{
 		margin: 0;
 		padding-left: 10px;
 		padding-right: 10px; 
@@ -149,11 +149,38 @@
 			}
 		}
 	}
+	//1-0page
+	
+	.even-last-child .card:last-child, .even-last-child .card:nth-last-child(2) {
+		display: flex;
+	}
+	.odd-last-child .card:last-child, .odd-last-child .card:nth-last-child(3) {
+		display: none;
+	}
+
+	//1-0page
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
 	.wrapp_cards a.card:last-of-type {
 		display: none;
+	}
+	.odd-last-child .card:last-child, .odd-last-child .card:nth-last-child(3),.odd-last-child .card:nth-last-child(2) {
+		display: block;
+	}
+	.even-last-child .card:last-child, .even-last-child .card:nth-last-child(2) {
+		display: none;
+	}
+	.cards-block-sport {
+		.card-horizontal {
+			flex-basis: 40%;
+			.wrapp-img {
+				flex-basis: 35%;
+			}
+			.wrapp-content {
+				flex-basis: 65%;	
+			}
+		}
 	}
 }
 @media (max-width: 860px) {
@@ -411,6 +438,31 @@
 			}
 		}
 	}
+
+	//1-0page
+	.cards-block-sport { 
+		.card {
+			flex-basis: 100%;
+		}
+		.card-horizontal {
+			max-height: 200px;
+			height: 200px;
+			.wrapp-img {
+				flex-basis: 30%;
+			}
+			.wrapp-content {
+				flex-basis: 70%;
+			}
+		}
+		.card-horizontal-full_bg {
+			.wrapp-content {
+				flex-basis: 100%;
+			}
+		}
+		
+	}
+	
+	//1-0page
 	
 }
 
@@ -461,10 +513,55 @@
 		}
 	}
 
+	//1-0page
+	.cards-block-sport { 
+		.card {
+			flex-basis: 100%;
+		}
+		.card-horizontal {
+			max-height: none;
+			height: auto;
+			.wrapp-img {
+				flex-basis: 45%;
+			}
+			.wrapp-content {
+				flex-basis: 50%;
+			}
+		}
+		.card-horizontal-full_bg {
+			.wrapp-content {
+				flex-basis: 100%;
+			}
+		}
+		
+	}
+	
+	//1-0page
+
 }
 
 @media (max-width: 325px) {
 	.wrapp_footer .footer-menu .email .email-input {
 		max-width: 290px;
 	}
+	//1-0page
+	.cards-block-sport { 
+		padding-left: 0;
+		padding-right: 0; 
+		.card {
+			flex-basis: 100%;
+		}
+		.card-horizontal {
+			
+		}
+		.card-horizontal-full_bg {
+			.wrapp-content {
+				max-height: none;
+			}
+		}
+		
+	}
+	
+	//1-0page
 }
+    
