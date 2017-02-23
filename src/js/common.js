@@ -121,23 +121,18 @@ function initPopup() {
 
 function initMenu() {
 	$('.js-menu-category').on( 'mouseover', function(e){
+		var fade = 0;
+		if (!globalFlags.menuFirstOpen) { fade = 500; globalFlags.menuFirstOpen = true;}
+		else fade = 0;
 		if ($(e.target).data('index') == undefined ) e.preventDefault();
 		else {
-			$('.js-menu-category-content').find("[data-index='" + $(e.target).data('index') + "']").fadeIn(500).siblings().fadeOut(500);
+			$('.js-menu-category-content').find("[data-index='" + $(e.target).data('index') + "']").fadeIn(fade).siblings().fadeOut(0);
 		}
 	});
-	$('.js-menu-category').on( 'mouseout', function(e){
-		if ($(e.target).data('index') == undefined ) e.preventDefault();
-		else {
-			$('.js-menu-category-content-item').fadeOut(0);
-		}
+	$('.js-menu-category').on( 'mouseleave', function(e){
+		$('.js-menu-category-content-item').fadeOut(200);
 	});
-	$('.js-menu-category-content-item').on( 'mouseover', function(e){
-		$(this).fadeIn(0).siblings().fadeOut(0);
-	});
-	$('.js-menu-category-content-item').on( 'mouseout', function(e){
-		$(this).fadeOut(0).siblings().fadeOut(0);
-	});
+	
 	
 }
 
@@ -159,9 +154,20 @@ function resetForm(form) {
 	$(form).find('input').removeClass('input-border-bottom-value');
 }
 
-$( document ).ready(function() {
-	if ($('.js-slider-init').length) initSlider();
+function initGlobalFlags() {
+	globalFlags.menuFirstOpen = false;
+}
 
+
+
+var globalFlags = [];
+initGlobalFlags();
+
+
+$( document ).ready(function() {
+	
+
+	if ($('.js-slider-init').length) initSlider();
 	if ($('.js-slider-init-video').length) initSliderVideo();
 
 	if ($('.js-scroll-content').length) {
@@ -178,12 +184,13 @@ $( document ).ready(function() {
 		swichTabs.call(this);
 	});
 	
-
+	
 	initBurger();
 	initPopup();
 	initForm();
 	initMenu();
 	initSearch();
+
 
 	// добавить стили классу
 	// console.log(document.styleSheets[0].rules[260]);

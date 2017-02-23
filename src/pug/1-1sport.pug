@@ -1,7 +1,3 @@
-//- hover на карточки.
-//- стелочки.
-//- выбор в дропдауне.
-//- выбор в меню.
 
 
 extends _layout
@@ -13,15 +9,14 @@ block content
 	div.wrapp_page
 		include includes/_card-h-2
 		include includes/_header
-		nav
-			div.max-width-1300
-				ul.breadcrumbs
-					li 
-						a(href='#') Главная 
-					li 
-						a(href='#') Спорт
-					li 
-						a(href='#') Статьи
+		nav.max-width-1300
+			ul.breadcrumbs
+				li 
+					a(href='#') Главная 
+				li 
+					a(href='#') Спорт
+				li 
+					a(href='#') Статьи
 
 		section(title='filters')
 			div.max-width-1300
