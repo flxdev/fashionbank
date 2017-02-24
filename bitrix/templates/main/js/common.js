@@ -1,4 +1,5 @@
-function initSlider() {
+function initSliderMain() {
+	console.log('123');
 	$('.js-slider-init').slick({
 		rows: 2,
 		slidesToShow: 3,
@@ -48,7 +49,6 @@ function initSliderVideo() {
 }
 
 function initSliderOne() {
-	console.log('1111');
 	$('.js-slider-init-one-slide').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -171,9 +171,10 @@ function initSetting() {
 }
 
 function initSlider() {
+	if ($('.js-slider-init').length) initSliderMain();
 	if ($('.js-slider-init-one-slide').length) initSliderOne();
 	if ($('.js-slider-init-video').length) initSliderVideo();
-	if ($('.js-slider-init').length) initSlider();
+	
 }
 
 
