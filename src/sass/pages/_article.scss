@@ -121,18 +121,20 @@
 
 .content-wrapp {
 	position: relative;
-	padding-top: 50px;
+	// padding-top: 50px;
 	.block-left {
 		position: absolute;
 		left: 0;
 		max-width: 240px;
 		text-align: center;
+		padding: 70px 0;
 	}
 	.block-center-text {
 		max-width: 630px;
 		margin: 0 auto;
 		width: 100%;
 		text-align: left;
+		padding: 50px 0;
 		.line-bottom {
 			font-family: $font_m;
 			font-size: 2.4rem;
@@ -141,6 +143,18 @@
 		}
 		h2 {
 			font-family: $font_m;
+			padding: 60px 0 20px;
+		}
+		p {
+			padding: 15px 0; 
+			font-size: 2rem;
+		}
+		h3 {
+			letter-spacing: 2px;
+			font-size: 2rem;
+			text-transform: uppercase;
+			font-family: $font_bb;
+			padding: 0 0 15px;
 		}
 	}
 	.block-center-img-100 {
@@ -152,6 +166,15 @@
 			max-width: 630px;
 			margin: 0 auto;
 			width: 100%; 
+			font-size: 1.5rem;
+			color: #000;
+			padding: 20px 0;
+			span {
+				color: $grey;
+			}
+			a {
+				color: #000;
+			}
 		}
 	}
 	.block-center-citation, .block-center-img-50 {
@@ -159,8 +182,62 @@
 		margin: 0 auto;
 		width: 100%; 
 		text-align: center;
+		position: relative;
 		img {
 			width: 100%;
+			padding: 0 10px;
 		}
+		.slider {
+			position: relative;
+			figcaption {
+				font-size: 1.5rem;
+				color: #adadad;
+				padding-top: 20px;
+				letter-spacing: 0.25px;
+			}
+			.slider_arrow {
+				width: 25px;
+				position: absolute;
+				background-color: transparent;
+				top:0;
+				bottom:0;
+				z-index: 100;
+				svg{
+					fill: #fff;
+				}
+			}
+			.slider_arrow-next  {
+				right: 30px;
+			}
+			.slider_arrow-pre  {
+				left: 30px;
+			}
+		}
+		.citation {
+			font-size: 4rem;
+			letter-spacing: 0.25px;
+			font-family: $font_phil;
+			line-height: 1.2;
+			margin: 70px 0;
+			&:after {
+				content: '';
+				width: 120px;
+				height: 4px;
+				background-color: #000;
+				margin: auto;
+				position: absolute;
+				left: 0; bottom: -50px; right: 0;
+			}
+			&:before {
+				content: '';
+				width: 120px;
+				height: 4px;
+				background-color: #000;
+				margin: auto;
+				position: absolute;
+				top: -50px; left: 0; right: 0;
+			}
+		}
+
 	}
 }

@@ -69,6 +69,18 @@ function initSliderVideo() {
 	});
 }
 
+function initSliderOne() {
+	console.log('1111');
+	$('.js-slider-init-one-slide').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: true,
+		prevArrow: "<button type='button' class='slider_arrow slider_arrow-pre'><svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 15 27' enable-background='new 0 0 15 27' xml:space='preserve'><path fill-rule='evenodd' clip-rule='evenodd' d='M13.8,0L15,1.1L2.7,13.6L15,25.7L13.7,27L0,13.7L13.8,0z'/></svg></button>",
+		nextArrow: "<button type='button' class='slider_arrow slider_arrow-next'><svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 15 27' enable-background='new 0 0 15 27' xml:space='preserve'><path fill-rule='evenodd' clip-rule='evenodd' d='M15,13.7L1.3,27L0,25.7l12.3-12.1L0,1.1L1.2,0L15,13.7z'/></svg></button>",
+	});
+}
+
 function swichTabs() {
 	$(this).addClass("active").siblings().removeClass("active");
 	var currTab = $(".js-tabs-content").find("[data-tab-content='" + $(this).data("tab") + "']");
@@ -144,7 +156,7 @@ function initPopup() {
 function initMenu() {
 	$('.js-menu-category').on( 'mouseover', function(e){
 		var fade = 0;
-		if (!globalFlags.menuFirstOpen) { fade = 500; globalFlags.menuFirstOpen = true;}
+		if (!globalSetting.menuFirstOpen) { fade = 500; globalSetting.menuFirstOpen = true;}
 		else fade = 0;
 		if ($(e.target).data('index') == undefined ) e.preventDefault();
 		else {
@@ -176,21 +188,21 @@ function resetForm(form) {
 	$(form).find('input').removeClass('input-border-bottom-value');
 }
 
-function initGlobalFlags() {
-	globalFlags.menuFirstOpen = false;
+function initSetting() {
+	globalSetting.menuFirstOpen = false;
+}
+
+function initSlider() {
+	if ($('.js-slider-init-one-slide').length) initSliderOne();
+	if ($('.js-slider-init-video').length) initSliderVideo();
+	if ($('.js-slider-init').length) initSlider();
 }
 
 
-
-var globalFlags = [];
-initGlobalFlags();
-
+var globalSetting = [];
+initSetting();
 
 $( document ).ready(function() {
-	
-
-	if ($('.js-slider-init').length) initSlider();
-	if ($('.js-slider-init-video').length) initSliderVideo();
 
 	if ($('.js-scroll-content').length) {
 		shadowScroll('.js-scroll-container', '.js-scroll-content', '.js-scroll-opasity');
@@ -206,7 +218,7 @@ $( document ).ready(function() {
 		swichTabs.call(this);
 	});
 	
-	
+	initSlider();
 	initBurger();
 	initPopup();
 	initForm();
