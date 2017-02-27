@@ -54,19 +54,7 @@
 				color: #fff;
 				padding-bottom: 20px;
 			}
-			.email-input {
-				color: #fff;
-				font-family: $font_r;
-				width: 220px;
-				background-image: url(../img/svg/uEA02-email-grey.svg);
-				background-size: 10%;
-				background-position: 95%;
-				background-repeat: no-repeat;
-				transition: all 0.1s ease-out;
-			}
-			.email-input:focus {
-				background-image: url(../img/svg/uEA01-email-blue.svg);
-			}
+			
 		}
 	}
 	.footer-info {
@@ -98,3 +86,4 @@
 		}
 	}
 }
+

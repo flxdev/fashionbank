@@ -116,9 +116,17 @@ header {
 					}
 				}
 			}
+			.wrapp_content {
+				display: inline-block;
+				width: 80%;
+				vertical-align: top;
+			}
+			.wrapp_content.hidden {
+				display: none;
+			}
 			.menu-center {
 				display: inline-block;
-				width: 40%;
+				width: 50%;
 				vertical-align: top;
 				ul {
 					display: inline-block;
@@ -135,7 +143,7 @@ header {
 			}
 			.menu-right {
 				display: inline-block;
-				width: 40%;
+				width: 50%;
 				vertical-align: top;
 				.card-horizontal  { 
 					.wrapp-content  {

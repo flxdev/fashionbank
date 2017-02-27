@@ -19,7 +19,7 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	height: 100%;
-	// transition-property: all;
+	// transition-property: all;.input-type-1
 	// transition-duration: 2s;
 	// transition-delay: 1s;
 	// transition-timing-function: ease;
@@ -187,6 +187,15 @@ a {text-decoration: none;}
 			right: -8px;
 			top: 0px;
 			transform: scaleY(-1);
+		}
+	}
+	.like  {
+		position: absolute;
+		svg {
+			width: 20px;
+			height: 20px;
+			fill: #000;
+			background-color: #fff;
 		}
 	}
 	.label.label-orang {

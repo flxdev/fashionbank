@@ -159,9 +159,20 @@
 	}
 
 	//1-0page
+
+	.content-wrapp {
+		.block-left {
+			position: relative;
+			padding: 100px 0 0;
+   			margin: 0 auto;
+		}
+	}
 }
 
 @media (max-width: 1024px) {
+	.content-wrapp .block-center-text .subscribe {
+		display: none;
+	}
 	.wrapp_cards a.card:last-of-type {
 		display: none;
 	}
