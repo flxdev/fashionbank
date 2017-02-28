@@ -177,3 +177,26 @@
 		}
 	}
 }
+
+.block-filters {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	flex-basis: 100%;
+	margin: 0 15px;
+	.item-filter  {
+		flex-basis: 19%;
+		border-top: 1px solid #000;
+		border-bottom: 1px solid #000;
+		border-right: 1px solid #000;
+		height: 50px;
+		cursor:pointer;
+		&:first-child {
+			border-left: 1px solid #000;
+		}
+	}
+	.item-filter.next {
+		flex-basis: 5%;
+	}
+}
