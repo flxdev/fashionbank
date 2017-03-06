@@ -1,5 +1,4 @@
 
-
 extends _layout
 
 block title
@@ -65,27 +64,87 @@ block content
 							li # Все 
 								span 248
 					div.block-filters
-						div.item-filter 
-							p Районы Минска
-							p Выбрать район
-						div.item-filter-content
+						div.item-filter
+							div.js-item-filter
+								p Район Минска
+								p.fild-filter Выбрать район
+							div.item-filter-content
+								form.type-1
+									div.input-wrapp
+										input(type='checkbox')
+										label Заводской
+									div.input-wrapp
+										input(type='checkbox')
+										label Ленинский
+									div.input-wrapp
+										input(type='checkbox')
+										label Московский
+									div.input-wrapp
+										input(type='checkbox')
+										label Октябрьский
+									div.input-wrapp
+										input(type='checkbox')
+										label Советский
+									button.btn.btn-size-130.btn-black Применить
 
-						div.item-filter 
-							p Дополнительные услуги
-							p Выбрать услугу
-						div.item-filter-content
+						div.item-filter
+							div.js-item-filter
+								p Дополнительные услуги
+								p.fild-filter Выбрать услуги
+							div.item-filter-content
+								form.type-1
+									div.input-wrapp
+										input(type='checkbox')
+										label Заводской
+									div.input-wrapp
+										input(type='checkbox')
+										label Ленинский
+									div.input-wrapp
+										input(type='checkbox')
+										label Московский
+									div.input-wrapp
+										input(type='checkbox')
+										label Октябрьский
+									div.input-wrapp
+										input(type='checkbox')
+										label Советский
+									button.btn.btn-size-130.btn-black Применить
 
-						div.item-filter 
-							p Время работы
-							p С 00.00 до  24.00
-						div.item-filter-content
-						div.item-filter 
-							p Направления
-							p Выбрать направления
+						div.item-filter
+							div.js-item-filter
+								p Время работы
+								p.fild-filter С 00.00 до 24.00
+							div.item-filter-content
+								form.type-2
+									div#slider
+										
+									
+									button.btn.btn-size-130.btn-black Применить
+						div.item-filter
+							div.js-item-filter
+								p Направления
+								p.fild-filter Выбрать направления
+							div.item-filter-content
+								form.type-1
+									div.input-wrapp
+										input(type='checkbox')
+										label Заводской
+									div.input-wrapp
+										input(type='checkbox')
+										label Ленинский
+									div.input-wrapp
+										input(type='checkbox')
+										label Московский
+									div.input-wrapp
+										input(type='checkbox')
+										label Октябрьский
+									div.input-wrapp
+										input(type='checkbox')
+										label Советский
+									button.btn.btn-size-130.btn-black Применить				
 						div.item-filter 
 							p Спортивные игры
-							input
-						
+							input(type='checkbox')
 						div.item-filter.next >
 						div.item-filter-other
 							
@@ -109,5 +168,5 @@ block content
 						a(href='#') + 
 							span Показать ещё
 		
-		include includes/elements/_go_top
+		//- include includes/elements/_go_top
 		include includes/_footer

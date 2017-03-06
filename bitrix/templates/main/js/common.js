@@ -160,7 +160,6 @@ function initSearch() {
 	$('.js-search-open').on('click', function() {
 		$('.js-search').fadeIn(250);
 		$('body').addClass('overflow-hidden');
-		
 	});
 	$('.js-search-close').on('click', function() {
 		$('.js-search').fadeOut(250);
@@ -174,18 +173,57 @@ function resetForm(form) {
 	$(form).find('input').removeClass('input-border-bottom-value');
 }
 
-function initSetting() {
-	globalSetting.menuFirstOpen = false;
-}
-
 function initSlider() {
 	if ($('.js-slider-init').length) initSliderMain();
 	if ($('.js-slider-init-one-slide').length) initSliderOne();
 	if ($('.js-slider-init-video').length) initSliderVideo();
-	
 }
 
+function initFilters() {
+	$('.js-item-filter').on('click', function(e) {
+		$(this).next().fadeToggle(100);
+		// $(this).find('.item-filter-content').fadeToggle(100);
+	});
+}
 
+function initSlidersUi() {
+
+	  $( function() {
+	    $( "#slider" ).slider();
+	  } );
+	// $(".js_ui_slider").each(function () {
+	// 	var slider = $(this).find(".js_ui_slider_main");
+	// 	var sliderSetting = {};
+	// 	sliderSetting.max = $(this).data("max");
+	// 	sliderSetting.min = $(this).data("min");
+	// 	sliderSetting.step = $(this).data("step");
+	// 	sliderSetting.defaultValueTo = $(this).data("default-value-to");
+	// 	sliderSetting.defaultValueFrom = $(this).data("default-value-from");
+	// 	sliderSetting.labelTo = $(this).find(".js_ui_slider_label");
+	// 	sliderSetting.inputHidden = $(this).find(".js_ui_slider_input");
+	// 	sliderSetting.inputHiddenTop = $(this).find(".js_ui_slider_value_top");
+	// 	sliderSetting.inputHiddenBottom = $(this).find(".js_ui_slider_value_bottom");
+	// 	slider.slider({
+	// 		range: true,
+	// 		min: sliderSetting.min,
+	// 		max: sliderSetting.max,
+	// 		step: sliderSetting.step,
+	// 		values: [ sliderSetting.defaultValueTo, sliderSetting.defaultValueFrom ],
+	// 		slide: function( event, ui ) {
+	// 			$(sliderSetting.inputHidden).text( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+	// 			$(sliderSetting.inputHiddenTop).val(ui.values[ 1 ]);
+	// 			$(sliderSetting.inputHiddenBottom).val(ui.values[ 0 ]);
+	// 		}
+	// 	});
+	// 	$(sliderSetting.inputHidden).text( sliderSetting.defaultValueTo + " - " + sliderSetting.defaultValueFrom );
+	// 	$(sliderSetting.inputHiddenTop).val(sliderSetting.defaultValueFrom);
+	// 	$(sliderSetting.inputHiddenBottom).val(sliderSetting.defaultValueTo);
+	// });
+}
+
+function initSetting() {
+	globalSetting.menuFirstOpen = false;
+}
 var globalSetting = [];
 initSetting();
 
@@ -211,6 +249,8 @@ $( document ).ready(function() {
 	initForm();
 	initMenu();
 	initSearch();
+	initFilters();
+	initSlidersUi();
 
 
 	// добавить стили классу
