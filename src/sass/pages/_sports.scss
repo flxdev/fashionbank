@@ -370,7 +370,13 @@
 		}
 	}
 }
-
+.other-content {
+	.company-content-wrapp  {
+		.content-block {
+			padding: 25px 0;
+		}
+	}
+}
 .company-content-wrapp {
 	width: 850px;
 	.menu {
@@ -432,6 +438,8 @@
 				justify-content: flex-start;
 				align-items: flex-start;
 				flex-wrap: wrap;
+				padding-bottom: 40px;
+   				border-bottom: 1px solid #dbdbdb;
 				.card {
 					flex-basis: 45%;
 					
@@ -464,7 +472,31 @@
 						font-family: $font_r;
 					}
 				}
-				
+			}
+			.video {
+				.video-img {
+					height: 160px;
+					background-repeat: no-repeat;
+					background-size: cover;
+					background-position: center center;
+					position: relative;
+					.video-play {
+						width: 35px;
+						left: 50%;
+						margin-left: -13px;
+						top: 70px;
+						position: absolute;
+					}
+				}
+				.title {
+					font-family: $font_phil;
+					font-size: 2.4rem;
+					padding-top: 20px;
+					color: #000;
+					&:hover {
+						color: $main_blue;
+					}
+				}
 			}
 			.text {
 				margin-bottom: 30px;
