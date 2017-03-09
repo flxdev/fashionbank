@@ -71,8 +71,8 @@ block content
 							div.item-filter-content
 								form.type-1
 									div.input-wrapp
-										input(type='checkbox')
-										label Заводской
+										input(type='checkbox' id='q')
+										label(for='q') Заводской
 									div.input-wrapp
 										input(type='checkbox')
 										label Ленинский
@@ -148,17 +148,199 @@ block content
 										input(type='checkbox')
 										label Советский
 									button.btn.btn-size-130.btn-black Применить				
-						div.item-filter 
+						div.item-filter.item-filter-input-checkbox
 							p Спортивные игры
 							input(type='checkbox')
-						div.item-filter.next
-						div.item-filter-other
+							label Есть
+						div.item-filter.next.js-item-filter
+						div.item-filter-other.hidden
+							div.row
+								div.item-filter
+									div.js-item-filter
+										p Рейтинг
+										p.fild-filter Выбрать рейтинг
+									div.item-filter-content
+										form.type-1
+											div.input-wrapp
+												input(type='checkbox')
+												label Заводской
+											div.input-wrapp
+												input(type='checkbox')
+												label Ленинский
+											div.input-wrapp
+												input(type='checkbox')
+												label Московский
+											div.input-wrapp
+												input(type='checkbox')
+												label Октябрьский
+											div.input-wrapp
+												input(type='checkbox')
+												label Советский
+											button.btn.btn-size-130.btn-black Применить
+								div.item-filter
+									div.js-item-filter
+										p Аэробика
+										p.fild-filter Выбрать направления
+									div.item-filter-content
+										form.type-1
+											div.input-wrapp
+												input(type='checkbox')
+												label Заводской
+											div.input-wrapp
+												input(type='checkbox')
+												label Ленинский
+											div.input-wrapp
+												input(type='checkbox')
+												label Московский
+											div.input-wrapp
+												input(type='checkbox')
+												label Октябрьский
+											div.input-wrapp
+												input(type='checkbox')
+												label Советский
+											button.btn.btn-size-130.btn-black Применить
+								div.item-filter
+									div.js-item-filter
+										p Банный комплекс
+										p.fild-filter Выбрать комплекс
+									div.item-filter-content
+										form.type-1
+											div.input-wrapp
+												input(type='checkbox')
+												label Заводской
+											div.input-wrapp
+												input(type='checkbox')
+												label Ленинский
+											div.input-wrapp
+												input(type='checkbox')
+												label Московский
+											div.input-wrapp
+												input(type='checkbox')
+												label Октябрьский
+											div.input-wrapp
+												input(type='checkbox')
+												label Советский
+											button.btn.btn-size-130.btn-black Применить
+								div.item-filter
+									div.js-item-filter
+										p Прочие услуги
+										p.fild-filter Выбрать
+									div.item-filter-content
+										form.type-1
+											div.input-wrapp
+												input(type='checkbox')
+												label Заводской
+											div.input-wrapp
+												input(type='checkbox')
+												label Ленинский
+											div.input-wrapp
+												input(type='checkbox')
+												label Московский
+											div.input-wrapp
+												input(type='checkbox')
+												label Октябрьский
+											div.input-wrapp
+												input(type='checkbox')
+												label Советский
+											button.btn.btn-size-130.btn-black Применить
+							div.row
+								div.item-filter
+									div.js-item-filter
+										p Групповые программы
+										p.fild-filter Выбрать программу
+									div.item-filter-content
+										form.type-1
+											div.input-wrapp
+												input(type='checkbox')
+												label Заводской
+											div.input-wrapp
+												input(type='checkbox')
+												label Ленинский
+											div.input-wrapp
+												input(type='checkbox')
+												label Московский
+											div.input-wrapp
+												input(type='checkbox')
+												label Октябрьский
+											div.input-wrapp
+												input(type='checkbox')
+												label Советский
+											button.btn.btn-size-130.btn-black Применить
+								div.item-filter
+									div.js-item-filter
+										p Боевые искусства
+										p.fild-filter Выбрать боевые искусства
+									div.item-filter-content
+										form.type-1
+											div.input-wrapp
+												input(type='checkbox')
+												label Заводской
+											div.input-wrapp
+												input(type='checkbox')
+												label Ленинский
+											div.input-wrapp
+												input(type='checkbox')
+												label Московский
+											div.input-wrapp
+												input(type='checkbox')
+												label Октябрьский
+											div.input-wrapp
+												input(type='checkbox')
+												label Советский
+											button.btn.btn-size-130.btn-black Применить
+								div.item-filter
+									div.js-item-filter
+										p Танцевальные направления
+										p.fild-filter Выбрать направления
+									div.item-filter-content
+										form.type-1
+											div.input-wrapp
+												input(type='checkbox')
+												label Заводской
+											div.input-wrapp
+												input(type='checkbox')
+												label Ленинский
+											div.input-wrapp
+												input(type='checkbox')
+												label Московский
+											div.input-wrapp
+												input(type='checkbox')
+												label Октябрьский
+											div.input-wrapp
+												input(type='checkbox')
+												label Советский
+											button.btn.btn-size-130.btn-black Применить
+								div.item-filter
+									div.js-item-filter
+										p Направления
+										p.fild-filter Выбрать направления
+									div.item-filter-content
+										form.type-1
+											div.input-wrapp
+												input(type='checkbox')
+												label Заводской
+											div.input-wrapp
+												input(type='checkbox')
+												label Ленинский
+											div.input-wrapp
+												input(type='checkbox')
+												label Московский
+											div.input-wrapp
+												input(type='checkbox')
+												label Октябрьский
+											div.input-wrapp
+												input(type='checkbox')
+												label Советский
+											button.btn.btn-size-130.btn-black Применить
+
 													
 
 					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
 					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
 					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
-					+card-vertical('card card-vertical text-center card-full_bg text-white','img/4.jpg', 2, true, false)
+					a(href="#").card.card-vertical.banner
+						img(src = 'img/banner-sport.png' alt ='')
+					//- +card-vertical('card card-vertical text-center card-full_bg text-white','', 2, true, false)
 					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
 					+card-vertical('card card-vertical text-center card-full_bg text-white','img/4.jpg', 2, true, false)
 					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)

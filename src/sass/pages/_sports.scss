@@ -177,7 +177,7 @@
 		}
 	}
 }
-
+ 
 .block-filters {
 	display: flex;
 	flex-direction: row;
@@ -186,17 +186,61 @@
 	flex-basis: 100%;
 	margin: 0 15px;
 	position: relative;
+	padding-bottom: 30px;
+	input[type='checkbox'] {
+		display: none;
+	}
+	input[type='checkbox'] + label {
+		padding-left: 40px;
+		cursor: pointer;
+	}
+	input[type='checkbox'] + label:hover {
+		color: $main_blue;
+	}
+
+	input[type='checkbox'] + label:after {
+		content:'';
+		background-color: rgba(0,0,0,0);
+		color: #757e1f;
+	    font-family: pf_medium;
+	    margin-right: 5%;
+	    font-size: 0rem;
+	    border: 1px solid #c6c6c6;
+		padding: 7px;
+		border-radius: 1px;
+		background-image: none;
+		background-size: 85%;
+	    background-position: center center;
+	    background-repeat: no-repeat;
+	    display: block;
+	    position: absolute;
+	  	top: 0;
+	  	margin-top: 8px;
+	    // width: 10px;
+	    // height: 10px;
+	}
+
+	input[type=checkbox]:checked + label:after {
+		border-color: $main_blue;
+		background-image: url('../img/svg/uEA01-check-symbol.svg');
+	}
+
 	.item-filter  {
 		flex-basis: 19%;
-		border-top: 1px solid grey;
-		border-bottom: 1px solid grey;
-		border-right: 1px solid grey;
+		border-top: 1px solid #c2c2c2;
+		border-bottom: 1px solid #c2c2c2;
+		border-right: 1px solid #c2c2c2;
 		min-height: 60px;
 		cursor:pointer;
 		padding: 5px 20px;
 		position: relative;
+		input[type=checkbox] + label {
+			font-size: 1.5rem;
+			margin-top: 30px;
+		}
 		p {
 			font-size: 1.3rem;
+			color: #7f7f7f;
 		}
 		.fild-filter {
 			width: 100%;
@@ -208,7 +252,7 @@
 			cursor: pointer;
 		}
 		&:first-child {
-			border-left: 1px solid grey;
+			border-left: 1px solid #c2c2c2;
 		}
 		.item-filter-content {
 			width: 100%;
@@ -236,9 +280,10 @@
 			.type-1 {
 				.input-wrapp {
 					padding: 5px 0;
+					position: relative;
 					label {
 						font-size: 1.5rem;
-						padding-left:10px;
+						// padding-left:10px;
 					}
 				}
 				.btn {
@@ -262,6 +307,16 @@
 			}
 		}
 	}
+	.item-filter-input-checkbox {
+		cursor: default;
+		    
+		input[type=checkbox]+label {
+			margin-left: -15px;
+		}
+		input[type=checkbox]+label:after {
+			margin-top: 30px;
+		}
+	}
 	.item-filter.next {
 		flex-basis: 5%;
 	}
@@ -274,6 +329,19 @@
 		top: 60px;
 		border: 2px solid #000;
 		background-color: #fff;
+		padding: 30px 0px;
+		.row {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+			padding: 15px 0;
+			.item-filter {
+				border: none;
+				border-bottom: 1px solid #cccccc;
+				padding-left: 0;
+			}
+		}
 	}
 }
 
@@ -285,6 +353,198 @@
 		padding-bottom: 132px;
 	}
 }
+.bg-black {
+	background-color: #000;
+	.company-content-wrapp {
+		.content-block {
+			.content-left { 
+				h3 {
+					color: #fff;
+				}
+				ul {
+					li.active {
+						color:#fff;
+					}
+				}
+			}
+		}
+	}
+}
+
 .company-content-wrapp {
 	width: 850px;
+	.menu {
+		padding: 50px 0;
+		li {
+			display: inline-block;
+			font-size: 1.5rem;
+			text-transform: uppercase;
+			color: #828282;
+			font-family: $font_m;
+			padding: 0 15px;
+			&:first-child {
+				padding-left: 0;
+			}
+		}
+		li.active {
+			color:#000;
+		}
+	}
+	.border-top {
+		border-top: 4px solid #000;
+	}
+	.content-block {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+		padding: 50px 0;
+		.content-left {
+			flex-basis: 25%;
+			.logo {
+				width: 100%;
+				padding-right: 70px;
+			}
+			h3 {
+				font-size: 1.8rem;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				font-family: $font_bb;
+				color: #000;
+			}
+			ul {
+				margin-top: 35px;
+				li {
+					padding-bottom: 10px;
+					color: #989898;
+					cursor: pointer;
+				}
+				li.active {
+					color: #000;
+				}
+			}
+		}
+		.content-right {
+			flex-basis: 75%;
+			.card-wrapp {
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-start;
+				align-items: flex-start;
+				flex-wrap: wrap;
+				.card {
+					flex-basis: 45%;
+					
+					.card-category {
+						padding: 0 0 10px 10px; 
+					}
+					.card-title {
+						font-size: 2rem;
+						padding: 0 10px 10px 10px; 
+					}
+					.card-description {
+						padding-left: 10px; 
+					}
+					.card-date_like {
+						padding-left: 5px;
+					}
+				}
+			}
+			.trainers {
+				.card {
+					.wrapp-img {
+						border-radius: 50%;
+					}
+				}
+			}
+			.articles {
+				.card {
+					.card-title {
+						font-size: 1.5rem;
+						font-family: $font_r;
+					}
+				}
+				
+			}
+			.text {
+				margin-bottom: 30px;
+				max-height: 120px;
+				overflow: hidden;
+			}
+			.link {
+				 text-transform: uppercase;
+				 color: $main_blue;
+				 font-size: 1.4rem;
+				 font-family: $font_b;
+				 letter-spacing: 2px;
+				 cursor: pointer;
+			}
+			.gallery_foto {
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-start;
+				align-items: flex-start;
+				flex-wrap: wrap;
+				.wrapp-img {
+					flex-basis: 30%;
+					min-height: 130px;
+					background-repeat: no-repeat;
+					background-size: cover;
+					background-position: center center;
+					margin: 10px;
+					img {
+						width: 100%;
+					}
+					p {
+						font-size: 1.5rem;
+						text-transform: uppercase;
+						color: #fff;
+					}
+				}
+			}
+			.price-list {
+
+			}
+			.services {
+				li {
+					display: flex;
+					flex-direction: row;
+					justify-content: flex-start;
+					align-items: center;
+					padding: 25px 0;
+					border-bottom: 1px dotted #cfcfcf; 
+					cursor: pointer;
+					img {
+						width: 40px;
+						margin-right: 30px;
+					}
+					p {
+						font-size: 1.5rem;
+						text-transform: uppercase;
+					}
+					&:first-child {
+						padding-top: 0;
+					}
+				}
+			}
+			.price-list {
+				margin-bottom: 40px;
+				max-height: 320px;
+				overflow: hidden;
+				li {
+					padding: 20px 0;
+					border-bottom: 1px solid #ebebeb;
+					cursor: pointer;
+					&:first-child {
+						padding-top: 0;
+						text-transform: uppercase;
+						font-family: $font_m;
+					}
+					span {
+						float: right;
+					}
+				}
+			}
+		}
+	}
 }

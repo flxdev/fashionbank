@@ -34,23 +34,23 @@ block content
 				div.company-content-wrapp
 					div.menu
 						ul
-							li О нас
+							li.active О нас
 							li Услуги
 							li Цены
 							li Фотогалерея
 							li Отзывы
 							li Еще 
-					div.content-block
+					div.content-block.border-top
 						div.content-left
 							img.logo(src='img/1-8-logo.png' alt='')
 						div.content-right
-							p Любите спорт, ведете здоровый образ жизни и давно мечтаете о занятиях фитнесом с грамотными тренерами, но не можете определиться с выбором? Мы с удовольствием приглашаем вас в новый фитнес-клуб Moby Dick, оснащенный профессиональным силовым и кардиооборудованием, идеально подходящим как для новичков, так и для профессионалов. Здесь знают все о правильных тренировках, предлагая действенные способы укрепления здоровья и раскрывая секреты прекрасной физической формы.
+							p.text Любите спорт, ведете здоровый образ жизни и давно мечтаете о занятиях фитнесом с грамотными тренерами, но не можете определиться с выбором? Мы с удовольствием приглашаем вас в новый фитнес-клуб Moby Dick, оснащенный профессиональным силовым и кардиооборудованием, идеально подходящим как для новичков, так и для профессионалов. Здесь знают все о правильных тренировках, предлагая действенные способы укрепления здоровья и раскрывая секреты прекрасной физической формы.
 							p.link + Все описание
 					div.content-block
 						div.content-left
 							h3 Услуги
 						div.content-right
-							ul
+							ul.services
 								li 
 									img(src='img/1-8-icon1.png' alt='')
 									p Тренажерный зал
@@ -75,7 +75,7 @@ block content
 								li Тренажерный зал
 								li Бойцовский клуб
 						div.content-right
-							ul
+							ul.price-list
 								li Тренаженрый зал (полный день)
 								li Абонемент на 1 месяц / 4 занятия. 
 									span 30,00 руб.
@@ -90,21 +90,47 @@ block content
 								li Абонемент на 1 месяц / 4 занятия. 
 									span 30,00 руб.
 							p.link + Все цены
-										
-					div.content-block
-						div.content-left
-						div.content-right
-			div.full-width
-				div.company-content-wrapp
-					div.content-block
-						div.content-left
-							h3 Прайслист
-							ul 
-								li.active Все цены
-								li Тренажерный зал
-								li Бойцовский клуб
-						div.content-right
-						
+
+
+			div.full-width.bg-black
+				div.max-width-1300
+					div.company-content-wrapp
+						div.content-block
+							div.content-left
+								h3.title_black Фотогалерея
+								ul 
+									li.active Все фотографии
+									li Тренажерный зал
+									li Бойцовский клуб
+							div.content-right
+								div.gallery_foto
+									div.wrapp-img(style='background-image:url("img/4.jpg")')
+									div.wrapp-img(style='background-image:url("img/4.jpg")')
+									div.wrapp-img(style='background-image:url("img/4.jpg")')
+									div.wrapp-img(style='background-image:url("img/4.jpg")')
+									div.wrapp-img(style='background-image:url("img/4.jpg")')
+									div.wrapp-img
+										p + Ещё (15 фото)
+
+			section
+				div.max-width-1300
+					div.company-content-wrapp
+						div.content-block
+							div.content-left
+								h3 Тренеры
+							div.content-right
+								div.card-wrapp.trainers
+									+card-horizont('card card-horizontal text-black','img/9.jpg','Евгения Кобик','Bodyflex, TRX, силовая аэробика','Зож',false,false)
+									+card-horizont('card card-horizontal text-black','img/12.jpg','Иван Шарпилов','Фитнес','Мода и стиль',false,false)
+						div.content-block
+							div.content-left
+								h3 Статьи
+							div.content-right
+								div.card-wrapp.articles
+									+card-horizont('card card-horizontal text-black','img/6.jpg','Личный опыт: работа моделью в Китае','','',true,false)
+									+card-horizont('card card-horizontal text-black','img/7.jpg','Кастинг моделей: как себя вести','','',true,false)
+									+card-horizont('card card-horizontal text-black','img/7.jpg','Кастинг моделей: как себя вести. Истории из мира моды','','',true,false)
+
 		//- include includes/elements/_go_top
 		include includes/_footer
 	

@@ -428,7 +428,11 @@ a {text-decoration: none;}
 	}
 	
 }
-
+.banner {
+	img {
+		width: 100%;
+	}
+}
 .wrapp_sidebar {
 	flex-basis: 25%;
 	display: flex;
@@ -856,6 +860,7 @@ a {text-decoration: none;}
 		padding: 10px 25px;
 		right: -1px;
     	top: 56px;
+    	z-index: 50;
 		li {
 			padding: 7px 0;
 		}
