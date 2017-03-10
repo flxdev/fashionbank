@@ -14,6 +14,12 @@
 	.go_top {
 		display: none;
 	}
+	.company-content-wrapp {
+		padding-left: 20px;
+	}
+	.company-contact  {
+		right: 5%;
+	}
 }
 
 @media (max-width: 1150px) {
@@ -167,6 +173,54 @@
    			margin: 0 auto;
 		}
 	}
+
+	//1-8 page 
+	.article-wrapp .article-wrapp-bg {
+		height: 643px;
+	}
+	.company-content-wrapp {
+		width: 640px;
+		.menu {
+			padding: 40px 0;
+		}
+		.content-block {
+			flex-wrap: wrap;
+			.content-left {
+				flex-basis: 100%;
+				margin-bottom: 30px;
+				h3 {
+					display: inline-block;
+				}
+				ul {
+					display: inline-block;
+					margin-left: 30px;
+					margin-top: 0;
+					li {
+						display: inline-block;
+						padding-right: 30px;
+						&:last-child {
+							padding-right: 0;
+						}
+					}
+				}
+				.logo {
+					padding-right: 20px;
+				}
+			}
+			.content-right {
+				flex-basis: 100%;
+			}
+		}
+		.content-block.first-block {
+			flex-wrap: nowrap;
+			.content-left {
+				flex-basis: 25%;
+			}
+		}
+	}
+	.company-contact {
+		right: 1%;
+	}
 }
 
 @media (max-width: 1024px) {
@@ -192,6 +246,15 @@
 				flex-basis: 65%;	
 			}
 		}
+	}
+	.company-contact {
+		position: relative !important;
+		top: 0 !important;
+		right: 0 !important;
+		margin: 30px auto 0;
+	}
+	.company-content-wrapp {
+    	width: 98%;
 	}
 }
 @media (max-width: 860px) {
@@ -474,6 +537,53 @@
 	}
 	
 	//1-0page
+
+	//1-8page
+	.article-wrapp {
+		.article-wrapp-bg {
+			height: 580px;
+		}
+		.article-wrapp-info {
+			.panel_dop {
+				flex-direction: column-reverse;
+				align-items: center;
+				.share {
+					display: none;
+				}
+				.add_favorites {
+					margin-top: 15px;
+				}
+			}
+		}
+	}
+	.company-content-wrapp  {
+		.content-block {
+			padding: 30px 0;
+			.content-left {
+				ul {
+					display: none;
+				}
+			}
+		}
+		.content-block.first-block {
+			flex-wrap: wrap;
+			.content-left {
+				flex-basis: 100%;
+				h3 {
+					display: inline-block;
+				}
+				img {
+					display: none;
+				}
+				
+			}
+			.content-right {
+				flex-basis: 100%;
+			}
+		}
+	}
+
+	//1-8page
 	
 }
 

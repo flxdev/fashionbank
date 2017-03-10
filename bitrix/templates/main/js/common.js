@@ -1,3 +1,27 @@
+function initYandexMap(){   
+	var mapSetting = {};
+	mapSetting.centerX = $("#map").data("center-x");
+	mapSetting.centerY = $("#map").data("center-y");
+	mapSetting.zoom = $("#map").data("zoom");
+	mapSetting.markerX = $("#map").data("marker-x");
+	mapSetting.markerY = $("#map").data("marker-y");
+	var myMap;
+	myMap = new ymaps.Map("map", {
+		center: [mapSetting.centerX,mapSetting.centerY],
+		zoom: mapSetting.zoom
+	});
+	myMap.controls.add('zoomControl', { top: 10, left: 5 });
+
+	myPlacemark0 = new ymaps.Placemark([mapSetting.markerX,mapSetting.markerY], {
+		balloonContent: "" 
+		}, {
+		iconImageHref: "img/map-marker.png", 
+		iconImageSize: [27, 35], 
+		iconImageOffset: [0, 0]
+	}); 
+	myMap.geoObjects.add(myPlacemark0);
+}
+
 function initSliderMain() {
 	$('.js-slider-init').slick({
 		rows: 2,
@@ -220,6 +244,30 @@ function initSlidersUi() {
 	});
 }
 
+function initSticky() {
+	$(window).scroll(function () {
+		var offsetS = $('#sticky').offset().top;
+		var scrollTop = $(this).scrollTop(),
+		    h = $(this).height(),
+		    offset = $('footer').offset().top;
+		    footer_h = $('footer').height();
+		// console.log(offset - scrollTop + 30);
+		console.log(offset)
+
+		if (offset - scrollTop + 30 <= h) {
+			$('#sticky').css({'position' : 'absolute', 'top': offset - footer_h - 200});
+		}
+		if (offset - scrollTop + 30 > h) {
+			if ($(this).scrollTop() >= 700) {
+				$('#sticky').css({'position' : 'fixed','top':'30px'});
+			}
+			else if ($(this).scrollTop() < 700) {
+				$('#sticky').css({'position' : 'absolute','top':'750px'});
+			}
+		}
+	})
+}
+
 function initSetting() {
 	globalSetting.menuFirstOpen = false;
 }
@@ -250,6 +298,8 @@ $( document ).ready(function() {
 	initSearch();
 	initFilters();
 	initSlidersUi();
+	if ($("#map").length > 0) ymaps.ready(initYandexMap);
+	if ($("#sticky").length > 0 ) initSticky();
 
 
 	// добавить стили классу
