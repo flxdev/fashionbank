@@ -390,16 +390,50 @@
 			text-transform: uppercase;
 			font-family: $font_m;
 			padding: 0 15px;
-			a {
-				color: #828282; 
-			}
+			color: #828282;
+			cursor: pointer;
+			transition: all 0.3s ease-out;
 			&:first-child {
 				padding-left: 0;
 			}
+			
+			svg.down {
+				width: 15px;
+				height: 15px;
+				transform: rotate(180deg);
+				fill: #7f7f7f;
+				margin-left: 5px;
+			   	position: relative;
+				top: 2px;
+				transition: all 0.3s ease-out;
+			}
+			svg.up {
+				transform: rotate(0deg);
+			}
+		}
+		li:hover {
+			color: $main_blue;
+			svg {
+				fill: $main_blue;
+			}
 		}
 		li.active {
-			a {
-				color:#000;
+			color:#000;
+		}
+		.dop_menu {
+			position: absolute;
+			border: 2px solid #000;
+			padding: 20px;
+			background-color: #fff;
+			display: none;
+			margin-top: 10px;
+			z-index: 100;
+			li {
+				display: block;
+				padding: 5px 0;
+				text-transform: none;
+				font-family: $font_r;
+				color: #000;
 			}
 		}
 	}
@@ -510,6 +544,9 @@
 				}
 			}
 			.video {
+				.card {
+					cursor: pointer;
+				}
 				.video-img {
 					height: 160px;
 					background-repeat: no-repeat;
@@ -664,6 +701,7 @@
 						position: absolute;
    						right: 0;
    						fill: #7f7f7f;
+   						transition: all 0.3s ease-out;
 					}
 					svg.up {
 						transform: rotate(0deg);
@@ -687,11 +725,13 @@
     					text-align: right;
 					}
 					&:first-child {
-						padding-top: 0;
-						text-transform: uppercase;
-						font-family: $font_m;
+						padding-top: 0 !important;
 					}
-					
+				}
+				li.title {
+					padding-top: 50px;
+					text-transform: uppercase;
+					font-family: $font_m;
 				}
 			}
 			.fills {
@@ -790,7 +830,6 @@
 }
 
 
-
 .gallery-wrapp {
 	position: fixed;
 	width: 100%;
@@ -830,6 +869,7 @@
    					fill: #fff;
    				}
 			}
+			
 			.left-content {
 				height: 50rem;
 				width: 30%;
@@ -849,18 +889,26 @@
 					width: 50%;
 					text-align: center;
 					padding: 15px;
-					div {
+					.img-content {
+						border: 2px solid #000;
 						background-color: #000;
 						img {
 							height: 90px;
 							cursor: pointer;
 						}
 					}
-					.img-content {
-						border: 2px solid #000;
-					}
 					.active {
 						border: 2px solid #fff;
+					}
+				}
+			}
+			.left-youtube-gallery {
+				.wrapp-img {
+					.img-content {
+						img {
+							height: auto;
+							width: 100%;
+						}
 					}
 				}
 			}
@@ -894,8 +942,15 @@
 					}
 				}
 			}
-
+			.right-youtube-gallery {
+				.wrapp-img {
+					div {
+						height: 50rem;
+   						margin: 0 auto;	
+					}
+				}
+			}
 		}
 	}
-	
 }
+

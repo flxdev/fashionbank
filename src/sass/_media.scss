@@ -27,6 +27,15 @@
 	.company-content-wrapp .content-block .content-right .card-wrapp .card {
 		flex-basis: 44%;
 	}
+	.specialist-page-first-screen .article-wrapp-info .wrapp-info .foto {
+		left: 15px;
+	}
+	.article-wrapp .article-wrapp-info .panel_dop .add_favorites {
+		padding-left: 20px;
+	}
+	.specialist-page-first-screen .article-wrapp-info .breadcrumbs {
+		padding-left: 20px;
+	}
 }
 @media (max-width: 1150px) { 
  //page 1-8
@@ -236,6 +245,10 @@
 	}
 	.company-contact {
 		right: 1%;
+	}
+	
+	.specialist-page-first-screen .article-wrapp-info .breadcrumbs {
+		padding-bottom: 70px;
 	}
 }
 
@@ -612,6 +625,18 @@
 		flex-basis: 70%;
 	}
 	//1-8page
+
+	.specialist-page-first-screen .article-wrapp-info .wrapp-info .foto {
+		display: none;
+	}
+	.specialist-page-first-screen .article-wrapp-info .wrapp-info {
+		text-align: center;
+		padding: 0 20px 132px 20px;
+	}
+	.specialist-page-first-screen .article-wrapp-info .breadcrumbs {
+		padding-bottom: 30px;
+		text-align: center;
+	}
 	
 }
 
@@ -712,6 +737,10 @@
 		flex-basis: 43%;
 	}
 	//1-8page end 
+
+	.article-wrapp .article-wrapp-info h1 {
+		font-size: 4.5rem;
+	}
 
 }
 

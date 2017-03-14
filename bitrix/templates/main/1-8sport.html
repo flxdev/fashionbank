@@ -7,7 +7,6 @@
     <meta content="IE=9" http-equiv="X-UA-Compatible">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" media="all" href="css/screen.css">
-    <script src="js/app.js"></script>
   </head>
   <body>
     <!--BEGIN out-->
@@ -1606,14 +1605,24 @@
         <section>
           <div class="max-width-1300">
             <div class="company-content-wrapp">
-              <div class="menu">
-                <ul>
-                  <li class="active"> <a href="#">О нас</a></li>
-                  <li> <a href="#">Услуги</a></li>
-                  <li> <a href="#">Цены</a></li>
-                  <li> <a href="#">Фотогалерея</a></li>
-                  <li> <a href="#">Отзывы</a></li>
-                  <li> <a href="#">Еще</a></li>
+              <div class="menu js-menu-dropdown">
+                <ul class="main_menu">
+                  <li class="active">О нас</li>
+                  <li>Услуги</li>
+                  <li>Цены</li>
+                  <li>Фотогалерея</li>
+                  <li>Отзывы</li>
+                  <li class="js-menu-dropdown-open">Еще
+                    <svg class="down">
+                      <use xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                    </svg>
+                  </li>
+                </ul>
+                <ul class="dop_menu js-menu-dropdown-dop">
+                  <li>Услуги</li>
+                  <li>Цены</li>
+                  <li>Фотогалерея</li>
+                  <li>Отзывы</li>
                 </ul>
               </div>
               <div class="content-block border-top first-block">
@@ -1680,7 +1689,7 @@
                 </div>
                 <div class="content-right js-show-text" data-height="280">
                   <ul class="price-list shadow-text js-show-other-content">
-                    <li>Тренаженрый зал (полный день)</li>
+                    <li class="title">Тренаженрый зал (полный день)</li>
                     <li>Абонемент на 1 месяц / 4 занятия. <span>30,00 руб.</span></li>
                     <li>Абонемент на 1 месяц / 4 занятия. <span>30,00 руб.</span></li>
                     <li>Абонемент на 1 месяц / 4 занятия. <span>30,00 руб.</span></li>
@@ -1790,11 +1799,16 @@
                     <h3>Видео</h3>
                   </div>
                   <div class="content-right">
-                    <div class="card-wrapp video"><a class="card" href="">
-                        <div class="video-img" style="background-image:url(&quot;img/1-8-video-1.jpg&quot;);"><img class="video-play" src="img/video_play.png"></div>
-                        <p class="title">Мова Нанова - Мова Гуркова</p></a><a class="card" href="">
-                        <div class="video-img" style="background-image:url(&quot;img/1-8-video-2.jpg&quot;);"><img class="video-play" src="img/video_play.png"></div>
-                        <p class="title">Мова Нанова - Мова Гуркова</p></a></div>
+                    <div class="card-wrapp video">
+                      <div class="card js-open-youtube" data-gallery="1">
+                        <div class="video-img" style="background-image:url(&quot;//img.youtube.com/vi/JMJXvsCLu6s/maxresdefault.jpg&quot;);"><img class="video-play" src="img/video_play.png"></div>
+                        <p class="title">Мова Нанова - Мова Гуркова</p>
+                      </div>
+                      <div class="card js-open-youtube" data-gallery="2">
+                        <div class="video-img" style="background-image:url(&quot;//img.youtube.com/vi/JMJXvsCLu6s/maxresdefault.jpg&quot;);"><img class="video-play" src="img/video_play.png"></div>
+                        <p class="title">Мова Нанова - Мова Гуркова</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="content-block">
@@ -1852,9 +1866,9 @@
                   </div>
                   <div class="content-right">
                     <div class="sertif">
-                      <div><img src="img/sert1.jpg" alt=""></div>
-                      <div><img src="img/sert2.jpg" alt=""></div>
-                      <div><img src="img/sert3.jpg" alt=""></div>
+                      <div class="js-open-certificate" data-gallery="1"><img src="img/sert1.jpg" alt=""></div>
+                      <div class="js-open-certificate" data-gallery="1"><img src="img/sert2.jpg" alt=""></div>
+                      <div class="js-open-certificate" data-gallery="1"><img src="img/sert3.jpg" alt=""></div>
                     </div>
                   </div>
                 </div>
@@ -1863,7 +1877,7 @@
           </section>
           <section>
             <div class="full-width">
-              <div class="map">
+              <div class="map" id="end">
                 <div id="map" data-center-x="55.76" data-center-y="37.64" data-zoom="7" data-marker-x="55.76" data-marker-y="37.64"></div>
               </div>
             </div>
@@ -1923,6 +1937,12 @@
                 <div class="wrapp-img" data-gallery="10">
                   <div class="img-content"><img src="img/4.jpg" alt=""></div>
                 </div>
+                <div class="wrapp-img" data-gallery="11">
+                  <div class="img-content"><img src="img/4.jpg" alt=""></div>
+                </div>
+                <div class="wrapp-img" data-gallery="12">
+                  <div class="img-content"><img src="img/4.jpg" alt=""></div>
+                </div>
               </div>
               <div class="right-content">
                 <div class="js-slider-init-gallery">
@@ -1955,6 +1975,68 @@
                   </div>
                   <div class="wrapp-img" data-gallery="10">
                     <div><img src="img/4.jpg" alt=""></div>
+                  </div>
+                  <div class="wrapp-img" data-gallery="11">
+                    <div><img src="img/4.jpg" alt=""></div>
+                  </div>
+                  <div class="wrapp-img" data-gallery="12">
+                    <div><img src="img/4.jpg" alt=""></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-wrapp js-open-certificate-modal">
+          <div class="gallery-wrapp-content">
+            <div class="gallery">
+              <div class="wrapp_close js-close-certificate-modal"><svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.3 54.4" enable-background="new 0 0 54.3 54.4" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.7,4.8l2.5-2.5l48.8,48.8l-2.5,2.5L0.7,4.8z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M3.2,2.3L5.5,0l48.8,48.8l-2.3,2.3L3.2,2.3z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M49.2,0.4l2.5,2.5L2.5,52.1L0,49.6L49.2,0.4z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M51.6,2.9L54,5.2L4.8,54.4l-2.4-2.4L51.6,2.9z"/></svg></div>
+              <div class="left-content js-slider-certificate-preview">
+                <div class="wrapp-img" data-gallery="1">
+                  <div class="img-content active"><img src="img/sert1.jpg" alt=""></div>
+                </div>
+                <div class="wrapp-img" data-gallery="2">
+                  <div class="img-content"><img src="img/sert2.jpg" alt=""></div>
+                </div>
+                <div class="wrapp-img" data-gallery="3">
+                  <div class="img-content"><img src="img/sert3.jpg" alt=""></div>
+                </div>
+              </div>
+              <div class="right-content">
+                <div class="js-slider-init-certificate">
+                  <div class="wrapp-img" data-gallery="1">
+                    <div><img src="img/sert1.jpg" alt=""></div>
+                  </div>
+                  <div class="wrapp-img" data-gallery="2">
+                    <div><img src="img/sert2.jpg" alt=""></div>
+                  </div>
+                  <div class="wrapp-img" data-gallery="3">
+                    <div><img src="img/sert3.jpg" alt=""></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-wrapp js-open-youtube-modal">
+          <div class="gallery-wrapp-content">
+            <div class="gallery">
+              <div class="wrapp_close js-close-youtube-modal"><svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.3 54.4" enable-background="new 0 0 54.3 54.4" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.7,4.8l2.5-2.5l48.8,48.8l-2.5,2.5L0.7,4.8z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M3.2,2.3L5.5,0l48.8,48.8l-2.3,2.3L3.2,2.3z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M49.2,0.4l2.5,2.5L2.5,52.1L0,49.6L49.2,0.4z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M51.6,2.9L54,5.2L4.8,54.4l-2.4-2.4L51.6,2.9z"/></svg></div>
+              <div class="left-content js-slider-youtube-preview left-youtube-gallery">
+                <div class="wrapp-img" data-gallery="1">
+                  <div class="img-content active"><img src="//img.youtube.com/vi/JMJXvsCLu6s/maxresdefault.jpg" alt=""></div>
+                </div>
+                <div class="wrapp-img" data-gallery="2">
+                  <div class="img-content"><img src="//img.youtube.com/vi/JMJXvsCLu6s/maxresdefault.jpg" alt=""></div>
+                </div>
+              </div>
+              <div class="right-content right-youtube-gallery">
+                <div class="js-slider-init-youtube">
+                  <div class="wrapp-img" data-gallery="1">
+                    <div><iframe id = 'video1' style="width: 100%; height: 50rem;" src="//www.youtube.com/embed/JMJXvsCLu6s" frameborder="0" allowfullscreen ></iframe></div>
+                  </div>
+                  <div class="wrapp-img" data-gallery="2">
+                    <div><iframe id = 'video2' style="width: 100%; height: 50rem;" src="//www.youtube.com/embed/JMJXvsCLu6s" frameborder="0" allowfullscreen ></iframe></div>
                   </div>
                 </div>
               </div>
@@ -2007,6 +2089,8 @@
       </div>
     </div>
     <!--END out-->
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="js/app.js"></script>
     <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
     <script src="//yastatic.net/share2/share.js"></script>
     <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&amp;lang=ru-RU" type="text/javascript"></script>

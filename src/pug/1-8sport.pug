@@ -1,8 +1,8 @@
-//- еще стрелочка
-//- мобильная версия. карточки. списки
-//- раскрывашки
-//- галереи
-//- шрифты отступы проверить на iphone5
+//- еще выподающее меню, и на ресайз
+//-остановка видео на ютуб
+
+
+
 
 extends _layout
 
@@ -65,20 +65,21 @@ block content
 		section
 			div.max-width-1300
 				div.company-content-wrapp
-					div.menu
-						ul
-							li.active 
-								a(href='#') О нас
-							li 
-								a(href='#') Услуги
-							li 
-								a(href='#') Цены
-							li 
-								a(href='#') Фотогалерея
-							li 
-								a(href='#') Отзывы
-							li  
-								a(href='#') Еще
+					div.menu.js-menu-dropdown
+						ul.main_menu
+							li.active О нас
+							li Услуги
+							li Цены
+							li Фотогалерея
+							li Отзывы
+							li.js-menu-dropdown-open Еще
+								svg.down
+									use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
+						ul.dop_menu.js-menu-dropdown-dop
+							li Услуги
+							li Цены
+							li Фотогалерея
+							li Отзывы
 					div.content-block.border-top.first-block
 						div.content-left
 							img.logo(src='img/1-8-logo.png' alt='')
@@ -131,7 +132,7 @@ block content
 								li Бойцовский клуб
 						div.content-right.js-show-text(data-height='280')
 							ul.price-list.shadow-text.js-show-other-content
-								li Тренаженрый зал (полный день)
+								li.title Тренаженрый зал (полный день)
 								li Абонемент на 1 месяц / 4 занятия. 
 									span 30,00 руб.
 								li Абонемент на 1 месяц / 4 занятия. 
@@ -196,12 +197,12 @@ block content
 								h3 Видео
 							div.content-right
 								div.card-wrapp.video
-									a.card(href='')
-										div.video-img(style='background-image:url("img/1-8-video-1.jpg")' )
+									div.card.js-open-youtube(data-gallery = '1')
+										div.video-img(style='background-image:url("//img.youtube.com/vi/JMJXvsCLu6s/maxresdefault.jpg")' )
 											img.video-play(src="img/video_play.png" )
 										p.title Мова Нанова - Мова Гуркова
-									a.card(href='')
-										div.video-img(style='background-image:url("img/1-8-video-2.jpg")')
+									div.card.js-open-youtube(data-gallery = '2')
+										div.video-img(style='background-image:url("//img.youtube.com/vi/JMJXvsCLu6s/maxresdefault.jpg")')
 											img.video-play(src="img/video_play.png" )
 										p.title Мова Нанова - Мова Гуркова
 						div.content-block
@@ -266,15 +267,15 @@ block content
 								h3 Сертификаты
 							div.content-right
 								div.sertif
-									div
+									div.js-open-certificate(data-gallery = '1')
 										img(src='img/sert1.jpg' alt='')
-									div
+									div.js-open-certificate(data-gallery = '1')
 										img(src='img/sert2.jpg' alt='')
-									div
+									div.js-open-certificate(data-gallery = '1')
 										img(src='img/sert3.jpg' alt='')
 			section
 				div.full-width
-					div.map
+					div.map#end
 						div(id="map" data-center-x='55.76' data-center-y='37.64' data-zoom='7' data-marker-x='55.76' data-marker-y='37.64')
 			section
 				div.max-width-1300
@@ -333,6 +334,12 @@ block content
 						div.wrapp-img(data-gallery='10')
 							div.img-content
 								img(src='img/4.jpg' alt='')
+						div.wrapp-img(data-gallery='11')
+							div.img-content
+								img(src='img/4.jpg' alt='')
+						div.wrapp-img(data-gallery='12')
+							div.img-content
+								img(src='img/4.jpg' alt='')
 
 					div.right-content
 						div.js-slider-init-gallery
@@ -366,6 +373,62 @@ block content
 							div.wrapp-img(data-gallery='10')
 								div
 									img(src='img/4.jpg' alt='')
+							div.wrapp-img(data-gallery='11')
+								div
+									img(src='img/4.jpg' alt='')
+							div.wrapp-img(data-gallery='12')
+								div
+									img(src='img/4.jpg' alt='')
+		div.gallery-wrapp.js-open-certificate-modal
+			div.gallery-wrapp-content
+				div.gallery
+					div.wrapp_close.js-close-certificate-modal
+						<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.3 54.4" enable-background="new 0 0 54.3 54.4" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.7,4.8l2.5-2.5l48.8,48.8l-2.5,2.5L0.7,4.8z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M3.2,2.3L5.5,0l48.8,48.8l-2.3,2.3L3.2,2.3z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M49.2,0.4l2.5,2.5L2.5,52.1L0,49.6L49.2,0.4z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M51.6,2.9L54,5.2L4.8,54.4l-2.4-2.4L51.6,2.9z"/></svg>
+					div.left-content.js-slider-certificate-preview
+						div.wrapp-img(data-gallery='1')
+							div.img-content.active
+								img(src='img/sert1.jpg' alt='')
+						div.wrapp-img(data-gallery='2')
+							div.img-content
+								img(src='img/sert2.jpg' alt='')
+						div.wrapp-img(data-gallery='3')
+							div.img-content
+								img(src='img/sert3.jpg' alt='')
+
+					div.right-content
+						div.js-slider-init-certificate
+							div.wrapp-img(data-gallery='1')
+								div
+									img(src='img/sert1.jpg' alt='')
+							div.wrapp-img(data-gallery='2')
+								div
+									img(src='img/sert2.jpg' alt='')
+							div.wrapp-img(data-gallery='3')
+								div
+									img(src='img/sert3.jpg' alt='')
+		div.gallery-wrapp.js-open-youtube-modal
+			div.gallery-wrapp-content
+				div.gallery
+					div.wrapp_close.js-close-youtube-modal
+						<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.3 54.4" enable-background="new 0 0 54.3 54.4" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.7,4.8l2.5-2.5l48.8,48.8l-2.5,2.5L0.7,4.8z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M3.2,2.3L5.5,0l48.8,48.8l-2.3,2.3L3.2,2.3z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M49.2,0.4l2.5,2.5L2.5,52.1L0,49.6L49.2,0.4z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M51.6,2.9L54,5.2L4.8,54.4l-2.4-2.4L51.6,2.9z"/></svg>
+					div.left-content.js-slider-youtube-preview.left-youtube-gallery
+						div.wrapp-img(data-gallery='1')
+							div.img-content.active
+								img(src='//img.youtube.com/vi/JMJXvsCLu6s/maxresdefault.jpg' alt='')
+						div.wrapp-img(data-gallery='2')
+							div.img-content
+								img(src='//img.youtube.com/vi/JMJXvsCLu6s/maxresdefault.jpg' alt='')
+
+					div.right-content.right-youtube-gallery
+						div.js-slider-init-youtube
+							div.wrapp-img(data-gallery='1')
+								div
+									<iframe id = 'video1' style="width: 100%; height: 50rem;" src="//www.youtube.com/embed/JMJXvsCLu6s" frameborder="0" allowfullscreen ></iframe>
+							div.wrapp-img(data-gallery='2')
+								div
+									<iframe id = 'video2' style="width: 100%; height: 50rem;" src="//www.youtube.com/embed/JMJXvsCLu6s" frameborder="0" allowfullscreen ></iframe>
+
+						
 		//- include includes/elements/_go_top
 		include includes/_footer
 
