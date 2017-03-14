@@ -9,7 +9,8 @@ gulp.task('watch', [
     'pug:watch',
     // 'html:watch',
     'font:watch',
-    'js:watch'
+    'js:watch',
+    'svgmin:watch'
 ]);
 
 
@@ -17,4 +18,4 @@ gulp.task('delete', function (cb) {
     rimraf('./'+config.dest.root, cb);
 });
 gulp.task('default', ['server', 'watch'], function() {});
-gulp.task('build', ['html','font','sprite','copy','js','sass'], function() {});
+gulp.task('build', ['html','font','sprite','copy','js','sass','svgmin'], function() {});

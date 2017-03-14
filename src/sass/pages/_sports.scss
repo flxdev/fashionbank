@@ -373,6 +373,7 @@
 
 
 .other-content {
+	padding-top: 50px;
 	.company-content-wrapp  {
 		.content-block {
 			padding: 25px 0;
@@ -397,7 +398,9 @@
 			}
 		}
 		li.active {
-			color:#000;
+			a {
+				color:#000;
+			}
 		}
 	}
 	.border-top {
@@ -446,6 +449,7 @@
 		}
 		.content-right {
 			flex-basis: 75%;
+			position: relative;
 			.btn {
 				margin: 50px 0;
 			}
@@ -459,7 +463,6 @@
    				border-bottom: 1px solid #dbdbdb;
 				.card {
 					flex-basis: 45%;
-					
 					.card-category {
 						padding: 0 0 10px 10px; 
 					}
@@ -478,7 +481,9 @@
 			.trainers {
 				.card {
 					.wrapp-img {
-						border-radius: 50%;
+						img {
+							border-radius: 50%;
+						}
 					}
 				}
 			}
@@ -500,6 +505,7 @@
 					flex-basis: 30%;
 					img {
 						width: 100%;
+						cursor: pointer;
 					}
 				}
 			}
@@ -565,8 +571,19 @@
 			}
 			.text {
 				margin-bottom: 30px;
-				max-height: 100px;
 				overflow: hidden;
+			}
+			.shadow-text:before {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 30px;
+    			bottom: 50px;
+    			background: rgb(17, 142, 199);
+				background: -webkit-linear-gradient(0deg, rgba(255,255,255,1) 25%, rgba(0,0,0,0) 100%);
+				background: -o-linear-gradient(0deg, rgba(255,255,255,1) 25%, rgba(0,0,0,0) 100%);
+				background: -ms-linear-gradient(0deg, rgba(255,255,255,1) 25%, rgba(0,0,0,0) 100%);
+				background: linear-gradient(0deg, rgba(255,255,255,1) 25%, rgba(0,0,0,0) 100%);
 			}
 			.link {
 				 text-transform: uppercase;
@@ -582,6 +599,24 @@
 				justify-content: flex-start;
 				align-items: flex-start;
 				flex-wrap: wrap;
+				.text-foto {
+					display: flex;
+					flex-direction: row;
+					justify-content: center;
+					align-items: center;
+					text-align: center;
+					p {
+						font-size: 1.5rem;
+						text-transform: uppercase;
+						color: #fff;
+						a {
+							text-align: center;
+							letter-spacing: 2px;
+							color: #fff;
+						}
+					}
+					
+				}
 				.wrapp-img {
 					flex-basis: 30%;
 					min-height: 130px;
@@ -589,13 +624,9 @@
 					background-size: cover;
 					background-position: center center;
 					margin: 10px;
+					cursor: pointer;
 					img {
 						width: 100%;
-					}
-					p {
-						font-size: 1.5rem;
-						text-transform: uppercase;
-						color: #fff;
 					}
 				}
 			}
@@ -605,6 +636,7 @@
 					flex-direction: row;
 					justify-content: flex-start;
 					align-items: center;
+					flex-wrap: wrap;
 					padding: 25px 0;
 					border-bottom: 1px dotted #cfcfcf; 
 					cursor: pointer;
@@ -619,31 +651,60 @@
 					&:first-child {
 						padding-top: 0;
 					}
+					.dop-info  {
+						display: none;
+						flex-basis: 100%;
+						text-transform: none;
+						padding: 20px 20px 0 0;
+					}
+					svg.down {
+						width: 18px;
+						height: 18px;
+						transform: rotate(180deg);
+						position: absolute;
+   						right: 0;
+   						fill: #7f7f7f;
+					}
+					svg.up {
+						transform: rotate(0deg);
+					}
 				}
 			}
 			.price-list {
 				margin-bottom: 40px;
-				max-height: 320px;
+				// max-height: 280px;
 				overflow: hidden;
 				li {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					align-items: flex-start;
 					padding: 20px 0;
 					border-bottom: 1px solid #ebebeb;
 					cursor: pointer;
+					span:last-child {
+						flex-basis: 31%;
+    					text-align: right;
+					}
 					&:first-child {
 						padding-top: 0;
 						text-transform: uppercase;
 						font-family: $font_m;
 					}
-					span {
-						float: right;
-					}
+					
 				}
 			}
 			.fills {
+				max-height: none;
 				li {
 					font-family: $font_m;
+					cursor: default;
 					span {
 						font-family: $font_r;
+					}
+					span:last-child {
+						flex-basis: 52%;
+    					text-align: right;
 					}
 					&:first-child {
 						text-transform: none;
@@ -663,10 +724,10 @@
 }
 
 .company-contact {
-	width: 335px;
-	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+	width: 385px;
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
 	padding: 40px 30px;
 	text-align: center;
 	position: absolute;
@@ -676,14 +737,13 @@
 	background-color: #fff;
 	.addres  {
 		margin-bottom: 10px;
-		p {
-			img {
-				width: 10px;
-				display: inline-block;
-			}	
-			span {
-				padding-left: 10px;
-			}
+		img {
+			width: 10px;
+			display: inline-block;
+		}	
+		span {
+			padding-left: 10px;
+			font-size: 1.6rem;
 		}
 	}
 	.time-work {
@@ -699,6 +759,7 @@
 		width: 55%;
    		margin: 0 auto;
    		padding:  10px 0;
+   		font-size: 1.4rem;	
 	}
 	.tel {
 		padding: 30px 0;
@@ -723,6 +784,118 @@
 		font-family: $font_b;
 		letter-spacing: 2px;
 		margin: 35px 0;
+		cursor: pointer;
 
 	}
+}
+
+
+
+.gallery-wrapp {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0,0,0,.8);
+	z-index: 1000;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	text-align: center;
+	display: none;
+	.gallery-wrapp-content {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		font-size: 0;
+		overflow: auto;
+		&:before {
+			content:'';
+			height: 100%;
+			width: 0;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.gallery {
+			background-color: #fff;
+			max-width: 80%;
+			width: 100%;
+			display: inline-block;
+			vertical-align: middle;
+			position: relative;
+			text-align: left;
+			.wrapp_close {
+				top: -40px;
+   				right: -40px;
+   				svg {
+   					fill: #fff;
+   				}
+			}
+			.left-content {
+				height: 50rem;
+				width: 30%;
+				background-color: #1a1a1a;
+				text-align: left;
+				padding: 15px;
+				overflow: hidden;
+				display: inline-block;
+				vertical-align: top;
+				position: absolute;
+   				bottom: 0;
+   				top: 0;
+				.wrapp-img {
+					display: inline-block;
+					font-size: 0;
+					line-height: 0;
+					width: 50%;
+					text-align: center;
+					padding: 15px;
+					div {
+						background-color: #000;
+						img {
+							height: 90px;
+							cursor: pointer;
+						}
+					}
+					.img-content {
+						border: 2px solid #000;
+					}
+					.active {
+						border: 2px solid #fff;
+					}
+				}
+			}
+			.right-content {
+				display: inline-block;
+				width: 100%;
+				vertical-align: top;
+				background-color: #000;
+				padding-left: 30%;
+				.slider_arrow {
+					position: absolute;
+					width: 20px;
+					top: 0;
+    				bottom: 0;
+    				background-color: transparent;
+    				z-index: 1001;
+    				svg {
+    					fill: #fff;
+    				}
+				}
+				.slider_arrow-next {
+					right: 10px;
+				}
+				.slider_arrow-pre {
+					left: 10px;
+				}
+				.wrapp-img {
+					img {
+						height: 50rem;
+   						margin: 0 auto;	
+					}
+				}
+			}
+
+		}
+	}
+	
 }

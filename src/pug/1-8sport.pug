@@ -48,9 +48,8 @@ block content
 		div.max-width-1300
 			div.company-contact#sticky
 				div.addres 
-					p 
-						img(src='img/map-marker.png')
-						span Минск, ул. Октябрьская 16 Ленинский район, ст. м. Первомайская
+					img(src='img/map-marker.png')
+					span Минск, ул. Октябрьская 16 <br> Ленинский район, ст. м. Первомайская
 				div.time-work
 					p Пн-пт 7:00 - 22:00
 					p Cб-вс	10:00 - 20:00
@@ -84,29 +83,44 @@ block content
 						div.content-left
 							img.logo(src='img/1-8-logo.png' alt='')
 							h3 О компании
-						div.content-right
-							p.text Любите спорт, ведете здоровый образ жизни и давно мечтаете о занятиях фитнесом с грамотными тренерами, но не можете определиться с выбором? Мы с удовольствием приглашаем вас в новый фитнес-клуб Moby Dick, оснащенный профессиональным силовым и кардиооборудованием, идеально подходящим как для новичков, так и для профессионалов. Здесь знают все о правильных тренировках, предлагая действенные способы укрепления здоровья и раскрывая секреты прекрасной физической формы.
-							p.link + Все описание
+						div.content-right.js-show-text(data-height='100')
+							p.text.shadow-text.js-show-other-content Любите спорт, ведете здоровый образ жизни и давно мечтаете о занятиях фитнесом с грамотными тренерами, но не можете определиться с выбором? Мы с удовольствием приглашаем вас в новый фитнес-клуб Moby Dick, оснащенный профессиональным силовым и кардиооборудованием, идеально подходящим как для новичков, так и для профессионалов. Здесь знают все о правильных тренировках, предлагая действенные способы укрепления здоровья и раскрывая секреты прекрасной физической формы.
+							p.link.js-show-other + Все описание
 					div.content-block
 						div.content-left
 							h3 Услуги
 						div.content-right
 							ul.services
-								li 
+								li.js-drop-open 
 									img(src='img/1-8-icon1.png' alt='')
 									p Тренажерный зал
-								li 
+									svg.down
+										use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
+									p.dop-info.js-drop-open-content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris faucibus nisl non nisl accumsan, eu mattis ligula porta. Cras pellentesque nisl id leo tempor, id sollicitudin nisi finibus. Quisque at fermentum ante, ac lobortis quam. Integer imperdiet justo vitae purus consequat, vel mattis ligula placerat. Vivamus efficitur leo et ante lacinia efficitur	
+								li.js-drop-open  
 									img(src='img/1-8-icon2.png' alt='')
 									p Единоборства
-								li 
+									svg.down
+										use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
+									p.dop-info.js-drop-open-content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris faucibus nisl non nisl accumsan, eu mattis ligula porta. Cras pellentesque nisl id leo tempor, id sollicitudin nisi finibus. Quisque at fermentum ante, ac lobortis quam. Integer imperdiet justo vitae purus consequat, vel mattis ligula placerat. Vivamus efficitur leo et ante lacinia efficitur
+								li.js-drop-open  
 									img(src='img/1-8-icon3.png' alt='')
 									p Бесплатная парковка
-								li 
+									svg.down
+										use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
+									p.dop-info.js-drop-open-content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris faucibus nisl non nisl accumsan, eu mattis ligula porta. Cras pellentesque nisl id leo tempor, id sollicitudin nisi finibus. Quisque at fermentum ante, ac lobortis quam. Integer imperdiet justo vitae purus consequat, vel mattis ligula placerat. Vivamus efficitur leo et ante lacinia efficitur
+								li.js-drop-open  
 									img(src='img/1-8-icon4.png' alt='')
 									p Фит-бар
-								li 
+									svg.down
+										use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
+									p.dop-info.js-drop-open-content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris faucibus nisl non nisl accumsan, eu mattis ligula porta. Cras pellentesque nisl id leo tempor, id sollicitudin nisi finibus. Quisque at fermentum ante, ac lobortis quam. Integer imperdiet justo vitae purus consequat, vel mattis ligula placerat. Vivamus efficitur leo et ante lacinia efficitur
+								li.js-drop-open  
 									img(src='img/1-8-icon5.png' alt='')
 									p Общие услуги
+									svg.down
+										use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
+									p.dop-info.js-drop-open-content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris faucibus nisl non nisl accumsan, eu mattis ligula porta. Cras pellentesque nisl id leo tempor, id sollicitudin nisi finibus. Quisque at fermentum ante, ac lobortis quam. Integer imperdiet justo vitae purus consequat, vel mattis ligula placerat. Vivamus efficitur leo et ante lacinia efficitur
 
 					div.content-block
 						div.content-left
@@ -115,8 +129,8 @@ block content
 								li.active Все цены
 								li Тренажерный зал
 								li Бойцовский клуб
-						div.content-right
-							ul.price-list
+						div.content-right.js-show-text(data-height='280')
+							ul.price-list.shadow-text.js-show-other-content
 								li Тренаженрый зал (полный день)
 								li Абонемент на 1 месяц / 4 занятия. 
 									span 30,00 руб.
@@ -130,7 +144,11 @@ block content
 									span 30,00 руб.
 								li Абонемент на 1 месяц / 4 занятия. 
 									span 30,00 руб.
-							p.link + Все цены
+								li Абонемент на 1 месяц / 4 занятия. 
+									span 30,00 руб.
+								li Абонемент на 1 месяц / 4 занятия. 
+									span 30,00 руб.
+							p.link.js-show-other + Все цены
 
 			section
 				div.full-width.bg-black
@@ -145,13 +163,14 @@ block content
 										li Бойцовский клуб
 								div.content-right
 									div.gallery_foto
-										div.wrapp-img(style='background-image:url("img/4.jpg")')
-										div.wrapp-img(style='background-image:url("img/4.jpg")')
-										div.wrapp-img(style='background-image:url("img/4.jpg")')
-										div.wrapp-img(style='background-image:url("img/4.jpg")')
-										div.wrapp-img(style='background-image:url("img/4.jpg")')
-										div.wrapp-img
-											p + Ещё (15 фото)
+										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '1')
+										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '2')
+										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '3')
+										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '4')
+										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '5')
+										div.wrapp-img.js-open-gallery.text-foto(data-gallery = '1')
+											p
+												a(href='#') + Ещё (15 фото)
 
 			section
 				div.max-width-1300.other-content
@@ -161,8 +180,9 @@ block content
 								h3 Тренеры
 							div.content-right
 								div.card-wrapp.trainers
-									+card-horizont('card card-horizontal text-black','img/9.jpg','Евгения Кобик','Bodyflex, TRX, силовая аэробика','Зож',false,false)
-									+card-horizont('card card-horizontal text-black','img/12.jpg','Иван Шарпилов','Фитнес','Мода и стиль',false,false)
+									+card-horizont('card card-horizontal text-black','img/2.jpg','Евгения Кобик','Bodyflex, TRX, силовая аэробика','Зож',false,false)
+									+card-horizont('card card-horizontal text-black','img/3.jpg','Евгения Кобик ','Bodyflex, TRX, силовая аэробика','Зож',false,false)
+									+card-horizont('card card-horizontal text-black','img/4.jpg','Евгения Кобик ','Bodyflex, TRX, силовая аэробика','Зож',false,false)
 						div.content-block
 							div.content-left
 								h3 Статьи
@@ -187,41 +207,58 @@ block content
 						div.content-block
 							div.content-left
 								h3 Отзывы о компании 
-									span(26)
-							div.content-right
-								div.review-wrapp
-									p.title Владимир
-									ul
-										li
-											img(src='img/star-y.png')
-										li
-											img(src='img/star-y.png')
-										li
-											img(src='img/star-y.png')
-										li
-											img(src='img/star-g.png')
-										li
-											img(src='img/star-g.png')
+									p (26)
+							div.content-right.js-show-text(data-height='450')
+								div.js-show-other-content.overflow-hidden
+									div.review-wrapp
+										p.title Владимир
+										ul
+											li
+												img(src='img/star-y.png')
+											li
+												img(src='img/star-y.png')
+											li
+												img(src='img/star-y.png')
+											li
+												img(src='img/star-g.png')
+											li
+												img(src='img/star-g.png')
 
-									p.text Туда приятно приходить, стильный зал, отличный персонал, мега админы и тренера) У меня был самый лучший тренер Гришаня! Один его внешний вид вдохновляет! Он супер качок и чемпион по жиму лёжа)) Всем Моби Дик)))
-									p.date 20 ноября 2016
-								div.review-wrapp
-									p.title Владимир
-									ul
-										li
-											img(src='img/star-y.png')
-										li
-											img(src='img/star-y.png')
-										li
-											img(src='img/star-y.png')
-										li
-											img(src='img/star-g.png')
-										li
-											img(src='img/star-g.png')
+										p.text Туда приятно приходить, стильный зал, отличный персонал, мега админы и тренера) У меня был самый лучший тренер Гришаня! Один его внешний вид вдохновляет! Он супер качок и чемпион по жиму лёжа)) Всем Моби Дик)))
+										p.date 20 ноября 2016
+									div.review-wrapp
+										p.title Владимир
+										ul
+											li
+												img(src='img/star-y.png')
+											li
+												img(src='img/star-y.png')
+											li
+												img(src='img/star-y.png')
+											li
+												img(src='img/star-g.png')
+											li
+												img(src='img/star-g.png')
 
-									p.text Туда приятно приходить, стильный зал, отличный персонал, мега админы и тренера) У меня был самый лучший тренер Гришаня! Один его внешний вид вдохновляет! Он супер качок и чемпион по жиму лёжа)) Всем Моби Дик)))
-									p.date 20 ноября 2016
-								p.link + Все описание
+										p.text Туда приятно приходить, стильный зал, отличный персонал, мега админы и тренера) У меня был самый лучший тренер Гришаня! Один его внешний вид вдохновляет! Он супер качок и чемпион по жиму лёжа)) Всем Моби Дик)))
+										p.date 20 ноября 2016
+									div.review-wrapp
+										p.title Владимир
+										ul
+											li
+												img(src='img/star-y.png')
+											li
+												img(src='img/star-y.png')
+											li
+												img(src='img/star-y.png')
+											li
+												img(src='img/star-g.png')
+											li
+												img(src='img/star-g.png')
+
+										p.text Туда приятно приходить, стильный зал, отличный персонал, мега админы и тренера) У меня был самый лучший тренер Гришаня! Один его внешний вид вдохновляет! Он супер качок и чемпион по жиму лёжа)) Всем Моби Дик)))
+										p.date 20 ноября 2016
+								p.link.js-show-other + Все отзывы
 								button.btn.btn-size-225.btn-black Оставить отзыв
 
 						div.content-block
@@ -247,16 +284,90 @@ block content
 								h3 Филиалы
 							div.content-right
 								ul.price-list.fills
-									li г.Минск, ул. Янки Мавра 5
+									li 
+										span г.Минск, ул. Янки Мавра 5
 										span +375 29 617 82 31
-									li г.Минск, ул. Янки Мавра 5
+									li 
+										span г.Минск, ул. Янки Мавра 5
 										span +375 29 617 82 31
-									li г.Минск, ул. Янки Мавра 5
+									li 
+										span г.Минск, ул. Янки Мавра 5
 										span +375 29 617 82 31
-									li г.Минск, ул. Янки Мавра 5
+									li 
+										span г.Минск, ул. Янки Мавра 5
 										span +375 29 617 82 31
 		
+		div.gallery-wrapp.js-open-gallery-modal
+			div.gallery-wrapp-content
+				div.gallery
+					div.wrapp_close.js-close-gallery-modal
+						<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.3 54.4" enable-background="new 0 0 54.3 54.4" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.7,4.8l2.5-2.5l48.8,48.8l-2.5,2.5L0.7,4.8z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M3.2,2.3L5.5,0l48.8,48.8l-2.3,2.3L3.2,2.3z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M49.2,0.4l2.5,2.5L2.5,52.1L0,49.6L49.2,0.4z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M51.6,2.9L54,5.2L4.8,54.4l-2.4-2.4L51.6,2.9z"/></svg>
+					div.left-content.js-slider-gallery-preview
+						div.wrapp-img(data-gallery='1')
+							div.img-content.active
+								img(src='img/4.jpg' alt='')
+						div.wrapp-img(data-gallery='2')
+							div.img-content
+								img(src='img/5.jpg' alt='')
+						div.wrapp-img(data-gallery='3')
+							div.img-content
+								img(src='img/2.jpg' alt='')
+						div.wrapp-img(data-gallery='4')
+							div.img-content
+								img(src='img/4.jpg' alt='')
+						div.wrapp-img(data-gallery='5')
+							div.img-content
+								img(src='img/4.jpg' alt='')
+						div.wrapp-img(data-gallery='6')
+							div.img-content
+								img(src='img/4.jpg' alt='')
+						div.wrapp-img(data-gallery='7')
+							div.img-content
+								img(src='img/4.jpg' alt='')
+						div.wrapp-img(data-gallery='8')
+							div.img-content
+								img(src='img/4.jpg' alt='')
+						div.wrapp-img(data-gallery='9')
+							div.img-content
+								img(src='img/4.jpg' alt='')
+						div.wrapp-img(data-gallery='10')
+							div.img-content
+								img(src='img/4.jpg' alt='')
 
+					div.right-content
+						div.js-slider-init-gallery
+							div.wrapp-img(data-gallery='1')
+								div
+									img(src='img/4.jpg' alt='')
+							div.wrapp-img(data-gallery='2')
+								div
+									img(src='img/5.jpg' alt='')
+							div.wrapp-img(data-gallery='3')
+								div
+									img(src='img/2.jpg' alt='')
+							div.wrapp-img(data-gallery='4')
+								div
+									img(src='img/4.jpg' alt='')
+							div.wrapp-img(data-gallery='5')
+								div
+									img(src='img/4.jpg' alt='')
+							div.wrapp-img(data-gallery='6')
+								div
+									img(src='img/4.jpg' alt='')
+							div.wrapp-img(data-gallery='7')
+								div
+									img(src='img/4.jpg' alt='')
+							div.wrapp-img(data-gallery='8')
+								div
+									img(src='img/4.jpg' alt='')
+							div.wrapp-img(data-gallery='9')
+								div
+									img(src='img/4.jpg' alt='')
+							div.wrapp-img(data-gallery='10')
+								div
+									img(src='img/4.jpg' alt='')
 		//- include includes/elements/_go_top
 		include includes/_footer
-	
+
+
+			

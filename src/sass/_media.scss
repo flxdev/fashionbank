@@ -16,12 +16,25 @@
 	}
 	.company-content-wrapp {
 		padding-left: 20px;
+		width: 700px;
 	}
 	.company-contact  {
 		right: 5%;
 	}
+	.company-content-wrapp .content-block .content-right .gallery_foto .wrapp-img {
+		flex-basis: 29%;
+	}
+	.company-content-wrapp .content-block .content-right .card-wrapp .card {
+		flex-basis: 44%;
+	}
 }
-
+@media (max-width: 1150px) { 
+ //page 1-8
+ 	.company-contact {
+		width: 350px;
+ 	}
+ //end page 1-8
+}
 @media (max-width: 1150px) {
 	//header
 	.wrapp_header {
@@ -215,6 +228,9 @@
 			flex-wrap: nowrap;
 			.content-left {
 				flex-basis: 25%;
+				h3 {
+					display: none;
+				}
 			}
 		}
 	}
@@ -247,16 +263,23 @@
 			}
 		}
 	}
-	.company-contact {
+	
+}
+@media (max-width: 1020px) {
+.company-contact {
 		position: relative !important;
 		top: 0 !important;
 		right: 0 !important;
 		margin: 30px auto 0;
+		width: 385px;
 	}
 	.company-content-wrapp {
-    	width: 98%;
+		width: 96%;
+
 	}
 }
+
+
 @media (max-width: 860px) {
 	.wrapp_first-screen {
 		flex-wrap: wrap;
@@ -582,10 +605,32 @@
 			}
 		}
 	}
-
+	.content-right  .card-horizontal .wrapp-img {
+		flex-basis: 30%;
+	}
+	.content-right  .card-horizontal .wrapp-content {
+		flex-basis: 70%;
+	}
 	//1-8page
 	
 }
+
+@media (max-width: 530px) {
+	.company-content-wrapp .content-block .content-right .gallery_foto .wrapp-img {
+		flex-basis: 45%;
+	}
+	.company-content-wrapp .content-block .content-right .card-wrapp .card {
+		flex-basis: 100%;
+	}
+	.company-content-wrapp .content-block .content-right .sertif div {
+		flex-basis: 100%;
+	}
+	.company-contact {
+		margin: 45px auto 0;
+	}
+	
+}
+
 
 
 @media (max-width: 480px) {
@@ -658,6 +703,15 @@
 	}
 	
 	//1-0page
+
+	//1-8page 
+	.company-contact {
+		width: 90%;
+	}
+	.company-content-wrapp .content-block .content-right .gallery_foto .wrapp-img {
+		flex-basis: 43%;
+	}
+	//1-8page end 
 
 }
 
