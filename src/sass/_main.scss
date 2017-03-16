@@ -88,6 +88,8 @@ a {text-decoration: none;}
 .card {
 	margin: $card-margin;
 	position: relative;
+
+
 	// overflow: hidden;
 	.card-bg {
 		position: absolute;
@@ -191,12 +193,17 @@ a {text-decoration: none;}
 	}
 	.like  {
 		position: absolute;
-		svg {
+		right: 10px;
+    	top: 10px;
+    	display: none;
+    	transition: all 0.3s ease-out;
+		img {
 			width: 20px;
-			height: 20px;
-			fill: #000;
-			background-color: #fff;
+			// background-color: #fff;
 		}
+	}
+	.like.show {
+		display: block;
 	}
 	.label.label-orang {
 		background-color: #ff620c;
@@ -225,7 +232,11 @@ a {text-decoration: none;}
 			border-left: 8px solid #53ba42;
 		}
 	}
-
+	&:hover {
+		.like {
+			display: block;
+		}
+	}
 	
 
 }
@@ -334,6 +345,7 @@ a {text-decoration: none;}
 		overflow: hidden;
 		height: 100%;
 		flex-grow: 10;
+		position: relative;
 		img {
 			max-width: 100%;
 		}
@@ -556,6 +568,9 @@ a {text-decoration: none;}
 				left: 0;
 				z-index: -1;
 				// margin-left: 15px;
+			}
+			.like {
+				right: 42px;
 			}
 		}	
 	}
@@ -863,6 +878,13 @@ a {text-decoration: none;}
     	z-index: 50;
 		li {
 			padding: 7px 0;
+			a {
+				color: #000;
+				transition: all 0.3s ease-out;
+				&:hover {
+					color: $main_blue;
+				}
+			}
 		}
 	}
 	&:hover {
@@ -886,25 +908,25 @@ a {text-decoration: none;}
 }
 
 
-.ps-container > .ps-scrollbar-y-rail {
-	opacity: 1 !important;
-}
+// .ps-container > .ps-scrollbar-y-rail {
+// 	opacity: 1 !important;
+// }
 
-.ps-container > .ps-scrollbar-y-rail:hover > .ps-scrollbar-y, .ps-container > .ps-scrollbar-y-rail:active > .ps-scrollbar-y {
-	width: 3px  !important;
-	right: 10px !important;
-}
+// .ps-container > .ps-scrollbar-y-rail:hover > .ps-scrollbar-y, .ps-container > .ps-scrollbar-y-rail:active > .ps-scrollbar-y {
+// 	width: 3px  !important;
+// 	right: 10px !important;
+// }
 
-.ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
-	background-color: grey !important;
-	right: 10px !important;
-}
-.ps-container > .ps-scrollbar-y-rail {
-	width: 3px !important;
-	background-color: transparent !important;
-}
-.ps-container>.ps-scrollbar-y-rail>.ps-scrollbar-y {
-	width: 3px !important;
-}
+// .ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+// 	background-color: grey !important;
+// 	right: 10px !important;
+// }
+// .ps-container > .ps-scrollbar-y-rail {
+// 	width: 3px !important;
+// 	background-color: transparent !important;
+// }
+// .ps-container>.ps-scrollbar-y-rail>.ps-scrollbar-y {
+// 	width: 3px !important;
+// }
 
-.ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y { width: 3px !important; }
+// .ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y { width: 3px !important; }

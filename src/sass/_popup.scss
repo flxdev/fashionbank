@@ -39,6 +39,41 @@
 		display: inline-block;
 		vertical-align: middle;
 		position: relative;
+		width: 100%;
+		.rewiew {
+			text-align: left;
+			margin-top: 25px;
+			li {
+				display: inline-block;
+				background-image: url('../img/star-g.png');
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center center;
+				width: 20px;
+				height: 20px;
+				margin-right: 7px;
+				transition: all 0.2s ease-out;
+				&:hover {
+					background-image: url('../img/star-y.png');
+				}
+				&:first-child {
+					width: auto;
+					background-image: none !important;
+					height: auto;
+					color: #6e6e6e;
+					font-size: 1.4rem;
+					margin-right: 15px;
+					span {
+						color: red;
+						left: -4px;
+						position: relative;
+					}
+				}
+			}
+		}
+		.js-review-input {
+			display: none;
+		}
     	h3 {
     		margin-top: 60px;
     		padding: 0 40px;

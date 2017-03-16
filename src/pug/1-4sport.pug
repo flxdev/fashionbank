@@ -22,47 +22,94 @@ block content
 				div.filters-wrapp
 					h2 Всё о спорте
 					ul.filters-li
-						li Обзор
-						li.active Статьи
-						li Компании
-						li Специалисты
-						li Магазины
+						li 
+							a(href='#') Обзор
+						li.active 
+							a(href='#') Статьи
+						li 
+							a(href='#') Компании
+						li 
+							a(href='#') Специалисты
+						li 
+							a(href='#') Магазины
 					div.dropdown
 						p Сначала 
 							span новые
 						ul.dropdown-list
-							li Новые
-							li Популярные
-							li Обсуждаемые
+							li 
+								a(href='#') Новые
+							li 
+								a(href='#') Популярные
+							li 
+								a(href='#') Обсуждаемые
 							
 
 		section(title='cards-block-sport-1')
 			div.max-width-1300
 				div.wrapp_cards-block-1.cards-block-sport.cards-block-sport-articles.odd-last-child
 					div.block-title
-						ul.tags
-							li.active # Все 
-								span 248
-							li # Все 
-								span 248
-							li # Все 
-								span 248
-							li # Все 
-								span 248
-							li # Все 
-								span 248
-							li # Все 
-								span 248
-							li # Все 
-								span 248
-							li # Все 
-								span 248
-							li # Все 
-								span 248
-							li # Все 
-								span 248
-							li # Все 
-								span 248
+						ul.tags.js-tags-resize
+							li.active 
+								a(href = '#') # Все
+									span 248
+							li 
+								a(href = '#') # Все
+									span 248
+							li 
+								a(href = '#') # Здоровье
+									span 248
+							li 
+								a(href = '#') # Красота
+									span 248
+							li 
+								a(href = '#') # Все
+									span 248
+							li 
+								a(href = '#') # Все
+									span 248
+							li 
+								a(href = '#') # Все
+									span 248
+							li 
+								a(href = '#') # Все
+									span 248
+							li 
+								a(href = '#') # Все
+									span 248
+							li 
+								a(href = '#') # Все
+									span 248
+							li 
+								a(href = '#') # Все
+									span 248
+							li 
+								a(href = '#') # Все
+									span 248
+							li 
+								a(href = '#') # Все
+									span 248
+							li 
+								a(href = '#') # Все
+									span 248
+							li 
+								a(href = '#') # Все
+									span 248
+							li 
+								a(href = '#') # Все
+									span 248
+							li 
+								a(href = '#') # Мода и стиль
+									span 248
+							li 
+								a(href = '#') # Все
+									span 248
+							li 
+								a(href = '#') # Все
+									span 248
+							li 
+								a(href = '#') # Все
+									span 248
+
 					div.block-filters
 						div.item-filter
 							div.js-item-filter
@@ -72,10 +119,10 @@ block content
 								form.type-1
 									div.input-wrapp
 										input(type='checkbox' id='q')
-										label(for='q') Заводской
+										label(for='q').js-check Заводской
 									div.input-wrapp
-										input(type='checkbox')
-										label Ленинский
+										input(type='checkbox' id='q3')
+										label(for='q3').js-check Ленинский
 									div.input-wrapp
 										input(type='checkbox')
 										label Московский
@@ -85,8 +132,8 @@ block content
 									div.input-wrapp
 										input(type='checkbox')
 										label Советский
-									button.btn.btn-size-130.btn-black Применить
 
+									button.btn.btn-size-130.btn-black Применить
 						div.item-filter
 							div.js-item-filter
 								p Дополнительные услуги
@@ -150,9 +197,11 @@ block content
 									button.btn.btn-size-130.btn-black Применить				
 						div.item-filter.item-filter-input-checkbox
 							p Спортивные игры
-							input(type='checkbox')
-							label Есть
+							input(type='checkbox' id='q1')
+							label(for='q1') Есть
 						div.item-filter.next.js-item-filter
+							svg.down
+								use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
 						div.item-filter-other.hidden
 							div.row
 								div.item-filter

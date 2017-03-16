@@ -10,19 +10,25 @@
 
 	.filters-li {
 		padding-top: 10px;
-		// padding-left: 200px;
-
 		li {
 			display: inline-block;
 			margin-right: 30px;
 			font-size: 1.4rem;
 			cursor:pointer;
 			position: relative;
-			color: $grey;
+			a {
+				color: $grey;
+				transition: all 0.3s ease-out;
+				&:hover {
+					color: $main_blue;
+				}
+			}
 		}
 		li.active {
 			font-family: $font_b;
-			color: #000;
+			a {
+				color: #000;
+			}
 		}
 		li.active:after {
 			content: '.';
@@ -128,6 +134,11 @@
 }
 
 .specialists {
+	.card {
+		.like {
+			display: none !important;
+		}
+	}
 	.card-horizontal {
 		.wrapp-img {
 			img {
@@ -157,24 +168,42 @@
 		font-size: 1.4rem;
 		letter-spacing: 0.25px;
 		cursor: pointer;
+		a {
+			transition: all 0.3s ease-out;
+			color: #000;
+			span {
+				color: $grey;
+				font-family: $font_l;
+				padding-left: 6px;
+			}
+		}
+		img {
+			width: 25px;	
+			height: 12px;
+		}
 		&:first-child {
 			margin-left: 0;
 		}
 		&:last-child {
 			margin-right: 0;
 		}
-		span {
-			color: $grey;
-			font-family: $font_l;
+		
+		&:hover {
+			a {
+				color: $main_blue;
+			}
 		}
 	}
 	li.active {
-		color: #fff;
 		font-family: $font_m;
 		background-color: #000;
-		span {
+		a {
 			color: #fff;
+			span {
+				color: #fff;
+			}
 		}
+		
 	}
 }
  
@@ -187,44 +216,7 @@
 	margin: 0 15px;
 	position: relative;
 	padding-bottom: 30px;
-	input[type='checkbox'] {
-		display: none;
-	}
-	input[type='checkbox'] + label {
-		padding-left: 40px;
-		cursor: pointer;
-	}
-	input[type='checkbox'] + label:hover {
-		color: $main_blue;
-	}
-
-	input[type='checkbox'] + label:after {
-		content:'';
-		background-color: rgba(0,0,0,0);
-		color: #757e1f;
-	    font-family: pf_medium;
-	    margin-right: 5%;
-	    font-size: 0rem;
-	    border: 1px solid #c6c6c6;
-		padding: 7px;
-		border-radius: 1px;
-		background-image: none;
-		background-size: 85%;
-	    background-position: center center;
-	    background-repeat: no-repeat;
-	    display: block;
-	    position: absolute;
-	  	top: 0;
-	  	margin-top: 8px;
-	    // width: 10px;
-	    // height: 10px;
-	}
-
-	input[type=checkbox]:checked + label:after {
-		border-color: $main_blue;
-		background-image: url('../img/svg/uEA01-check-symbol.svg');
-	}
-
+	
 	.item-filter  {
 		flex-basis: 19%;
 		border-top: 1px solid #c2c2c2;
@@ -234,6 +226,12 @@
 		cursor:pointer;
 		padding: 5px 20px;
 		position: relative;
+		svg.down {
+			width: 20px;
+			height: 20px;
+			margin-top: 15px;
+			transform: rotate(180deg);
+		}
 		input[type=checkbox] + label {
 			font-size: 1.5rem;
 			margin-top: 30px;
@@ -264,9 +262,13 @@
 			z-index: 50;
 			border: 2px solid #000;
 			display: none;
+			// .input_group_wrapp {
+			// 	height: 250px;
+			// }
 			form {
 				padding: 20px;
 				.slider_ui {
+
 					.ui-slider-horizontal .ui-slider-range {
 						background-color: #000;
 					}
@@ -274,6 +276,7 @@
 						height: 3px;
 						border: none;
 						background-color: $grey_dop;
+						margin-top: 15px;
 					}
 				}
 			}
@@ -309,7 +312,6 @@
 	}
 	.item-filter-input-checkbox {
 		cursor: default;
-		    
 		input[type=checkbox]+label {
 			margin-left: -15px;
 		}
@@ -343,6 +345,29 @@
 			}
 		}
 	}
+	.ps-container > .ps-scrollbar-y-rail {
+		opacity: 1 !important;
+	}
+
+	.ps-container > .ps-scrollbar-y-rail:hover > .ps-scrollbar-y, .ps-container > .ps-scrollbar-y-rail:active > .ps-scrollbar-y {
+		width: 3px  !important;
+		right: 10px !important;
+	}
+	.ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+		background-color: grey !important;
+		right: 10px !important;
+	}
+	.ps-container > .ps-scrollbar-y-rail {
+		width: 3px !important;
+		background-color: transparent !important;
+	}
+	.ps-container>.ps-scrollbar-y-rail>.ps-scrollbar-y {
+		width: 3px !important;
+	}
+
+	.ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y { 
+		width: 3px !important; 
+	}
 }
 
 .company-wrapp  {
@@ -350,7 +375,9 @@
 		padding-bottom: 20px;
 	}
 	.adress {
-		padding-bottom: 132px;
+		// padding-bottom: 132px;
+		padding: 0 10px 132px;
+
 	}
 }
 .bg-black {
@@ -420,22 +447,7 @@
 		li.active {
 			color:#000;
 		}
-		.dop_menu {
-			position: absolute;
-			border: 2px solid #000;
-			padding: 20px;
-			background-color: #fff;
-			display: none;
-			margin-top: 10px;
-			z-index: 100;
-			li {
-				display: block;
-				padding: 5px 0;
-				text-transform: none;
-				font-family: $font_r;
-				color: #000;
-			}
-		}
+		
 	}
 	.border-top {
 		border-top: 4px solid #000;
@@ -667,6 +679,9 @@
 					}
 				}
 			}
+			.hidden {
+				display: none;
+			}
 			.services {
 				li {
 					display: flex;
@@ -754,7 +769,22 @@
 		}
 	}
 }
-
+.dop_menu {
+	position: absolute;
+	border: 2px solid #000;
+	padding: 20px;
+	background-color: #fff;
+	display: none;
+	margin-top: 10px;
+	z-index: 100;
+	li {
+		display: block;
+		padding: 5px 0;
+		text-transform: none;
+		font-family: $font_r;
+		color: #000;
+	}
+}
 .map {
 	margin: 50px 0;
 	div {
@@ -797,17 +827,41 @@
 		color: #838383;
 		cursor: pointer;
 		width: 55%;
-   		margin: 0 auto;
-   		padding:  10px 0;
-   		font-size: 1.4rem;	
+		margin: 0 auto;
+		padding:  10px 0;
+		font-size: 1.4rem;	
 	}
 	.tel {
 		padding: 30px 0;
+		position: relative;
+		padding: 15px 0;
+		svg {
+			width: 10px;
+			position: absolute;
+			margin-left: -18px;
+			margin-top: 9px;
+		}
 		p {
 			font-size: 2rem;
 			span {
 				font-family: $font_b;
 			}
+		}
+		p.text {
+			font-size: 1.5rem;
+			color: #949494;
+		}
+	}
+	.contact {
+		padding: 15px 0;
+		svg {
+			width: 18px;
+			margin-left: -23px;
+   			margin-top: 4px;
+   			height: 18px;
+		}
+		p {
+			font-size: 1.5rem;
 		}
 	}
 	.link {
@@ -825,7 +879,10 @@
 		letter-spacing: 2px;
 		margin: 35px 0;
 		cursor: pointer;
-
+		transition: all 0.3s ease-out;
+		&:hover {
+			color: $main_blue;
+		}
 	}
 }
 

@@ -53,6 +53,7 @@
 		h1 {
 			padding-bottom: 40px;
 			font-family: $font_m;
+			line-height: 1;
 		}
 		.panel_dop {
 			display: flex;
@@ -78,12 +79,19 @@
 				font-family: $font_r;
 				cursor: pointer;
 				width: 200px;
+				transition: all 0.3s ease-out;
 				svg {
 					width: 15px;
 					fill: #fff;
 					margin-right: 7px;
 					position: relative;
 					top: 3px;
+				}
+				&:hover {
+					color: $orange;
+					svg {
+						fill: $orange;
+					}
 				}
 			}
 			.share  {
@@ -98,6 +106,11 @@
 					padding-left: 15px;
 					position: relative;
 					top: -4px;
+					transition: all 0.3s ease-out;
+					cursor: pointer;
+					&:hover {
+						color: $orange;
+					}
 				}
 				ul {
 					display: inline-block;
@@ -151,6 +164,9 @@
 		max-width: 240px;
 		text-align: center;
 		padding: 70px 0;
+		img {
+			border-radius: 50%;
+		}
 	}
 	.block-center-text {
 		max-width: 630px;
@@ -180,12 +196,19 @@
 				font-family: $font_r;
 				cursor: pointer;
 				width: 200px;
+				transition: all 0.3s ease-out;
 				svg {
 					width: 15px;
 					fill: #000;
 					margin-right: 7px;
 					position: relative;
 					top: 3px;
+				}
+				&:hover {
+					color: $main_blue;
+					svg {
+						fill: $main_blue;
+					}
 				}
 			}
 		}
@@ -213,8 +236,8 @@
 				height: 30px;
 				position: absolute;
 				left: 12px;
-    			top: 3px;
-    			fill: #cccccc;
+				top: 3px;
+				fill: #cccccc;
 
 			}
 		}
@@ -306,12 +329,30 @@
 		}
 
 	}
+	.block-center-img-50 {
+		padding: 20px 0;
+		figcaption {
+			max-width: 630px;
+			margin: 0 auto;
+			width: 100%; 
+			font-size: 1.5rem;
+			color: #000;
+			padding: 20px 0;
+			span {
+				color: $grey;
+			}
+			a {
+				color: #000;
+			}
+		}
+	}
 	.block-center-citation, .block-center-img-50 {
 		max-width: 850px;
 		margin: 0 auto;
 		width: 100%; 
 		text-align: center;
 		position: relative;
+
 		img {
 			width: 100%;
 			padding: 0 10px;
@@ -374,9 +415,14 @@
 
 	}
 }
+.fix_pad {
+	padding: 0 20px;
+}
 .comments-wrapp {
 	background-color: #f6f6f6;
 	height: 120px;
+	margin-bottom: 35px;
+	padding: 0 20px;
 	.comments-wrapp-content {
 		position: relative;
 		max-width: 1300px;
@@ -404,15 +450,27 @@
 			font-size: 2rem;
 			text-transform: uppercase;
 			font-family: black;
-			svg {
-				width: 10px;
-				transform: rotate(-90deg);
-				position: absolute;
-				margin-left: 20px;
-				margin-top: 5px;
+			transition: all 0.3s ease-out;
+			a {
+				color: #000;
+				svg {
+					width: 10px;
+					transform: rotate(-90deg);
+					position: absolute;
+					margin-left: 20px;
+					margin-top: 5px;
+				}
+			}
+			
+			&:hover {
+				a {
+					color: $main_blue;
+					svg {
+						fill: $main_blue;
+					}
+				}
 			}
 		}
-
 	}
 }
 
@@ -421,6 +479,32 @@
 	height: 450px;
 	.article-wrapp-bg, .article-wrapp-info {
 		height: 450px;
+	}
+	.h1 {
+		font-size: 6rem;
+		font-family: $font_m;
+		padding-bottom: 25px;
+	}
+	svg.next_post-refresh {
+		width: 30px;
+		height: 30px;
+		fill: #fff;
+		margin: 0px auto 50px;
+		cursor: pointer;
+		&:hover {
+			animation: spin 3s infinite linear;
+		}
+	}
+	@keyframes spin {
+		from {
+			transform:rotate(0deg);
+		}
+		to {
+			transform:rotate(360deg);
+		}
+	}
+	.card-date_like {
+		padding-bottom: 70px !important;
 	}
 }
 
@@ -463,10 +547,11 @@
 					padding-left: 15px;
 					position: relative;
 					top: -4px;
+
 				}
 			}
 			.adress {
-			    padding-bottom: 30px;
+				padding-bottom: 30px;
 			}
 		}
 	}

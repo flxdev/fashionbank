@@ -1,5 +1,8 @@
 //- еще выподающее меню, и на ресайз
 //-остановка видео на ютуб
+//- попапы обратный звонок и еще адреса
+//- мобильная версия
+
 
 
 
@@ -61,12 +64,12 @@ block content
 						span 641-04-04
 				a.link(href='#') www.mobydick.by
 				div.show-map Смотреть на карте
-				button.btn.btn-size-225.btn-black Обратный звонок
+				button.btn.btn-size-225.btn-black.js-popup-open(data-open-popup = 'popup-backcall') Обратный звонок
 		section
 			div.max-width-1300
 				div.company-content-wrapp
 					div.menu.js-menu-dropdown
-						ul.main_menu
+						ul.main_menu.js-tags-resizes
 							li.active О нас
 							li Услуги
 							li Цены
@@ -75,11 +78,11 @@ block content
 							li.js-menu-dropdown-open Еще
 								svg.down
 									use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
-						ul.dop_menu.js-menu-dropdown-dop
-							li Услуги
-							li Цены
-							li Фотогалерея
-							li Отзывы
+					ul.dop_menu.js-menu-dropdown-dop
+						li Услуги
+						li Цены
+						li Фотогалерея
+						li Отзывы
 					div.content-block.border-top.first-block
 						div.content-left
 							img.logo(src='img/1-8-logo.png' alt='')
@@ -126,30 +129,71 @@ block content
 					div.content-block
 						div.content-left
 							h3 Прайслист
-							ul 
-								li.active Все цены
-								li Тренажерный зал
-								li Бойцовский клуб
-						div.content-right.js-show-text(data-height='280')
-							ul.price-list.shadow-text.js-show-other-content
-								li.title Тренаженрый зал (полный день)
-								li Абонемент на 1 месяц / 4 занятия. 
-									span 30,00 руб.
-								li Абонемент на 1 месяц / 4 занятия. 
-									span 30,00 руб.
-								li Абонемент на 1 месяц / 4 занятия. 
-									span 30,00 руб.
-								li Абонемент на 1 месяц / 4 занятия. 
-									span 30,00 руб.
-								li Абонемент на 1 месяц / 4 занятия. 
-									span 30,00 руб.
-								li Абонемент на 1 месяц / 4 занятия. 
-									span 30,00 руб.
-								li Абонемент на 1 месяц / 4 занятия. 
-									span 30,00 руб.
-								li Абонемент на 1 месяц / 4 занятия. 
-									span 30,00 руб.
-							p.link.js-show-other + Все цены
+							ul.js-tabs-categories
+								li.active(data-tab='tab1') Все цены
+								li(data-tab='tab2') Тренажерный зал
+								li(data-tab='tab3') Бойцовский клуб
+						div.content-right.js-show-text.js-tabs-content(data-height='280')
+							div(data-tab-content='tab1')
+								ul.price-list.shadow-text.js-show-other-content
+									li.title Тренаженрый зал (полный день)
+									li Абонемент на 1 месяц / 4 занятия. 
+										span 30,00 руб.
+									li Абонемент на 1 месяц / 4 занятия. 
+										span 30,00 руб.
+									li Абонемент на 1 месяц / 4 занятия. 
+										span 30,00 руб.
+									li Абонемент на 1 месяц / 4 занятия. 
+										span 30,00 руб.
+									li Абонемент на 1 месяц / 4 занятия. 
+										span 30,00 руб.
+									li Абонемент на 1 месяц / 4 занятия. 
+										span 30,00 руб.
+									li Абонемент на 1 месяц / 4 занятия. 
+										span 30,00 руб.
+									li Абонемент на 1 месяц / 4 занятия. 
+										span 30,00 руб.
+								p.link.js-show-other + Все цены
+							div.hidden(data-tab-content='tab2')
+								ul.price-list.shadow-text.js-show-other-content
+									li.title Тренаженрый зал (полный день)
+									li Абонемент на 1 месяц / 4 занятия. 
+										span 30,00 руб.
+									li Абонемент на 1 месяц / 4 занятия. 
+										span 30,00 руб.
+									li Абонемент на 1 месяц / 4 занятия. 
+										span 30,00 руб.
+									li Абонемент на 1 месяц / 4 занятия. 
+										span 30,00 руб.
+									li Абонемент на 1 месяц / 4 занятия. 
+										span 30,00 руб.
+									li Абонемент на 1 месяц / 4 занятия. 
+										span 30,00 руб.
+									li Абонемент на 1 месяц / 4 занятия. 
+										span 30,00 руб.
+									li Абонемент на 1 месяц / 4 занятия. 
+										span 30,00 руб.
+								p.link.js-show-other + Все цены
+							div.hidden(data-tab-content='tab3')
+								ul.price-list.shadow-text.js-show-other-content
+									li.title Тренаженрый зал (полный день)
+									li Абонемент на 1 месяц / 4 занятия. 
+										span 30,00 руб.
+									li Абонемент на 1 месяц / 4 занятия. 
+										span 30,00 руб.
+									li Абонемент на 1 месяц / 4 занятия. 
+										span 30,00 руб.
+									li Абонемент на 1 месяц / 4 занятия. 
+										span 30,00 руб.
+									li Абонемент на 1 месяц / 4 занятия. 
+										span 30,00 руб.
+									li Абонемент на 1 месяц / 4 занятия. 
+										span 30,00 руб.
+									li Абонемент на 1 месяц / 4 занятия. 
+										span 30,00 руб.
+									li Абонемент на 1 месяц / 4 занятия. 
+										span 30,00 руб.
+								p.link.js-show-other + Все цены
 
 			section
 				div.full-width.bg-black
@@ -158,12 +202,12 @@ block content
 							div.content-block
 								div.content-left
 									h3.title_black Фотогалерея
-									ul 
-										li.active Все фотографии
-										li Тренажерный зал
-										li Бойцовский клуб
-								div.content-right
-									div.gallery_foto
+									ul.js-tabs-categories
+										li.active(data-tab='tab4') Все фотографии
+										li(data-tab='tab5') Тренажерный зал
+										li(data-tab='tab6') Бойцовский клуб
+								div.content-right.js-tabs-content
+									div.gallery_foto(data-tab-content='tab4')
 										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '1')
 										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '2')
 										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '3')
@@ -172,6 +216,24 @@ block content
 										div.wrapp-img.js-open-gallery.text-foto(data-gallery = '1')
 											p
 												a(href='#') + Ещё (15 фото)
+									div.gallery_foto(data-tab-content='tab5' style='display: none;')
+										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '1')
+										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '2')
+										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '3')
+										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '4')
+										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '5')
+										div.wrapp-img.js-open-gallery.text-foto(data-gallery = '1')
+											p
+												a(href='#') + Ещё (13 фото)
+									div.gallery_foto(data-tab-content='tab6' style='display: none;')
+										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '1')
+										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '2')
+										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '3')
+										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '4')
+										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '5')
+										div.wrapp-img.js-open-gallery.text-foto(data-gallery = '1')
+											p
+												a(href='#') + Ещё (11 фото)
 
 			section
 				div.max-width-1300.other-content
@@ -260,7 +322,7 @@ block content
 										p.text Туда приятно приходить, стильный зал, отличный персонал, мега админы и тренера) У меня был самый лучший тренер Гришаня! Один его внешний вид вдохновляет! Он супер качок и чемпион по жиму лёжа)) Всем Моби Дик)))
 										p.date 20 ноября 2016
 								p.link.js-show-other + Все отзывы
-								button.btn.btn-size-225.btn-black Оставить отзыв
+								button.btn.btn-size-225.btn-black.js-popup-open(data-open-popup = 'popup-review') Оставить отзыв
 
 						div.content-block
 							div.content-left
