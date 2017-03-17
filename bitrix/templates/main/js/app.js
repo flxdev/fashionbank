@@ -1034,6 +1034,8 @@ function initMenuOther() {
 
 			$('.js-menu-dropdown-dop').slideToggle(200);
 
+			return false;
+
 		})
 
 

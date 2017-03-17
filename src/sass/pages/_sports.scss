@@ -396,6 +396,7 @@
 }
 .bg-black {
 	background-color: #000;
+	margin: 40px 0 0;
 	.company-content-wrapp {
 		.content-block {
 			.content-left { 
@@ -414,7 +415,7 @@
 
 
 .other-content {
-	padding-top: 50px;
+	padding-top: 40px;
 	.company-content-wrapp  {
 		.content-block {
 			padding: 25px 0;
@@ -424,16 +425,18 @@
 .company-content-wrapp {
 	width: 800px;
 	.menu {
-		padding: 50px 0;
+		padding: 45px 0 40px;
 		li {
 			display: inline-block;
 			font-size: 1.5rem;
 			text-transform: uppercase;
 			font-family: $font_m;
 			padding: 0 15px;
-			color: #828282;
 			cursor: pointer;
-			transition: all 0.3s ease-out;
+			a {
+				transition: all 0.3s ease-out;
+				color: #828282;
+			}
 			&:first-child {
 				padding-left: 0;
 			}
@@ -453,13 +456,18 @@
 			}
 		}
 		li:hover {
-			color: $main_blue;
-			svg {
-				fill: $main_blue;
+			a {
+				color: $main_blue;
+				
 			}
+			svg {
+					fill: $main_blue;
+				}
 		}
 		li.active {
-			color:#000;
+			a {
+				color:#000;
+			}
 		}
 		
 	}
@@ -478,7 +486,7 @@
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: flex-start;
-		padding: 50px 0;
+		padding: 40px 0;
 		.content-left {
 			flex-basis: 25%;
 			.logo {
@@ -543,8 +551,18 @@
 					.wrapp-img {
 						img {
 							border-radius: 50%;
+							border: 6px solid #efefef;
+						}
+						.like {
+							display: none;
 						}
 					}
+				}
+				.card-horizontal {
+					.wrapp-img {
+						flex-basis: 48%;
+					}
+
 				}
 			}
 			.articles {
@@ -655,6 +673,14 @@
 				 font-family: $font_b;
 				 letter-spacing: 2px;
 				 cursor: pointer;
+				 transition: all 0.3s ease-out;
+				 &:hover {
+				 	color: #000;
+				 }
+				 
+			}
+			.show-other-review {
+				margin-top: 20px;
 			}
 			.gallery_foto {
 				display: flex;
@@ -796,7 +822,13 @@
 		padding: 5px 0;
 		text-transform: none;
 		font-family: $font_r;
-		color: #000;
+		a {
+			color: #000;
+			transition: all 0.1s ease-out;
+			&:hover {
+				color: $main_blue;
+			}
+		}
 	}
 }
 .map {
@@ -942,7 +974,7 @@
 			}
 			
 			.left-content {
-				height: 50rem;
+				height: 60rem;
 				width: 30%;
 				background-color: #1a1a1a;
 				text-align: left;
@@ -1008,7 +1040,7 @@
 				}
 				.wrapp-img {
 					img {
-						height: 50rem;
+						height: 60rem;
    						margin: 0 auto;	
 					}
 				}
@@ -1016,7 +1048,7 @@
 			.right-youtube-gallery {
 				.wrapp-img {
 					div {
-						height: 50rem;
+						height: 60rem;
    						margin: 0 auto;	
 					}
 				}

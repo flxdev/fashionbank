@@ -224,7 +224,7 @@
 
 	//1-8 page 
 	.article-wrapp .article-wrapp-bg {
-		height: 643px;
+		height: 580px;
 	}
 	.company-content-wrapp {
 		width: 640px;
@@ -285,6 +285,37 @@
 	}
 }
 
+
+@media (max-width: 1090px) {
+	.filters-wrapp {
+		flex-direction: column;
+		margin-bottom: 25px;
+		h2 {
+			position: relative;
+			left: 0;
+		}
+		.filters-li {
+			li {
+				margin-right: 10px;
+			}
+		}	 
+		.dropdown {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 1057px) {
+	.specialist-page-first-screen .article-wrapp-info .wrapp-info h1 {
+		height: 140px;
+	}
+	.specialist-page-first-screen .article-wrapp-info .wrapp-info {
+		padding-bottom: 41px;
+	}
+}
+
+
+
 @media (max-width: 1024px) {
 	.content-wrapp .block-center-text .subscribe {
 		display: none;
@@ -313,9 +344,13 @@
 		}
 	}
 	
+	
 }
 @media (max-width: 1020px) {
-.company-contact {
+	.auth {
+		padding: 30px 20px 0
+	}
+	.company-contact {
 		position: relative !important;
 		top: 0 !important;
 		right: 0 !important;
@@ -325,22 +360,7 @@
 	.company-content-wrapp {
 		width: 96%;
 	}
-	.filters-wrapp {
-		flex-direction: column;
-		margin-bottom: 25px;
-		h2 {
-			position: relative;
-			left: 0;
-		}
-		.filters-li {
-			li {
-				margin-right: 10px;
-			}
-		}	 
-		.dropdown {
-			display: none;
-		}
-	}
+	
 	.comments-wrapp .comments-wrapp-content .comments-col {
 		display: none;
 	}
@@ -358,11 +378,11 @@
 	}
 }
 
-@media (max-width: 919px) {
+@media (max-width: 936px) {
 	.wrapp_cards-block-1  {
 		.card-vertical {
-			min-height: 580px;
-   			max-height: 580px;
+			min-height: 660px;
+   			max-height: 660px;
 			.wrapp-img {
 				max-height: 415px;
 			}
@@ -745,7 +765,7 @@
 	
 }
 
-@media (max-width: 530px) {
+@media (max-width: 542px) {
 	.company-content-wrapp .content-block .content-right .gallery_foto .wrapp-img {
 		flex-basis: 45%;
 	}
@@ -757,6 +777,12 @@
 	}
 	.company-contact {
 		margin: 45px auto 0;
+	}
+	.company-content-wrapp .content-block .content-right .trainers .card-horizontal .wrapp-img {
+		flex-basis: 30%;
+	}
+	.article-wrapp .article-wrapp-info h1 {
+		font-size: 4.5rem;
 	}
 	
 }
@@ -852,9 +878,7 @@
 	}
 	//1-8page end 
 
-	.article-wrapp .article-wrapp-info h1 {
-		font-size: 4.5rem;
-	}
+	
 
 }
 

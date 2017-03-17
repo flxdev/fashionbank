@@ -496,6 +496,7 @@ function initMenuOther() {
 			$(this).find('.down').toggleClass('up');
 			$('.js-menu-dropdown-dop').css({"left":clickLeft});
 			$('.js-menu-dropdown-dop').slideToggle(200);
+			return false;
 		})
 
 		$(window).on('resize', function(){
