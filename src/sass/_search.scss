@@ -116,6 +116,10 @@
 						display: block;
 						padding: 20px 0;
 						letter-spacing: 2px;
+						transition: all 0.3s ease-out;
+						&:hover {
+							color: $main_blue;
+						}
 					}
 				}
 				// width: 49%;

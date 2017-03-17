@@ -97,7 +97,12 @@
 	background-position: 95%;
 	background-repeat: no-repeat;
 	transition: all 0.1s ease-out;
+	
 }
+.email-input::-webkit-input-placeholder {color:#4e4e4e;}
+.email-input::-moz-placeholder          {color:#4e4e4e;}
+.email-input:-moz-placeholder           {color:#4e4e4e;}
+.email-input:-ms-input-placeholder      {color:#4e4e4e;}
 
 .email-input:focus {
 	background-image: url(../img/svg/uEA01-email-blue.svg);
@@ -113,28 +118,38 @@
 		padding-right: 30px;
 		font-size: 0;
 		line-height: 0;
+		vertical-align: middle;
+		a {
+			svg {
+				fill: #fff;
+				transition: all 0.3s ease-out;
+				&:hover {
+					fill: $main_blue !important;
+				}
+			}
+		}
 		a.vk {
 			svg {
-				width: 25px;
-				fill: #fff;
+				width: 20px;
+				height: 13px;
 			}
 		}
 		a.fb {
 			svg {
-				width: 10px;
-				fill: #fff;
+				width: 8px;
+				height: 16px;
 			}
 		}
 		a.yt {
 			svg {
-				width: 20px;
-				fill: #fff;
+				width: 15px;
+				height: 20px;
 			}
 		}
 		a.inst {
 			svg {
-				width: 19px;
-				fill: #fff;
+				width: 16px;
+				height: 16px;
 			}
 		}
 

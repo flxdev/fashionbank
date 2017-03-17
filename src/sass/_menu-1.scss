@@ -24,7 +24,7 @@
 	.burger_menu {
 		min-width:320px;
 		// max-width: 600px;
-		width: 33%;
+		width: 410px;
 		background-color: #fff;
 		min-height: 100%;
 		padding: 14vh 10px 60px 65px;
@@ -66,6 +66,7 @@
 					letter-spacing: 2px;
 					color: #000;
 					font-family: $font_b;
+
 				}
 				&:last-child {
 					padding-bottom: 0;
@@ -81,6 +82,10 @@
 					letter-spacing: 2px;
 					color: #000;
 					font-family: $font_b;
+					transition: all 0.3s ease-out;
+					&:hover {
+						color: $main_blue;
+					}
 				}
 				&:last-child {
 					padding-bottom: 0;
@@ -96,6 +101,10 @@
 					letter-spacing: 1px;
 					color: #000;
 					font-family: $font_b;
+					transition: all 0.3s ease-out;
+					&:hover {
+						color: $main_blue;
+					}
 				}
 				&:last-child {
 					padding-bottom: 0;
@@ -128,16 +137,16 @@
 }
 
 .artclose {
-	height: 30px;
-	width: 33px;
+	height: 18px;
+	width: 27px;
 	cursor: pointer;
 }
 
 .burgx, .burgx2, .burgx3 {
-	margin-top: 3px;
+	margin-top: 0px;
 	background: #fff;
-	width: 33px;
-	height: 4px;
+	width: 27px;
+	height: 3px;
 	position: absolute;
 	-webkit-transform: rotate(-180deg);
 	transform: rotate(-180deg);
@@ -146,10 +155,10 @@
 }
 
 .burgx2 {
-	margin-top: 13px;
+	margin-top: 8px;
 }
 .burgx3 {
-	margin-top: 23px;
+	margin-top: 16px;
  	-webkit-transform: rotate(180deg);
 	transform: rotate(180deg);
 	-moz-transform: rotate(180deg);

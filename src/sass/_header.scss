@@ -11,13 +11,13 @@ header {
 	div {
 		display: inline-block;
 		svg {
-			width: 20px;
+			width: 16px;
 			fill: #fff;
 			margin-left: 40px;
 			cursor:pointer;
 			transition: all 0.3s ease;
 			&:hover {
-				fill: $orange;
+				fill: $main_blue;
 			}
 		}
 	}
@@ -42,7 +42,8 @@ header {
 		flex-basis: 100%;
 		.wrapp_svg {
 			width: 40%;
-			margin: 40px auto;
+			max-width: 420px;
+			margin: 32px auto 27px;
 			svg {
 				fill: #fff;
 				width: 100%;
@@ -60,19 +61,24 @@ header {
    		z-index: 101;
 		li {
 			a {
-				color: #c4c4c4;
+				// color: #c4c4c4;
+				color: #fff;
 				font-family: $font_b;
 				font-weight: 400;
 				letter-spacing: 1.2px;
-				padding: 0 5px 20px 5px;
+				padding: 0 5px 25px 5px;
 				display: block;
 				text-transform: uppercase;
 				border-bottom: 3px solid rgba(0,0,0,0);
 				transition: all 0.3s ease;
-				&:hover {
-					border-bottom: 3px solid #fff;
-					color: #fff;
-				}
+				
+			}
+			a.active {
+				border-bottom: 3px solid #fff;
+				color: #fff;
+			}
+			a.no-active {
+				color: $grey;
 			}
 			&:first-child {
 				margin-left: 60px;
@@ -80,7 +86,6 @@ header {
 			&:last-child {
 				margin-right: 60px;
 			}
-			
 		}
 	}
 	// .wrapp_menu_categories {
@@ -110,9 +115,13 @@ header {
 						display: block;
 						letter-spacing: 1px;
 						transition: all 0.3s ease;
-						&:hover {
-							background-color: #3b3b3b;
-						}
+						
+					}
+					
+				}
+				li.active {
+					a {
+						background-color: #3b3b3b;
 					}
 				}
 			}
@@ -137,6 +146,10 @@ header {
 							color: #fff;
 							padding: 15px 10px 15px 40px;
 							display: block;
+							transition: all 0.3s ease-out;
+						}
+						a.no-active {
+							color: $grey;
 						}
 					}
 				}

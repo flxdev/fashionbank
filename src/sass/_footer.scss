@@ -16,7 +16,7 @@
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: flex-start;
-		padding: 65px 0 80px;
+		padding: 65px 0 70px;
 		.footer-menu_logo {
 			img {
 				max-width: 100px;
@@ -27,24 +27,46 @@
 			// column-count:2;  
 			// column-gap: 5px;  
 			padding-right: 40px;
+			li:last-child {
+				a {
+					padding-bottom: 0;
+				}
+			}
 			a {
 				text-transform: uppercase;
 				font-size: 1.4rem;
 				letter-spacing: 1px;
 				font-family: $font_m;
-			}
-			li {
 				padding-bottom: 20px;
+				display: block;
+				transition: all 0.3s ease-out;
+			}
+			a.active {
+				color:#fff;
+			}
+			a.no-active {
+				color: $grey;
 			}
 		}
 		.footer-menu_main-info {
 			padding-right: 60px;
+			li:last-child {
+				a {
+					padding-bottom: 0;
+				}
+			}
 			a {
 				font-size: 1.4rem;
 				letter-spacing: 1px;
-			}
-			li {
+				transition: all 0.3s ease-out;
 				padding-bottom: 20px;
+				display: block;
+			}
+			a.active {
+				color:#fff;
+			}
+			a.no-active {
+				color: $grey;
 			}
 		}
 		.email {
@@ -62,7 +84,7 @@
 		flex-direction: row;
 		justify-content: flex-start;
 		align-items: flex-start;
-		padding-bottom: 95px;
+		padding-bottom: 90px;
 		p {
 			color: #4e4e4e;
 			font-size: 1.4rem;

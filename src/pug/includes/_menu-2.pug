@@ -3,20 +3,20 @@ include _card-h
 mixin menu-2(index, content)
 	div.menu_categories-content.js-menu-category-content-item(data-index=index)
 			ul.menu-left.js-menu-hover
-				li
-					a(href='#' data-tab='1') Статьи 
-				li
-					a(href='#' data-tab='2') Компании 
-				li
-					a(href='#' data-tab='3') Специалисты
-				li
-					a(href='#' data-tab='4') Магазины
+				li.active.js-left-menu-hover(data-tab='1')
+					a(href='#' ) Статьи 
+				li.js-left-menu-hover(data-tab='2')
+					a(href='#' ) Компании 
+				li.js-left-menu-hover(data-tab='3')
+					a(href='#' ) Специалисты
+				li.js-left-menu-hover(data-tab='4')
+					a(href='#' ) Магазины
 
-			div.wrapp_content(data-tab-content='1')
+			div.wrapp_content(data-tab-content='1').js-menu-item-hover
 				div.menu-center
 					ul
 						li
-							a(href='#') Все статьи 
+							a(href='#') Все статьи1111111111111111 
 						li
 							a(href='#') Фитнес-клуб
 						li
@@ -50,7 +50,7 @@ mixin menu-2(index, content)
 					+card-horizont('card card-horizontal text-white','img/10.jpg','Массажный салон BonJoli',false ,'Мода и стиль',true,false)
 
 
-			div.wrapp_content(data-tab-content='2').hidden
+			div.wrapp_content(data-tab-content='2').hidden.js-menu-item-hover
 				div.menu-center
 					ul
 						li
@@ -88,7 +88,7 @@ mixin menu-2(index, content)
 					+card-horizont('card card-horizontal text-white','img/10.jpg','Массажный салон BonJoli',false ,'Мода и стиль',true,false)
 
 
-			div.wrapp_content(data-tab-content='3').hidden
+			div.wrapp_content(data-tab-content='3').hidden.js-menu-item-hover
 				div.menu-center
 					ul
 						li
@@ -125,7 +125,7 @@ mixin menu-2(index, content)
 					+card-horizont('card card-horizontal text-white','img/12.jpg','Массажный салон BonJoli',false ,'Мода и стиль',true,false)
 					+card-horizont('card card-horizontal text-white','img/10.jpg','Массажный салон BonJoli',false ,'Мода и стиль',true,false)
 
-			div.wrapp_content(data-tab-content='4').hidden
+			div.wrapp_content(data-tab-content='4').hidden.js-menu-item-hover
 				div.menu-center
 					ul
 						li
