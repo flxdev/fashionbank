@@ -48,6 +48,7 @@
 }
 @media (max-width: 1150px) { 
  //page 1-8
+
  	.company-contact {
 		width: 350px;
  	}
@@ -116,6 +117,10 @@
 				}
 			}
 		}
+		
+	}
+	.card-full_bg .card-title {
+			padding-top: 300px;
 	}
 	.wrapp_sidebar {
 		flex-basis: 32%;
@@ -389,7 +394,7 @@
 		}
 		.card-full_bg {
 			.card-title {
-				padding-top: 350px;
+				padding-top: 450px;
 			}
 		}
 	}
