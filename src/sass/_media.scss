@@ -4,6 +4,9 @@
 		padding-left: 10px;
 		padding-right: 10px; 
 	}
+	.breadcrumbs {
+		padding-left: 20px;
+	}
 	.wrapp_slider-video-bg-black .wrapp_slider {
 		padding-left: 25px;
 		padding-right: 25px;
@@ -35,6 +38,12 @@
 	}
 	.specialist-page-first-screen .article-wrapp-info .breadcrumbs {
 		padding-left: 20px;
+	}
+	.filters-wrapp h2 {
+		left: 20px;
+	}
+	.filters-wrapp .dropdown {
+		right: 20px;
 	}
 }
 @media (max-width: 1150px) { 
@@ -281,7 +290,7 @@
 		display: none;
 	}
 	
-	.odd-last-child .card:last-child, .odd-last-child .card:nth-last-child(3),.odd-last-child .card:nth-last-child(2) {
+	.odd-last-child .card:last-child {
 		display: block;
 	}
 	.even-last-child .card:last-child, .even-last-child .card:nth-last-child(2) {
@@ -295,6 +304,11 @@
 			}
 			.wrapp-content {
 				flex-basis: 65%;	
+			}
+		}
+		.card-horizontal-full_bg {
+			.wrapp-content {
+				flex-basis: 100%;	
 			}
 		}
 	}
@@ -314,6 +328,10 @@
 	.filters-wrapp {
 		flex-direction: column;
 		margin-bottom: 25px;
+		h2 {
+			position: relative;
+			left: 0;
+		}
 		.filters-li {
 			li {
 				margin-right: 10px;
@@ -340,6 +358,22 @@
 	}
 }
 
+@media (max-width: 919px) {
+	.wrapp_cards-block-1  {
+		.card-vertical {
+			min-height: 580px;
+   			max-height: 580px;
+			.wrapp-img {
+				max-height: 415px;
+			}
+		}
+		.card-full_bg {
+			.card-title {
+				padding-top: 350px;
+			}
+		}
+	}
+}
 
 @media (max-width: 860px) {
 	.card-vertical {
@@ -385,6 +419,9 @@
 }
 
 @media (max-width: 700px) {
+	.wrapp_cards-block-1 .card-vertical {
+		max-height: none;
+	}
 	.gallery-wrapp .gallery-wrapp-content .gallery .right-content .wrapp-img img, .gallery-wrapp .gallery-wrapp-content .gallery .right-youtube-gallery .wrapp-img div {
 		height: 30rem;
 	}

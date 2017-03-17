@@ -16,26 +16,36 @@ block content
 				li 
 					a(href='#') Статьи
 
-		section(title='filters')
+		section
 			div.max-width-1300
 				div.filters-wrapp
 					h2 Всё о спорте
-					ul.filters-li
-						li Обзор
-						li.active Статьи
-						li Компании
-						li Специалисты
-						li Магазины
+					l.filters-li
+						li.active 
+							a(href='#') Обзор
+						li 
+							a(href='#') Статьи
+						li 
+							a(href='#') Компании
+						li 
+							a(href='#') Специалисты
+						li 
+							a(href='#') Магазины
 					div.dropdown
 						p Сначала 
 							span новые
+								svg.down
+									use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
 						ul.dropdown-list
-							li Новые
-							li Популярные
-							li Обсуждаемые
+							li 
+								a(href='#') Новые
+							li 
+								a(href='#') Популярные
+							li 
+								a(href='#') Обсуждаемые
 							
 
-		section(title='cards-block-sport-1')
+		section
 			div.max-width-1300
 				div.wrapp_cards-block-1.cards-block-sport.cards-block-sport-articles.odd-last-child
 					div.block-title

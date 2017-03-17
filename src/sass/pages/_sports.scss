@@ -1,11 +1,18 @@
 .filters-wrapp {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
-	padding-top: 20px;
+	position: relative;
+	padding: 25px 0;
 	h2 {
 		font-family: $font_m;
+		position: absolute;
+		left: 0;
+	}
+	.dropdown {
+		position: absolute;
+		right: 0;
 	}
 
 	.filters-li {
@@ -44,7 +51,13 @@
 }
 
 .cards-block-sport {
+	.full-baner {
+		margin: 20px 0 35px;
+	}
 	.load_more {
+		padding: 60px 0;
+	}
+	.load_more-sport {
 		padding: 60px 0 0;
 	}
 	.block-title {
@@ -132,6 +145,7 @@
 		
 	}
 }
+
 
 .specialists {
 	.card {
