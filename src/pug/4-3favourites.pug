@@ -1,0 +1,65 @@
+//-- ВНИМАНИЕ! 	к класу .like добавить класс .show
+
+extends _layout
+
+block title
+	title Title of template
+
+block content
+	div.wrapp_page
+		include includes/_card-h-2
+		include includes/_header
+		nav
+			div.max-width-1300
+				ul.breadcrumbs
+					li 
+						a(href='#') Главная 
+					li 
+						a(href='#') Личный кабинет
+
+		section
+			div.max-width-1300
+				div.title-page-wrapp
+					h2 Избранные материалы
+					
+		section
+			div.max-width-1300.favourites
+				div.favourites-left
+					ul.favourites-menu
+						li
+							a(href='#') Избранные материалы
+						li
+							a.active(href='#') Персональные данные
+						li
+							a(href='#') Сменить пароль
+						li
+							a(href='#') Подписка
+						li
+							a(href='#') 
+								img(src='img/singout.png' alt='')
+								span Выход
+				div.favourites-right.personal_data
+					div.favourites-right_left
+						h3 Мои данные
+						form
+							div.input-wrapp
+								p Имя и фамилия
+									span *
+								input(placeholder = 'Введите имя и фамилию')
+							div.input-wrapp
+								p E-mail
+									span *
+								input(placeholder = 'Введите E-mail')
+							p Ваш пол
+							div
+								
+								input(type='radio' name='sex' id ='radio-4')
+								label(for ='radio-4') Мужской
+								input(type='radio' name='sex' id ='radio-5')
+								label(for ='radio-5') Мужской
+					div.favourites-right_right
+						h3 Мои аккаунты
+
+		
+		include includes/elements/_go_top
+		include includes/_footer

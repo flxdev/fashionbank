@@ -565,3 +565,47 @@
 		}
 	}
 }
+.block-right {
+	position: absolute;
+	right: 0;
+	width: 180px;
+	h3 {
+		font-size: 1.5rem;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-family: $font_m;
+		margin-bottom: 30px;
+	}
+	figure {
+		width: 60%;
+		position: relative;
+		margin-bottom: 15px;
+		img {
+			width: 100%;
+		}
+		.play {
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			width: 35%;
+    		margin: auto;
+		}
+	}
+	a {
+		.desc  {
+			font-size: 1.5rem;
+			color: #000;
+			text-align: left;
+			transition: all 0.3s ease-out;
+		}
+		
+		&:hover {
+			.desc  {
+				color: $main_blue;
+			}
+		}
+	}
+	
+}

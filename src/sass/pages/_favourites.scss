@@ -54,7 +54,7 @@
 				justify-content: space-between;
 				align-items: flex-start;
 				.tabs-categories {
-					margin-bottom: 25px;
+					// margin-bottom: 25px;
 					li {
 						display: inline-block;
 						text-transform: uppercase;
@@ -139,4 +139,48 @@
 			}
 		}
 	}
+	.personal_data {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+		h3 {
+			font-family: $font_bb;
+			text-transform: uppercase;
+			font-size: 1.8rem;
+			letter-spacing: 2px;
+		}
+		.favourites-right_left {
+			flex-basis: 50%;
+			h3 {
+				margin-bottom: 30px;
+			}
+			.input-wrapp {
+				border: 1px solid #c6c6c6;
+				padding: 8px 15px 12px;
+				max-width: 300px;
+				margin-bottom: 20px;
+				p {
+					font-size: 1.2rem;
+					color: #c6c6c6;
+					padding: 0 0 5px;
+					span {
+						color: #ed8585;
+					}
+				}
+				input {
+					color: #000;
+					font-size: 1.4rem;
+				}
+			}
+		}
+		.favourites-right_right {
+			flex-basis: 50%;
+		}
+	}
+}
+
+.block-right {
+	position: absolute;
+	right: 0;
 }

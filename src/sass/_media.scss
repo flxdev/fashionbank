@@ -48,6 +48,7 @@
 }
 @media (max-width: 1300px) { 
 	//page4-0
+
 	.title-page-wrapp {
 		padding: 20px 20px 35px;
 	}
@@ -77,6 +78,12 @@
 	}
 	//end 4-0
 }
+
+@media (max-width: 1250px) {
+	.block-right {
+		display: none;
+	}
+ }
 
 @media (max-width: 1150px) {
 	//page 1-8
@@ -506,7 +513,7 @@
 					.wrapp_slider-content {
 						.card-horizontal {
 							flex-basis: 100%;
-							
+
 						}
 					}
 				}
