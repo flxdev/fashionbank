@@ -352,6 +352,7 @@
 			}
 		}
 	}
+	
 	.block-center-img-50 + .block-center-text  {
 		padding: 0 0 50px;
 	}
@@ -421,7 +422,28 @@
 				top: -50px; left: 0; right: 0;
 			}
 		}
-
+	}
+	.article-for {
+		padding-top: 0;
+		padding-bottom: 70px;
+		h3 {
+			padding-top: 0;
+		}
+		p {
+			padding: 10px 0;
+			a {
+				color: #000;
+				transition: all 0.3s ease-out;
+			}
+			&:hover {
+				a {
+					color: $main_blue;
+				}
+			}
+			a.active {
+				color: #a5a5a5;
+			}
+		}
 	}
 }
 .fix_pad {
@@ -600,7 +622,7 @@
 			text-align: left;
 			transition: all 0.3s ease-out;
 		}
-		
+
 		&:hover {
 			.desc  {
 				color: $main_blue;
