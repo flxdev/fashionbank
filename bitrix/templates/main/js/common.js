@@ -250,8 +250,12 @@ function initSliderOne() {
 function swichTabs() {
 	$(this).addClass("active").siblings().removeClass("active");
 	var currTab = $(".js-tabs-content").find("[data-tab-content='" + $(this).data("tab") + "']");
-	currTab.fadeIn(250).siblings().fadeOut(0);
-	currTab.slick('setPosition');
+	console.log('add');
+	currTab.removeClass('hidden').siblings().addClass('hidden');
+	if (currTab.hasClass('js-slider-init')) {
+		currTab.slick('setPosition');
+	}
+	
 }
 
 function shadowScroll(scrollContainer, scrolling, add) {
@@ -617,12 +621,12 @@ function initLike() {
 			if ($(this).attr('data-like') == '1') {
 				$(this).find('img').attr( 'src', 'img/icons/heart-2.png' );
 				$(this).attr( "data-like", '0');
-				$(this).addClass('show');
+				$(this).toggleClass('show');
 			}
 			else {
 				$(this).find('img').attr( 'src', 'img/icons/heart1.png' );
 				$(this).attr( "data-like", '1');
-				$(this).removeClass('show');
+				$(this).toggleClass('show');
 			}
 			return false;
 		})
@@ -657,7 +661,6 @@ var globalSetting = [];
 initSetting();
 
 $( document ).ready(function() {
-
 	if ($('.js-scroll-content').length) {
 		shadowScroll('.js-scroll-container', '.js-scroll-content', '.js-scroll-opasity');
 		$('.js-scroll-container').on( 'scroll', function(){

@@ -542,9 +542,17 @@ function swichTabs() {
 
 	var currTab = $(".js-tabs-content").find("[data-tab-content='" + $(this).data("tab") + "']");
 
-	currTab.fadeIn(250).siblings().fadeOut(0);
+	console.log('add');
 
-	currTab.slick('setPosition');
+	currTab.removeClass('hidden').siblings().addClass('hidden');
+
+	if (currTab.hasClass('js-slider-init')) {
+
+		currTab.slick('setPosition');
+
+	}
+
+	
 
 }
 
@@ -1276,7 +1284,7 @@ function initLike() {
 
 				$(this).attr( "data-like", '0');
 
-				$(this).addClass('show');
+				$(this).toggleClass('show');
 
 			}
 
@@ -1286,7 +1294,7 @@ function initLike() {
 
 				$(this).attr( "data-like", '1');
 
-				$(this).removeClass('show');
+				$(this).toggleClass('show');
 
 			}
 
@@ -1355,8 +1363,6 @@ initSetting();
 
 
 $( document ).ready(function() {
-
-
 
 	if ($('.js-scroll-content').length) {
 

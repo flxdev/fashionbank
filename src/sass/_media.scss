@@ -46,9 +46,56 @@
 		right: 20px;
 	}
 }
-@media (max-width: 1150px) { 
- //page 1-8
+@media (max-width: 1300px) { 
+	//page4-0
+	.title-page-wrapp {
+		padding: 20px 20px 35px;
+	}
+	.favourites-menu {
+		padding: 0 20px;
+	}
+	.favourites {
+		.favourites-right {
+			.favourites-content {
+				.wrapp_tabs-content {
+					.wrapp_slider-content {
+						.card {
+							flex-basis: 29%;
+						}
+						.card-full_bg {
+						 	.card-title	 {
+						 		padding-top: 250px;
+						 	}
+						}
+						.card-horizontal {
+							flex-basis: 46%;
+						}
+					}
+				}
+			}
+		}   	
+	}
+	//end 4-0
+}
 
+@media (max-width: 1150px) {
+	//page 1-8
+	.favourites {
+		flex-wrap: wrap;
+		.favourites-left {
+			flex-basis: 100%;
+			.favourites-menu {
+				text-align: center;
+			}
+		}
+		.favourites-right {
+			flex-basis: 100%;
+			width: 100%;
+			.favourites-content {
+				margin-top: 40px;
+			}
+		}
+	}
  	.company-contact {
 		width: 350px;
  	}
@@ -70,8 +117,6 @@
  		padding-right: 25px; 
  	}
  //end page 1-8
-}
-@media (max-width: 1150px) {
 	//header
 	.wrapp_header {
 		.menu_categories {
@@ -398,6 +443,21 @@
 			}
 		}
 	}
+	.favourites {
+		.favourites-right {
+			.favourites-content {
+				.wrapp_tabs-content {
+					.wrapp_slider-content {
+						.card-horizontal {
+							.card-title {
+								padding: 0 0 5px;
+							}
+						}
+					}
+				}
+			}
+		}   	
+	}
 }
 
 @media (max-width: 860px) {
@@ -439,11 +499,40 @@
 	.wrapp_slider .wrapp_slider-content .card-horizontal-full_bg .wrapp-content .card-category {
 		padding: 25px 0 50px;
 	}
+	.favourites {
+		.favourites-right {
+			.favourites-content {
+				.wrapp_tabs-content {
+					.wrapp_slider-content {
+						.card-horizontal {
+							flex-basis: 100%;
+							
+						}
+					}
+				}
+			}
+		}   	
+	}
 	
 	
 }
 
 @media (max-width: 700px) {
+	.favourites {
+		.favourites-right {
+			.favourites-content {
+				.wrapp_tabs-content {
+					.wrapp_slider-content {
+						.card-full_bg {
+							.card-title {
+								padding-top: 350px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}     
 	.wrapp_cards-block-1 .card-vertical {
 		max-height: none;
 	}
