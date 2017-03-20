@@ -1,0 +1,67 @@
+//-- ВНИМАНИЕ! 	к класу .like добавить класс .show
+
+extends _layout
+
+block title
+	title Title of template
+
+block content
+	div.wrapp_page
+		include includes/_card-h-2
+		include includes/_header
+		nav
+			div.max-width-1300
+				ul.breadcrumbs
+					li 
+						a(href='#') Главная 
+					li 
+						a(href='#') Личный кабинет
+
+		section
+			div.max-width-1300
+				div.title-page-wrapp
+					h2 Сменить пароль
+					
+		section
+			div.max-width-1300.favourites
+				div.favourites-left
+					ul.favourites-menu
+						li
+							a(href='#') Избранные материалы
+						li
+							a(href='#') Персональные данные
+						li
+							a.active(href='#') Сменить пароль
+						li
+							a(href='#') Подписка
+						li
+							a(href='#') 
+								img(src='img/singout.png' alt='')
+								span Выход
+				div.favourites-right.personal_data
+					div.favourites-right_left
+						h3 Мои данные
+						form.js-form
+							div.input-wrapp
+								input.input-border-bottom(type="password")
+								label Текущий пароль
+									span *
+							p.note 
+								a(href='#') Забыли пароль?
+
+							div.input-wrapp
+								input.input-border-bottom(type="password")
+								label Новый пароль
+									span *
+							div.input-wrapp
+								input.input-border-bottom(type="password")
+								label Повторите пароль
+									span *
+							button.btn.btn-size-225.btn-black Сохранить
+							div.success-pass
+								img(src = 'img/success-pass.png')
+								span Изменения успешно сохранены
+					
+		
+		include includes/elements/_go_top
+		include includes/_footer

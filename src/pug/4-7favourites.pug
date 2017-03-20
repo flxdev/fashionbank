@@ -1,0 +1,101 @@
+//-- ВНИМАНИЕ! 	к класу .like добавить класс .show
+
+extends _layout
+
+block title
+	title Title of template
+
+block content
+	div.wrapp_page
+		include includes/_card-h-2
+		include includes/_header
+		nav
+			div.max-width-1300
+				ul.breadcrumbs
+					li 
+						a(href='#') Главная 
+					li 
+						a(href='#') Личный кабинет
+
+		section
+			div.max-width-1300
+				div.title-page-wrapp
+					h2 Сменить пароль
+					
+		section
+			div.max-width-1300.favourites
+				div.favourites-left
+					ul.favourites-menu
+						li
+							a(href='#') Избранные материалы
+						li
+							a(href='#') Персональные данные
+						li
+							a.active(href='#') Сменить пароль
+						li
+							a(href='#') Подписка
+						li
+							a(href='#') 
+								img(src='img/singout.png' alt='')
+								span Выход
+				div.favourites-right.personal_data.subscribe
+					div.favourites-right_left
+						form
+							h3 Как часто вы хотите получать информацию:
+							div.radio-wrap
+								ul
+									li 
+										input(type='radio' name='sub' id ='radio-10')
+										label(for ='radio-10') Ежедневно
+									li
+										input(type='radio' name='sub' id ='radio-11')
+										label(for ='radio-11') Раз в неделю
+								ul
+									li 
+										input(type='radio' name='sub' id ='radio-12')
+										label(for ='radio-12') Дважды в неделю
+									li
+										input(type='radio' name='sub' id ='radio-13')
+										label(for ='radio-13') Раз в месяц
+
+							h3 Какие рубрики вам интересны:
+							div.cheched-wrap
+								ul
+									li 
+										input(type='checkbox' name='sub' id ='checkbox-14')
+										label(for ='checkbox-14') Ежедневно
+									li
+										input(type='checkbox' name='sub' id ='checkbox-15')
+										label(for ='checkbox-15') Раз в неделю
+									li 
+										input(type='checkbox' name='sub' id ='checkbox-16')
+										label(for ='checkbox-16') Дважды в неделю
+									li
+										input(type='checkbox' name='sub' id ='checkbox-17')
+										label(for ='checkbox-17') Раз в месяц
+								ul
+									li 
+										input(type='checkbox' name='sub' id ='checkbox-18')
+										label(for ='checkbox-18') Дважды в неделю
+									li
+										input(type='checkbox' name='sub' id ='checkbox-19')
+										label(for ='checkbox-19') Раз в месяц
+									li 
+										input(type='checkbox' name='sub' id ='checkbox-20')
+										label(for ='checkbox-20') Дважды в неделю
+									li
+										input(type='checkbox' name='sub' id ='checkbox-21')
+										label(for ='checkbox-21') Раз в месяц
+							div.check-all
+								svg
+									use(xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-check-symbol-black" xmlns:xlink="http://www.w3.org/1999/xlink")
+								span 
+									a(href='#') Выбрать все рубрики
+							button.btn.btn-size-225.btn-black Сохранить
+
+
+						
+					
+		
+		include includes/elements/_go_top
+		include includes/_footer

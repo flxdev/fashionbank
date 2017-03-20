@@ -632,6 +632,20 @@ function initForm() {
 
 	})
 
+	$('.js-form .input-wrapp input').on( "focusout", function() {
+
+		console.log($(this));
+
+		if(this.value.length != 0) {
+
+			$(this).addClass('input-border-bottom-value');
+
+		}
+
+		else $(this).removeClass('input-border-bottom-value');
+
+	})
+
 }
 
 

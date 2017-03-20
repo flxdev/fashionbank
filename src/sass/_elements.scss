@@ -189,6 +189,7 @@ input[type='checkbox'] {
 input[type='checkbox'] + label {
 	padding-left: 40px;
 	cursor: pointer;
+	position: relative;
 }
 input[type='checkbox'] + label:hover {
 	color: $main_blue;
@@ -210,8 +211,8 @@ input[type='checkbox'] + label:after {
     background-repeat: no-repeat;
     display: block;
     position: absolute;
-  	top: 0;
   	margin-top: 8px;
+  	top: -6px;
     // width: 10px;
     // height: 10px;
 }

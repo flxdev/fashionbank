@@ -102,6 +102,19 @@
 				margin-top: 40px;
 			}
 		}
+		.personal_data {
+			flex-wrap: wrap;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 80px;
+			
+			.favourites-right_left {
+				
+			}
+			.favourites-right_right {
+				
+			}
+		}
 	}
  	.company-contact {
 		width: 350px;
