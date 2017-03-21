@@ -55,9 +55,48 @@
 				}
 			}
 		}
+		.left-padding {
+			padding-left: 35px;
+		}
+	}
+	.accordion {
+		margin-top: 140px;
+		li {
+			margin-bottom: 35px;
+			p.title {
+				font-size: 2rem;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				font-family: $font_bb;
+				cursor: pointer;
+				border-bottom: 1px solid #000;
+				display: inline-block;
+				padding: 10px 0;
+			}
+			p.text {
+				display: none;
+			}
+		}
+	}
+	.contacts {
+		font-size: 0;
+		li {
+			width: 50%;
+			display: inline-block;
+			height: 200px;
+			padding-right: 10px;
+			vertical-align: top;
+			p {
+				padding: 5px 0;
+			}
+			h3 {
+				padding: 0 0 20px 0;
+			}
+		}
 	}
 }
 
-.about > div:last-child {
+.about.line-bottom > div:last-child {
 	border-bottom: 4px solid #000;
+	padding-bottom: 120px;
 } 
