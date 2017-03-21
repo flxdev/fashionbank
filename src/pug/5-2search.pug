@@ -1,0 +1,83 @@
+//-- ВНИМАНИЕ! 	к класу .like добавить класс .show
+
+extends _layout
+
+block title
+	title Title of template
+
+block content
+	div.wrapp_page
+		include includes/_card-h-2
+		include includes/_header
+		nav
+			div.max-width-1300
+				ul.breadcrumbs
+					li 
+						a(href='#') Главная 
+					li 
+						a(href='#') Поиск
+
+		section
+			div.max-width-1300
+				div.title-page-wrapp
+					h2 Поиск
+		section
+			div.max-width-1300.search
+				div.search-left
+					form
+						input.input-search(placeholder='Введите запрос')
+						button.search-btn
+							svg
+								use(xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-search" xmlns:xlink="http://www.w3.org/1999/xlink")
+						ul
+							li 
+								input(type='radio' name='sub' id ='radio-10')
+								label(for ='radio-10') Статьи
+							li
+								input(type='radio' name='sub' id ='radio-11')
+								label(for ='radio-11') Компании
+							li 
+								input(type='radio' name='sub' id ='radio-12')
+								label(for ='radio-12') Специалисты
+							li
+								input(type='radio' name='sub' id ='radio-13')
+								label(for ='radio-13') Магазины
+					div.search-resault
+						p.sum-resault По вашему запросу «мода» найдено 100 совпадений
+						div.search-resault-wrapp
+							+card-horizont-2('card card-horizontal text-black round-vip','img/10.jpg','Возрастные модели: нужны ли они в Беларуси?','Модное закулисье Met Gala, Недели моды в Нью-Йорке и универмага Bergdorf Goodman. В разгар рабочей недели рекомендуем вам обратить внимание на вдохно ...','Мода и стиль',false,false, '6 октября 2016')
+							+card-horizont-2('card card-horizontal text-black round-vip','img/10.jpg','Возрастные модели: нужны ли они в Беларуси?','Модное закулисье Met Gala, Недели моды в Нью-Йорке и универмага Bergdorf Goodman. В разгар рабочей недели рекомендуем вам обратить внимание на вдохно ...','Мода и стиль',false,false, '6 октября 2016')
+							+card-horizont-2('card card-horizontal text-black round-vip','img/10.jpg','Возрастные модели: нужны ли они в Беларуси?','Модное закулисье Met Gala, Недели моды в Нью-Йорке и универмага Bergdorf Goodman. В разгар рабочей недели рекомендуем вам обратить внимание на вдохно ...','Мода и стиль',false,false, '6 октября 2016')
+							+card-horizont-2('card card-horizontal text-black round-vip','img/10.jpg','Возрастные модели: нужны ли они в Беларуси?','Модное закулисье Met Gala, Недели моды в Нью-Йорке и универмага Bergdorf Goodman. В разгар рабочей недели рекомендуем вам обратить внимание на вдохно ...','Мода и стиль',false,false, '6 октября 2016')
+							+card-horizont-2('card card-horizontal text-black round-vip','img/10.jpg','Возрастные модели: нужны ли они в Беларуси?','Модное закулисье Met Gala, Недели моды в Нью-Йорке и универмага Bergdorf Goodman. В разгар рабочей недели рекомендуем вам обратить внимание на вдохно ...','Мода и стиль',false,false, '6 октября 2016')
+							+card-horizont-2('card card-horizontal text-black round','img/10.jpg','Возрастные модели: нужны ли они в Беларуси?','Модное закулисье Met Gala, Недели моды в Нью-Йорке и универмага Bergdorf Goodman. В разгар рабочей недели рекомендуем вам обратить внимание на вдохно ...','Мода и стиль',false,false, '6 октября 2016')
+							+card-horizont-2('card card-horizontal text-black round','img/10.jpg','Возрастные модели: нужны ли они в Беларуси?','Модное закулисье Met Gala, Недели моды в Нью-Йорке и универмага Bergdorf Goodman. В разгар рабочей недели рекомендуем вам обратить внимание на вдохно ...','Мода и стиль',false,false, '6 октября 2016')
+							+card-horizont-2('card card-horizontal text-black round','img/10.jpg','Возрастные модели: нужны ли они в Беларуси?','Модное закулисье Met Gala, Недели моды в Нью-Йорке и универмага Bergdorf Goodman. В разгар рабочей недели рекомендуем вам обратить внимание на вдохно ...','Мода и стиль',false,false, '6 октября 2016')
+							+card-horizont-2('card card-horizontal text-black round','img/10.jpg','Возрастные модели: нужны ли они в Беларуси?','Модное закулисье Met Gala, Недели моды в Нью-Йорке и универмага Bergdorf Goodman. В разгар рабочей недели рекомендуем вам обратить внимание на вдохно ...','Мода и стиль',false,false, '6 октября 2016')
+							+card-horizont-2('card card-horizontal text-black round','img/10.jpg','Возрастные модели: нужны ли они в Беларуси?','Модное закулисье Met Gala, Недели моды в Нью-Йорке и универмага Bergdorf Goodman. В разгар рабочей недели рекомендуем вам обратить внимание на вдохно ...','Мода и стиль',false,false, '6 октября 2016')
+							+card-horizont-2('card card-horizontal text-black round','img/10.jpg','Возрастные модели: нужны ли они в Беларуси?','Модное закулисье Met Gala, Недели моды в Нью-Йорке и универмага Bergdorf Goodman. В разгар рабочей недели рекомендуем вам обратить внимание на вдохно ...','Мода и стиль',false,false, '6 октября 2016')
+						div.show-other
+							a(href='#')
+								svg.next_post-refresh
+									use(xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-refresh" xmlns:xlink="http://www.w3.org/1999/xlink")
+								span Показать еще
+
+				div.search-right
+					div.wrapp_sidebar
+						div.wrapp_baner
+							div.card.card-vertical.banner
+								a(href='#')
+									img(src='img/banner.jpg' alt='')
+						div.wrapp_top-news
+							h4.text-uppercase Самое обсуждаемое
+							+card-horizont('card card-horizontal text-black','img/6.jpg','Кастинг моделей: как себя вести. Истории из мира моды','','',true,false)
+							+card-horizont('card card-horizontal text-black','img/7.jpg','Кастинг моделей: как себя вести. Истории из мира моды','','',true,false)
+							+card-horizont('card card-horizontal text-black','img/8.jpg','Кастинг моделей: как себя вести. Истории из мира моды','','',true,false)
+							+card-horizont('card card-horizontal text-black','img/5.jpg','Кастинг моделей: как себя вести. Истории из мира моды','','',true,false)
+				
+
+						
+					
+		
+		include includes/elements/_go_top
+		include includes/_footer

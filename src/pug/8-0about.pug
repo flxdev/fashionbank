@@ -1,0 +1,107 @@
+extends _layout
+
+block title
+	title Title of template
+
+block content
+	div.wrapp_page
+		include includes/_card-h-2
+		include includes/_header
+		div.article-wrapp
+			div.article-wrapp-bg(style='background-image: url("img/7-2-full-header.jpg");')
+			//- div.article-wrapp-bg-dark затемнять блок
+			div.article-wrapp-info.max-width-1300
+				nav
+					ul.breadcrumbs
+						li 
+							a(href='#') Главная 
+						li 
+							a(href='#') Спорт
+						li 
+							a(href='#') Статьи
+				h1 Плыви по течению
+				p.card-date_like 6 октября 2016 /
+					span.eyes <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"	 viewBox="0 5.7 406.7 286.8" enable-background="new 0 5.7 406.7 286.8" xml:space="preserve"><path d="M405.1,138.9C292.9-38.7,115.3-38.7,3.1,138.9c-4.1,6.1-4.1,14.3,0,20.4c112.3,177.6,289.8,177.6,402.1,0		C407.2,153.2,407.2,145,405.1,138.9z M203.1,251.1c-57.1,0-102-44.9-102-102s44.9-102,102-102s102,44.9,102,102S260.2,251.1,203.1,251.1z"/>	<circle cx="203.1" cy="149.1" r="61.2"/></svg> 159
+					span.comment <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"	 viewBox="259.1 79.1 352.1 352.1" enable-background="new 259.1 79.1 352.1 352.1" xml:space="preserve"><path d="M259.1,79.1h352.1v264.1h-88v88l-88-88h-176V79.1z"/></svg> 28
+				div.panel_dop
+					a.all_article(href='#') <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 15 27' enable-background='new 0 0 15 27' xml:space='preserve'><path fill-rule='evenodd' clip-rule='evenodd' d='M13.8,0L15,1.1L2.7,13.6L15,25.7L13.7,27L0,13.7L13.8,0z'/></svg> Все статьи о спорте
+					p.add_favorites <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="249.6 44.5 371 319.1" enable-background="new 249.6 44.5 371 319.1" xml:space="preserve"><path d="M520.9,44.5c-35.5,0-67.8,19-85.8,50.2c-18-31.1-50.2-50.2-85.7-50.2c-55,0-99.8,46.1-99.8,102.8c0,77.7,98,151.2,156.6,195.1c10.3,7.7,19.4,14.5,26.6,20.3c0.7,0.5,1.5,0.8,2.3,0.8c0.8,0,1.6-0.3,2.3-0.8c7.2-5.8,16.3-12.6,26.6-20.3c58.6-43.9,156.6-117.5,156.6-195.1C620.6,90.7,575.9,44.5,520.9,44.5z M459.6,336.6c-9.3,7-17.6,13.2-24.5,18.7c-6.9-5.4-15.2-11.7-24.5-18.7C353.2,293.5,257,221.4,257,147.4c0-52.7,41.5-95.5,92.4-95.5c35,0,66.6,20,82.4,52.2c0.6,1.3,1.9,2.1,3.3,2.1c1.4,0,2.7-0.8,3.3-2.1c15.9-32.2,47.5-52.2,82.5-52.2c51,0,92.4,42.8,92.4,95.5C613.3,221.4,517.1,293.5,459.6,336.6z"/></svg> Добавить в избранное
+					div.share 
+						div.ya-share2(data-services="vkontakte,facebook" data-counter="")
+
+		section
+			div.content-wrapp.max-width-1300.about
+				div.block-left
+					ul
+						li.active 
+							a(href='#') О проекте
+						li 
+							a(href='#') Рекламодателям
+						li 
+							a(href='#') Контакты
+				div.block-center-text
+					p.line-bottom Fashionbank.by — мой личный банк экспертов моды, красоты, спорта и здоровья.
+					h2 О проекте 
+					p Fashionbank — это информационный интернет-ресурс, посвященный актуальным событиям в мире моды, культуры, красоты, медиа и светской жизни, а также площадка для развития бизнеса. Достоверная информация, эксклюзивные материалы, оперативность и мнения авторитетных экспертов — это основные преимущества Fashionbanka. Мы рассказываем об успешных людях, чье мнение важно, о личностях, которые решают, каким будет наше завтра. 
+				div.block-center-img-50
+					div.slider.js-slider-init-one-slide
+						div.item 
+							img(src='img/7-2-full6.jpg' alt='')
+							figcaption Сбалансирвоанное и правильное питание помогает поддерживать фигуру в отличной форме
+						div.item 
+							img(src='img/7-2-full6.jpg' alt='')
+							figcaption Сбалансирвоанное и правильное питание помогает поддерживать фигуру в отличной форме
+						div.item 
+							img(src='img/7-2-full6.jpg' alt='')
+							figcaption Сбалансирвоанное и правильное питание помогает поддерживать фигуру в отличной форме
+						div.item 
+							img(src='img/7-2-full6.jpg' alt='')
+				div.block-center-text
+					h3 Команда
+					p Наша команда состоит из профессиональных журналистов и мастеров пера. Мы работаем 27 часа в сутки 7 дней в неделю для того, чтобы вы всегда могли получить акуальную и свежую информацию. В нашем штате работают:
+					ul.three-block
+						li
+							p.title 37
+							p.text Профессиональных журналиста
+						li
+							p.title 5
+							p.text Фотогрофов с большим опытом
+						li
+							p.title 3
+							p.text Дизайнера с отменным вкусом
+
+				div.block-center-citation
+					p.citation Желательно придерживаться именно такого порядка, в противном случае после плавания, когда вы расслабились, очень сложно заставить себя пойти в зал.
+				div.block-center-text
+					p Сбалансирвоанное и правильное питание помогает поддерживать фигуру в отличной форме
+
+			div.content-wrapp.max-width-1300.about
+				div.block-center-text
+					h2 Рекламодателям
+					p Fashionbank — это информационный интернет-ресурс, посвященный актуальным событиям в мире моды, культуры, красоты, медиа и светской жизни, а также площадка для развития бизнеса. Достоверная информация, эксклюзивные материалы, оперативность и мнения авторитетных экспертов — это основные преимущества Fashionbanka. Мы рассказываем об успешных людях, чье мнение важно, о личностях, которые решают, каким будет наше завтра. 
+				div.block-center-img-50
+					div.slider.js-slider-init-one-slide
+						div.item 
+							img(src='img/7-2-full6.jpg' alt='')
+							figcaption Сбалансирвоанное и правильное питание помогает поддерживать фигуру в отличной форме
+						div.item 
+							img(src='img/7-2-full6.jpg' alt='')
+							figcaption Сбалансирвоанное и правильное питание помогает поддерживать фигуру в отличной форме
+						div.item 
+							img(src='img/7-2-full6.jpg' alt='')
+							figcaption Сбалансирвоанное и правильное питание помогает поддерживать фигуру в отличной форме
+						div.item 
+							img(src='img/7-2-full6.jpg' alt='')
+				div.block-center-text
+					h3 Команда
+					p Сайт fashionbank.by предлагает как традиционное рекламное размещение (баннеры и брендирование), так и размещение компаний, специалистов и магазинов в каталоге. Мы хорошо знаем нашего читателя и предлагаем именно то рекламное решение, которое будет интересно аудитории и эффективно для рекламодателя.
+					p По всем возникаюбщим вопросам вы можете связаться с нами:
+					p +375 (29) 361 55 87        fashionbank@gmail.com
+				div.block-center-text
+					p Сбалансирвоанное и правильное питание помогает поддерживать фигуру в отличной форме
+				
+				
+
+		//- include includes/elements/_go_top
+		include includes/_footer
+	

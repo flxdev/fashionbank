@@ -1,0 +1,71 @@
+//-- ВНИМАНИЕ! 	к класу .like добавить класс .show
+
+extends _layout
+
+block title
+	title Title of template
+
+block content
+	div.wrapp_page
+		include includes/_card-h-2
+		include includes/_header
+		nav
+			div.max-width-1300
+				ul.breadcrumbs
+					li 
+						a(href='#') Главная 
+					li 
+						a(href='#') Поиск
+
+		section
+			div.max-width-1300
+				div.title-page-wrapp
+					h2 Поиск
+		section
+			div.max-width-1300.search
+				div.search-left
+					form
+						input.input-search(placeholder='Введите запрос')
+						button.search-btn
+							svg
+								use(xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-search" xmlns:xlink="http://www.w3.org/1999/xlink")
+						ul
+							li 
+								input(type='radio' name='sub' id ='radio-10')
+								label(for ='radio-10') Статьи
+							li
+								input(type='radio' name='sub' id ='radio-11')
+								label(for ='radio-11') Компании
+							li 
+								input(type='radio' name='sub' id ='radio-12')
+								label(for ='radio-12') Специалисты
+							li
+								input(type='radio' name='sub' id ='radio-13')
+								label(for ='radio-13') Магазины
+					div.search-resault
+						div.search-resault-none
+							h3 Ничего не найдено
+							p К сожалению, в данном разделе по вашему запросу «модуа» ничего не найдено. Посмотрите остальные разделы и проверьте правильность написания слова или вернитесь на главную страницу.
+							button.btn.btn-black.btn-size-225 Вернуться на главную
+						
+							
+
+				div.search-right
+					div.wrapp_sidebar
+						div.wrapp_baner
+							div.card.card-vertical.banner
+								a(href='#')
+									img(src='img/banner.jpg' alt='')
+						div.wrapp_top-news
+							h4.text-uppercase Самое обсуждаемое
+							+card-horizont('card card-horizontal text-black','img/6.jpg','Кастинг моделей: как себя вести. Истории из мира моды','','',true,false)
+							+card-horizont('card card-horizontal text-black','img/7.jpg','Кастинг моделей: как себя вести. Истории из мира моды','','',true,false)
+							+card-horizont('card card-horizontal text-black','img/8.jpg','Кастинг моделей: как себя вести. Истории из мира моды','','',true,false)
+							+card-horizont('card card-horizontal text-black','img/5.jpg','Кастинг моделей: как себя вести. Истории из мира моды','','',true,false)
+				
+
+						
+					
+		
+		include includes/elements/_go_top
+		include includes/_footer

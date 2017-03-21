@@ -258,6 +258,9 @@
 			padding: 20px 0 30px;
 		}
 	}
+	.block-center-text + .block-center-text {
+		padding-top: 0; 
+	}
 	.block-center-img-100 {
 		width: 100%;
 		img {
@@ -525,16 +528,18 @@
 			animation: spin 3s infinite linear;
 		}
 	}
-	@keyframes spin {
-		from {
-			transform:rotate(0deg);
-		}
-		to {
-			transform:rotate(360deg);
-		}
-	}
+	
 	.card-date_like {
 		padding-bottom: 70px !important;
+	}
+}
+
+@keyframes spin {
+	from {
+		transform:rotate(0deg);
+	}
+	to {
+		transform:rotate(360deg);
 	}
 }
 

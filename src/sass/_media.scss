@@ -47,6 +47,37 @@
 	}
 }
 @media (max-width: 1300px) { 
+	//5-0
+	.search {
+		.search-left {
+			form {
+				padding-left: 20px;
+				padding-right: 20px;
+				.search-btn {
+					right: 35px;
+				}
+			}
+			.search-resault {
+				.sum-resault, .search-resault-none {
+					padding-left: 20px;
+					padding-right: 20px;
+				}
+				.search-resault-wrapp {
+					.card-horizontal {
+						.wrapp-img {
+							flex-basis: 30%;
+							max-width: none;
+						}
+						.wrapp-content {
+							flex-basis: 70%;
+						}
+					} 
+				}
+			}
+		}
+	}
+	//5-0
+
 	//page4-0
 
 	.title-page-wrapp {
@@ -83,6 +114,22 @@
 	.block-right {
 		display: none;
 	}
+	//5-0
+	.search {
+		.search-left {
+			.search-resault {
+				.search-resault-wrapp {
+					.card-horizontal {
+						.wrapp-img {
+							flex-basis: 30%;
+							max-width: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	//5-0
  }
 
 @media (max-width: 1150px) {
@@ -107,7 +154,7 @@
 			flex-direction: column;
 			align-items: center;
 			margin-top: 80px;
-			
+
 			.favourites-right_left {
 				
 			}
@@ -387,10 +434,21 @@
 
 
 @media (max-width: 1024px) {
+	
+	.search {
+		.search-right {
+			display: none;
+		}
+		.search-left {
+			flex-basis: 100%;
+			.search-resault .search-resault-wrapp .card-horizontal .wrapp-content {
+				flex-basis: 70%;
+			}
+		}
+	}
 	.content-wrapp .block-center-text .subscribe {
 		display: none;
 	}
-	
 	.odd-last-child .card:last-child {
 		display: block;
 	}
@@ -459,7 +517,7 @@
 		}
 		.card-full_bg {
 			.card-title {
-				padding-top: 450px;
+				padding-top: 400px;
 			}
 		}
 	}
@@ -538,6 +596,32 @@
 }
 
 @media (max-width: 700px) {
+	.search {
+		.search-left {
+			form {
+				ul {
+					li {
+						display: block;
+					}
+				}
+			}
+			.search-resault {
+				.search-resault-wrapp {
+					.card-horizontal {
+					    flex-direction: column;
+						align-items: center;
+   						.wrapp-img {
+							margin-bottom: 30px;
+   						}
+   						.wrapp-content {
+   							padding-left: 0;
+   							margin-bottom: 40px;
+   						}
+					}
+				}
+			} 		
+		}
+	} 
 	.favourites {
 		.favourites-right {
 			.favourites-content {
@@ -555,6 +639,7 @@
 	}     
 	.wrapp_cards-block-1 .card-vertical {
 		max-height: none;
+		min-height: 0;
 	}
 	.gallery-wrapp .gallery-wrapp-content .gallery .right-content .wrapp-img img, .gallery-wrapp .gallery-wrapp-content .gallery .right-youtube-gallery .wrapp-img div {
 		height: 30rem;
@@ -687,6 +772,9 @@
 		.card-category, .card-title, .card-date_like {
 			z-index: 10;
 			position: relative;
+		}
+		.card-date_like {
+			padding-bottom: 20px;
 		}
 	}
 	.wrapp_slider-video-bg-black {
