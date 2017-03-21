@@ -314,6 +314,7 @@
 						padding: 8px 0;
 						input[type=checkbox]+label {
 							padding-left: 30px;
+							font-size: 1.4rem;
 							&:hover {
 								color: #000;
 							}
@@ -340,6 +341,7 @@
 					height: 10px;
 					display: inline-block;
 					fill: #828282;
+					transition: all 0.3s ease-out;
 				}
 				span {
 					padding-left: 10px;
@@ -349,6 +351,17 @@
 					letter-spacing: 2px;
 					a {
 						color: #828282;
+						transition: all 0.3s ease-out;
+					}
+				}
+				&:hover {
+					svg {
+						fill: $main_blue;
+					}
+					span {
+						a {
+							color: $main_blue;
+						}
 					}
 				}
 			}
