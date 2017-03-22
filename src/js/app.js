@@ -3,5 +3,7 @@
 // =include lib/jquery-ui.min.js
 // =include lib/perfect-scrollbar.min.js
 // =include lib/perfect-scrollbar.jquery.min.js
+// =include lib/jquery.inputmask.bundle.js
+
 
 // =include common.js

@@ -95,9 +95,9 @@
 							flex-basis: 29%;
 						}
 						.card-full_bg {
-						 	.card-title	 {
-						 		padding-top: 250px;
-						 	}
+							.card-title	 {
+								padding-top: 250px;
+							}
 						}
 						.card-horizontal {
 							flex-basis: 46%;
@@ -109,7 +109,11 @@
 	}
 	//end 4-0
 }
-
+@media (max-width: 1279px) { 
+	.wrapp_sidebar h4 {
+		margin: 38px 15px 13px 0;
+	}
+}
 @media (max-width: 1250px) {
 	.block-right {
 		display: none;
@@ -163,26 +167,23 @@
 			}
 		}
 	}
- 	.company-contact {
+	.company-contact {
 		width: 350px;
- 	}
- 	.gallery-wrapp .gallery-wrapp-content .gallery .left-content {
- 		display: none;
- 	}
- 	.gallery-wrapp .gallery-wrapp-content .gallery .right-content {
- 		padding-left: 0;
- 	}
- 	.block-filters {
- 		display: none;
- 	}
- 	.filters-wrapp {
- 		padding-left: 25px;
- 		padding-right: 25px; 
- 	}
- 	.breadcrumbs {
- 		padding-left: 25px;
- 		padding-right: 25px; 
- 	}
+	}
+	.gallery-wrapp .gallery-wrapp-content .gallery .left-content {
+		display: none;
+	}
+	.gallery-wrapp .gallery-wrapp-content .gallery .right-content {
+		padding-left: 0;
+	}
+	.filters-wrapp {
+		padding-left: 25px;
+		padding-right: 25px; 
+	}
+	.breadcrumbs {
+		padding-left: 25px;
+		padding-right: 25px; 
+	}
  //end page 1-8
 	//header
 	.wrapp_header {
@@ -237,7 +238,7 @@
 	.wrapp_sidebar {
 		flex-basis: 32%;
 		h4 {
-			margin: 28px 15px 20px;
+			margin: 28px 15px 20px 0;
 		}
 	}
 	
@@ -335,7 +336,7 @@
 		.block-left {
 			position: relative;
 			padding: 100px 0 0;
-   			margin: 0 auto;
+			margin: 0 auto;
 		}
 	}
 
@@ -395,10 +396,10 @@
 	}
 	.card-vertical {
 		min-height: 550px;
-   		max-height: 550px;
-   		.wrapp-img {
-   			max-height: 350px;
-   		}
+		max-height: 550px;
+		.wrapp-img {
+			max-height: 350px;
+		}
 	}
 }
 
@@ -471,6 +472,9 @@
 			}
 		}
 	}
+	.block-filters .item-filter p {
+		max-width: 130px;
+	}
 	
 	
 }
@@ -507,10 +511,16 @@
 }
 
 @media (max-width: 936px) {
+	.block-filters {
+		display: none;
+	}
+	.block-filters-mobile {
+		display: block;
+	}
 	.wrapp_cards-block-1  {
 		.card-vertical {
 			min-height: 660px;
-   			max-height: 660px;
+			max-height: 660px;
 			.wrapp-img {
 				max-height: 415px;
 			}
@@ -541,13 +551,13 @@
 @media (max-width: 860px) {
 	.card-vertical {
 		min-height: 560px;
-   		max-height: 560px;
-   		.wrapp-img  {
-   			max-height: 390px;
-   		}
+		max-height: 560px;
+		.wrapp-img  {
+			max-height: 390px;
+		}
 	}
 	.wrapp_cards a.card:last-of-type {
-	    display: none; 
+		display: none; 
 	}
 	.wrapp_first-screen {
 		flex-wrap: wrap;
@@ -608,15 +618,15 @@
 			.search-resault {
 				.search-resault-wrapp {
 					.card-horizontal {
-					    flex-direction: column;
+						flex-direction: column;
 						align-items: center;
-   						.wrapp-img {
+						.wrapp-img {
 							margin-bottom: 30px;
-   						}
-   						.wrapp-content {
-   							padding-left: 0;
-   							margin-bottom: 40px;
-   						}
+						}
+						.wrapp-content {
+							padding-left: 0;
+							margin-bottom: 40px;
+						}
 					}
 				}
 			} 		
@@ -659,7 +669,7 @@
 		padding-top: 0;
 	}
 	header {
-    	padding: 0;
+		padding: 0;
 	}
 	.wrapp_burger_menu {
 		.burger_menu {
@@ -669,7 +679,7 @@
 		}
 	}
 	.wrapp_header {
-    	.burger {
+		.burger {
 			right: 20px;
 			left: auto;
 			top: 22px;
@@ -677,7 +687,7 @@
 		.logo {
 			.wrapp_svg {
 				width: 60%;
-    			margin: 20px;
+				margin: 20px;
 			}
 		}
 		.user_panel {
@@ -689,6 +699,7 @@
 		margin-top: 30px;
 		margin-bottom: 30px;
 		max-height: none; 
+		min-height: 0;
 		.wrapp-img {
 			max-height: none !important; 
 		}
@@ -866,7 +877,7 @@
 			form {
 				input[type=radio]+label {
 					width: 50%;
-    				display: inline-block;
+					display: inline-block;
 				}
 			}
 		}
@@ -992,6 +1003,10 @@
 
 
 @media (max-width: 480px) {
+	.block-filters-mobile .block-filters-mobile-footer .reset-filter {
+		display: block;
+		padding: 17px 5px 5px;
+	}
 	.gallery-wrapp .gallery-wrapp-content .gallery .right-content .wrapp-img img, .gallery-wrapp .gallery-wrapp-content .gallery .right-youtube-gallery .wrapp-img div {
 		height: 25rem;
 	}
@@ -1079,7 +1094,16 @@
 		flex-basis: 43%;
 	}
 	//1-8page end 
-
+	.filters-wrapp .filters-li li {
+		display: block;
+		text-align: center;
+		margin: 0;
+		padding: 10px 0;
+	}
+	.filters-wrapp .filters-li li.active:after {
+		text-align: right;
+    	top: 12px;
+	}
 	
 
 }
@@ -1108,4 +1132,4 @@
 	
 	//1-0page
 }
-    
+	
