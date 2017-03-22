@@ -3466,9 +3466,6 @@ function swichTabs() {
 	var currTab = $(".js-tabs-content").find("[data-tab-content='" + $(this).data("tab") + "']");
 
 
-	console.log('add');
-
-
 	currTab.removeClass('hidden').siblings().addClass('hidden');
 
 

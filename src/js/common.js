@@ -250,7 +250,6 @@ function initSliderOne() {
 function swichTabs() {
 	$(this).addClass("active").siblings().removeClass("active");
 	var currTab = $(".js-tabs-content").find("[data-tab-content='" + $(this).data("tab") + "']");
-	console.log('add');
 	currTab.removeClass('hidden').siblings().addClass('hidden');
 	if (currTab.hasClass('js-slider-init')) {
 		currTab.slick('setPosition');
