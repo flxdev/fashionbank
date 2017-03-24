@@ -38,7 +38,7 @@ p,li { font-size: 1.5rem;  font-family: $font_r}
 ul { list-style-type: none; }
 a {text-decoration: none;}
 input {font-family: $font_r}
-
+input[type='password'] {font-family: arial}
 .overflow-hidden {
 	overflow: hidden;
 } 
@@ -949,3 +949,17 @@ input {font-family: $font_r}
 }
 
 .ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y { width: 3px !important; }
+
+.form-error {
+	display: none;
+}
+
+.js-no-popup .has-error {
+	border-color: red !important;
+}
+.js-no-popup .error {
+	border: none;
+}
+.error {
+	border-bottom-color: red !important;
+}

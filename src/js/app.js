@@ -5,6 +5,7 @@
 // =include lib/perfect-scrollbar.jquery.min.js
 // =include lib/jquery.inputmask.bundle.js
 // =include lib/jquery.scrollTo.min.js
+// =include lib/jquery.form-validator.min.js
 
 
 // =include common.js

@@ -5,10 +5,10 @@ div.wrapp_popup-contener.js-popup-sing-in
 		h3 Войти в кабинет
 		p.text-note!= 'У вас нет аккаунта? <span class="js-popup-open" data-open-popup = "popup-create-account">Создайте</span> свой аккаунт на нашем сайте.'
 		form.js-form
-			input.input-border-bottom
+			input.input-border-bottom(data-validation="email required" type="text")
 			label E-mail
 				span *
-			input.input-border-bottom(type='password')
+			input.input-border-bottom(data-validation="required" data-validation-strength="5" type="password")
 			label Пароль
 				span *
 			p.link.text-right.js-popup-open(data-open-popup = 'popup-reset-password') Забыли пароль?

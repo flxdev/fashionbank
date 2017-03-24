@@ -21,7 +21,7 @@ block content
 			div.max-width-1300
 				div.title-page-wrapp
 					h2 Сменить пароль
-					
+		
 		section
 			div.max-width-1300.favourites
 				div.favourites-left
@@ -41,20 +41,19 @@ block content
 				div.favourites-right.personal_data
 					div.favourites-right_left
 						h3 Мои данные
-						form.js-form
+						form.js-form.js-no-popup
 							div.input-wrapp
-								input.input-border-bottom(type="password")
+								input.input-border-bottom(data-validation="required" data-validation-strength="5" type="password")
 								label Текущий пароль
 									span *
 							p.note 
 								a(href='#') Забыли пароль?
-
 							div.input-wrapp
-								input.input-border-bottom(type="password")
+								input.input-border-bottom(data-validation="required" data-validation-strength="5" type="password")
 								label Новый пароль
 									span *
 							div.input-wrapp
-								input.input-border-bottom(type="password")
+								input.input-border-bottom(data-validation="required" data-validation-strength="5" type="password")
 								label Повторите пароль
 									span *
 							button.btn.btn-size-225.btn-black Сохранить

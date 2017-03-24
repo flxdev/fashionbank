@@ -41,13 +41,13 @@ block content
 				div.favourites-right.personal_data
 					div.favourites-right_left
 						h3 Мои данные
-						form.js-form
+						form.js-form.js-no-popup
 							div.input-wrapp
-								input.input-border-bottom
+								input.input-border-bottom(data-validation="required" type="text")
 								label Имя и фамилия 
 									span *
 							div.input-wrapp
-								input.input-border-bottom
+								input.input-border-bottom(data-validation="email required" type="text")
 								label E-mail
 									span *
 							p.title-sex Ваш пол
@@ -57,7 +57,7 @@ block content
 								input(type='radio' name='sex' id ='radio-11')
 								label(for ='radio-11') Мужской
 							div.input-wrapp
-								input.input-border-bottom.js-date-valid
+								input.input-border-bottom.js-date-valid(data-validation="required" type="text")
 								label Дата рождения
 									span *
 							button.btn.btn-size-225.btn-black Сохранить
