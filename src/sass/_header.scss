@@ -74,9 +74,12 @@ header {
 				transition: all 0.3s ease;
 				
 			}
-			a.active {
+			a.active, .active_page {
 				border-bottom: 3px solid #fff;
-				color: #fff;
+				
+			}
+			a.active_page {
+				color: #fff !important;
 			}
 			a.no-active {
 				color: $grey;
@@ -87,7 +90,9 @@ header {
 			&:last-child {
 				margin-right: 60px;
 			}
+
 		}
+
 	}
 	// .wrapp_menu_categories {
 	// 	width: 100%;
@@ -192,5 +197,64 @@ header {
 			}
 		}
 	}
-	
+}
+.fixPaddingMenu {
+	padding-top: 189px;
+}
+.fixedMenu {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	max-width: none;
+	// transition: all 0.5s ease-out;
+	background-color: #000;
+	.wrapp_header {
+		max-width: 1280px;
+   		margin: 0 auto;
+		.burger {
+			top: 25px;
+		}
+		.user_panel {
+			top: 25px;
+			.user {
+				display: none;
+			}
+		}
+		.menu_categories {
+			padding-top: 25px;
+			max-width: 1000px;
+    		margin: 0 auto;
+			li {
+				font-size: 1.2rem;
+			}
+		}
+		.logo {
+			display: none;
+		}
+	}
+}
+.animetMenuIn {
+	animation: topMenuIn 0.5s ease-in-out;
+}
+.animetMenuOut {
+	animation: topMenuOut 1s ease-in-out;
+}
+
+@keyframes topMenuIn {
+	0% {
+		transform: translate(0, -100%);
+	}
+	100% {
+		transform: translate(0, 0%);
+	}
+}
+
+@keyframes topMenuOut {
+	0% {
+		transform: translate(0, 0%);
+	}
+	100% {
+		
+		transform: translate(0, -100%);
+	}
 }

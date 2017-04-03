@@ -2,11 +2,13 @@ mixin card-horizont(className,img,text,descr,categor,like_select,full)
 	a(href="#" class=className)
 		if (!full)
 			div.wrapp-img
+				div.wrapp-img-bg-h
 				img(src=img alt='')
 				div.like.js-like
 					img(src='img/icons/heart1.png')
 		else 
 			div.wrapp-bg(style='background-image: url("'+img+'");')
+			div.wrapp-img-bg-h
 			
 							
 		div.wrapp-content.text-left

@@ -3528,6 +3528,9 @@ function initBurger() {
 	$('.js-burger').on('click', function() {
 
 
+		console.log('111');
+
+
 		$('.js-burger-menu').removeClass('hidden');
 
 
@@ -3546,6 +3549,9 @@ function initBurger() {
 	$('.js-burger-close').on('click', function() {
 
 
+		console.log('222');
+
+
 		setTimeout( function() { $('.js-burger-menu').addClass('hidden'); } , 500)
 
 
@@ -3562,6 +3568,9 @@ function initBurger() {
 
 
 	$('.js-burger-menu').on('click', function(e) {
+
+
+		console.log('333');
 
 
 		if (!$(e.target).closest("#burger_menu").length) {
@@ -4269,7 +4278,7 @@ function initSticky() {
 		if (offset - scrollTop + 300 <= h) {
 
 
-			$('#sticky').css({'position' : 'absolute', 'top': offset - footer_h - 100});
+			$('#sticky').css({'position' : 'absolute', 'top': offset - footer_h - 150});
 
 
 		}
@@ -4281,7 +4290,7 @@ function initSticky() {
 			if ($(this).scrollTop() >= 700) {
 
 
-				$('#sticky').css({'position' : 'fixed','top':'30px'});
+				$('#sticky').css({'position' : 'fixed','top':'130px'});
 
 
 			}
@@ -4554,7 +4563,22 @@ function initReview() {
 			$(this).nextAll().css({"background-image" : "url('img/star-g.png')"})
 
 
-			$(this).css({"background-image" : "url('img/star-y.png')"})
+			$(this).css({"background-image" : "url('img/star-y.png')"});
+
+
+		})
+
+
+		$(this).on("mouseenter", function() {
+
+
+			$(this).css({"background-image" : "url('img/star-y.png')"});
+
+
+			$(this).prevAll().css({"background-image" : "url('img/star-y.png')"});
+
+
+			$(this).nextAll().css({"background-image" : "url('img/star-g.png')"})
 
 
 		})
@@ -5043,6 +5067,60 @@ function initValidForm(){
 }
 
 
+function initHeader() {
+
+
+	var _height = $('header').height();
+
+
+	$(window).scroll(function() {
+
+
+		if ($(window).scrollTop() >=_height+120) {
+
+
+			$('header').addClass('fixedMenu');
+
+
+			$('header').addClass('animetMenuIn');
+
+
+			$('.wrapp_page').css({"padding-top":_height });
+
+
+			
+
+
+		}
+
+
+		else  { 
+
+
+			$('header').removeClass('fixedMenu');
+
+
+			$('header').removeClass('animetMenuIn');
+
+
+			$('.wrapp_page').removeClass('fixPaddingMenu');
+
+
+			$('.wrapp_page').removeAttr('style');
+
+
+		}
+
+
+	})
+
+
+	
+
+
+}
+
+
  
 
 
@@ -5182,6 +5260,9 @@ $( document ).ready(function() {
 
 
 	initValidForm();
+
+
+	initHeader();
 
 
 

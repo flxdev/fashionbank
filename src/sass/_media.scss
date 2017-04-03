@@ -64,6 +64,7 @@
 				}
 				.search-resault-wrapp {
 					.card-horizontal {
+						margin-left: 20px;
 						.wrapp-img {
 							flex-basis: 30%;
 							max-width: none;
@@ -206,10 +207,10 @@
 		.menu_categories {
 			display: none;
 			li:first-child {
-				padding-left: 25px;
+				margin-left: 20px;
 			}
 			li:last-child {
-				padding-right: 25px;
+				margin-left: 20px;	
 			}
 			li {
 				font-size: 1.3rem;
@@ -219,6 +220,25 @@
 
 	header {
 		padding: 0 20px;
+	}
+	.fixPaddingMenu {
+		padding-top: 117px !important;
+	}
+	.fixedMenu {
+		.wrapp_header {
+			.logo {
+				display: block;
+			}
+			.user_panel {
+				top: 0px;
+				.user {
+					display: inline-block;
+				}
+			}
+			.burger {
+	    		top: 0px;
+			}
+		}
 	}
 	//end header
 	
@@ -613,11 +633,12 @@
 			}
 		}   	
 	}
-	
-	
 }
 
 @media (max-width: 700px) {
+	.fixPaddingMenu {
+		padding-top: 0 !important;
+	}
 	.search {
 		.search-left {
 			form {

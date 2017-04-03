@@ -8,6 +8,7 @@ mixin card-vertical(className,img,type,showCat,videoSlider)
 				img.video-play(src='img/video_play.png' alt='')
 			div.wrapp-img
 				img(src=img alt='')
+				div.wrapp-img-bg
 			if (showCat)	
 				p.card-category 
 					object
@@ -24,6 +25,7 @@ mixin card-vertical(className,img,type,showCat,videoSlider)
 			div.like.js-like
 				img(src='img/icons/heart1.png')
 			div.card-bg(style=strImg)
+			div.wrapp-img-bg-full
 			if (showCat)
 				p.card-category 
 					object
