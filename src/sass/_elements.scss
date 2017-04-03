@@ -169,9 +169,10 @@
 		letter-spacing: 2px;
 		a {
 			color: $grey;
+			transition: all 0.3s ease-out;
 		}
 		a:hover {
-			color: $main_blue;
+			color: $main_blue !important;
 		}
 		&:after {
 			content:'/';

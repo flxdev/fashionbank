@@ -289,7 +289,7 @@
 	.block-supported {
 		max-width: 850px;
 		margin: 0 auto;
-		padding: 90px 100px 0;
+		padding: 90px 100px 90px;
 		background-color: #e9f6f9;
 		h3 {
 			padding-bottom: 40px;
@@ -443,9 +443,9 @@
 					color: $main_blue;
 				}
 			}
-			a.active {
-				color: #a5a5a5;
-			}
+		}
+		p.active {
+			color: #a5a5a5;
 		}
 	}
 }

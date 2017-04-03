@@ -390,10 +390,32 @@ function initSlider() {
 }
 
 function initFilters() {
-	$('.js-item-filter').on('click', function(e) {
-		var __content = $(this).next().find('.js-item-filter-content')
-		$(this).next().fadeToggle(100);
-		// $(this).find('.item-filter-content').fadeToggle(100);
+	$('body').on('click', function(e) {
+		if (!$(e.target).closest(".js-item-filter").length) {
+			setTimeout( function() { $('.js-burger-menu').addClass('hidden'); } , 500)
+			$('body').removeClass('overflow-hidden');
+			$('#burger_menu').toggleClass('burger-animate')
+		}
+	});
+	$(".js-item-filter").on("click", function(e) {
+		if ($(this).next().is(":visible")) {
+			$(this).next().fadeOut(100);
+			return false;
+		}
+		$(".js-item-filter-menu").next().fadeOut(100);
+		$(".js-item-filter-inMenu").next().fadeOut(100)
+		$(".js-item-filter").next().fadeOut(100);
+		$(this).next().fadeIn(200);
+	});
+	$(".js-item-filter-menu").on("click", function() {
+		$(".js-item-filter").next().fadeOut(100)
+		$(this).next().fadeToggle(200);
+	});
+	$(".js-item-filter-inMenu").on("click", function() {
+		if ($(this).next().is(":visible")) return false; 
+		$(".js-item-filter").next().fadeOut(100)
+		$(".js-item-filter-inMenu").next().fadeOut(100)
+		$(this).next().fadeIn(200);
 	});
 
 	$('.js-chechbox').each(function () {
@@ -505,25 +527,19 @@ function initSticky() {
 
 function initShowOther() {
 	$('.js-show-text').each(function() {
-		var __h = $(this).find('.js-show-other-content').height();
-		var __openContent = $(this).find('.js-show-other-content');
-		var open = false;
-		var defaultHeight = $(this).data('height');
-
-		$(this).find('.js-show-other-content').css({'height':defaultHeight});
-		$(this).find('.js-show-other').on('click', function() {
-			if (!open) { 
-				var __hNow = __h + 15; 
-				open = true;
-				$(__openContent).removeClass('')
+		var _click = $(this).find(".js-show-other")
+		$(_click).on("click", function() {
+			$(this).prev().find('.js-show-other-content').slideToggle(350);
+			if ($(this).text() != '- Скрыть') {
+				$(this).text('- Скрыть')
 			}
-			else { var __hNow = defaultHeight; open = false }
-			
-			$(__openContent).animate({ 
-				height: __hNow
-			}, 500);
+			else {
+				var _text = $(this).data('text');
+				$(this).text(_text); 
+			}
 		})
 	});
+
 }
 function initDropShow () {
 	$('.js-drop-open ').each(function() {
@@ -537,26 +553,21 @@ function initDropShow () {
 function initMenuOther() {
 	$('.js-menu-dropdown').each(function() {
 		var click = $(this).find('.js-menu-dropdown-open');
-		
 		var __this = this;
 		$(click).on('click', function() {
 			var clickLeft = $('.js-menu-dropdown-open').position().left - 20;
 			$(this).find('.down').toggleClass('up');
 			$('.js-menu-dropdown-dop').css({"left":clickLeft});
-			$('.js-menu-dropdown-dop').slideToggle(200);
+			$('.js-menu-dropdown-dop').slideToggle(300);
 			return false;
 		})
 
 		$(window).on('resize', function(){
-
-
 			var sizeMenu = $('.js-menu-dropdown').find('.main_menu').outerWidth(true);
 			var sizeEl = 0;
-
 			$('.js-menu-dropdown').find('.main_menu').children().each( function () {
 				sizeEl = sizeEl + $(this).outerWidth(true);
 			})
-
 			var count = 0;
 			sizeEl = sizeEl + 30;
 

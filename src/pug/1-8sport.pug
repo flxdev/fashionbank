@@ -91,9 +91,11 @@ block content
 						div.content-left
 							img.logo(src='img/1-8-logo.png' alt='')
 							h3 О компании
-						div.content-right.js-show-text(data-height='100')
-							p.text.shadow-text.js-show-other-content Любите спорт, ведете здоровый образ жизни и давно мечтаете о занятиях фитнесом с грамотными тренерами, но не можете определиться с выбором? Мы с удовольствием приглашаем вас в новый фитнес-клуб Moby Dick, оснащенный профессиональным силовым и кардиооборудованием, идеально подходящим как для новичков, так и для профессионалов. Здесь знают все о правильных тренировках, предлагая действенные способы укрепления здоровья и раскрывая секреты прекрасной физической формы.
-							p.link.js-show-other + Все описание
+						div.content-right.js-show-text
+							div.text
+								p Любите спорт, ведете здоровый образ жизни и давно мечтаете о занятиях фитнесом с грамотными тренерами, но не можете определиться с выбором? Мы с удовольствием приглашаем вас в новый фитнес-клуб Moby Dick, оснащенный профессиональным силовым и кардиооборудованием, идеально подходящим как для новичков, так и для
+								p.text-hide.js-show-other-content  Здесь знают все о правильных тренировках, предлагая действенные способы укрепления здоровья и раскрывая секреты прекрасной физической формы.
+							p.link.js-show-other(data-text='+ Все описание') + Все описание
 					div.content-block.js-scrollTo-content(data-scroll = 'el2')
 						div.content-left
 							h3 Услуги
@@ -137,67 +139,73 @@ block content
 								li.active(data-tab='tab1') Все цены
 								li(data-tab='tab2') Тренажерный зал
 								li(data-tab='tab3') Бойцовский клуб
-						div.content-right.js-show-text.js-tabs-content(data-height='280')
+						div.content-right.js-show-text.js-tabs-content
 							div(data-tab-content='tab1')
-								ul.price-list.shadow-text.js-show-other-content
-									li.title Тренаженрый зал (полный день)
-									li Абонемент на 1 месяц / 4 занятия. 
-										span 30,00 руб.
-									li Абонемент на 1 месяц / 4 занятия. 
-										span 30,00 руб.
-									li Абонемент на 1 месяц / 4 занятия. 
-										span 30,00 руб.
-									li Абонемент на 1 месяц / 4 занятия. 
-										span 30,00 руб.
-									li Абонемент на 1 месяц / 4 занятия. 
-										span 30,00 руб.
-									li Абонемент на 1 месяц / 4 занятия. 
-										span 30,00 руб.
-									li Абонемент на 1 месяц / 4 занятия. 
-										span 30,00 руб.
-									li Абонемент на 1 месяц / 4 занятия. 
-										span 30,00 руб.
-								p.link.js-show-other + Все цены
+								div
+									ul.price-list
+										li.title 1Тренаженрый зал (полный день)
+										li Абонемент на 1 месяц / 4 занятия. 
+											span 30,00 руб.
+										li Абонемент на 1 месяц / 4 занятия. 
+											span 30,00 руб.
+										li Абонемент на 1 месяц / 4 занятия. 
+											span 30,00 руб.
+									ul.price-list.price-list-hidden.js-show-other-content
+										li Абонемент на 1 месяц / 4 занятия. 
+											span 30,00 руб.
+										li Абонемент на 1 месяц / 4 занятия. 
+											span 30,00 руб.
+										li Абонемент на 1 месяц / 4 занятия. 
+											span 30,00 руб.
+										li Абонемент на 1 месяц / 4 занятия. 
+											span 30,00 руб.
+										li Абонемент на 1 месяц / 4 занятия. 
+											span 30,00 руб.
+								p.link.js-show-other(data-text='+ Все цены') + Все цены
 							div.hidden(data-tab-content='tab2')
-								ul.price-list.shadow-text.js-show-other-content
-									li.title Тренаженрый зал (полный день)
-									li Абонемент на 1 месяц / 4 занятия. 
-										span 30,00 руб.
-									li Абонемент на 1 месяц / 4 занятия. 
-										span 30,00 руб.
-									li Абонемент на 1 месяц / 4 занятия. 
-										span 30,00 руб.
-									li Абонемент на 1 месяц / 4 занятия. 
-										span 30,00 руб.
-									li Абонемент на 1 месяц / 4 занятия. 
-										span 30,00 руб.
-									li Абонемент на 1 месяц / 4 занятия. 
-										span 30,00 руб.
-									li Абонемент на 1 месяц / 4 занятия. 
-										span 30,00 руб.
-									li Абонемент на 1 месяц / 4 занятия. 
-										span 30,00 руб.
-								p.link.js-show-other + Все цены
+								div
+									ul.price-list
+										li.title 2Тренаженрый зал (полный день)
+										li Абонемент на 1 месяц / 4 занятия. 
+											span 30,00 руб.
+										li Абонемент на 1 месяц / 4 занятия. 
+											span 30,00 руб.
+										li Абонемент на 1 месяц / 4 занятия. 
+											span 30,00 руб.
+									ul.price-list.price-list-hidden.js-show-other-content
+										li Абонемент на 1 месяц / 4 занятия. 
+											span 30,00 руб.
+										li Абонемент на 1 месяц / 4 занятия. 
+											span 30,00 руб.
+										li Абонемент на 1 месяц / 4 занятия. 
+											span 30,00 руб.
+										li Абонемент на 1 месяц / 4 занятия. 
+											span 30,00 руб.
+										li Абонемент на 1 месяц / 4 занятия. 
+											span 30,00 руб.
+								p.link.js-show-other(data-text='+ Все цены') + Все цены
 							div.hidden(data-tab-content='tab3')
-								ul.price-list.shadow-text.js-show-other-content
-									li.title Тренаженрый зал (полный день)
-									li Абонемент на 1 месяц / 4 занятия. 
-										span 30,00 руб.
-									li Абонемент на 1 месяц / 4 занятия. 
-										span 30,00 руб.
-									li Абонемент на 1 месяц / 4 занятия. 
-										span 30,00 руб.
-									li Абонемент на 1 месяц / 4 занятия. 
-										span 30,00 руб.
-									li Абонемент на 1 месяц / 4 занятия. 
-										span 30,00 руб.
-									li Абонемент на 1 месяц / 4 занятия. 
-										span 30,00 руб.
-									li Абонемент на 1 месяц / 4 занятия. 
-										span 30,00 руб.
-									li Абонемент на 1 месяц / 4 занятия. 
-										span 30,00 руб.
-								p.link.js-show-other + Все цены
+								div
+									ul.price-list
+										li.title 3Тренаженрый зал (полный день)
+										li Абонемент на 1 месяц / 4 занятия. 
+											span 30,00 руб.
+										li Абонемент на 1 месяц / 4 занятия. 
+											span 30,00 руб.
+										li Абонемент на 1 месяц / 4 занятия. 
+											span 30,00 руб.
+									ul.price-list.price-list-hidden.js-show-other-content
+										li Абонемент на 1 месяц / 4 занятия. 
+											span 30,00 руб.
+										li Абонемент на 1 месяц / 4 занятия. 
+											span 30,00 руб.
+										li Абонемент на 1 месяц / 4 занятия. 
+											span 30,00 руб.
+										li Абонемент на 1 месяц / 4 занятия. 
+											span 30,00 руб.
+										li Абонемент на 1 месяц / 4 занятия. 
+											span 30,00 руб.
+								p.link.js-show-other(data-text='+ Все цены') + Все цены
 
 			section
 				div.full-width.bg-black
@@ -275,57 +283,57 @@ block content
 							div.content-left
 								h3 Отзывы о компании 
 									p (26)
-							div.content-right.js-show-text(data-height='450')
-								div.js-show-other-content.overflow-hidden
-									div.review-wrapp
-										p.title Владимир
-										ul
-											li
-												img(src='img/star-y.png')
-											li
-												img(src='img/star-y.png')
-											li
-												img(src='img/star-y.png')
-											li
-												img(src='img/star-g.png')
-											li
-												img(src='img/star-g.png')
-
-										p.text Туда приятно приходить, стильный зал, отличный персонал, мега админы и тренера) У меня был самый лучший тренер Гришаня! Один его внешний вид вдохновляет! Он супер качок и чемпион по жиму лёжа)) Всем Моби Дик)))
-										p.date 20 ноября 2016
-									div.review-wrapp
-										p.title Владимир
-										ul
-											li
-												img(src='img/star-y.png')
-											li
-												img(src='img/star-y.png')
-											li
-												img(src='img/star-y.png')
-											li
-												img(src='img/star-g.png')
-											li
-												img(src='img/star-g.png')
-
-										p.text Туда приятно приходить, стильный зал, отличный персонал, мега админы и тренера) У меня был самый лучший тренер Гришаня! Один его внешний вид вдохновляет! Он супер качок и чемпион по жиму лёжа)) Всем Моби Дик)))
-										p.date 20 ноября 2016
-									div.review-wrapp
-										p.title Владимир
-										ul
-											li
-												img(src='img/star-y.png')
-											li
-												img(src='img/star-y.png')
-											li
-												img(src='img/star-y.png')
-											li
-												img(src='img/star-g.png')
-											li
-												img(src='img/star-g.png')
-
-										p.text Туда приятно приходить, стильный зал, отличный персонал, мега админы и тренера) У меня был самый лучший тренер Гришаня! Один его внешний вид вдохновляет! Он супер качок и чемпион по жиму лёжа)) Всем Моби Дик)))
-										p.date 20 ноября 2016
-								p.link.js-show-other.show-other-review + Все отзывы
+							div.content-right.js-show-text
+								div
+									div.overflow-hidden
+										div.review-wrapp
+											p.title Владимир
+											ul
+												li
+													img(src='img/star-y.png')
+												li
+													img(src='img/star-y.png')
+												li
+													img(src='img/star-y.png')
+												li
+													img(src='img/star-g.png')
+												li
+													img(src='img/star-g.png')
+											p.text Туда приятно приходить, стильный зал, отличный персонал, мега админы и тренера) У меня был самый лучший тренер Гришаня! Один его внешний вид вдохновляет! Он супер качок и чемпион по жиму лёжа)) Всем Моби Дик)))
+											p.date 20 ноября 2016
+										
+									div.review-hidden.js-show-other-content
+										div.review-wrapp
+											p.title Владимир
+											ul
+												li
+													img(src='img/star-y.png')
+												li
+													img(src='img/star-y.png')
+												li
+													img(src='img/star-y.png')
+												li
+													img(src='img/star-g.png')
+												li
+													img(src='img/star-g.png')
+											p.text Туда приятно приходить, стильный зал, отличный персонал, мега админы и тренера) У меня был самый лучший тренер Гришаня! Один его внешний вид вдохновляет! Он супер качок и чемпион по жиму лёжа)) Всем Моби Дик)))
+											p.date 20 ноября 2016
+										div.review-wrapp
+											p.title Владимир
+											ul
+												li
+													img(src='img/star-y.png')
+												li
+													img(src='img/star-y.png')
+												li
+													img(src='img/star-y.png')
+												li
+													img(src='img/star-g.png')
+												li
+													img(src='img/star-g.png')
+											p.text Туда приятно приходить, стильный зал, отличный персонал, мега админы и тренера) У меня был самый лучший тренер Гришаня! Один его внешний вид вдохновляет! Он супер качок и чемпион по жиму лёжа)) Всем Моби Дик)))
+											p.date 20 ноября 2016
+								p.link.show-other-review.js-show-other(data-text='+ Все отзывы') + Все отзывы
 								button.btn.btn-size-225.btn-black.js-popup-open(data-open-popup = 'popup-review') Оставить отзыв
 
 						div.content-block.js-scrollTo-content(data-scroll = 'el9')
