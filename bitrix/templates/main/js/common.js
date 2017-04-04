@@ -116,10 +116,10 @@ function initScrollbar(tag) {
 
 function initSliderCustom() {
 	initSliderGallery('.js-slider-init-gallery', '.js-slider-gallery-preview', '.js-open-gallery', '.js-open-gallery-modal', '.js-close-gallery-modal' )
-	initSliderGallery('.js-slider-init-certificate', '.js-slider-certificate-preview', '.js-open-certificate', '.js-open-certificate-modal', '.js-close-certificate-modal' )
+	// initSliderGallery('.js-slider-init-certificate', '.js-slider-certificate-preview', '.js-open-certificate', '.js-open-certificate-modal', '.js-close-certificate-modal' )
 	initSliderGallery('.js-slider-init-youtube', '.js-slider-youtube-preview', '.js-open-youtube', '.js-open-youtube-modal', '.js-close-youtube-modal' )
+	
 	function initSliderGallery(init, preview, open, openContent, close) {
-
 		function scrollTopCustom() {
 			var activeSlide = $(init).find('.slick-active').data('gallery');
 			var __scrollEl = $(preview).find("[data-gallery='" + activeSlide + "']").find(".img-content").position().top;
@@ -139,37 +139,34 @@ function initSliderCustom() {
 		}
 		if (init != '.js-slider-init-youtube') {
 			$(init).slick({
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			dots: false,
-			arrows: true,
-			infinite: false,
-			prevArrow: "<button type='button' class='slider_arrow slider_arrow-pre'><svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 15 27' enable-background='new 0 0 15 27' xml:space='preserve'><path fill-rule='evenodd' clip-rule='evenodd' d='M13.8,0L15,1.1L2.7,13.6L15,25.7L13.7,27L0,13.7L13.8,0z'/></svg></button>",
-			nextArrow: "<button type='button' class='slider_arrow slider_arrow-next'><svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 15 27' enable-background='new 0 0 15 27' xml:space='preserve'><path fill-rule='evenodd' clip-rule='evenodd' d='M15,13.7L1.3,27L0,25.7l12.3-12.1L0,1.1L1.2,0L15,13.7z'/></svg></button>",
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				dots: false,
+				arrows: true,
+				infinite: false,
+				prevArrow: "<button type='button' class='slider_arrow slider_arrow-pre'><svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 15 27' enable-background='new 0 0 15 27' xml:space='preserve'><path fill-rule='evenodd' clip-rule='evenodd' d='M13.8,0L15,1.1L2.7,13.6L15,25.7L13.7,27L0,13.7L13.8,0z'/></svg></button>",
+				nextArrow: "<button type='button' class='slider_arrow slider_arrow-next'><svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 15 27' enable-background='new 0 0 15 27' xml:space='preserve'><path fill-rule='evenodd' clip-rule='evenodd' d='M15,13.7L1.3,27L0,25.7l12.3-12.1L0,1.1L1.2,0L15,13.7z'/></svg></button>",
 			});
-			$(init).find('.slider_arrow').on('click', function() {
-				var activeSlide = $(init).find('.slick-active').data('gallery');
-				$(preview).find(".img-content").removeClass('active');
-				$(preview).find("[data-gallery='" + activeSlide + "']").find(".img-content").addClass('active');
-				scrollTopCustom();
-			})
-			$(init).on('swipe', function(event, slick, direction){
-				var activeSlide = $(init).find('.slick-active').data('gallery');
-				$(preview).find(".img-content").removeClass('active');
-				$(preview).find("[data-gallery='" + activeSlide + "']").find(".img-content").addClass('active');
-				scrollTopCustom();
-			});
+
 			var __p = preview + ' .wrapp-img';
+
 			$(__p).on('click', function(e) {
+				console.log('111',e);
 				var activeSlide = $(this).data('gallery');
 				$(init).slick('slickGoTo', activeSlide-1);
 				$(preview).find(".img-content").removeClass('active');
 				$(this).find('.img-content').addClass('active');
 			})
-			$(open).on('click', function(){
+
+			$(open).on('click', function(e){
 				$('body').addClass('overflow-hidden');
-				$(openContent).fadeIn(1000);
-				$(openContent).fadeIn({
+				// console.log('123',$(e.target).closest('.gallery_foto').data('gallery-open'));
+				var openContentData = $('.js-wrapp-foto-gallery').find("[data-gallery-modal='" + $(e.target).closest('.js-gallery-foto').data('gallery-open') + "']")
+				var openContentDataSlider = openContentData.find('.js-slider-init-gallery');
+				console.log(openContentData);
+				console.log(openContentDataSlider);
+				$(openContentData).fadeIn(1000);
+				$(openContentData).fadeIn({
 					duration: 1000,
 					complete: function(){
 						initScrollbar(preview);
@@ -180,12 +177,24 @@ function initSliderCustom() {
 				$(init).slick('slickGoTo', activeSlide-1);
 				$(preview).find(".img-content").removeClass('active');
 				$(preview).find("[data-gallery='" + activeSlide + "']").find(".img-content").addClass('active');
+				$(openContentDataSlider).find('.slider_arrow').on('click', function() {
+					var activeSlide = $(openContentDataSlider).find('.slick-active').data('gallery');
+					$(preview).find(".img-content").removeClass('active');
+					$(preview).find("[data-gallery='" + activeSlide + "']").find(".img-content").addClass('active');
+					console.log(preview);
+					console.log(activeSlide);
+					scrollTopCustom();
+				})
+				$(openContentDataSlider).on('swipe', function(event, slick, direction){
+					var activeSlide = $(openContentDataSlider).find('.slick-active').data('gallery');
+					$(preview).find(".img-content").removeClass('active');
+					$(preview).find("[data-gallery='" + activeSlide + "']").find(".img-content").addClass('active');
+					scrollTopCustom();
+				});
 			})
 			$(close).on('click', function(){
 				$(openContent).fadeOut(500);
 				$('body').removeClass('overflow-hidden');
-
-
 			})
 			$(openContent).on('click', function(e) {
 				if (!$(e.target).closest('.gallery').length) {

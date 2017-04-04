@@ -219,7 +219,7 @@ block content
 										li(data-tab='tab5') Тренажерный зал
 										li(data-tab='tab6') Бойцовский клуб
 								div.content-right.js-tabs-content
-									div.gallery_foto(data-tab-content='tab4')
+									div.gallery_foto.js-gallery-foto(data-tab-content='tab4' data-gallery-open='gallery-1' )
 										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '1')
 										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '2')
 										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '3')
@@ -228,16 +228,16 @@ block content
 										div.wrapp-img.js-open-gallery.text-foto(data-gallery = '1')
 											p
 												a(href='#') + Ещё (15 фото)
-									div.gallery_foto.hidden(data-tab-content='tab5')
-										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '1')
-										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '2')
-										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '3')
-										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '4')
-										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '5')
+									div.gallery_foto.js-gallery-foto.hidden(data-tab-content='tab5' data-gallery-open='gallery-2')
+										div.wrapp-img.js-open-gallery(style='background-image:url("img/5.jpg")' data-gallery = '1')
+										div.wrapp-img.js-open-gallery(style='background-image:url("img/5.jpg")' data-gallery = '2')
+										div.wrapp-img.js-open-gallery(style='background-image:url("img/5.jpg")' data-gallery = '3')
+										div.wrapp-img.js-open-gallery(style='background-image:url("img/5.jpg")' data-gallery = '4')
+										div.wrapp-img.js-open-gallery(style='background-image:url("img/5.jpg")' data-gallery = '5')
 										div.wrapp-img.js-open-gallery.text-foto(data-gallery = '1')
 											p
 												a(href='#') + Ещё (13 фото)
-									div.gallery_foto.hidden(data-tab-content='tab6')
+									div.gallery_foto.js-gallery-foto.hidden(data-tab-content='tab6' data-gallery-open='gallery-3')
 										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '1')
 										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '2')
 										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '3')
@@ -340,12 +340,12 @@ block content
 							div.content-left
 								h3 Сертификаты
 							div.content-right
-								div.sertif
-									div.js-open-certificate(data-gallery = '1')
+								div.sertif.js-gallery-foto(data-gallery-open='gallery-4')
+									div.js-open-gallery(data-gallery = '1')
 										img(src='img/sert1.jpg' alt='')
-									div.js-open-certificate(data-gallery = '1')
+									div.js-open-gallery(data-gallery = '2')
 										img(src='img/sert2.jpg' alt='')
-									div.js-open-certificate(data-gallery = '1')
+									div.js-open-gallery(data-gallery = '3')
 										img(src='img/sert3.jpg' alt='')
 			section
 				div.full-width
@@ -375,115 +375,276 @@ block content
 										span 
 											a(href='#') г.Минск, ул. Янки Мавра 5
 										span +375 29 617 82 31
-		
-		div.gallery-wrapp.js-open-gallery-modal
-			div.gallery-wrapp-content
-				div.gallery
-					div.wrapp_close.js-close-gallery-modal
-						<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.3 54.4" enable-background="new 0 0 54.3 54.4" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.7,4.8l2.5-2.5l48.8,48.8l-2.5,2.5L0.7,4.8z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M3.2,2.3L5.5,0l48.8,48.8l-2.3,2.3L3.2,2.3z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M49.2,0.4l2.5,2.5L2.5,52.1L0,49.6L49.2,0.4z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M51.6,2.9L54,5.2L4.8,54.4l-2.4-2.4L51.6,2.9z"/></svg>
-					div.left-content.js-slider-gallery-preview
-						div.wrapp-img(data-gallery='1')
-							div.img-content.active
-								img(src='img/4.jpg' alt='')
-						div.wrapp-img(data-gallery='2')
-							div.img-content
-								img(src='img/5.jpg' alt='')
-						div.wrapp-img(data-gallery='3')
-							div.img-content
-								img(src='img/2.jpg' alt='')
-						div.wrapp-img(data-gallery='4')
-							div.img-content
-								img(src='img/4.jpg' alt='')
-						div.wrapp-img(data-gallery='5')
-							div.img-content
-								img(src='img/4.jpg' alt='')
-						div.wrapp-img(data-gallery='6')
-							div.img-content
-								img(src='img/4.jpg' alt='')
-						div.wrapp-img(data-gallery='7')
-							div.img-content
-								img(src='img/4.jpg' alt='')
-						div.wrapp-img(data-gallery='8')
-							div.img-content
-								img(src='img/4.jpg' alt='')
-						div.wrapp-img(data-gallery='9')
-							div.img-content
-								img(src='img/4.jpg' alt='')
-						div.wrapp-img(data-gallery='10')
-							div.img-content
-								img(src='img/4.jpg' alt='')
-						div.wrapp-img(data-gallery='11')
-							div.img-content
-								img(src='img/4.jpg' alt='')
-						div.wrapp-img(data-gallery='12')
-							div.img-content
-								img(src='img/4.jpg' alt='')
-
-					div.right-content
-						div.js-slider-init-gallery
+		div.js-wrapp-foto-gallery
+			div.gallery-wrapp.js-open-gallery-modal(data-gallery-modal='gallery-1')
+				div.gallery-wrapp-content
+					div.gallery
+						div.wrapp_close.js-close-gallery-modal
+							<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.3 54.4" enable-background="new 0 0 54.3 54.4" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.7,4.8l2.5-2.5l48.8,48.8l-2.5,2.5L0.7,4.8z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M3.2,2.3L5.5,0l48.8,48.8l-2.3,2.3L3.2,2.3z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M49.2,0.4l2.5,2.5L2.5,52.1L0,49.6L49.2,0.4z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M51.6,2.9L54,5.2L4.8,54.4l-2.4-2.4L51.6,2.9z"/></svg>
+						div.left-content.js-slider-gallery-preview
 							div.wrapp-img(data-gallery='1')
-								div
+								div.img-content.active
 									img(src='img/4.jpg' alt='')
 							div.wrapp-img(data-gallery='2')
-								div
+								div.img-content
 									img(src='img/5.jpg' alt='')
 							div.wrapp-img(data-gallery='3')
-								div
+								div.img-content
 									img(src='img/2.jpg' alt='')
 							div.wrapp-img(data-gallery='4')
-								div
+								div.img-content
 									img(src='img/4.jpg' alt='')
 							div.wrapp-img(data-gallery='5')
-								div
+								div.img-content
 									img(src='img/4.jpg' alt='')
 							div.wrapp-img(data-gallery='6')
-								div
+								div.img-content
 									img(src='img/4.jpg' alt='')
 							div.wrapp-img(data-gallery='7')
-								div
+								div.img-content
 									img(src='img/4.jpg' alt='')
 							div.wrapp-img(data-gallery='8')
-								div
+								div.img-content
 									img(src='img/4.jpg' alt='')
 							div.wrapp-img(data-gallery='9')
-								div
+								div.img-content
 									img(src='img/4.jpg' alt='')
 							div.wrapp-img(data-gallery='10')
-								div
+								div.img-content
 									img(src='img/4.jpg' alt='')
 							div.wrapp-img(data-gallery='11')
-								div
+								div.img-content
 									img(src='img/4.jpg' alt='')
 							div.wrapp-img(data-gallery='12')
-								div
+								div.img-content
 									img(src='img/4.jpg' alt='')
-		div.gallery-wrapp.js-open-certificate-modal
-			div.gallery-wrapp-content
-				div.gallery
-					div.wrapp_close.js-close-certificate-modal
-						<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.3 54.4" enable-background="new 0 0 54.3 54.4" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.7,4.8l2.5-2.5l48.8,48.8l-2.5,2.5L0.7,4.8z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M3.2,2.3L5.5,0l48.8,48.8l-2.3,2.3L3.2,2.3z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M49.2,0.4l2.5,2.5L2.5,52.1L0,49.6L49.2,0.4z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M51.6,2.9L54,5.2L4.8,54.4l-2.4-2.4L51.6,2.9z"/></svg>
-					div.left-content.js-slider-certificate-preview
-						div.wrapp-img(data-gallery='1')
-							div.img-content.active
-								img(src='img/sert1.jpg' alt='')
-						div.wrapp-img(data-gallery='2')
-							div.img-content
-								img(src='img/sert2.jpg' alt='')
-						div.wrapp-img(data-gallery='3')
-							div.img-content
-								img(src='img/sert3.jpg' alt='')
 
-					div.right-content
-						div.js-slider-init-certificate
+						div.right-content
+							div.js-slider-init-gallery
+								div.wrapp-img(data-gallery='1')
+									div
+										img(src='img/4.jpg' alt='')
+								div.wrapp-img(data-gallery='2')
+									div
+										img(src='img/5.jpg' alt='')
+								div.wrapp-img(data-gallery='3')
+									div
+										img(src='img/2.jpg' alt='')
+								div.wrapp-img(data-gallery='4')
+									div
+										img(src='img/4.jpg' alt='')
+								div.wrapp-img(data-gallery='5')
+									div
+										img(src='img/4.jpg' alt='')
+								div.wrapp-img(data-gallery='6')
+									div
+										img(src='img/4.jpg' alt='')
+								div.wrapp-img(data-gallery='7')
+									div
+										img(src='img/4.jpg' alt='')
+								div.wrapp-img(data-gallery='8')
+									div
+										img(src='img/4.jpg' alt='')
+								div.wrapp-img(data-gallery='9')
+									div
+										img(src='img/4.jpg' alt='')
+								div.wrapp-img(data-gallery='10')
+									div
+										img(src='img/4.jpg' alt='')
+								div.wrapp-img(data-gallery='11')
+									div
+										img(src='img/4.jpg' alt='')
+								div.wrapp-img(data-gallery='12')
+									div
+										img(src='img/4.jpg' alt='')
+			div.gallery-wrapp.js-open-gallery-modal(data-gallery-modal='gallery-2')
+				div.gallery-wrapp-content
+					div.gallery
+						div.wrapp_close.js-close-gallery-modal
+							<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.3 54.4" enable-background="new 0 0 54.3 54.4" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.7,4.8l2.5-2.5l48.8,48.8l-2.5,2.5L0.7,4.8z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M3.2,2.3L5.5,0l48.8,48.8l-2.3,2.3L3.2,2.3z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M49.2,0.4l2.5,2.5L2.5,52.1L0,49.6L49.2,0.4z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M51.6,2.9L54,5.2L4.8,54.4l-2.4-2.4L51.6,2.9z"/></svg>
+						div.left-content.js-slider-gallery-preview
 							div.wrapp-img(data-gallery='1')
-								div
+								div.img-content.active
+									img(src='img/2.jpg' alt='')
+							div.wrapp-img(data-gallery='2')
+								div.img-content
+									img(src='img/5.jpg' alt='')
+							div.wrapp-img(data-gallery='3')
+								div.img-content
+									img(src='img/2.jpg' alt='')
+							div.wrapp-img(data-gallery='4')
+								div.img-content
+									img(src='img/4.jpg' alt='')
+							div.wrapp-img(data-gallery='5')
+								div.img-content
+									img(src='img/4.jpg' alt='')
+							div.wrapp-img(data-gallery='6')
+								div.img-content
+									img(src='img/4.jpg' alt='')
+							div.wrapp-img(data-gallery='7')
+								div.img-content
+									img(src='img/4.jpg' alt='')
+							div.wrapp-img(data-gallery='8')
+								div.img-content
+									img(src='img/4.jpg' alt='')
+							div.wrapp-img(data-gallery='9')
+								div.img-content
+									img(src='img/4.jpg' alt='')
+							div.wrapp-img(data-gallery='10')
+								div.img-content
+									img(src='img/4.jpg' alt='')
+							div.wrapp-img(data-gallery='11')
+								div.img-content
+									img(src='img/4.jpg' alt='')
+							div.wrapp-img(data-gallery='12')
+								div.img-content
+									img(src='img/4.jpg' alt='')
+
+						div.right-content
+							div.js-slider-init-gallery
+								div.wrapp-img(data-gallery='1')
+									div
+										img(src='img/4.jpg' alt='')
+								div.wrapp-img(data-gallery='2')
+									div
+										img(src='img/5.jpg' alt='')
+								div.wrapp-img(data-gallery='3')
+									div
+										img(src='img/2.jpg' alt='')
+								div.wrapp-img(data-gallery='4')
+									div
+										img(src='img/4.jpg' alt='')
+								div.wrapp-img(data-gallery='5')
+									div
+										img(src='img/4.jpg' alt='')
+								div.wrapp-img(data-gallery='6')
+									div
+										img(src='img/4.jpg' alt='')
+								div.wrapp-img(data-gallery='7')
+									div
+										img(src='img/4.jpg' alt='')
+								div.wrapp-img(data-gallery='8')
+									div
+										img(src='img/4.jpg' alt='')
+								div.wrapp-img(data-gallery='9')
+									div
+										img(src='img/4.jpg' alt='')
+								div.wrapp-img(data-gallery='10')
+									div
+										img(src='img/4.jpg' alt='')
+								div.wrapp-img(data-gallery='11')
+									div
+										img(src='img/4.jpg' alt='')
+								div.wrapp-img(data-gallery='12')
+									div
+										img(src='img/4.jpg' alt='')
+			div.gallery-wrapp.js-open-gallery-modal(data-gallery-modal='gallery-3')
+				div.gallery-wrapp-content
+					div.gallery
+						div.wrapp_close.js-close-gallery-modal
+							<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.3 54.4" enable-background="new 0 0 54.3 54.4" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.7,4.8l2.5-2.5l48.8,48.8l-2.5,2.5L0.7,4.8z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M3.2,2.3L5.5,0l48.8,48.8l-2.3,2.3L3.2,2.3z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M49.2,0.4l2.5,2.5L2.5,52.1L0,49.6L49.2,0.4z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M51.6,2.9L54,5.2L4.8,54.4l-2.4-2.4L51.6,2.9z"/></svg>
+						div.left-content.js-slider-gallery-preview
+							div.wrapp-img(data-gallery='1')
+								div.img-content.active
+									img(src='img/2.jpg' alt='')
+							div.wrapp-img(data-gallery='2')
+								div.img-content
+									img(src='img/5.jpg' alt='')
+							div.wrapp-img(data-gallery='3')
+								div.img-content
+									img(src='img/2.jpg' alt='')
+							div.wrapp-img(data-gallery='4')
+								div.img-content
+									img(src='img/4.jpg' alt='')
+							div.wrapp-img(data-gallery='5')
+								div.img-content
+									img(src='img/4.jpg' alt='')
+							div.wrapp-img(data-gallery='6')
+								div.img-content
+									img(src='img/4.jpg' alt='')
+							div.wrapp-img(data-gallery='7')
+								div.img-content
+									img(src='img/4.jpg' alt='')
+							div.wrapp-img(data-gallery='8')
+								div.img-content
+									img(src='img/4.jpg' alt='')
+							div.wrapp-img(data-gallery='9')
+								div.img-content
+									img(src='img/4.jpg' alt='')
+							div.wrapp-img(data-gallery='10')
+								div.img-content
+									img(src='img/4.jpg' alt='')
+							div.wrapp-img(data-gallery='11')
+								div.img-content
+									img(src='img/4.jpg' alt='')
+							div.wrapp-img(data-gallery='12')
+								div.img-content
+									img(src='img/4.jpg' alt='')
+
+						div.right-content
+							div.js-slider-init-gallery
+								div.wrapp-img(data-gallery='1')
+									div
+										img(src='img/4.jpg' alt='')
+								div.wrapp-img(data-gallery='2')
+									div
+										img(src='img/5.jpg' alt='')
+								div.wrapp-img(data-gallery='3')
+									div
+										img(src='img/2.jpg' alt='')
+								div.wrapp-img(data-gallery='4')
+									div
+										img(src='img/4.jpg' alt='')
+								div.wrapp-img(data-gallery='5')
+									div
+										img(src='img/4.jpg' alt='')
+								div.wrapp-img(data-gallery='6')
+									div
+										img(src='img/4.jpg' alt='')
+								div.wrapp-img(data-gallery='7')
+									div
+										img(src='img/4.jpg' alt='')
+								div.wrapp-img(data-gallery='8')
+									div
+										img(src='img/4.jpg' alt='')
+								div.wrapp-img(data-gallery='9')
+									div
+										img(src='img/4.jpg' alt='')
+								div.wrapp-img(data-gallery='10')
+									div
+										img(src='img/4.jpg' alt='')
+								div.wrapp-img(data-gallery='11')
+									div
+										img(src='img/4.jpg' alt='')
+								div.wrapp-img(data-gallery='12')
+									div
+										img(src='img/4.jpg' alt='')
+			div.gallery-wrapp.js-open-gallery-modal(data-gallery-modal='gallery-4')
+				div.gallery-wrapp-content
+					div.gallery
+						div.wrapp_close.js-close-gallery-modal
+							<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.3 54.4" enable-background="new 0 0 54.3 54.4" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.7,4.8l2.5-2.5l48.8,48.8l-2.5,2.5L0.7,4.8z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M3.2,2.3L5.5,0l48.8,48.8l-2.3,2.3L3.2,2.3z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M49.2,0.4l2.5,2.5L2.5,52.1L0,49.6L49.2,0.4z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M51.6,2.9L54,5.2L4.8,54.4l-2.4-2.4L51.6,2.9z"/></svg>
+						div.left-content.js-slider-gallery-preview
+							div.wrapp-img(data-gallery='1')
+								div.img-content.active
 									img(src='img/sert1.jpg' alt='')
 							div.wrapp-img(data-gallery='2')
-								div
+								div.img-content
 									img(src='img/sert2.jpg' alt='')
 							div.wrapp-img(data-gallery='3')
-								div
+								div.img-content
 									img(src='img/sert3.jpg' alt='')
+						div.right-content
+							div.js-slider-init-gallery
+								div.wrapp-img(data-gallery='1')
+									div
+										img(src='img/sert1.jpg' alt='')
+								div.wrapp-img(data-gallery='2')
+									div
+										img(src='img/sert2.jpg' alt='')
+								div.wrapp-img(data-gallery='3')
+									div
+										img(src='img/sert3.jpg' alt='')
 		div.gallery-wrapp.js-open-youtube-modal
 			div.gallery-wrapp-content
 				div.gallery
