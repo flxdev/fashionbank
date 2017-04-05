@@ -334,14 +334,14 @@
 			width: 100%;
 			text-align: center;
 			padding-left: 10px;
+			padding-top: 70px;
 			.burger_menu-big-mobile {
 				display: block;
 			}
-			.burger_menu-small {
+			.burger_menu-small, .burger_menu-big {
 				display: none;
 			}
 			.burger_menu-big {
-				padding-bottom: 60px;
 				li {
 					padding-bottom: 25px;
 					a {
@@ -355,6 +355,19 @@
 					}
 				}
 			}
+			.wrapp-menu-mobile {
+				display: block;
+				margin-bottom: 90px;
+				.burger_menu-big { 
+					display: block;
+				}
+			}
+		}
+		.social_links {
+			position: relative;
+			// margin: 0 auto;
+			// left: 0;
+			// right: 0;
 		}
 	}
 	//1-0page

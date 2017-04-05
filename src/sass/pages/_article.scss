@@ -472,6 +472,7 @@
 	height: 120px;
 	margin-bottom: 35px;
 	padding: 0 20px;
+	cursor: pointer;
 	.comments-wrapp-content {
 		position: relative;
 		max-width: 1300px;
@@ -484,8 +485,10 @@
 			background-image: url('../img/comments.png');
 			background-size: cover;
 			background-position: center center;
-			padding: 13px 20px 16px;
+			padding: 13px 22px 19px;
 			margin-top: 35px;
+			transition: color 0.3s ease-out;
+			background-repeat: no-repeat;
 		}
 		.show_all {
 			position: absolute;
@@ -499,24 +502,29 @@
 			font-size: 2rem;
 			text-transform: uppercase;
 			font-family: black;
-			transition: all 0.3s ease-out;
-			a {
-				color: #000;
+			transition: color 0.3s ease-out;
+			color: #000;
+			svg {
+				width: 10px;
+				transform: rotate(-90deg);
+				position: absolute;
+				margin-left: 20px;
+				margin-top: 5px;
+			}
+			
+			
+		}
+	}
+	&:hover {
+		.comments-wrapp-content {
+			.show_all {
+				color: $main_blue;
 				svg {
-					width: 10px;
-					transform: rotate(-90deg);
-					position: absolute;
-					margin-left: 20px;
-					margin-top: 5px;
+					fill: $main_blue;
 				}
 			}
-			&:hover {
-				a {
-					color: $main_blue;
-					svg {
-						fill: $main_blue;
-					}
-				}
+			.comments-col {
+				color: $main_blue;
 			}
 		}
 	}
