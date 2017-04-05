@@ -942,6 +942,9 @@ input[type='password'] {font-family: arial}
    		top: 2px;
    		transition: all 0.3s ease-out;
 	}
+	svg.up {
+		transform: rotate(0deg);
+	}
 	.dropdown-list {
 		display: none;
 		position: absolute;
@@ -962,18 +965,18 @@ input[type='password'] {font-family: arial}
 			}
 		}
 	}
-	&:hover {
-		.dropdown-list {
-			display: block;
-		}
-		svg.down {
-			width: 20px;
-	   		height: 11px;
-	   		transform: rotate(0deg);
-	   		position: relative;
-	   		top: 2p
-		}
-	} 
+	// &:hover {
+	// 	.dropdown-list {
+	// 		display: block;
+	// 	}
+	// 	svg.down {
+	// 		width: 20px;
+	//    		height: 11px;
+	//    		transform: rotate(0deg);
+	//    		position: relative;
+	//    		top: 2p
+	// 	}
+	// } 
 }
 
 

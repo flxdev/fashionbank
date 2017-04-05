@@ -433,7 +433,6 @@ function initSlider() {
 }
 
 function initFilters() {
-	
 	$('body').on('click', function(e) {
 		if (!$(e.target).closest(".block-filters").length) {
 			if (!$(e.target).closest(".item-filter-content").length) {
@@ -514,6 +513,12 @@ function initSlidersUi() {
 		sliderSetting.step = $(this).data("step");
 		sliderSetting.defaultValueTo = '0'+ $(this).data("default-value-to") +'.00';
 		sliderSetting.defaultValueFrom = $(this).data("default-value-from") +'.00';
+
+		
+		
+		sliderSetting.inputShowFildFilterTop = $(this).closest('.item-filter').find('.js-fild-filter-slider').find('.js_ui_slider_value_bottom');
+		sliderSetting.inputShowFildFilterBottom = $(this).closest('.item-filter').find('.js-fild-filter-slider').find('.js_ui_slider_value_top');
+
 		// sliderSetting.labelTo = $(this).find(".js_ui_slider_label");
 		sliderSetting.inputHidden = $(this).find(".js_ui_slider_input");
 		sliderSetting.inputHiddenTop = $(this).find(".js_ui_slider_value_top");
@@ -541,13 +546,16 @@ function initSlidersUi() {
 					var __timeUp = ui.values[ 1 ]+'.00'
 				}
 
-				
+				$(sliderSetting.inputShowFildFilterTop).val(__timeDown);
+				$(sliderSetting.inputShowFildFilterBottom).val(__timeUp);
 				$(sliderSetting.inputHiddenTop).val(__timeUp);
 				$(sliderSetting.inputHiddenBottom).val(__timeDown);
 				
 			}
 		});
 		$(sliderSetting.inputHidden).text( sliderSetting.defaultValueTo + " - " + sliderSetting.defaultValueFrom );
+		$(sliderSetting.inputShowFildFilterTop).val(sliderSetting.defaultValueTo);
+		$(sliderSetting.inputShowFildFilterBottom).val(sliderSetting.defaultValueFrom);
 		$(sliderSetting.inputHiddenTop).val(sliderSetting.defaultValueFrom);
 		$(sliderSetting.inputHiddenBottom).val(sliderSetting.defaultValueTo);
 	});
@@ -890,6 +898,12 @@ $( document ).ready(function() {
 	initScrollTo();
 	initValidForm();
 	initHeader();
+
+	// $('.js-add-favorites').each( function {
+	// 	$(this).on('click', function() {
+	// 		$(this).toggleClass('add-favorites-active')
+	// 	});
+	// })
 
 	// добавить стили классу
 	// console.log(document.styleSheets[0].rules[260]);

@@ -1834,15 +1834,15 @@
                 <li> <a href="#">Специалисты</a></li>
                 <li> <a href="#">Магазины</a></li>
               </ul>
-              <div class="dropdown">
-                <p>Сначала <span>новые
+              <div class="dropdown js-menu-dropdown">
+                <p class="js-menu-dropdown-open">Сначала <span>новые
                     <svg class="down">
                       <use xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
                     </svg></span></p>
-                <ul class="dropdown-list">
-                  <li> <a href="#">Новые</a></li>
-                  <li> <a href="#">Популярные</a></li>
-                  <li> <a href="#">Обсуждаемые</a></li>
+                <ul class="js-menu-dropdown-dop dropdown-list">
+                  <li><a href="#">Новые</a></li>
+                  <li><a href="#">Популярные</a></li>
+                  <li><a href="#">Обсуждаемые</a></li>
                 </ul>
               </div>
             </div>
@@ -1947,7 +1947,10 @@
                 <div class="item-filter">
                   <div class="wrapp-filter-content js-item-filter">
                     <p>Время работы</p>
-                    <p class="fild-filter">С 00.00 до 24.00</p>
+                    <p class="fild-filter js-fild-filter-slider"><span>С</span>
+                      <input class="js_ui_slider_value_bottom" disabled="disabled"><span>ДО</span>
+                      <input class="js_ui_slider_value_top" disabled="disabled">
+                    </p>
                     <svg class="close js-close hidden">
                       <use xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-close" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
                     </svg>

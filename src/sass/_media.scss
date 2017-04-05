@@ -4,6 +4,10 @@
 		padding-left: 10px;
 		padding-right: 10px; 
 	}
+	header {
+		padding-left: 20px;
+		padding-right: 20px; 
+	}
 	.breadcrumbs {
 		padding-left: 20px;
 	}
@@ -649,6 +653,10 @@
 }
 
 @media (max-width: 700px) {
+	header {
+		padding-left: 0px;
+		padding-right: 0px; 
+	}
 	.fixPaddingMenu {
 		padding-top: 0 !important;
 	}

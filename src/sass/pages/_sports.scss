@@ -277,6 +277,17 @@
 			color: #000;
 			font-family: $font_r;
 			cursor: pointer;
+			input {
+				width: 48px;
+				margin: 0 5px;
+				font-size: 1.6rem;
+				font-family: $font_r;
+				background-color: transparent;
+				color: #000;
+			}
+			span {
+				font-size: 1.4rem;
+			}
 
 		}
 		&:first-child {

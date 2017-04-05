@@ -32,17 +32,17 @@ block content
 							a(href='#') Специалисты
 						li 
 							a(href='#') Магазины
-					div.dropdown
-						p Сначала 
+					div.dropdown.js-menu-dropdown
+						p.js-menu-dropdown-open Сначала 
 							span новые
 								svg.down
 									use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
-						ul.dropdown-list
-							li 
+						ul.js-menu-dropdown-dop.dropdown-list
+							li
 								a(href='#') Новые
-							li 
+							li
 								a(href='#') Популярные
-							li 
+							li
 								a(href='#') Обсуждаемые
 							
 
@@ -166,7 +166,11 @@ block content
 						div.item-filter
 							div.wrapp-filter-content.js-item-filter
 								p Время работы
-								p.fild-filter С 00.00 до 24.00
+								p.fild-filter.js-fild-filter-slider
+									span С
+									input.js_ui_slider_value_bottom(disabled="disabled")
+									span ДО
+									input.js_ui_slider_value_top(disabled="disabled")
 								svg.close.js-close.hidden
 									use(xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-close" xmlns:xlink="http://www.w3.org/1999/xlink")
 							div.item-filter-content

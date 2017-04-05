@@ -4032,9 +4032,6 @@ function initSlider() {
 function initFilters() {
 
 
-	
-
-
 	$('body').on('click', function(e) {
 
 
@@ -4275,6 +4272,24 @@ function initSlidersUi() {
 		sliderSetting.defaultValueFrom = $(this).data("default-value-from") +'.00';
 
 
+
+
+
+		
+
+
+		
+
+
+		sliderSetting.inputShowFildFilterTop = $(this).closest('.item-filter').find('.js-fild-filter-slider').find('.js_ui_slider_value_bottom');
+
+
+		sliderSetting.inputShowFildFilterBottom = $(this).closest('.item-filter').find('.js-fild-filter-slider').find('.js_ui_slider_value_top');
+
+
+
+
+
 		// sliderSetting.labelTo = $(this).find(".js_ui_slider_label");
 
 
@@ -4356,7 +4371,10 @@ function initSlidersUi() {
 
 
 
-				
+				$(sliderSetting.inputShowFildFilterTop).val(__timeDown);
+
+
+				$(sliderSetting.inputShowFildFilterBottom).val(__timeUp);
 
 
 				$(sliderSetting.inputHiddenTop).val(__timeUp);
@@ -4375,6 +4393,12 @@ function initSlidersUi() {
 
 
 		$(sliderSetting.inputHidden).text( sliderSetting.defaultValueTo + " - " + sliderSetting.defaultValueFrom );
+
+
+		$(sliderSetting.inputShowFildFilterTop).val(sliderSetting.defaultValueTo);
+
+
+		$(sliderSetting.inputShowFildFilterBottom).val(sliderSetting.defaultValueFrom);
 
 
 		$(sliderSetting.inputHiddenTop).val(sliderSetting.defaultValueFrom);
@@ -5401,6 +5425,24 @@ $( document ).ready(function() {
 
 
 	initHeader();
+
+
+
+
+
+	// $('.js-add-favorites').each( function {
+
+
+	// 	$(this).on('click', function() {
+
+
+	// 		$(this).toggleClass('add-favorites-active')
+
+
+	// 	});
+
+
+	// })
 
 
 
