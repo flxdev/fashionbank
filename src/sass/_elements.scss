@@ -87,16 +87,38 @@
 	background-color: $main_blue;
 	color: #fff;
 }
-
+.wrapp-email-input {
+	position: relative;
+	button {
+		display: block;
+		position: absolute;
+		top: 9px;
+		right: 12px;
+		background-color: transparent;
+	}
+	.email-input + button {
+		svg {
+			fill: #4e4e4e;
+			width: 20px;
+			height: 20px;
+			transition: fill 0.3s ease-out;
+		}
+	}
+	.email-input:focus + button{ 
+		svg {
+			fill: $main_blue;
+		}
+	}
+}
 .email-input {
 	color: #fff;
 	font-family: $font_r;
 	width: 220px;
-	background-image: url(../img/svg/uEA02-email-grey.svg);
+	// background-image: url(../img/svg/uEA02-email-grey.svg);
 	background-size: 10%;
 	background-position: 95%;
 	background-repeat: no-repeat;
-	transition: all 0.1s ease-out;
+	transition: all 0.3s ease-out;
 	
 }
 .email-input::-webkit-input-placeholder {color:#4e4e4e;}
@@ -105,7 +127,7 @@
 .email-input:-ms-input-placeholder      {color:#4e4e4e;}
 
 .email-input:focus {
-	background-image: url(../img/svg/uEA01-email-blue.svg);
+	// background-image: url(../img/svg/uEA01-email-blue.svg);
 }
 //end form
 

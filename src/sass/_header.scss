@@ -67,7 +67,7 @@ header {
 				font-family: $font_b;
 				font-weight: 400;
 				letter-spacing: 1.2px;
-				padding: 0 5px 25px 5px;
+				padding: 0px 5px 22px 5px;
 				display: block;
 				text-transform: uppercase;
 				border-bottom: 3px solid rgba(0,0,0,0);
@@ -101,6 +101,7 @@ header {
 		width: 100%;
 		position: relative;
 		.menu_categories-content {
+			height: 453px;
 			display: none;
 			background-color: #1b1b1b;
 			width: 100%;

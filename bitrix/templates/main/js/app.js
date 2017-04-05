@@ -3549,16 +3549,10 @@ function shadowScroll(scrollContainer, scrolling, add) {
 function initBurger() {
 
 
-	// $('.js-burger').off('click.burger').on('click.burger', function() {
-
-
 	$('.js-burger').on('click', function() {
 
 
-		console.log('111');
-
-
-		$('.js-burger-menu').removeClass('hidden');
+		$('.js-burger-menu').fadeIn(300);
 
 
 		$('body').addClass('overflow-hidden');
@@ -3579,7 +3573,7 @@ function initBurger() {
 		console.log('222');
 
 
-		setTimeout( function() { $('.js-burger-menu').addClass('hidden'); } , 500)
+		setTimeout( function() { $('.js-burger-menu').fadeOut(200) } , 100)
 
 
 		$('body').removeClass('overflow-hidden');
@@ -3603,13 +3597,13 @@ function initBurger() {
 		if (!$(e.target).closest("#burger_menu").length) {
 
 
-			setTimeout( function() { $('.js-burger-menu').addClass('hidden'); } , 500)
+			setTimeout( function() { $('.js-burger-menu').fadeOut(200) } , 100)
 
 
 			$('body').removeClass('overflow-hidden');
 
 
-			$('#burger_menu').toggleClass('burger-animate')
+			$('#burger_menu').toggleClass('burger-animate');
 
 
 		}
@@ -3750,58 +3744,157 @@ function initPopup() {
 function initMenu() {
 
 
+	var clearSetTimeout;
+
+
 	$('.js-menu-category .menu_categories li a').on( 'mouseover', function(e){
 
 
-		var fade = 0;
+		var __self = this;
 
 
-		if (!globalSetting.menuFirstOpen) { fade = 500; globalSetting.menuFirstOpen = true;}
+		var _e = e;
 
 
-		else fade = 0;
+		clearSetTimeout = setTimeout(function() { 
 
 
-		if ($(this).data('index') == undefined ) e.preventDefault();
+			var fade = 0;
 
 
-		else {
+			if (!globalSetting.menuFirstOpen) { fade = 500; globalSetting.menuFirstOpen = true;}
 
 
-			$('.js-menu-category').find('.menu_categories').children().find('a').removeClass('active').addClass('no-active');
+			else fade = 0;
 
 
-			$(this).addClass('active').removeClass('no-active');
+			if ($(__self).data('index') == undefined ) _e.preventDefault();
 
 
-			var thisTab = $('.js-menu-category-content').find("[data-index='" + $(this).data('index') + "']")
+			else {
+
+
+				
+
+
+				
+
+
+				
+
+
+				//находим нужную вкладку
+
+
+				var thisTab = $('.js-menu-category-content').find("[data-index='" + $(__self).data('index') + "']")
+
+
+				var thisTabActivIndex = $('.js-menu-category').find('.menu_categories').find('.active').data('index');
+
+
+				var thisTabActiv= $('.js-menu-category-content').find("[data-index='" + thisTabActivIndex + "']")
 
 
 
 
 
-			thisTab.fadeIn(fade).siblings().fadeOut(0);
+				//добавление активного пункта меню
 
 
-			thisTab.find('.js-menu-hover').children().first().addClass('active').siblings().removeClass('active');
+				$('.js-menu-category').find('.menu_categories').children().find('a').removeClass('active').addClass('no-active');
 
 
-			thisTab.find('.wrapp_content').css("display","none");
+				$(__self).addClass('active').removeClass('no-active');
 
 
-			thisTab.find('.wrapp_content').first().css("display","inline-block");
+				
 
 
-		}
+				//показываем ее и скрываем остальные
+
+
+				if (thisTabActivIndex == undefined) {
+
+
+					thisTab.slideToggle(500);
+
+
+				}
+
+
+
+
+
+				thisTabActiv.slideUp({
+
+
+					duration: 500,
+
+
+					complete: function(){
+
+
+						thisTab.slideToggle(500);
+
+
+					}
+
+
+				});
+
+
+				
+
+
+				
+
+
+				// thisTab.slideToggle(fade).siblings().slideToggle(0);
+
+
+				thisTab.find('.js-menu-hover').children().first().addClass('active').siblings().removeClass('active');
+
+
+				thisTab.find('.wrapp_content').css("display","none");
+
+
+				thisTab.find('.wrapp_content').first().css("display","inline-block");
+
+
+			}
+
+
+		}, 500);
+
+
+		
 
 
 	});
 
 
+
+
+
+	$('.js-menu-category .menu_categories li a').on( 'mouseleave', function(e){
+
+
+		clearTimeout(clearSetTimeout);
+
+
+	});
+
+
+
+
+
 	$('.js-menu-category').on( 'mouseleave', function(e){
 
 
-		$('.js-menu-category-content-item').fadeOut(500);
+		clearTimeout(clearSetTimeout);
+
+
+		$('.js-menu-category-content-item').fadeOut(0);
 
 
 		$('.js-menu-category').find('.menu_categories').children().find('a').removeClass('active').removeClass('no-active');
@@ -3814,6 +3907,9 @@ function initMenu() {
 
 
 
+
+
+	//ховеры на табы слева
 
 
 	$('.js-left-menu-hover').on('mouseenter', function(){
@@ -3832,6 +3928,9 @@ function initMenu() {
 
 
 
+
+
+	// ховеры на пункты меню
 
 
 	$('.js-menu-item-hover .menu-center ul li a').on('mouseenter', function(){
@@ -3942,22 +4041,25 @@ function initFilters() {
 	$('body').on('click', function(e) {
 
 
-		if (!$(e.target).closest(".js-item-filter").length) {
+		// if (!$(e.target).closest(".js-item-filter").length) {
 
 
-			setTimeout( function() { $('.js-burger-menu').addClass('hidden'); } , 500)
+		// 	setTimeout( function() { $('.js-burger-menu').addClass('hidden'); } , 500)
 
 
-			$('body').removeClass('overflow-hidden');
+		// 	$('body').removeClass('overflow-hidden');
 
 
-			$('#burger_menu').toggleClass('burger-animate')
+		// 	$('#burger_menu').toggleClass('burger-animate')
 
 
-		}
+		// }
 
 
 	});
+
+
+
 
 
 	$(".js-item-filter").on("click", function(e) {
@@ -3990,6 +4092,9 @@ function initFilters() {
 	});
 
 
+
+
+
 	$(".js-item-filter-menu").on("click", function() {
 
 
@@ -4000,6 +4105,9 @@ function initFilters() {
 
 
 	});
+
+
+
 
 
 	$(".js-item-filter-inMenu").on("click", function() {
