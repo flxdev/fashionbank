@@ -227,9 +227,9 @@
 	justify-content: space-between;
 	align-items: center;
 	flex-basis: 100%;
-	margin: 0 15px;
+	margin: 0 15px 30px;
 	position: relative;
-	padding-bottom: 30px;
+	// padding-bottom: 30px;
 	
 	.item-filter  {
 		flex-basis: 20%;
@@ -238,8 +238,11 @@
 		border-right: 1px solid #c2c2c2;
 		min-height: 60px;
 		cursor:pointer;
-		padding: 5px 20px;
 		position: relative;
+		.wrapp-filter-content {
+			padding: 5px 20px;
+			user-select: none;
+		}
 		.close {
 			width: 10px;
 			height: 10px;
@@ -289,6 +292,7 @@
 			z-index: 50;
 			border: 2px solid #000;
 			display: none;
+			user-select: none;
 			// .input_group_wrapp {
 			// 	height: 250px;
 			// }
@@ -384,8 +388,11 @@
 			padding: 15px 0;
 			.item-filter {
 				border: none;
-				border-bottom: 1px solid #cccccc;
 				padding-left: 0;
+				.wrapp-filter-content {
+					padding: 5px 20px 5px 0px;
+					border-bottom: 1px solid #cccccc;
+				}
 			}
 		}
 	}
