@@ -1028,9 +1028,18 @@
 		padding-bottom: 30px;
 		text-align: center;
 	}
-	.content-wrapp .block-supported {
-		text-align: center;
-		padding: 90px 10px;
+	.content-wrapp  {
+		.block-supported {
+			text-align: center;
+			padding: 90px 10px;
+			.sup-wrapp {
+				.sup-text-wrapp {
+					.btn {
+						margin: 15px auto;
+					}
+				}
+			} 
+		}
 	}
 	
 }

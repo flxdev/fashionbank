@@ -4974,6 +4974,78 @@ function initLike() {
 	})
 
 
+	$('.js-add-favorites').each(function() {
+
+
+		$(this).attr( "data-like", '1');
+
+
+		$(this).on('click', function() {
+
+
+			if ($(this).attr('data-like') == '1') {
+
+
+				$(this).find('img').attr( 'src', 'img/icons/heart-2.png' );
+
+
+				$(this).attr( "data-like", '0');
+
+
+			}
+
+
+			else {
+
+
+				$(this).find('img').attr( 'src', 'img/icons/heart1.png' );
+
+
+				$(this).attr( "data-like", '1');
+
+
+			}
+
+
+			return false;
+
+
+		})
+
+
+		// $(this).on('mouseenter', function() {
+
+
+		// 	// $(this).find('img').attr( 'src', 'img/icons/heart-2.png' );
+
+
+		// })
+
+
+		// $(this).on('mouseleave', function() {
+
+
+		// 	if ($(this).attr('data-like') == '1') {
+
+
+		// 		// $(this).find('img').attr( 'src', 'img/icons/heart1.png' );
+
+
+		// 		// $(this).find('span').removeClass('span-noactive');
+
+
+		// 	}
+
+
+		// })
+
+
+	})
+
+
+
+
+
 	
 
 
