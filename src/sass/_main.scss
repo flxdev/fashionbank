@@ -656,7 +656,7 @@ input[type='password'] {font-family: arial}
 				// margin-left: 15px;
 			}
 			.like {
-				right: 42px;
+				right: 20px;
 			}
 		}	
 	}
@@ -1058,4 +1058,7 @@ input[type='password'] {font-family: arial}
 }
 .error {
 	border-bottom-color: red !important;
+}
+.like {
+	width: 20px !important;
 }

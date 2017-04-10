@@ -20,8 +20,7 @@ block content
 		section
 			div.max-width-1300
 				div.title-page-wrapp
-					h2 Сменить пароль
-		
+					h2 Изменение пароля
 		section
 			div.max-width-1300.favourites
 				div.favourites-left
@@ -47,7 +46,7 @@ block content
 								label Текущий пароль
 									span *
 							p.note 
-								a(href='#') Забыли пароль?
+								a.js-popup-open(data-open-popup="popup-reset-password")(href='#') Забыли пароль?
 							div.input-wrapp
 								input.input-border-bottom(data-validation="required" data-validation-strength="5" type="password")
 								label Новый пароль

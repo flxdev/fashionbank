@@ -865,6 +865,7 @@ function initValidForm(){
 		});
 	}
 }
+
 function initHeader() {
 	var _height = $('header').height();
 	$(window).scroll(function() {
@@ -881,7 +882,20 @@ function initHeader() {
 			$('.wrapp_page').removeAttr('style');
 		}
 	})
-	
+}
+
+function initChechAll() {
+	var checkedAll = false;
+	$('.js-chech-all').on('click', function() {
+		if (!checkedAll) {
+			$(this).prev().find('input').prop('checked', true);
+			checkedAll = true;
+		}
+		else  { 
+			$(this).prev().find('input').prop('checked', false); 
+			checkedAll = false;
+		}
+	});
 }
  
 function initSetting() {
@@ -931,6 +945,7 @@ $( document ).ready(function() {
 	initScrollTo();
 	initValidForm();
 	initHeader();
+	initChechAll();
 
 	// $('.js-add-favorites').each( function {
 	// 	$(this).on('click', function() {

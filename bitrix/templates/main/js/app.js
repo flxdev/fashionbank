@@ -5328,6 +5328,9 @@ function initValidForm(){
 }
 
 
+
+
+
 function initHeader() {
 
 
@@ -5376,7 +5379,46 @@ function initHeader() {
 	})
 
 
-	
+}
+
+
+
+
+
+function initChechAll() {
+
+
+	var checkedAll = false;
+
+
+	$('.js-chech-all').on('click', function() {
+
+
+		if (!checkedAll) {
+
+
+			$(this).prev().find('input').prop('checked', true);
+
+
+			checkedAll = true;
+
+
+		}
+
+
+		else  { 
+
+
+			$(this).prev().find('input').prop('checked', false); 
+
+
+			checkedAll = false;
+
+
+		}
+
+
+	});
 
 
 }
@@ -5524,6 +5566,9 @@ $( document ).ready(function() {
 
 
 	initHeader();
+
+
+	initChechAll();
 
 
 

@@ -104,18 +104,22 @@
 				
 			}
 			.search-resault-wrapp {
-
 				.card-horizontal {
 					justify-content: flex-start;
 					margin-left: 0;
+					.like {
+						display: none;
+					}
 					.wrapp-img {
 						max-width: 190px;
+						min-width: 190px;
 					}
 					.card-category {
 						padding: 0 0 15px;
 					}
 					.card-title {
-						padding: 0 0 15px;
+						margin: 0 0 15px;
+						padding: 0;
 					}
 					.wrapp-content {
 						padding-left: 30px;
@@ -132,14 +136,18 @@
 					}
 				}
 				.round {
+					.wrapp-img-bg-h {
+						border-radius: 50%;
+					}
 					.wrapp-img {
-						position: static;
+						position: relative;
 						img {
 							border-radius: 50%;
 							border: 6px solid #efefef;
 						}
 						.like {
 							img {
+								display: none;
 								border: none;
 								padding: 0;
 							}
@@ -147,8 +155,11 @@
 					}
 				}
 				.round-vip {
+					.wrapp-img-bg-h {
+						border-radius: 50%;
+					}
 					.wrapp-img {
-						position: static;
+						position: relative;
 						img {
 							border-radius: 50%;
 							border: 1px solid #000;
@@ -156,6 +167,7 @@
 						}
 						.like {
 							img {
+								display: none;
 								border: none;
 								padding: 0;
 							}
@@ -175,3 +187,4 @@
 		}
 	}
 }
+
