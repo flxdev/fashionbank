@@ -5352,9 +5352,6 @@ function initHeader() {
 			$('.wrapp_page').css({"padding-top":_height });
 
 
-			
-
-
 		}
 
 

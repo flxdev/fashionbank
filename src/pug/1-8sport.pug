@@ -7,6 +7,7 @@ block title
 block content
 	div.wrapp_page
 		include includes/_card-h-2
+		include includes/_card-h-3
 		include includes/_header
 		div.article-wrapp.company-wrapp
 			div.article-wrapp-bg(style='background-image: url("img/1-8bg.jpg");')
@@ -95,8 +96,10 @@ block content
 							h3 О компании
 						div.content-right.js-show-text
 							div.text
-								p Любите спорт, ведете здоровый образ жизни и давно мечтаете о занятиях фитнесом с грамотными тренерами, но не можете определиться с выбором? Мы с удовольствием приглашаем вас в новый фитнес-клуб Moby Dick, оснащенный профессиональным силовым и кардиооборудованием, идеально подходящим как для новичков, так и для
-								p.text-hide.js-show-other-content  Здесь знают все о правильных тренировках, предлагая действенные способы укрепления здоровья и раскрывая секреты прекрасной физической формы.
+								div
+									p Любите спорт, ведете здоровый образ жизни и давно мечтаете о занятиях фитнесом с грамотными тренерами, но не можете определиться с выбором? Мы с удовольствием приглашаем вас в новый фитнес-клуб Moby Dick, оснащенный профессиональным силовым и кардиооборудованием, идеально подходящим как для новичков, так и для
+								div
+									p.text-hide.js-show-other-content  Здесь знают все о правильных тренировках, предлагая действенные способы укрепления здоровья и раскрывая секреты прекрасной физической формы.
 							p.link.js-show-other(data-text='+ Все описание') + Все описание
 					div.content-block.js-scrollTo-content(data-scroll = 'el2')
 						div.content-left
@@ -257,9 +260,9 @@ block content
 								h3 Тренеры
 							div.content-right
 								div.card-wrapp.trainers
-									+card-horizont('card card-horizontal text-black','img/2.jpg','Евгения Кобик','Bodyflex, TRX, силовая аэробика','Зож',false,false)
-									+card-horizont('card card-horizontal text-black','img/3.jpg','Евгения Кобик ','Bodyflex, TRX, силовая аэробика','Зож',false,false)
-									+card-horizont('card card-horizontal text-black','img/4.jpg','Евгения Кобик ','Bodyflex, TRX, силовая аэробика','Зож',false,false)
+									+card-horizont-3('card card-horizontal text-black','img/2.jpg','Евгения Кобик','Bodyflex, TRX, силовая аэробика','Зож',false,false)
+									+card-horizont-3('card card-horizontal text-black','img/3.jpg','Евгения Кобик ','Bodyflex, TRX, силовая аэробика','Зож',false,false)
+									+card-horizont-3('card card-horizontal text-black','img/4.jpg','Евгения Кобик ','Bodyflex, TRX, силовая аэробика','Зож',false,false)
 						div.content-block.js-scrollTo-content(data-scroll = 'el6')
 							div.content-left
 								h3 Статьи

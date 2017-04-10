@@ -9,10 +9,12 @@
 		font-family: $font_m;
 		position: absolute;
 		left: 0;
+		top: 9px;
 	}
 	.dropdown {
 		position: absolute;
 		right: 0;
+		top: 19px;
 	}
 
 	.filters-li {
@@ -694,9 +696,9 @@
 							border-radius: 50%;
 							border: 6px solid #efefef;
 						}
-						.like {
-							display: none;
-						}
+					}
+					.like {
+						top: 0;	
 					}
 				}
 				.card-horizontal {
@@ -1080,6 +1082,8 @@
 	.link {
 		font-size: 1.5rem;
 		color: $main_blue;
+		margin-bottom: 35px;
+		display: block;
 	}
 	.show-map {
 		background-image: url('../img/map-contact.jpg');
@@ -1090,7 +1094,7 @@
 		font-size: 1.4rem;
 		font-family: $font_b;
 		letter-spacing: 2px;
-		margin: 35px 0;
+		margin: 0 0 35px;
 		cursor: pointer;
 		transition: all 0.3s ease-out;
 		&:hover {

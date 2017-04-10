@@ -123,6 +123,8 @@ input[type='password'] {font-family: arial}
 		max-height: 125px;
    		overflow: hidden;
    		margin-bottom: 25px;
+   		position: relative;
+   		z-index: 5;
 	}
 	.card-date_like {
 		font-size: 1rem;

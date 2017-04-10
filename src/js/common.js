@@ -873,7 +873,6 @@ function initHeader() {
 			$('header').addClass('fixedMenu');
 			$('header').addClass('animetMenuIn');
 			$('.wrapp_page').css({"padding-top":_height });
-			
 		}
 		else  { 
 			$('header').removeClass('fixedMenu');
