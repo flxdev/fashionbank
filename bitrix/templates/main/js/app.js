@@ -3492,13 +3492,34 @@ function initSliderOne() {
 function swichTabs() {
 
 
+	// .js-tabs-categories-flex
+
+
 	$(this).addClass("active").siblings().removeClass("active");
 
 
 	var currTab = $(".js-tabs-content").find("[data-tab-content='" + $(this).data("tab") + "']");
 
 
-	currTab.removeClass('hidden').siblings().addClass('hidden');
+	// currTab.removeClass('hidden').siblings().addClass('hidden');
+
+
+	if ($(this).parent().hasClass('js-tabs-categories-flex')) {
+
+
+		currTab.fadeIn(300).css("display","flex");
+
+
+	}
+
+
+	else currTab.fadeIn(300)
+
+
+	
+
+
+	currTab.siblings().fadeOut(0);
 
 
 	if (currTab.hasClass('js-slider-init')) {
@@ -3741,6 +3762,9 @@ function initMenu() {
 	var clearSetTimeout;
 
 
+	var menuDelay = 200;
+
+
 	$('.js-menu-category .menu_categories li a').on( 'mouseover', function(e){
 
 
@@ -3756,7 +3780,7 @@ function initMenu() {
 			var fade = 0;
 
 
-			if (!globalSetting.menuFirstOpen) { fade = 500; globalSetting.menuFirstOpen = true;}
+			if (!globalSetting.menuFirstOpen) { fade = 300; globalSetting.menuFirstOpen = true; menuDelay = 0; }
 
 
 			else fade = 0;
@@ -3766,15 +3790,6 @@ function initMenu() {
 
 
 			else {
-
-
-				
-
-
-				
-
-
-				
 
 
 				//находим нужную вкладку
@@ -3810,7 +3825,7 @@ function initMenu() {
 				if (thisTabActivIndex == undefined) {
 
 
-					thisTab.slideToggle(500);
+					thisTab.slideToggle(fade);
 
 
 				}
@@ -3822,13 +3837,13 @@ function initMenu() {
 				thisTabActiv.slideUp({
 
 
-					duration: 500,
+					duration: 0,
 
 
 					complete: function(){
 
 
-						thisTab.slideToggle(500);
+						thisTab.slideToggle(0);
 
 
 					}
@@ -3858,7 +3873,7 @@ function initMenu() {
 			}
 
 
-		}, 500);
+		}, menuDelay);
 
 
 		
@@ -3876,6 +3891,15 @@ function initMenu() {
 		clearTimeout(clearSetTimeout);
 
 
+		globalSetting.menuFirstOpen = false;
+
+
+		
+
+
+		
+
+
 	});
 
 
@@ -3886,6 +3910,9 @@ function initMenu() {
 
 
 		clearTimeout(clearSetTimeout);
+
+
+		menuDelay = 200;
 
 
 		$('.js-menu-category-content-item').fadeOut(0);

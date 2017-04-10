@@ -253,9 +253,16 @@ function initSliderOne() {
 }
 
 function swichTabs() {
+	// .js-tabs-categories-flex
 	$(this).addClass("active").siblings().removeClass("active");
 	var currTab = $(".js-tabs-content").find("[data-tab-content='" + $(this).data("tab") + "']");
-	currTab.removeClass('hidden').siblings().addClass('hidden');
+	// currTab.removeClass('hidden').siblings().addClass('hidden');
+	if ($(this).parent().hasClass('js-tabs-categories-flex')) {
+		currTab.fadeIn(300).css("display","flex");
+	}
+	else currTab.fadeIn(300)
+	
+	currTab.siblings().fadeOut(0);
 	if (currTab.hasClass('js-slider-init')) {
 		currTab.slick('setPosition');
 	}
@@ -336,18 +343,16 @@ function initPopup() {
 
 function initMenu() {
 	var clearSetTimeout;
+	var menuDelay = 200;
 	$('.js-menu-category .menu_categories li a').on( 'mouseover', function(e){
 		var __self = this;
 		var _e = e;
 		clearSetTimeout = setTimeout(function() { 
 			var fade = 0;
-			if (!globalSetting.menuFirstOpen) { fade = 500; globalSetting.menuFirstOpen = true;}
+			if (!globalSetting.menuFirstOpen) { fade = 300; globalSetting.menuFirstOpen = true; menuDelay = 0; }
 			else fade = 0;
 			if ($(__self).data('index') == undefined ) _e.preventDefault();
 			else {
-				
-				
-				
 				//находим нужную вкладку
 				var thisTab = $('.js-menu-category-content').find("[data-index='" + $(__self).data('index') + "']")
 				var thisTabActivIndex = $('.js-menu-category').find('.menu_categories').find('.active').data('index');
@@ -359,13 +364,13 @@ function initMenu() {
 				
 				//показываем ее и скрываем остальные
 				if (thisTabActivIndex == undefined) {
-					thisTab.slideToggle(500);
+					thisTab.slideToggle(fade);
 				}
 
 				thisTabActiv.slideUp({
-					duration: 500,
+					duration: 0,
 					complete: function(){
-						thisTab.slideToggle(500);
+						thisTab.slideToggle(0);
 					}
 				});
 				
@@ -375,16 +380,20 @@ function initMenu() {
 				thisTab.find('.wrapp_content').css("display","none");
 				thisTab.find('.wrapp_content').first().css("display","inline-block");
 			}
-		}, 500);
+		}, menuDelay);
 		
 	});
 
 	$('.js-menu-category .menu_categories li a').on( 'mouseleave', function(e){
 		clearTimeout(clearSetTimeout);
+		globalSetting.menuFirstOpen = false;
+		
+		
 	});
 
 	$('.js-menu-category').on( 'mouseleave', function(e){
 		clearTimeout(clearSetTimeout);
+		menuDelay = 200;
 		$('.js-menu-category-content-item').fadeOut(0);
 		$('.js-menu-category').find('.menu_categories').children().find('a').removeClass('active').removeClass('no-active');
 

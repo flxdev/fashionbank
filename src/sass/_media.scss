@@ -32,7 +32,7 @@
 		flex-basis: 29%;
 	}
 	.company-content-wrapp .content-block .content-right .card-wrapp .card {
-		flex-basis: 44%;
+		flex-basis: 43%;
 	}
 	.specialist-page-first-screen .article-wrapp-info .wrapp-info .foto {
 		left: 15px;
@@ -98,10 +98,11 @@
 					.wrapp_slider-content {
 						.card {
 							flex-basis: 29%;
+							flex-grow: 1;
 						}
 						.card-full_bg {
 							.card-title	 {
-								padding-top: 250px;
+								margin-top: 250px;
 							}
 						}
 						.card-horizontal {
@@ -273,7 +274,7 @@
 		
 	}
 	.card-full_bg .card-title {
-			padding-top: 300px;
+			margin-top: 300px;
 	}
 	.wrapp_sidebar {
 		flex-basis: 32%;
@@ -292,12 +293,6 @@
 		.card {
 			flex-basis: 30%;
 			flex-grow: 1;
-			&:last-child {
-				display: none;
-			}
-			&:nth-last-child(2) {
-				display: none;
-			}
 		}
 	}
 	//end cards-block-1
@@ -376,12 +371,12 @@
 	}
 	//1-0page
 	
-	.even-last-child .card:last-child, .even-last-child .card:nth-last-child(2) {
-		display: flex;
-	}
-	.odd-last-child .card:last-child, .odd-last-child .card:nth-last-child(3) {
-		display: none;
-	}
+	// .even-last-child .card:last-child, .even-last-child .card:nth-last-child(2) {
+	// 	display: flex;
+	// }
+	// .odd-last-child .card:last-child, .odd-last-child .card:nth-last-child(3) {
+	// 	display: none;
+	// }
 
 	//1-0page
 
@@ -577,7 +572,7 @@
 		}
 		.card-full_bg {
 			.card-title {
-				padding-top: 400px;
+				margin-top: 400px;
 			}
 		}
 	}
@@ -588,7 +583,8 @@
 					.wrapp_slider-content {
 						.card-horizontal {
 							.card-title {
-								padding: 0 0 5px;
+								padding: 0;
+								margin-bottom: 5px;
 							}
 						}
 					}
@@ -693,7 +689,7 @@
 					.wrapp_slider-content {
 						.card-full_bg {
 							.card-title {
-								padding-top: 350px;
+								margin-top: 350px;
 							}
 						}
 					}
@@ -755,8 +751,8 @@
 	.card-vertical {
 		margin-top: 30px;
 		margin-bottom: 30px;
-		max-height: none; 
-		min-height: 0;
+		max-height: none !important;
+		min-height: 0 !important;
 		.wrapp-img {
 			max-height: none !important; 
 		}
@@ -843,6 +839,7 @@
 		}
 		.card-date_like {
 			padding-bottom: 20px;
+			bottom: 0;
 		}
 	}
 	.wrapp_slider-video-bg-black {
@@ -946,8 +943,8 @@
 			flex-basis: 100%;
 		}
 		.card-horizontal {
-			max-height: 200px;
-			height: 200px;
+			// max-height: 200px;
+			// height: 200px;
 			.wrapp-img {
 				flex-basis: 30%;
 			}
@@ -1173,7 +1170,28 @@
 	.favourites .favourites-left .favourites-menu li {
 		display: block;
 	}
-	
+}
+
+@media (max-width: 450px) {
+	.cards-block-sport {
+		.card-horizontal {
+			.wrapp-content {
+				.dop_info {
+					display: none;
+				}
+				.card-description {
+					display: none;
+				}
+			} 
+		}
+		.card-horizontal-full_bg {
+			.wrapp-content {
+				.card-description {
+					display: block;
+				}
+			} 
+		}
+	} 
 
 }
 
@@ -1204,41 +1222,51 @@
 	
 
 
-//cards
-@media (max-width: 1250px) {
-	.card-vertical {
-	    min-height: 480px;
-	    max-height: 480px;
-	}
-}
 @media (max-width: 1024px) {
 	.card-vertical {
 	    min-height: 508px;
 	    max-height: 508px;
 	}
 }
-@media (max-width: 930px) {
-	.card-vertical {
-	    min-height: 480px;
-	    max-height: 480px;
+@media (max-width: 936px) {
+	.favourites .favourites-right .favourites-content .wrapp_tabs-content .wrapp_slider-content .card {
+		flex-basis: 31%;
+		flex-grow: 1;
 	}
-}
-@media (max-width: 919px) {
 	.card-vertical {
-	    min-height: 590px;
-	    max-height: 590px;
+	    min-height: 600px;
+	    max-height: 600px;
 	}
-}
-@media (max-width: 919px) {
-	.card-vertical {
-	    min-height: 560px;
-		max-height: 560px;
+	.wrapp_first-screen {
+		.card-vertical {
+			min-height: 508px;
+			max-height: 508px;
+		}
 	}
 }
 
-@media (max-width: 770px) {
-	.card-vertical {
+@media (max-width: 860px) {
+	.wrapp_first-screen {
+		.card-vertical {
+			min-height: 600px;
+			max-height: 600px;
+		}
 	}
 }
+@media (max-width: 830px) {
+	.card-vertical {
+	    min-height: 580px;
+		max-height: 580px;    
+	}
+	.card-full_bg {
+		.card-title {
+			
+		}
+	}
+	.wrapp_cards-block-1 .card-full_bg .card-title {
+		margin-top: 350px;
+	}
+}
+
 
 

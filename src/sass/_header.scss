@@ -185,7 +185,7 @@ header {
     					padding-left: 20px;
     					.card-title {
     						padding-left: 0;
-    						padding-bottom: 20px;
+    						margin-bottom: 20px;
     					}
     					.card-category {
     						padding: 10px 0 20px;
@@ -235,7 +235,7 @@ header {
 	}
 }
 .animetMenuIn {
-	animation: topMenuIn 0.5s ease-in-out;
+	animation: topMenuIn 0.3s ease-in-out;
 }
 .animetMenuOut {
 	animation: topMenuOut 1s ease-in-out;

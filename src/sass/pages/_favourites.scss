@@ -10,7 +10,7 @@
 .favourites {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: flex-start;
 	.favourites-left {
 		flex-basis: 25%;
@@ -105,7 +105,14 @@
 				.card-round {
 					.card-horizontal {
 						.wrapp-img  { 
-							position: static;
+							// position: static;
+							position: relative;
+							.wrapp-img-bg-h {
+								border-radius: 50%;
+							}
+							.like {
+								display: none;
+							}
 							img {
 								border-radius: 50%;
 								border: 6px solid #efefef;
