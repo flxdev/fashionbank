@@ -327,6 +327,9 @@
 								color: #000;
 							}
 						}
+						input[type=checkbox]+label:after {
+							left: 0;
+						}
 						input[type=checkbox]:checked {
 							color: #c6c6c6;
 						}

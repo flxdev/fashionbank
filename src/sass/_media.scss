@@ -668,14 +668,16 @@
 			.search-resault {
 				.search-resault-wrapp {
 					.card-horizontal {
-						flex-direction: column;
-						align-items: center;
-						.wrapp-img {
-							margin-bottom: 30px;
-						}
-						.wrapp-content {
-							padding-left: 0;
-							margin-bottom: 40px;
+						a {
+							flex-direction: column;
+							align-items: center;
+							.wrapp-img {
+								margin-bottom: 30px;
+							}
+							.wrapp-content {
+								padding-left: 0;
+								margin-bottom: 40px;
+							}
 						}
 					}
 				}
@@ -794,13 +796,13 @@
 						max-height: 62px;
 						overflow: hidden;
 					}
-		// 			.card-category {
-					//     padding: 10px 0 15px;
-					// }
 				}
 			}
 			.card-horizontal-full_bg .wrapp-bg {
 				z-index: 0;
+				width: 100%;
+			}
+			.card-horizontal-full_bg .wrapp-img-bg-h { 
 				width: 100%;
 			}
 			a.card:nth-child(n+7) {
