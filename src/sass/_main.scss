@@ -375,6 +375,10 @@ input[type='password'] {font-family: arial}
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
+	cursor: pointer;
+	a {
+		display: block;
+	}
 	// display: flex;
 	// flex-direction: column;
 	// justify-content: space-between;
