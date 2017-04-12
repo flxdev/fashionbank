@@ -38,6 +38,18 @@ header {
 		top: 50px;
 		left: 35px;
 	}
+	.dop_logo {
+		position: absolute;
+		z-index: 1000;
+		top: 16px;
+		left: 35px;
+		display: none;
+		a {
+			img {
+				width: 27px;
+			}
+		}
+	}
 	
 	.logo {
 		flex-basis: 100%;

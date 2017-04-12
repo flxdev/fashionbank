@@ -449,9 +449,15 @@ function initFilters() {
 				$(".item-filter-other").fadeOut(200);
 				$(".js-item-filter-inMenu").next().fadeOut(200);
 			}
-			
 		}
 	});
+
+	$('body').on('click', function(e) {
+		if (!$(e.target).closest(".js-item-filter-inMenu").length) {
+			$(".js-item-filter-inMenu").next().fadeOut(200);
+		}
+	});
+
 	$(".js-item-filter").on("click", function(e) {
 		if ($(this).next().is(":visible")) {
 			$(this).next().fadeOut(200);
@@ -768,7 +774,7 @@ function initLike() {
 				$(this).attr( "data-like", '1');
 			}
 			return false;
-		})
+		});
 		// $(this).on('mouseenter', function() {
 		// 	// $(this).find('img').attr( 'src', 'img/icons/heart-2.png' );
 		// })
@@ -778,7 +784,7 @@ function initLike() {
 		// 		// $(this).find('span').removeClass('span-noactive');
 		// 	}
 		// })
-	})
+	});
 
 	
 }
@@ -873,12 +879,17 @@ function initHeader() {
 			$('header').addClass('fixedMenu');
 			$('header').addClass('animetMenuIn');
 			$('.wrapp_page').css({"padding-top":_height });
+			$('.js-burger').fadeOut(0);
+			$('.js-dop-logo').fadeIn(0);
+
 		}
 		else  { 
 			$('header').removeClass('fixedMenu');
 			$('header').removeClass('animetMenuIn');
 			$('.wrapp_page').removeClass('fixPaddingMenu');
 			$('.wrapp_page').removeAttr('style');
+			$('.js-burger').fadeIn(0);
+			$('.js-dop-logo').fadeOut(0);
 		}
 	})
 }

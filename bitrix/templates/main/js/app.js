@@ -4080,13 +4080,31 @@ function initFilters() {
 			}
 
 
-			
+		}
+
+
+	});
+
+
+
+
+
+	$('body').on('click', function(e) {
+
+
+		if (!$(e.target).closest(".js-item-filter-inMenu").length) {
+
+
+			$(".js-item-filter-inMenu").next().fadeOut(200);
 
 
 		}
 
 
 	});
+
+
+
 
 
 	$(".js-item-filter").on("click", function(e) {
@@ -5037,7 +5055,7 @@ function initLike() {
 			return false;
 
 
-		})
+		});
 
 
 		// $(this).on('mouseenter', function() {
@@ -5067,7 +5085,7 @@ function initLike() {
 		// })
 
 
-	})
+	});
 
 
 
@@ -5352,6 +5370,15 @@ function initHeader() {
 			$('.wrapp_page').css({"padding-top":_height });
 
 
+			$('.js-burger').fadeOut(0);
+
+
+			$('.js-dop-logo').fadeIn(0);
+
+
+
+
+
 		}
 
 
@@ -5368,6 +5395,12 @@ function initHeader() {
 
 
 			$('.wrapp_page').removeAttr('style');
+
+
+			$('.js-burger').fadeIn(0);
+
+
+			$('.js-dop-logo').fadeOut(0);
 
 
 		}

@@ -145,7 +145,8 @@ input[type='radio']:checked + label:before {
 	background-color: transparent;
 	position: absolute;
 	right: 22px;
-	margin-top: -45px;
+	top: 25px;
+	// margin-top: -45px;
 	svg {
 		width: 20px;
 		height: 23px;

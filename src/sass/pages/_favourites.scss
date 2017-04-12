@@ -194,6 +194,7 @@
 				padding: 0px 15px;
 				max-width: 300px;
 				margin-bottom: 20px;
+				position: relative;
 				p {
 					font-size: 1.2rem;
 					color: #c6c6c6;
@@ -214,6 +215,8 @@
 				.input-border-bottom+label {
 					margin-top: -40px;
 					z-index: 10;
+					left: 15px;
+					top: 58px;
 				}
 				.input-border-bottom:focus + label {
 					margin-top: -55px;

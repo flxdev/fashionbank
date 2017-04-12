@@ -328,6 +328,7 @@ input[type='password'] {font-family: arial}
 		left: 0;
 		width: 100%;
 		height: 100%;
+		transition: all 0.3s ease-out;
 	}
 	&:hover  {
 		.wrapp-img-bg {
