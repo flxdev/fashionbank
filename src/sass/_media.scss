@@ -1,12 +1,12 @@
 @media (max-width: 1330px) {
-	.wrapp_first-screen, .wrapp_slider, .wrapp_cards-block-1, .filters-wrapp, .breadcrumbs{
+	.wrapp_first-screen, .wrapp_slider, .wrapp_cards-block-1, .filters-wrapp, .breadcrumbs, {
 		margin: 0;
 		padding-left: 10px;
 		padding-right: 10px; 
 	}
-	header {
-		padding-left: 20px;
-		padding-right: 20px; 
+	header, .wrapp_footer {
+		padding-left: 25px;
+		padding-right: 25px; 
 	}
 	.breadcrumbs {
 		padding-left: 20px;
@@ -140,9 +140,37 @@
 		}
 	}
 	//5-0
+	.wrapp_footer {
+		.footer-menu {
+			.social_links {
+				li {
+					padding-right: 15px;
+					&:last-child {
+						padding-right: 0px;
+					}
+				}
+			}
+			.email {
+				padding-right: 30px;
+			}
+		}
+	}
+	
  }
 
 @media (max-width: 1150px) {
+	.wrapp_footer {
+		.footer-menu {
+			.social_links {
+				li {
+					padding-right: 30px;
+				}
+			}
+		}
+		.email {
+			padding-right: 60px;
+		}
+	}
 	.user_panel {
 		bottom: 0;
 		top: 0;
@@ -255,7 +283,7 @@
 		.card-vertical {
 			flex-basis: 33%;
 		}
-		a.card:last-of-type { 
+		div.card:last-of-type { 
 			display: block;
 			width: 29%;
 		}	
@@ -301,7 +329,6 @@
 
 	//footer
 	.wrapp_footer {
-		padding: 0 20px;
 		.footer-menu {
 			.footer-menu_logo {
 				display: none;
@@ -547,11 +574,13 @@
 		padding: 50px 20px;
 	}
 	.wrapp_footer{
-		.social_links {
-			text-align: right;
-			li {
-				display: block;
-				padding: 10px 0 10px 10px;
+		.footer-menu  {
+			.social_links {
+				text-align: right;
+				li {
+					display: block;
+					padding: 10px 0 10px 10px;
+				}
 			}
 		}
 	}
@@ -601,7 +630,7 @@
 			max-height: 390px;
 		}
 	}
-	.wrapp_cards a.card:last-of-type {
+	.wrapp_cards div.card:last-of-type {
 		display: none; 
 	}
 	.wrapp_first-screen {
@@ -632,6 +661,16 @@
 	.wrapp_slider .wrapp_slider-content .card-horizontal-full_bg .wrapp-content .card-category {
 		padding: 25px 0 50px;
 	}
+	.wrapp_footer {
+		.footer-menu {
+			.footer-menu_categories {
+				padding-right: 30px;
+			}
+			.footer-menu_main-info {
+				padding-right: 40px;
+			}
+		}
+	}  
 	.favourites {
 		.favourites-right {
 			.favourites-content {
@@ -639,7 +678,6 @@
 					.wrapp_slider-content {
 						.card-horizontal {
 							flex-basis: 100%;
-
 						}
 					}
 				}
@@ -652,6 +690,12 @@
 	header {
 		padding-left: 0px;
 		padding-right: 0px; 
+	}
+	.dop_logo {
+		display: none !important;
+	}
+	.burger {
+		display: block !important;
 	}
 	.fixPaddingMenu {
 		padding-top: 0 !important;
@@ -761,11 +805,13 @@
 	}
 
 	.wrapp_footer{
-		.social_links {
-			text-align: center;
-			li {
-				display: inline-block;
-				padding: 0 30px 0 0;
+		.footer-menu {
+			.social_links {
+				text-align: center;
+				li {
+					display: inline-block;
+					padding: 0 30px 0 0;
+				}
 			}
 		}
 	}
@@ -792,7 +838,8 @@
 					position: relative;
 					padding-left: 10px;
 					.card-title {
-						padding: 0 0 10px;
+						margin: 0 0 10px;
+						padding: 0;
 						max-height: 62px;
 						overflow: hidden;
 					}

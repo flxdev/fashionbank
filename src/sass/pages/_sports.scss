@@ -502,6 +502,46 @@
 				}
 			}
 		}
+		.type-2 {
+			input {
+				width: 48px;
+					margin: 0 5px;
+				font-size: 1.6rem;
+				font-family: $font_r;
+				background-color: transparent;
+				color: #000;
+			}
+			span {
+				font-size: 1.4rem;
+			}
+			.slider_ui {
+				margin-bottom: 50px;
+				.ui-state-default, .ui-widget-content .ui-state-default {
+					background-color: transparent;
+					border: none;
+					background-image: url('../img/icons/triangle-black.png');
+					background-size: 100%;
+					background-position: center center;
+					background-repeat: no-repeat;
+					top: 2px;
+					cursor: pointer;
+					// transition: all 0.3s ease-out;
+					&:hover  {
+						background-image: url('../img/icons/triangle-blue.png');
+					}
+				}
+				.ui-slider-horizontal .ui-slider-range {
+					background-color: #000;
+				}
+				.js_ui_slider_main {
+					height: 3px;
+					border: none;
+					background-color: $grey_dop;
+					margin-top: 15px;
+				}
+			}
+			
+		}
 		.block-filters-mobile-one-item  {
 			border-bottom: 1px solid #eeeeee;
 			&:last-child {

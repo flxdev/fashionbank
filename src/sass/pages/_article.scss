@@ -181,8 +181,19 @@
 
 .content-wrapp {
 	position: relative;
-	// padding-top: 50px;
+	.wrapp-video {
+		height: 400px;
+	}
 	.block-left {
+		a {
+			display: block;
+			color: #000;
+			&:hover {
+				.title {
+					color: $main_blue;
+				}
+			}
+		}
 		position: absolute;
 		left: 0;
 		max-width: 260px;
@@ -197,6 +208,7 @@
 			font-family: $font_phil;
 			font-size: 2.4rem;
 			padding:  20px 0 10px;
+			transition: all 0.3s ease-out;
 		}
 	}
 
@@ -206,6 +218,7 @@
 		width: 100%;
 		text-align: left;
 		padding: 50px 0;
+
 		.block-left {
 			padding-top: 0;
 			.title {
@@ -345,6 +358,13 @@
 		max-width: 630px;
 		margin: 0 auto;
 		padding-top: 30px;
+		a {
+			color: #000;
+			transition: all 0.3s ease-out;
+			&:hover {
+				color: $main_blue;
+			}
+		}
 	}
 	.block-supported {
 		max-width: 850px;

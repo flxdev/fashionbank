@@ -39,9 +39,16 @@ ul { list-style-type: none; }
 a {text-decoration: none;}
 input {font-family: $font_r}
 input[type='password'] {font-family: arial}
+
+.modal-open {
+	overflow: hidden;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+} 
 .overflow-hidden {
 	overflow: hidden;
-} 
+}
 .out {
 	width: 100%;
 	min-height: 100vh;    
@@ -413,6 +420,7 @@ input[type='password'] {font-family: arial}
 			img {
 				max-width: 100%;
 				display: block;
+				width: 100%;
 			}
 		}
 		.wrapp-img-bg-h {
