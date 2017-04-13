@@ -3765,13 +3765,10 @@ function initForm() {
 function initPopup() {
 
 
-	var globalpopup = '';
-
-
 	$('.js-popup-open').on('click', function () {
 
 
-		var __h = globalpopup = '.js-'+$(this).data('open-popup');
+		var __h = globalpopup = '.js-' + $(this).data('open-popup');
 
 
 
@@ -3783,25 +3780,10 @@ function initPopup() {
 		window.__prevScroll = top;
 
 
-		$("body").css("top", - top + 'px');
+		$("body").css("top", - (top) + 'px');
 
 
 
-
-
-		if (globalpopup == '.js-popup-backcall') {
-
-
-			var __top = parseInt(top) - parseInt($('#sticky').css("top"));
-
-
-			$('#sticky').css("bottom", __top  + "px");
-
-
-		}
-
-
-		
 
 
 		$('.js-popup').fadeIn(250);
@@ -3846,18 +3828,6 @@ function initPopup() {
 
 
 
-		if (globalpopup == '.js-popup-backcall') {
-
-
-			$('#sticky').css("margin-top", 0 + "px");
-
-
-		}
-
-
-
-
-
 		resetForm($('.js-popup').find('.js-form'));
 
 
@@ -3886,21 +3856,6 @@ function initPopup() {
 
 
 			$(window).scrollTop(window.__prevScroll);
-
-
-
-
-
-
-
-
-			if (globalpopup == '.js-popup-backcall') {
-
-
-				$('#sticky').css("margin-top", 0 + "px");
-
-
-			}
 
 
 
@@ -4224,7 +4179,7 @@ function initSlider() {
 function initFilters() {
 
 
-
+	
 
 
 	$('body').on('click', function(e) {
@@ -4234,6 +4189,30 @@ function initFilters() {
 
 
 			if (!$(e.target).closest(".item-filter-content").length) {
+
+
+				$('.block-filters').find('input').each(function() {
+
+
+					if (($(this).prop("checked"))&&(!$(this).hasClass('apply-filter'))) {
+
+
+						if (!$(this).hasClass('js-chechbox-one')) {
+
+
+							$(this).prop("checked", false);
+
+
+							$(this).removeClass('apply-filter');
+
+
+						}
+
+
+					}
+
+
+				});
 
 
 				$(".js-item-filter").next().fadeOut(200);
@@ -4257,13 +4236,49 @@ function initFilters() {
 
 
 
+
+
+
 	$('body').on('click', function(e) {
 
 
 		if (!$(e.target).closest(".js-item-filter-inMenu").length) {
 
 
-			$(".js-item-filter-inMenu").next().fadeOut(200);
+			if (!$(e.target).closest(".item-filter-content").length) {
+
+
+				$('.block-filters').find('input').each(function() {
+
+
+					if (($(this).prop("checked"))&&(!$(this).hasClass('apply-filter'))) {
+
+
+						if (!$(this).hasClass('js-chechbox-one')) {
+
+
+							$(this).prop("checked", false);
+
+
+							$(this).removeClass('apply-filter');
+
+
+						}
+
+
+					}
+
+
+				});
+
+
+				$(".js-item-filter-inMenu").next().fadeOut(200);
+
+
+			}
+
+
+			
 
 
 		}
@@ -4293,7 +4308,7 @@ function initFilters() {
 		$(".js-item-filter-menu").next().fadeOut(100);
 
 
-		$(".js-item-filter-inMenu").next().fadeOut(100)
+		$(".js-item-filter-inMenu").next().fadeOut(100);
 
 
 		$(".js-item-filter").next().fadeOut(100);
@@ -4311,7 +4326,7 @@ function initFilters() {
 	$(".js-item-filter-menu").on("click", function() {
 
 
-		$(".js-item-filter").next().fadeOut(100)
+		$(".js-item-filter").next().fadeOut(100);
 
 
 		$(this).next().fadeToggle(200);
@@ -4329,13 +4344,58 @@ function initFilters() {
 		if ($(this).next().is(":visible")) { $(this).next().fadeOut(200);  return false;}
 
 
-		$(".js-item-filter").next().fadeOut(100)
+		$(".js-item-filter").next().fadeOut(100);
 
 
-		$(".js-item-filter-inMenu").next().fadeOut(100)
+		$(".js-item-filter-inMenu").next().fadeOut(100);
 
 
 		$(this).next().fadeIn(200);
+
+
+	});
+
+
+
+
+
+	$(".js-apply-filter").each(function () {
+
+
+		$(this).on("click", function() {
+
+
+			var form = $(this).parent();
+
+
+			$(form).find('input').each( function() {
+
+
+				if ($(this).prop("checked")) {
+
+
+					$(this).addClass('apply-filter');
+
+
+				}
+
+
+				else {
+
+
+					$(this).removeClass('apply-filter');
+
+
+				}
+
+
+			});
+
+
+			return false;
+
+
+		});
 
 
 	});
@@ -4641,52 +4701,55 @@ function initSticky() {
 	$(window).scroll(function () {
 
 
-		var offsetS = $('#sticky').offset().top;
+		if ($('.js-popup').is(':visible')) return false;
 
 
-		var scrollTop = $(this).scrollTop(),
+			var offsetS = $('#sticky').offset().top;
 
 
-		    h = $(this).height(),
+			var scrollTop = $(this).scrollTop(),
 
 
-		    offset = $('#end').offset().top;
+			    h = $(this).height(),
 
 
-		    footer_h = $('#end').height();
+			    offset = $('#end').offset().top;
 
 
-		if (offset - scrollTop + 300 <= h) {
+			    footer_h = $('#end').height();
 
 
-			$('#sticky').css({'position' : 'absolute', 'top': offset - footer_h - 150});
+			if (offset - scrollTop + 300 <= h) {
 
 
-		}
-
-
-		if (offset - scrollTop + 300 > h) {
-
-
-			if ($(this).scrollTop() >= 700) {
-
-
-				$('#sticky').css({'position' : 'fixed','top':'130px'});
+				$('#sticky').css({'position' : 'absolute', 'top': offset - footer_h - 150});
 
 
 			}
 
 
-			else if ($(this).scrollTop() < 700) {
+			if (offset - scrollTop + 300 > h) {
 
 
-				$('#sticky').css({'position' : 'absolute','top':'750px'});
+				if ($(this).scrollTop() >= 700) {
+
+
+					$('#sticky').css({'position' : 'fixed','top':'130px'});
+
+
+				}
+
+
+				else if ($(this).scrollTop() < 700) {
+
+
+					$('#sticky').css({'position' : 'absolute','top':'750px'});
+
+
+				}
 
 
 			}
-
-
-		}
 
 
 	})
@@ -5175,7 +5238,7 @@ function initLike() {
 			if ($(this).attr('data-like') == '1') {
 
 
-				$(this).find('img').attr( 'src', 'img/icons/heart-2.png' );
+				$(this).find('.heart').addClass('added');
 
 
 				$(this).attr( "data-like", '0');
@@ -5190,7 +5253,7 @@ function initLike() {
 			else {
 
 
-				$(this).find('img').attr( 'src', 'img/icons/heart1.png' );
+				$(this).find('.heart').removeClass('added');
 
 
 				$(this).attr( "data-like", '1');
@@ -5223,7 +5286,7 @@ function initLike() {
 			if ($(this).attr('data-like') == '1') {
 
 
-				$(this).find('img').attr( 'src', 'img/icons/heart-2.png' );
+				$(this).find('.heart').addClass('added');
 
 
 				$(this).attr( "data-like", '0');
@@ -5235,7 +5298,7 @@ function initLike() {
 			else {
 
 
-				$(this).find('img').attr( 'src', 'img/icons/heart1.png' );
+				$(this).find('.heart').removeClass('added');
 
 
 				$(this).attr( "data-like", '1');
@@ -5727,9 +5790,6 @@ $( document ).ready(function() {
 	initBurger();
 
 
-	initPopup();
-
-
 	initForm();
 
 
@@ -5749,6 +5809,9 @@ $( document ).ready(function() {
 
 
 	if ($("#sticky").length > 0 ) initSticky();
+
+
+	initPopup();
 
 
 	initShowOther();

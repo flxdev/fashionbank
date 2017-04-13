@@ -6,7 +6,7 @@ mixin card-horizont-3(className,img,text,descr,categor,like_select,full)
 					div.wrapp-img-bg-h
 					img(src=img alt='')
 				div.like.js-like
-					img(src='img/icons/heart1.png')
+					span.heart
 			else 
 				div.wrapp-bg(style='background-image: url("'+img+'");')
 				div.wrapp-img-bg-h
@@ -14,7 +14,7 @@ mixin card-horizont-3(className,img,text,descr,categor,like_select,full)
 			div.wrapp-content.text-left
 				if (full)
 					div.like.js-like
-						img(src='img/icons/heart1.png')
+						span.heart
 				if (categor) 
 					p.card-category 
 						object

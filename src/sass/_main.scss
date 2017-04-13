@@ -209,10 +209,18 @@ input[type='password'] {font-family: arial}
     	display: none;
     	transition: all 0.3s ease-out;
     	z-index: 4;
-		img {
+		span {
 			width: 20px;
-			// background-color: #fff;
+			height: 20px;
+			background-image: url('../img/icons/heart1.png');
+			background-repeat: no-repeat;
+			background-size: 100%;
+			display: block;
 		}
+		.added {
+			background-image: url('../img/icons/heart-2.png');
+		}
+
 	}
 	.like.show {
 		display: block;
@@ -1001,6 +1009,7 @@ input[type='password'] {font-family: arial}
 		right: -1px;
     	top: 56px;
     	z-index: 50;
+    	box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
 		li {
 			padding: 7px 0;
 			a {
@@ -1012,18 +1021,6 @@ input[type='password'] {font-family: arial}
 			}
 		}
 	}
-	// &:hover {
-	// 	.dropdown-list {
-	// 		display: block;
-	// 	}
-	// 	svg.down {
-	// 		width: 20px;
-	//    		height: 11px;
-	//    		transform: rotate(0deg);
-	//    		position: relative;
-	//    		top: 2p
-	// 	}
-	// } 
 }
 
 

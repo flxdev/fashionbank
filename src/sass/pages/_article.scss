@@ -103,6 +103,21 @@
 					position: relative;
 					top: 2px;
 				}
+				.heart {
+					width: 17px;
+					height: 15px;
+					margin-right: 7px;
+					position: relative;
+					top: 5px;
+					background-image: url('../img/icons/heart1.png');
+					background-repeat: no-repeat;
+					background-size: 100%;
+					display: block;
+					float: left;
+				}
+				.heart.added {
+					background-image: url('../img/icons/heart-2.png');
+				}
 				&:hover {
 					color: $orange;
 					svg {
@@ -257,15 +272,28 @@
 				width: 200px;
 				transition: all 0.3s ease-out;
 				svg {
-					width: 15px;
 					fill: #000;
 					margin-right: 7px;
 					position: relative;
 					top: 3px;
 				}
+				.heart {
+					width: 17px;
+					height: 15px;
+					margin-right: 7px;
+					position: relative;
+					top: 5px;
+					background-image: url('../img/icons/heart1.png');
+					background-repeat: no-repeat;
+					background-size: 100%;
+					display: block;
+					float: left;
+				}
+				.heart.added {
+					background-image: url('../img/icons/heart-2.png');
+				}
 				img {
 					width: 15px;
-					fill: #fff;
 					margin-right: 7px;
 					position: relative;
 					top: 2px;
@@ -357,6 +385,9 @@
 				color: #000;
 			}
 		}
+	}
+	.block-center-img-100 + .block-center-img-100 {
+		padding-top: 60px;
 	}
 	.auth {
 		max-width: 630px;
@@ -642,8 +673,10 @@
 .next_post {
 	position: relative;
 	height: 450px;
+	top: 0;
 	.article-wrapp-bg, .article-wrapp-info {
 		height: 450px;
+		top: 0;
 	}
 	.h1 {
 		font-size: 6rem;

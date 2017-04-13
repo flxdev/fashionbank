@@ -4,7 +4,8 @@ mixin card-vertical(className,img,type,showCat,videoSlider)
 			a(href="#")
 				div.label.label-orang спецпроект
 				div.like.js-like
-					img(src='img/icons/heart1.png')
+					span.heart
+					// img(src='img/icons/heart1.png')
 				if (videoSlider)
 					img.video-play(src='img/video_play.png' alt='')
 				div.wrapp-img
@@ -26,7 +27,7 @@ mixin card-vertical(className,img,type,showCat,videoSlider)
 			a(href="#" )
 				div.label.label-blue спецпроект
 				div.like.js-like
-					img(src='img/icons/heart1.png')
+					span.heart
 				div.card-bg(style=strImg)
 				div.wrapp-img-bg-full
 				if (showCat)
