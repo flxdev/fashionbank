@@ -567,8 +567,13 @@
 }
 
 .company-wrapp  {
+	position: relative;
+	top: -186px;
 	.article-wrapp .article-wrapp-info h1 {
 		padding-bottom: 20px;
+	}
+	.article-wrapp-info {
+		top: 186px;
 	}
 	.adress {
 		// padding-bottom: 132px;

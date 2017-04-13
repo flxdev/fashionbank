@@ -1,6 +1,8 @@
 
 .article-wrapp {
 	width: 100%;
+	position: relative;
+    top: -186px;
 	.article-wrapp-bg {
 		width: 100%;
 		max-height: 630px;
@@ -38,6 +40,7 @@
 		// height: 700px;
 		// top: -215px;
 		color: #fff;
+		top: 186px;
 		.breadcrumbs {
 			padding-bottom: 90px;
 			padding-top: 45px;

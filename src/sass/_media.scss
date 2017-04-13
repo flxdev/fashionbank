@@ -416,9 +416,9 @@
 	}
 
 	//1-8 page 
-	.article-wrapp .article-wrapp-bg {
-		height: 580px;
-	}
+	// .article-wrapp .article-wrapp-bg {
+	// 	height: 580px;
+	// }
 	.company-content-wrapp {
 		width: 640px;
 		.menu {
@@ -687,6 +687,13 @@
 }
 
 @media (max-width: 700px) {
+	.company-wrapp .adress {
+		padding: 0 10px 100px;
+	}
+	.article-wrapp .article-wrapp-info .card-date_like {
+		padding-bottom: 65px;
+	}
+
 	header {
 		padding-left: 0px;
 		padding-right: 0px; 
@@ -1013,9 +1020,9 @@
 
 	//1-8page
 	.article-wrapp {
-		.article-wrapp-bg {
-			height: 580px;
-		}
+		// .article-wrapp-bg {
+		// 	height: 580px;
+		// }
 		.article-wrapp-info {
 			.panel_dop {
 				flex-direction: column-reverse;

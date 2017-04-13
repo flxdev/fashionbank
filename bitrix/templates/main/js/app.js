@@ -3675,9 +3675,6 @@ function initBurger() {
 	$('.js-burger-close').on('click', function() {
 
 
-		console.log('222');
-
-
 		setTimeout( function() { $('.js-burger-menu').fadeOut(200) } , 100)
 
 
@@ -3694,9 +3691,6 @@ function initBurger() {
 
 
 	$('.js-burger-menu').on('click', function(e) {
-
-
-		console.log('333');
 
 
 		if (!$(e.target).closest("#burger_menu").length) {
@@ -3789,7 +3783,7 @@ function initPopup() {
 		window.__prevScroll = top;
 
 
-		$("body").css("top",-top + 'px');
+		$("body").css("top", - top + 'px');
 
 
 
@@ -3801,7 +3795,7 @@ function initPopup() {
 			var __top = parseInt(top) - parseInt($('#sticky').css("top"));
 
 
-			$('#sticky').css("margin-top", __top  + "px");
+			$('#sticky').css("bottom", __top  + "px");
 
 
 		}
@@ -4027,9 +4021,6 @@ function initMenu() {
 
 
 				});
-
-
-				
 
 
 				
