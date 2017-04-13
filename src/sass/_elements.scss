@@ -206,19 +206,19 @@
 	
 }
 
-input[type='checkbox'] {
+input.ch[type='checkbox'] {
 	display: none;
 }
-input[type='checkbox'] + label {
+input.ch[type='checkbox'] + label {
 	padding-left: 40px;
 	cursor: pointer;
 	position: relative;
 }
-input[type='checkbox'] + label:hover {
+input.ch[type='checkbox'] + label:hover {
 	color: $main_blue;
 }
 
-input[type='checkbox'] + label:after {
+input.ch[type='checkbox'] + label:after {
 	content:'';
 	background-color: rgba(0,0,0,0);
 	color: #757e1f;
@@ -240,10 +240,10 @@ input[type='checkbox'] + label:after {
     // width: 10px;
     // height: 10px;
 }
-input[type=checkbox]:checked + label {
+input.ch[type=checkbox]:checked + label {
 	color: $main_blue;
 }
-input[type=checkbox]:checked + label:after {
+input.ch[type=checkbox]:checked + label:after {
 	border-color: $main_blue;
 	background-image: url('../img/svg/uEA01-check-symbol.svg');
 }

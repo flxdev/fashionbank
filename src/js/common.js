@@ -592,7 +592,8 @@ function initFilters() {
 			__self.find('.fild-filter').text(defaultText);
 			__self.find('form')[0].reset();
 			textFilter  = [];
-			$(this).addClass('hidden')
+			$(this).addClass('hidden');
+			return false;
 		});
 	});
 }

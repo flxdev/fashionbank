@@ -4509,7 +4509,10 @@ function initFilters() {
 			textFilter  = [];
 
 
-			$(this).addClass('hidden')
+			$(this).addClass('hidden');
+
+
+			return false;
 
 
 		});

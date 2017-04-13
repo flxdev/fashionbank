@@ -6,7 +6,6 @@
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: stretch;
-	// flex-wrap: wrap;
 	min-height: 400px;
 	a {
 		color: #fff;
@@ -26,9 +25,9 @@
 		.footer-menu_categories {
 			padding-right: 40px;
 			li:last-child {
-				a {
-					padding-bottom: 0;
-				}
+				// a {
+				// 	padding-bottom: 0;
+				// }
 			}
 			a {
 				text-transform: uppercase;
