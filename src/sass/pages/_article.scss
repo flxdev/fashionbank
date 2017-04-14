@@ -808,3 +808,46 @@
 	}
 	
 }
+.structure_inner {
+	.article-wrapp {
+		top: 0;
+		margin-top: -299px;
+		padding-top: 338px;
+		.article-wrapp-bg {
+			height: auto;
+			bottom: 0;
+			max-height: none;
+		}
+		.article-wrapp-info {
+			top: 0;
+			h1 {
+				max-width: 100%;
+				padding: 0 30px 20px 30px;
+			}
+		}
+	}
+	&.inner_align-left  {
+		.article-wrapp {
+			.article-wrapp-info {
+				h1 {
+					padding-left: 0;
+				}
+			}
+		}
+		.breadcrumbs {
+			text-align: left;
+		}
+	}
+	.main-content {
+		position: relative;
+	}
+	.sticky-container {
+		max-width: 1300px;
+		margin: 0 auto;
+	}
+	.company-contact {
+		top: 0px;
+		right: auto;
+		
+	}
+}

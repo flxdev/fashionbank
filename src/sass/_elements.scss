@@ -205,7 +205,28 @@
 	}
 	
 }
-
+.structure_inner {
+	.breadcrumbs {
+		max-width: 1300px;
+		margin: 0 auto;
+		text-align: center;
+		padding-top: 52px;
+		padding-bottom: 45px;
+		position: relative;
+		z-index: 5;
+		li {
+			letter-spacing: 3.5px;
+			a {
+				color: #c4c3c3;
+			}
+		}
+	}
+	&.inner_align-left {
+		.breadcrumbs {
+			text-align: left;
+		}
+	}
+}
 input.ch[type='checkbox'] {
 	display: none;
 }

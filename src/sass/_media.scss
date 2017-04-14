@@ -159,6 +159,7 @@
  }
 
 @media (max-width: 1150px) {
+
 	.wrapp_footer {
 		.footer-menu {
 			.social_links {
@@ -419,8 +420,11 @@
 	// .article-wrapp .article-wrapp-bg {
 	// 	height: 580px;
 	// }
+	.structure_inner .sticky-container {
+		padding: 0 15px;
+	}
 	.company-content-wrapp {
-		width: 640px;
+		width: 610px;
 		.menu {
 			padding: 40px 0;
 		}
@@ -499,9 +503,9 @@
 }
 
 @media (max-width: 1057px) {
-	.specialist-page-first-screen .article-wrapp-info .wrapp-info h1 {
-		height: 140px;
-	}
+	// .specialist-page-first-screen .article-wrapp-info .wrapp-info h1 {
+	// 	height: 140px;
+	// }
 	.specialist-page-first-screen .article-wrapp-info .wrapp-info {
 		padding-bottom: 41px;
 	}
@@ -557,9 +561,10 @@
 		padding: 30px 20px 0
 	}
 	.company-contact {
-		position: relative !important;
-		top: 0 !important;
-		right: 0 !important;
+		// position: relative !important;
+		// top: 0 !important;
+		// right: 0 !important;
+		float: none;
 		margin: 30px auto 0;
 		width: 385px;
 	}
@@ -687,6 +692,20 @@
 }
 
 @media (max-width: 700px) {
+	.structure_inner {
+		&.inner_align-left  {
+			.article-wrapp {
+				.article-wrapp-info {
+					h1 {
+						padding: 0px 0px 30px 0px;
+					}
+				}
+			}
+			.breadcrumbs {
+				text-align: center;
+			}
+		}
+	}
 	.company-wrapp .adress {
 		padding: 0 10px 100px;
 	}

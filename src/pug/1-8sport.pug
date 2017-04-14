@@ -5,23 +5,24 @@ block title
 	title Title of template
 
 block content
-	div.wrapp_page
+	div.wrapp_page.structure_inner
 		include includes/_card-h-2
 		include includes/_card-h-3
 		include includes/_header
+		nav
+			ul.breadcrumbs
+				li 
+					a(href='#') Главная 
+				li 
+					a(href='#') Спорт
+				li 
+					a(href='#') Компании
 		div.article-wrapp.company-wrapp
 			div.article-wrapp-bg(style='background-image: url("img/1-8bg.jpg");')
 			//- div.article-wrapp-bg-dark затемнять блок
 			div.article-wrapp-info.max-width-1300
-				nav
-					ul.breadcrumbs
-						li 
-							a(href='#') Главная 
-						li 
-							a(href='#') Спорт
-						li 
-							a(href='#') Статьи
-				h1 Плыви по течению
+				
+				h1 Фитнес-клуб "Moby Dick"
 				p.adress Минск, ул. Октябрьская 16, Ленинский район, ст. м. Первомайская
 				div.panel_dop
 					p.add_favorites.js-add-favorites 
@@ -42,316 +43,316 @@ block content
 						span 26 отзывов	
 					div.share 
 						div.ya-share2(data-services="vkontakte,facebook" data-counter="")
-
-		div.max-width-1300
-			div.company-contact#sticky
-				div.addres 
-					img(src='img/map-marker.png')
-					span Минск, ул. Октябрьская 16 <br> Ленинский район, ст. м. Первомайская
-				div.time-work
-					p Пн-пт 7:00 - 22:00
-					p Cб-вс	10:00 - 20:00
-				div.other-adres.js-scrollTo(data-scroll = 'el10')  Еще 4 адреса
-				div.tel
-					p +375 29 
-						span 640-03-03
-					p +375 29 
-						span 641-04-04
-				a.link(href='#') www.mobydick.by
-				div.show-map.js-scrollTo(data-scroll = 'el11') Смотреть на карте
-				button.btn.btn-size-225.btn-black.js-popup-open(data-open-popup = 'popup-backcall') Обратный звонок
-		section
-			div.max-width-1300
-				div.company-content-wrapp
-					div.menu.js-menu-dropdown
-						ul.main_menu.js-tags-resizes
-							li.active.js-scrollTo(data-scroll = 'el1') 
-								a(href='#') О нас
-							li.js-scrollTo(data-scroll = 'el2')
-								a(href='#') Услуги
-							li.js-scrollTo(data-scroll = 'el3') 
-								a(href='#') Цены
-							li.js-scrollTo(data-scroll = 'el4') 
-								a(href='#') Фотогалерея
-							li.js-scrollTo(data-scroll = 'el5') 
-								a(href='#') Тренеры
-							li.js-menu-dropdown-open 
-								a(href='#') Еще
-								svg.down
-									use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
-					ul.dop_menu.js-menu-dropdown-dop
-						li.js-scrollTo(data-scroll = 'el6') 
-							a(href='#') Статьи
-						li.js-scrollTo(data-scroll = 'el7')  
-							a(href='#') Видео
-						li.js-scrollTo(data-scroll = 'el8')  
-							a(href='#') Отзывы
-						li.js-scrollTo(data-scroll = 'el9')  
-							a(href='#') Сертификаты
-						li.js-scrollTo(data-scroll = 'el10')  
-							a(href='#') Филиалы
-					div.content-block.border-top.first-block.js-scrollTo-content(data-scroll = 'el1')
-						div.content-left
-							img.logo(src='img/1-8-logo.png' alt='')
-							h3 О компании
-						div.content-right.js-show-text
-							div.text
-								div
-									p Любите спорт, ведете здоровый образ жизни и давно мечтаете о занятиях фитнесом с грамотными тренерами, но не можете определиться с выбором? Мы с удовольствием приглашаем вас в новый фитнес-клуб Moby Dick, оснащенный профессиональным силовым и кардиооборудованием, идеально подходящим как для новичков, так и для
-								div
-									p.text-hide.js-show-other-content  Здесь знают все о правильных тренировках, предлагая действенные способы укрепления здоровья и раскрывая секреты прекрасной физической формы.
-							p.link.js-show-other(data-text='+ Все описание') + Все описание
-					div.content-block.js-scrollTo-content(data-scroll = 'el2')
-						div.content-left
-							h3 Услуги
-						div.content-right
-							ul.services
-								li.js-drop-open 
-									img(src='img/1-8-icon1.png' alt='')
-									p Тренажерный зал
-									svg.down
-										use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
-									p.dop-info.js-drop-open-content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris faucibus nisl non nisl accumsan, eu mattis ligula porta. Cras pellentesque nisl id leo tempor, id sollicitudin nisi finibus. Quisque at fermentum ante, ac lobortis quam. Integer imperdiet justo vitae purus consequat, vel mattis ligula placerat. Vivamus efficitur leo et ante lacinia efficitur	
-								li.js-drop-open  
-									img(src='img/1-8-icon2.png' alt='')
-									p Единоборства
-									svg.down
-										use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
-									p.dop-info.js-drop-open-content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris faucibus nisl non nisl accumsan, eu mattis ligula porta. Cras pellentesque nisl id leo tempor, id sollicitudin nisi finibus. Quisque at fermentum ante, ac lobortis quam. Integer imperdiet justo vitae purus consequat, vel mattis ligula placerat. Vivamus efficitur leo et ante lacinia efficitur
-								li.js-drop-open  
-									img(src='img/1-8-icon3.png' alt='')
-									p Бесплатная парковка
-									svg.down
-										use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
-									p.dop-info.js-drop-open-content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris faucibus nisl non nisl accumsan, eu mattis ligula porta. Cras pellentesque nisl id leo tempor, id sollicitudin nisi finibus. Quisque at fermentum ante, ac lobortis quam. Integer imperdiet justo vitae purus consequat, vel mattis ligula placerat. Vivamus efficitur leo et ante lacinia efficitur
-								li.js-drop-open  
-									img(src='img/1-8-icon4.png' alt='')
-									p Фит-бар
-									svg.down
-										use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
-									p.dop-info.js-drop-open-content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris faucibus nisl non nisl accumsan, eu mattis ligula porta. Cras pellentesque nisl id leo tempor, id sollicitudin nisi finibus. Quisque at fermentum ante, ac lobortis quam. Integer imperdiet justo vitae purus consequat, vel mattis ligula placerat. Vivamus efficitur leo et ante lacinia efficitur
-								li.js-drop-open  
-									img(src='img/1-8-icon5.png' alt='')
-									p Общие услуги
-									svg.down
-										use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
-									p.dop-info.js-drop-open-content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris faucibus nisl non nisl accumsan, eu mattis ligula porta. Cras pellentesque nisl id leo tempor, id sollicitudin nisi finibus. Quisque at fermentum ante, ac lobortis quam. Integer imperdiet justo vitae purus consequat, vel mattis ligula placerat. Vivamus efficitur leo et ante lacinia efficitur
-
-					div.content-block.js-scrollTo-content(data-scroll = 'el3')
-						div.content-left
-							h3 Прайслист
-							ul.js-tabs-categories
-								li.active(data-tab='tab1') Все цены
-								li(data-tab='tab2') Тренажерный зал
-								li(data-tab='tab3') Бойцовский клуб
-						div.content-right.js-show-text.js-tabs-content
-							div(data-tab-content='tab1')
-								div
-									ul.price-list
-										li.title 1Тренаженрый зал (полный день)
-										li Абонемент на 1 месяц / 4 занятия. 
-											span 30,00 руб.
-										li Абонемент на 1 месяц / 4 занятия. 
-											span 30,00 руб.
-										li Абонемент на 1 месяц / 4 занятия. 
-											span 30,00 руб.
-									ul.price-list.price-list-hidden.js-show-other-content
-										li Абонемент на 1 месяц / 4 занятия. 
-											span 30,00 руб.
-										li Абонемент на 1 месяц / 4 занятия. 
-											span 30,00 руб.
-										li Абонемент на 1 месяц / 4 занятия. 
-											span 30,00 руб.
-										li Абонемент на 1 месяц / 4 занятия. 
-											span 30,00 руб.
-										li Абонемент на 1 месяц / 4 занятия. 
-											span 30,00 руб.
-								p.link.js-show-other(data-text='+ Все цены') + Все цены
-							div.hidden(data-tab-content='tab2')
-								div
-									ul.price-list
-										li.title 2Тренаженрый зал (полный день)
-										li Абонемент на 1 месяц / 4 занятия. 
-											span 30,00 руб.
-										li Абонемент на 1 месяц / 4 занятия. 
-											span 30,00 руб.
-										li Абонемент на 1 месяц / 4 занятия. 
-											span 30,00 руб.
-									ul.price-list.price-list-hidden.js-show-other-content
-										li Абонемент на 1 месяц / 4 занятия. 
-											span 30,00 руб.
-										li Абонемент на 1 месяц / 4 занятия. 
-											span 30,00 руб.
-										li Абонемент на 1 месяц / 4 занятия. 
-											span 30,00 руб.
-										li Абонемент на 1 месяц / 4 занятия. 
-											span 30,00 руб.
-										li Абонемент на 1 месяц / 4 занятия. 
-											span 30,00 руб.
-								p.link.js-show-other(data-text='+ Все цены') + Все цены
-							div.hidden(data-tab-content='tab3')
-								div
-									ul.price-list
-										li.title 3Тренаженрый зал (полный день)
-										li Абонемент на 1 месяц / 4 занятия. 
-											span 30,00 руб.
-										li Абонемент на 1 месяц / 4 занятия. 
-											span 30,00 руб.
-										li Абонемент на 1 месяц / 4 занятия. 
-											span 30,00 руб.
-									ul.price-list.price-list-hidden.js-show-other-content
-										li Абонемент на 1 месяц / 4 занятия. 
-											span 30,00 руб.
-										li Абонемент на 1 месяц / 4 занятия. 
-											span 30,00 руб.
-										li Абонемент на 1 месяц / 4 занятия. 
-											span 30,00 руб.
-										li Абонемент на 1 месяц / 4 занятия. 
-											span 30,00 руб.
-										li Абонемент на 1 месяц / 4 занятия. 
-											span 30,00 руб.
-								p.link.js-show-other(data-text='+ Все цены') + Все цены
-
-			section
-				div.full-width.bg-black
-					div.max-width-1300
-						div.company-content-wrapp
-							div.content-block.js-scrollTo-content(data-scroll = 'el4')
-								div.content-left
-									h3.title_black Фотогалерея
-									ul.js-tabs-categories.js-tabs-categories-flex
-										li.active(data-tab='tab4') Все фотографии
-										li(data-tab='tab5') Тренажерный зал
-										li(data-tab='tab6') Бойцовский клуб
-								div.content-right.js-tabs-content
-									div.gallery_foto.js-gallery-foto(data-tab-content='tab4' data-gallery-open='gallery-1' )
-										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '1')
-										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '2')
-										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '3')
-										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '4')
-										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '5')
-										div.wrapp-img.js-open-gallery.text-foto(data-gallery = '1')
-											p
-												a(href='#') + Ещё (15 фото)
-									div.gallery_foto.js-gallery-foto.hidden(data-tab-content='tab5' data-gallery-open='gallery-2')
-										div.wrapp-img.js-open-gallery(style='background-image:url("img/5.jpg")' data-gallery = '1')
-										div.wrapp-img.js-open-gallery(style='background-image:url("img/5.jpg")' data-gallery = '2')
-										div.wrapp-img.js-open-gallery(style='background-image:url("img/5.jpg")' data-gallery = '3')
-										div.wrapp-img.js-open-gallery(style='background-image:url("img/5.jpg")' data-gallery = '4')
-										div.wrapp-img.js-open-gallery(style='background-image:url("img/5.jpg")' data-gallery = '5')
-										div.wrapp-img.js-open-gallery.text-foto(data-gallery = '1')
-											p
-												a(href='#') + Ещё (13 фото)
-									div.gallery_foto.js-gallery-foto.hidden(data-tab-content='tab6' data-gallery-open='gallery-3')
-										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '1')
-										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '2')
-										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '3')
-										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '4')
-										div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '5')
-										div.wrapp-img.js-open-gallery.text-foto(data-gallery = '1')
-											p
-												a(href='#') + Ещё (11 фото)
-
-			section
-				div.max-width-1300.other-content
+		section.main-content
+			.scroll-container
+				div.sticky-container
+					div.company-contact#sticky
+						div.addres 
+							img(src='img/map-marker.png')
+							span Минск, ул. Октябрьская 16 <br> Ленинский район, ст. м. Первомайская
+						div.time-work
+							p Пн-пт 7:00 - 22:00
+							p Cб-вс	10:00 - 20:00
+						div.other-adres.js-scrollTo(data-scroll = 'el10')  Еще 4 адреса
+						div.tel
+							p +375 29 
+								span 640-03-03
+							p +375 29 
+								span 641-04-04
+						a.link(href='#') www.mobydick.by
+						div.show-map.js-scrollTo(data-scroll = 'el11') Смотреть на карте
+						button.btn.btn-size-225.btn-black.js-popup-open(data-open-popup = 'popup-backcall') Обратный звонок
+				div.max-width-1300
 					div.company-content-wrapp
-						div.content-block.js-scrollTo-content(data-scroll = 'el5')
+						div.menu.js-menu-dropdown
+							ul.main_menu.js-tags-resizes
+								li.active.js-scrollTo(data-scroll = 'el1') 
+									a(href='#') О нас
+								li.js-scrollTo(data-scroll = 'el2')
+									a(href='#') Услуги
+								li.js-scrollTo(data-scroll = 'el3') 
+									a(href='#') Цены
+								li.js-scrollTo(data-scroll = 'el4') 
+									a(href='#') Фотогалерея
+								li.js-scrollTo(data-scroll = 'el5') 
+									a(href='#') Тренеры
+								li.js-menu-dropdown-open 
+									a(href='#') Еще
+									svg.down
+										use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
+						ul.dop_menu.js-menu-dropdown-dop
+							li.js-scrollTo(data-scroll = 'el6') 
+								a(href='#') Статьи
+							li.js-scrollTo(data-scroll = 'el7')  
+								a(href='#') Видео
+							li.js-scrollTo(data-scroll = 'el8')  
+								a(href='#') Отзывы
+							li.js-scrollTo(data-scroll = 'el9')  
+								a(href='#') Сертификаты
+							li.js-scrollTo(data-scroll = 'el10')  
+								a(href='#') Филиалы
+						div.content-block.border-top.first-block.js-scrollTo-content(data-scroll = 'el1')
 							div.content-left
-								h3 Тренеры
-							div.content-right
-								div.card-wrapp.trainers
-									+card-horizont-3('card card-horizontal text-black','img/2.jpg','Евгения Кобик','Bodyflex, TRX, силовая аэробика','Зож',false,false)
-									+card-horizont-3('card card-horizontal text-black','img/3.jpg','Евгения Кобик ','Bodyflex, TRX, силовая аэробика','Зож',false,false)
-									+card-horizont-3('card card-horizontal text-black','img/4.jpg','Евгения Кобик ','Bodyflex, TRX, силовая аэробика','Зож',false,false)
-						div.content-block.js-scrollTo-content(data-scroll = 'el6')
-							div.content-left
-								h3 Статьи
-							div.content-right
-								div.card-wrapp.articles
-									+card-horizont('card card-horizontal text-black','img/6.jpg','Личный опыт: работа моделью в Китае','','',true,false)
-									+card-horizont('card card-horizontal text-black','img/7.jpg','Кастинг моделей: как себя вести','','',true,false)
-									+card-horizont('card card-horizontal text-black','img/7.jpg','Кастинг моделей: как себя вести. Истории из мира моды','','',true,false)
-						div.content-block.js-scrollTo-content(data-scroll = 'el7')
-							div.content-left
-								h3 Видео
-							div.content-right
-								div.card-wrapp.video
-									div.card.js-open-youtube(data-gallery = '1')
-										div.video-img(style='background-image:url("//img.youtube.com/vi/JMJXvsCLu6s/maxresdefault.jpg")' )
-											img.video-play(src="img/video_play.png" )
-										p.title Мова Нанова - Мова Гуркова
-									div.card.js-open-youtube(data-gallery = '2')
-										div.video-img(style='background-image:url("//img.youtube.com/vi/JMJXvsCLu6s/maxresdefault.jpg")')
-											img.video-play(src="img/video_play.png" )
-										p.title Мова Нанова - Мова Гуркова
-						div.content-block.js-scrollTo-content(data-scroll = 'el8')
-							div.content-left
-								h3 Отзывы о компании 
-									p (26)
+								img.logo(src='img/1-8-logo.png' alt='')
+								h3 О компании
 							div.content-right.js-show-text
-								div
-									div.overflow-hidden
-										div.review-wrapp
-											p.title Владимир
-											ul
-												li
-													img(src='img/star-y.png')
-												li
-													img(src='img/star-y.png')
-												li
-													img(src='img/star-y.png')
-												li
-													img(src='img/star-g.png')
-												li
-													img(src='img/star-g.png')
-											p.text Туда приятно приходить, стильный зал, отличный персонал, мега админы и тренера) У меня был самый лучший тренер Гришаня! Один его внешний вид вдохновляет! Он супер качок и чемпион по жиму лёжа)) Всем Моби Дик)))
-											p.date 20 ноября 2016
-										
-									div.review-hidden.js-show-other-content
-										div.review-wrapp
-											p.title Владимир
-											ul
-												li
-													img(src='img/star-y.png')
-												li
-													img(src='img/star-y.png')
-												li
-													img(src='img/star-y.png')
-												li
-													img(src='img/star-g.png')
-												li
-													img(src='img/star-g.png')
-											p.text Туда приятно приходить, стильный зал, отличный персонал, мега админы и тренера) У меня был самый лучший тренер Гришаня! Один его внешний вид вдохновляет! Он супер качок и чемпион по жиму лёжа)) Всем Моби Дик)))
-											p.date 20 ноября 2016
-										div.review-wrapp
-											p.title Владимир
-											ul
-												li
-													img(src='img/star-y.png')
-												li
-													img(src='img/star-y.png')
-												li
-													img(src='img/star-y.png')
-												li
-													img(src='img/star-g.png')
-												li
-													img(src='img/star-g.png')
-											p.text Туда приятно приходить, стильный зал, отличный персонал, мега админы и тренера) У меня был самый лучший тренер Гришаня! Один его внешний вид вдохновляет! Он супер качок и чемпион по жиму лёжа)) Всем Моби Дик)))
-											p.date 20 ноября 2016
-								p.link.show-other-review.js-show-other(data-text='+ Все отзывы') + Все отзывы
-								button.btn.btn-size-225.btn-black.js-popup-open(data-open-popup = 'popup-review') Оставить отзыв
-
-						div.content-block.js-scrollTo-content(data-scroll = 'el9')
+								div.text
+									div
+										p Любите спорт, ведете здоровый образ жизни и давно мечтаете о занятиях фитнесом с грамотными тренерами, но не можете определиться с выбором? Мы с удовольствием приглашаем вас в новый фитнес-клуб Moby Dick, оснащенный профессиональным силовым и кардиооборудованием, идеально подходящим как для новичков, так и для
+									div
+										p.text-hide.js-show-other-content  Здесь знают все о правильных тренировках, предлагая действенные способы укрепления здоровья и раскрывая секреты прекрасной физической формы.
+								p.link.js-show-other(data-text='+ Все описание') + Все описание
+						div.content-block.js-scrollTo-content(data-scroll = 'el2')
 							div.content-left
-								h3 Сертификаты
+								h3 Услуги
 							div.content-right
-								div.sertif.js-gallery-foto(data-gallery-open='gallery-4')
-									div.js-open-gallery(data-gallery = '1')
-										img(src='img/sert1.jpg' alt='')
-									div.js-open-gallery(data-gallery = '2')
-										img(src='img/sert2.jpg' alt='')
-									div.js-open-gallery(data-gallery = '3')
-										img(src='img/sert3.jpg' alt='')
+								ul.services
+									li.js-drop-open 
+										img(src='img/1-8-icon1.png' alt='')
+										p Тренажерный зал
+										svg.down
+											use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
+										p.dop-info.js-drop-open-content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris faucibus nisl non nisl accumsan, eu mattis ligula porta. Cras pellentesque nisl id leo tempor, id sollicitudin nisi finibus. Quisque at fermentum ante, ac lobortis quam. Integer imperdiet justo vitae purus consequat, vel mattis ligula placerat. Vivamus efficitur leo et ante lacinia efficitur	
+									li.js-drop-open  
+										img(src='img/1-8-icon2.png' alt='')
+										p Единоборства
+										svg.down
+											use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
+										p.dop-info.js-drop-open-content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris faucibus nisl non nisl accumsan, eu mattis ligula porta. Cras pellentesque nisl id leo tempor, id sollicitudin nisi finibus. Quisque at fermentum ante, ac lobortis quam. Integer imperdiet justo vitae purus consequat, vel mattis ligula placerat. Vivamus efficitur leo et ante lacinia efficitur
+									li.js-drop-open  
+										img(src='img/1-8-icon3.png' alt='')
+										p Бесплатная парковка
+										svg.down
+											use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
+										p.dop-info.js-drop-open-content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris faucibus nisl non nisl accumsan, eu mattis ligula porta. Cras pellentesque nisl id leo tempor, id sollicitudin nisi finibus. Quisque at fermentum ante, ac lobortis quam. Integer imperdiet justo vitae purus consequat, vel mattis ligula placerat. Vivamus efficitur leo et ante lacinia efficitur
+									li.js-drop-open  
+										img(src='img/1-8-icon4.png' alt='')
+										p Фит-бар
+										svg.down
+											use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
+										p.dop-info.js-drop-open-content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris faucibus nisl non nisl accumsan, eu mattis ligula porta. Cras pellentesque nisl id leo tempor, id sollicitudin nisi finibus. Quisque at fermentum ante, ac lobortis quam. Integer imperdiet justo vitae purus consequat, vel mattis ligula placerat. Vivamus efficitur leo et ante lacinia efficitur
+									li.js-drop-open  
+										img(src='img/1-8-icon5.png' alt='')
+										p Общие услуги
+										svg.down
+											use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
+										p.dop-info.js-drop-open-content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris faucibus nisl non nisl accumsan, eu mattis ligula porta. Cras pellentesque nisl id leo tempor, id sollicitudin nisi finibus. Quisque at fermentum ante, ac lobortis quam. Integer imperdiet justo vitae purus consequat, vel mattis ligula placerat. Vivamus efficitur leo et ante lacinia efficitur
+
+						div.content-block.js-scrollTo-content(data-scroll = 'el3')
+							div.content-left
+								h3 Прайслист
+								ul.js-tabs-categories
+									li.active(data-tab='tab1') Все цены
+									li(data-tab='tab2') Тренажерный зал
+									li(data-tab='tab3') Бойцовский клуб
+							div.content-right.js-show-text.js-tabs-content
+								div(data-tab-content='tab1')
+									div
+										ul.price-list
+											li.title 1Тренаженрый зал (полный день)
+											li Абонемент на 1 месяц / 4 занятия. 
+												span 30,00 руб.
+											li Абонемент на 1 месяц / 4 занятия. 
+												span 30,00 руб.
+											li Абонемент на 1 месяц / 4 занятия. 
+												span 30,00 руб.
+										ul.price-list.price-list-hidden.js-show-other-content
+											li Абонемент на 1 месяц / 4 занятия. 
+												span 30,00 руб.
+											li Абонемент на 1 месяц / 4 занятия. 
+												span 30,00 руб.
+											li Абонемент на 1 месяц / 4 занятия. 
+												span 30,00 руб.
+											li Абонемент на 1 месяц / 4 занятия. 
+												span 30,00 руб.
+											li Абонемент на 1 месяц / 4 занятия. 
+												span 30,00 руб.
+									p.link.js-show-other(data-text='+ Все цены') + Все цены
+								div.hidden(data-tab-content='tab2')
+									div
+										ul.price-list
+											li.title 2Тренаженрый зал (полный день)
+											li Абонемент на 1 месяц / 4 занятия. 
+												span 30,00 руб.
+											li Абонемент на 1 месяц / 4 занятия. 
+												span 30,00 руб.
+											li Абонемент на 1 месяц / 4 занятия. 
+												span 30,00 руб.
+										ul.price-list.price-list-hidden.js-show-other-content
+											li Абонемент на 1 месяц / 4 занятия. 
+												span 30,00 руб.
+											li Абонемент на 1 месяц / 4 занятия. 
+												span 30,00 руб.
+											li Абонемент на 1 месяц / 4 занятия. 
+												span 30,00 руб.
+											li Абонемент на 1 месяц / 4 занятия. 
+												span 30,00 руб.
+											li Абонемент на 1 месяц / 4 занятия. 
+												span 30,00 руб.
+									p.link.js-show-other(data-text='+ Все цены') + Все цены
+								div.hidden(data-tab-content='tab3')
+									div
+										ul.price-list
+											li.title 3Тренаженрый зал (полный день)
+											li Абонемент на 1 месяц / 4 занятия. 
+												span 30,00 руб.
+											li Абонемент на 1 месяц / 4 занятия. 
+												span 30,00 руб.
+											li Абонемент на 1 месяц / 4 занятия. 
+												span 30,00 руб.
+										ul.price-list.price-list-hidden.js-show-other-content
+											li Абонемент на 1 месяц / 4 занятия. 
+												span 30,00 руб.
+											li Абонемент на 1 месяц / 4 занятия. 
+												span 30,00 руб.
+											li Абонемент на 1 месяц / 4 занятия. 
+												span 30,00 руб.
+											li Абонемент на 1 месяц / 4 занятия. 
+												span 30,00 руб.
+											li Абонемент на 1 месяц / 4 занятия. 
+												span 30,00 руб.
+									p.link.js-show-other(data-text='+ Все цены') + Все цены
+
+				section
+					div.full-width.bg-black
+						div.max-width-1300
+							div.company-content-wrapp
+								div.content-block.js-scrollTo-content(data-scroll = 'el4')
+									div.content-left
+										h3.title_black Фотогалерея
+										ul.js-tabs-categories.js-tabs-categories-flex
+											li.active(data-tab='tab4') Все фотографии
+											li(data-tab='tab5') Тренажерный зал
+											li(data-tab='tab6') Бойцовский клуб
+									div.content-right.js-tabs-content
+										div.gallery_foto.js-gallery-foto(data-tab-content='tab4' data-gallery-open='gallery-1' )
+											div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '1')
+											div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '2')
+											div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '3')
+											div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '4')
+											div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '5')
+											div.wrapp-img.js-open-gallery.text-foto(data-gallery = '1')
+												p
+													a(href='#') + Ещё (15 фото)
+										div.gallery_foto.js-gallery-foto.hidden(data-tab-content='tab5' data-gallery-open='gallery-2')
+											div.wrapp-img.js-open-gallery(style='background-image:url("img/5.jpg")' data-gallery = '1')
+											div.wrapp-img.js-open-gallery(style='background-image:url("img/5.jpg")' data-gallery = '2')
+											div.wrapp-img.js-open-gallery(style='background-image:url("img/5.jpg")' data-gallery = '3')
+											div.wrapp-img.js-open-gallery(style='background-image:url("img/5.jpg")' data-gallery = '4')
+											div.wrapp-img.js-open-gallery(style='background-image:url("img/5.jpg")' data-gallery = '5')
+											div.wrapp-img.js-open-gallery.text-foto(data-gallery = '1')
+												p
+													a(href='#') + Ещё (13 фото)
+										div.gallery_foto.js-gallery-foto.hidden(data-tab-content='tab6' data-gallery-open='gallery-3')
+											div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '1')
+											div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '2')
+											div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '3')
+											div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '4')
+											div.wrapp-img.js-open-gallery(style='background-image:url("img/4.jpg")' data-gallery = '5')
+											div.wrapp-img.js-open-gallery.text-foto(data-gallery = '1')
+												p
+													a(href='#') + Ещё (11 фото)
+
+				section
+					div.max-width-1300.other-content
+						div.company-content-wrapp
+							div.content-block.js-scrollTo-content(data-scroll = 'el5')
+								div.content-left
+									h3 Тренеры
+								div.content-right
+									div.card-wrapp.trainers
+										+card-horizont-3('card card-horizontal text-black','img/2.jpg','Евгения Кобик','Bodyflex, TRX, силовая аэробика','Зож',false,false)
+										+card-horizont-3('card card-horizontal text-black','img/3.jpg','Евгения Кобик ','Bodyflex, TRX, силовая аэробика','Зож',false,false)
+										+card-horizont-3('card card-horizontal text-black','img/4.jpg','Евгения Кобик ','Bodyflex, TRX, силовая аэробика','Зож',false,false)
+							div.content-block.js-scrollTo-content(data-scroll = 'el6')
+								div.content-left
+									h3 Статьи
+								div.content-right
+									div.card-wrapp.articles
+										+card-horizont('card card-horizontal text-black','img/6.jpg','Личный опыт: работа моделью в Китае','','',true,false)
+										+card-horizont('card card-horizontal text-black','img/7.jpg','Кастинг моделей: как себя вести','','',true,false)
+										+card-horizont('card card-horizontal text-black','img/7.jpg','Кастинг моделей: как себя вести. Истории из мира моды','','',true,false)
+							div.content-block.js-scrollTo-content(data-scroll = 'el7')
+								div.content-left
+									h3 Видео
+								div.content-right
+									div.card-wrapp.video
+										div.card.js-open-youtube(data-gallery = '1')
+											div.video-img(style='background-image:url("//img.youtube.com/vi/JMJXvsCLu6s/maxresdefault.jpg")' )
+												img.video-play(src="img/video_play.png" )
+											p.title Мова Нанова - Мова Гуркова
+										div.card.js-open-youtube(data-gallery = '2')
+											div.video-img(style='background-image:url("//img.youtube.com/vi/JMJXvsCLu6s/maxresdefault.jpg")')
+												img.video-play(src="img/video_play.png" )
+											p.title Мова Нанова - Мова Гуркова
+							div.content-block.js-scrollTo-content(data-scroll = 'el8')
+								div.content-left
+									h3 Отзывы о компании 
+										p (26)
+								div.content-right.js-show-text
+									div
+										div.overflow-hidden
+											div.review-wrapp
+												p.title Владимир
+												ul
+													li
+														img(src='img/star-y.png')
+													li
+														img(src='img/star-y.png')
+													li
+														img(src='img/star-y.png')
+													li
+														img(src='img/star-g.png')
+													li
+														img(src='img/star-g.png')
+												p.text Туда приятно приходить, стильный зал, отличный персонал, мега админы и тренера) У меня был самый лучший тренер Гришаня! Один его внешний вид вдохновляет! Он супер качок и чемпион по жиму лёжа)) Всем Моби Дик)))
+												p.date 20 ноября 2016
+											
+										div.review-hidden.js-show-other-content
+											div.review-wrapp
+												p.title Владимир
+												ul
+													li
+														img(src='img/star-y.png')
+													li
+														img(src='img/star-y.png')
+													li
+														img(src='img/star-y.png')
+													li
+														img(src='img/star-g.png')
+													li
+														img(src='img/star-g.png')
+												p.text Туда приятно приходить, стильный зал, отличный персонал, мега админы и тренера) У меня был самый лучший тренер Гришаня! Один его внешний вид вдохновляет! Он супер качок и чемпион по жиму лёжа)) Всем Моби Дик)))
+												p.date 20 ноября 2016
+											div.review-wrapp
+												p.title Владимир
+												ul
+													li
+														img(src='img/star-y.png')
+													li
+														img(src='img/star-y.png')
+													li
+														img(src='img/star-y.png')
+													li
+														img(src='img/star-g.png')
+													li
+														img(src='img/star-g.png')
+												p.text Туда приятно приходить, стильный зал, отличный персонал, мега админы и тренера) У меня был самый лучший тренер Гришаня! Один его внешний вид вдохновляет! Он супер качок и чемпион по жиму лёжа)) Всем Моби Дик)))
+												p.date 20 ноября 2016
+									p.link.show-other-review.js-show-other(data-text='+ Все отзывы') + Все отзывы
+									button.btn.btn-size-225.btn-black.js-popup-open(data-open-popup = 'popup-review') Оставить отзыв
+
+							div.content-block.js-scrollTo-content(data-scroll = 'el9')
+								div.content-left
+									h3 Сертификаты
+								div.content-right
+									div.sertif.js-gallery-foto(data-gallery-open='gallery-4')
+										div.js-open-gallery(data-gallery = '1')
+											img(src='img/sert1.jpg' alt='')
+										div.js-open-gallery(data-gallery = '2')
+											img(src='img/sert2.jpg' alt='')
+										div.js-open-gallery(data-gallery = '3')
+											img(src='img/sert3.jpg' alt='')
 			section
 				div.full-width
 					div.map#end.js-scrollTo-content(data-scroll = 'el11')

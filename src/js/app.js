@@ -6,6 +6,6 @@
 // =include lib/jquery.inputmask.bundle.js
 // =include lib/jquery.scrollTo.min.js
 // =include lib/jquery.form-validator.min.js
-
+// =include lib/sticky-kit.min.js
 
 // =include common.js

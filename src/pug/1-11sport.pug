@@ -10,23 +10,22 @@ block title
 	title Title of template
 
 block content
-	div.wrapp_page
+	div.wrapp_page.structure_inner.inner_align-left
 		include includes/_card-h-2
 		include includes/_card-h-3
 		include includes/_header
+		nav
+			ul.breadcrumbs
+				li 
+					a(href='#') Главная 
+				li 
+					a(href='#') Спорт
+				li 
+					a(href='#') Статьи
 		div.article-wrapp.company-wrapp.specialist-page-first-screen
 			div.article-wrapp-bg(style='background-image: url("img/1-8bg.jpg");')
 			//- div.article-wrapp-bg-dark затемнять блок
 			div.article-wrapp-info.max-width-1300
-				nav
-					ul.breadcrumbs
-						li 
-							a(href='#') Главная 
-						li 
-							a(href='#') Спорт
-						li 
-							a(href='#') Статьи
-
 				div.wrapp-info
 					img.foto(src='img/4.jpg' alt='')
 					h1 Шарпилов Иван Анатольевич
