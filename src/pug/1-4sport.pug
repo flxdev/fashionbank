@@ -126,7 +126,7 @@ block content
 								svg.close.js-close.hidden
 									use(xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-close" xmlns:xlink="http://www.w3.org/1999/xlink")
 							div.item-filter-content
-								form.type-1
+								.form.type-1
 									div.input-wrapp
 										input.ch(type='checkbox' id='q')
 										label(for='q') Заводской
@@ -521,7 +521,7 @@ block content
 									p.title Рейтинг
 										svg.down
 											use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
-								form.type-1.js-accordion-content
+								.form.type-1.js-accordion-content
 									div.input-wrapp
 										input.ch(type='checkbox' id='m')
 										label(for='m') Заводской
@@ -542,7 +542,7 @@ block content
 									p.title Аэробика
 										svg.down
 											use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
-								form.type-1.js-accordion-content
+								.form.type-1.js-accordion-content
 									div.input-wrapp
 										input.ch(type='checkbox' id='m')
 										label(for='m') Заводской
@@ -563,7 +563,7 @@ block content
 									p.title Базовый комплекс
 										svg.down
 											use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
-								form.type-1.js-accordion-content
+								.form.type-1.js-accordion-content
 									div.input-wrapp
 										input.ch(type='checkbox' id='m')
 										label(for='m') Заводской
@@ -584,7 +584,7 @@ block content
 									p.title Групповые программы
 										svg.down
 											use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
-								form.type-1.js-accordion-content
+								.form.type-1.js-accordion-content
 									div.input-wrapp
 										input.ch(type='checkbox' id='m')
 										label(for='m') Заводской
@@ -605,7 +605,7 @@ block content
 									p.title Боевые искусства
 										svg.down
 											use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
-								form.type-1.js-accordion-content
+								.form.type-1.js-accordion-content
 									div.input-wrapp
 										input.ch(type='checkbox' id='m')
 										label(for='m') Заводской
@@ -626,7 +626,7 @@ block content
 									p.title Танцевальные направления
 										svg.down
 											use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
-								form.type-1.js-accordion-content
+								.form.type-1.js-accordion-content
 									div.input-wrapp
 										input.ch(type='checkbox' id='m')
 										label(for='m') Заводской
@@ -647,7 +647,7 @@ block content
 									p.title Направления
 										svg.down
 											use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
-								form.type-1.js-accordion-content
+								.form.type-1.js-accordion-content
 									div.input-wrapp
 										input.ch(type='checkbox' id='m')
 										label(for='m') Заводской
@@ -664,24 +664,24 @@ block content
 										button.btn.btn-black.btn-size-225 Применить фильтр
 										span.reset-filter Сбросить все			
 
-
-					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
-					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
-					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
-					a(href="#").card.card-vertical.banner(style='background-image: url("img/banner-sport.png")')
-						
-					//- +card-vertical('card card-vertical text-center card-full_bg text-white','', 2, true, false)
-					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
-					+card-vertical('card card-vertical text-center card-full_bg text-white','img/4.jpg', 2, true, false)
-					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
-					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
-					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
-					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
-					+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
-					+card-vertical('card card-vertical text-center card-full_bg text-white','img/4.jpg', 2, true, false)
-					div.load_more
-						a(href='#') + 
-							span Показать ещё
+					.content-container
+						+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+						+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+						+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+						a(href="#").card.card-vertical.banner(style='background-image: url("img/banner-sport.png")')
+							
+						//- +card-vertical('card card-vertical text-center card-full_bg text-white','', 2, true, false)
+						+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+						+card-vertical('card card-vertical text-center card-full_bg text-white','img/4.jpg', 2, true, false)
+						+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+						+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+						+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+						+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+						+card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+						+card-vertical('card card-vertical text-center card-full_bg text-white','img/4.jpg', 2, true, false)
+						div.load_more
+							a(href='#') + 
+								span Показать ещё
 		
 		//- include includes/elements/_go_top
 		include includes/_footer
