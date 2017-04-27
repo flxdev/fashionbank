@@ -169,3 +169,20 @@
 		}
 	}
 }
+
+.wrapp_popup .wrapp_popup_window form.no-pad{
+	padding: 0;
+}
+
+.wrapp_popup .wrapp_popup_window .input-border-bottom+label span {
+	color: red;
+}
+
+.wrapp_popup .wrapp_popup_window .no-pad .text-note{
+	padding: 40px 50px 20px;
+}
+
+.wrapp_popup .wrapp_popup_window .no-pad .text-error{
+	color: red;
+}
+

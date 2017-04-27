@@ -61,7 +61,8 @@ block content
 									li.active(data-tab='tab1') Заведения
 									li(data-tab='tab2') Специалисты
 									li(data-tab='tab3') Магазины
-								p.all Все заведения
+								a(href='#')(data-tab-all='tab1').all Все заведения
+								a(href='#')(data-tab-all='tab2').all.hidden Все специалисты
 						div.wrapp_tabs-content.js-tabs-content
 							div.wrapp_slider-content.js-slider-init(data-tab-content='tab1')
 								+card-horizont('card card-horizontal text-black','img/9.jpg','Массажный салон BonJoli','Минск, ул. Петруся Бровки 30','Зож',false,false)

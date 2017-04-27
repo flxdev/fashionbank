@@ -100,4 +100,36 @@
 .about.line-bottom > div:last-child {
 	border-bottom: 4px solid #000;
 	padding-bottom: 120px;
-} 
+}
+
+.block-center-text {
+	.three-block {
+		width: 100%;
+		li {
+			display: inline-block;
+			font-size: 0;
+			width: 33%;
+			padding: 0 16px;
+			vertical-align: top;
+			&:first-child {
+				padding-left: 0;
+			}
+			&:last-child {
+				padding-right: 0;
+			}
+			.title {
+				font-size: 6rem;
+				font-family: $font_m;
+			}
+			.text {
+				font-size: 2rem;
+			}
+			p {
+				padding: 10px 0;
+			}
+		}
+	}
+	.left-padding {
+		padding-left: 35px;
+	}
+}

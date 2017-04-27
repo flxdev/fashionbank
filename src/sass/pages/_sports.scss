@@ -321,7 +321,7 @@
 			// 	height: 250px;
 			// }
 			.form {
-				padding: 20px;
+				padding: 20px 10px;
 				.slider_ui {
 					.ui-state-default, .ui-widget-content .ui-state-default {
 						background-color: transparent;
@@ -355,6 +355,27 @@
 				.input-wrapp {
 					padding: 5px 0;
 					position: relative;
+					input[type=checkbox]+label {
+						padding-left: 30px;
+						font-size: 1.4rem;
+						&:hover {
+							color: #000;
+						}
+					}
+					input[type=checkbox]:checked {
+						color: #c6c6c6;
+					}
+					input[type=checkbox]:checked+label {
+						color: #000;
+					}
+					input[type=checkbox]:checked+label:after {
+						border-color: #000;
+					}
+					input[type=checkbox]:checked+label:after {
+						background-image: url(../img/svg/uEA01-check-symbol-black.svg);
+					}
+
+
 					input[type=checkbox]+label:after {
 						left: 0;
 					}
@@ -451,6 +472,7 @@
 .block-filters-mobile {
 	flex-basis: 100%;
 	display: none;
+	width: 100%;
 	.block-filters-mobile-header {
 		width: 100%;
 		text-align: center;
@@ -568,6 +590,15 @@
 	}
 }
 
+.block-filters .item-filter .item-filter-content .input-wrapp-pad .input-wrapp label{
+	padding-left: 30px;
+}
+
+.block-filters .item-filter .item-filter-content .input-wrapp-pad .btn{
+	display: block;
+	text-align: center;
+	margin: 20px auto 0;
+}
 .company-wrapp  {
 	position: relative;
 	top: -186px;
@@ -1218,6 +1249,7 @@
 					.img-content {
 						border: 2px solid #000;
 						background-color: #000;
+						overflow: hidden;
 						img {
 							height: 90px;
 							cursor: pointer;

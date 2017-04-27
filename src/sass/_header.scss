@@ -246,13 +246,18 @@ header {
 		}
 	}
 }
-.animetMenuIn {
+.animetMenuIn.opacityFixMenu {
 	animation: topMenuIn 0.3s ease-in-out;
 }
-.animetMenuOut {
+.animetMenuOut.opacityFixMenu {
 	animation: topMenuOut 1s ease-in-out;
 }
-
+.fixedMenu{
+	opacity: 0;
+}
+.fixedMenu.opacityFixMenu{
+	opacity: 1;
+}
 @keyframes topMenuIn {
 	0% {
 		transform: translate(0, -100%);
