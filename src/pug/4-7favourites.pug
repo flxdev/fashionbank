@@ -39,7 +39,11 @@ block content
 								span Выход
 				div.favourites-right.personal_data.subscribe
 					div.favourites-right_left
-						form
+						form.js-form
+							h3 На какой почтовый адрес вы хотите получать рассылку:
+							.input-wrapp
+								input.input-border-bottom(name="EMAIL" type="text" data-validation="required" data-validation-strength="5" value="ccewewc" title="E-mail")
+								label Email:<span>*</span>
 							h3 Как часто вы хотите получать информацию:
 							div.radio-wrap
 								ul

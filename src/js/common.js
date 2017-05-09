@@ -670,8 +670,10 @@ function initSlidersUi() {
 				$(sliderSetting.inputShowFildFilterBottom).val(__timeUp);
 				$(sliderSetting.inputHiddenTop).val(__timeUp);
 				$(sliderSetting.inputHiddenBottom).val(__timeDown);
-				$(sliderSetting.inputTimeTo).text(__timeDownSpan);
-				$(sliderSetting.inputTimeFrom).text(__timeUpSpan);
+				// $(sliderSetting.inputTimeTo).text(__timeDownSpan);
+				// $(sliderSetting.inputTimeFrom).text(__timeUpSpan);
+				$(sliderSetting.inputTimeTo).val(__timeDownSpan);
+				$(sliderSetting.inputTimeFrom).val(__timeUpSpan);
 				
 			}
 		});
