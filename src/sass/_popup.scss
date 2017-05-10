@@ -79,7 +79,7 @@
 			display: none;
 		}
     	h3 {
-    		margin-top: 60px;
+    		margin-top: 55px;
     		padding: 0 40px;
     	}
     	.text-note {
@@ -179,10 +179,21 @@
 }
 
 .wrapp_popup .wrapp_popup_window .no-pad .text-note{
-	padding: 40px 50px 20px;
+	padding: 20px 50px 20px;
 }
 
 .wrapp_popup .wrapp_popup_window .no-pad .text-error{
 	color: red;
 }
 
+.user_panel {
+	.dropdown .dropdown-list{
+		right: -80px;
+		top: 47px;
+		width: 165px;
+		padding: 10px 20px;
+	}
+	.js-menu-dropdown-hover-open:hover .dropdown-list{
+		display: block;
+	}
+}
