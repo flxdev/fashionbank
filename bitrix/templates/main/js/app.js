@@ -3886,6 +3886,7 @@ function initChechAll() {
 			$(this).prev().find('input').prop('checked', false); 
 			checkedAll = false;
 		}
+		return false
 	});
 }
 
