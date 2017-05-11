@@ -613,7 +613,7 @@
 .comments-wrapp {
 	background-color: #f6f6f6;
 	min-height: 120px;
-	margin-bottom: 35px;
+	//margin-bottom: 35px;
 	padding: 0 20px;
 	cursor: pointer;
 	.comments-wrapp-content {
@@ -835,9 +835,6 @@
 	
 }
 
-.structure_inner .article-wrapp:nth-child(1){
-  margin-top: -299px;
-}
 .structure_inner {
 	.article-wrapp {
 		top: 0;
@@ -884,4 +881,8 @@
 .content-container {
 	display: flex;
 	flex-flow: row wrap;
+	width: 100%;
+}
+.number input{
+	text-align: center;
 }

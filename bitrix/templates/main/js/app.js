@@ -3367,6 +3367,7 @@ function initFilters() {
 function initSlidersUi() {
 	$(".js_ui_slider").each(function () {
 		var slider = $(this).find(".js_ui_slider_main");
+        var sliderNumber = $(this).find(".js_ui_slider_main-number");
 		var sliderSetting = {};
 		sliderSetting.max = $(this).data("max");
 		sliderSetting.min = $(this).data("min");
@@ -3374,10 +3375,15 @@ function initSlidersUi() {
 		sliderSetting.defaultValueTo = '0'+ $(this).data("default-value-to") +'.00';
 		sliderSetting.defaultValueFrom = $(this).data("default-value-from") +'.00';
 
+        sliderSetting.defaultValueNumberTo = $(this).data("default-value-to");
+        sliderSetting.defaultValueNumberFrom = $(this).data("default-value-from");
+
 		
 		
 		sliderSetting.inputShowFildFilterTop = $(this).closest('.item-filter').find('.js-fild-filter-slider').find('.js_ui_slider_value_bottom');
+		sliderSetting.inputShowFildFilterTopNumber = $(this).closest('.number').find('.js-fild-filter-slider').find('.js_ui_slider_value_bottom');
 		sliderSetting.inputShowFildFilterBottom = $(this).closest('.item-filter').find('.js-fild-filter-slider').find('.js_ui_slider_value_top');
+		sliderSetting.inputShowFildFilterBottomNumber = $(this).closest('.number').find('.js-fild-filter-slider').find('.js_ui_slider_value_top');
 
 		sliderSetting.inputTimeTo = $(this).closest('.item-filter').find('.js-fild-filter-slider').find('.time-to');
 		sliderSetting.inputTimeFrom = $(this).closest('.item-filter').find('.js-fild-filter-slider').find('.time-from');
@@ -3387,6 +3393,10 @@ function initSlidersUi() {
 		sliderSetting.inputHidden = $(this).find(".js_ui_slider_input");
 		sliderSetting.inputHiddenTop = $(this).find(".js_ui_slider_value_top");
 		sliderSetting.inputHiddenBottom = $(this).find(".js_ui_slider_value_bottom");
+
+		sliderSetting.inputHiddenTopNumber = $(this).closest('.number').find(".js_ui_slider_value_top");
+		sliderSetting.inputHiddenBottomNumber = $(this).closest('.number').find(".js_ui_slider_value_bottom");
+
 		slider.slider({
 			range: true,
 			min: sliderSetting.min,
@@ -3425,11 +3435,52 @@ function initSlidersUi() {
 				
 			}
 		});
+
+        sliderNumber.slider({
+            range: true,
+            min: sliderSetting.min,
+            max: sliderSetting.max,
+            step: sliderSetting.step,
+            values: [ sliderSetting.defaultValueNumberTo, sliderSetting.defaultValueNumberFrom ],
+            slide: function( event, ui ) {
+                // $(sliderSetting.inputHidden).text( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+                var __timeDownSpan = '';
+                if (ui.values[ 0 ] < 10) {
+                    var __timeDownSpan = ui.values[ 0 ]
+                }
+                else {
+                    var __timeDownSpan = ui.values[ 0 ]
+                }
+
+                if (ui.values[ 1 ] < 10) {
+                    var __timeUpSpan = ui.values[ 1 ]
+                }
+                else {
+                    var __timeUpSpan = ui.values[ 1 ]
+                }
+
+				$(sliderSetting.inputShowFildFilterTop).val(__timeDownSpan);
+				$(sliderSetting.inputShowFildFilterBottom).val(__timeUpSpan);
+				$(sliderSetting.inputHiddenTop).val(__timeUpSpan);
+				$(sliderSetting.inputHiddenBottom).val(__timeDownSpan);
+				$(sliderSetting.inputTimeTo).val(__timeDownSpan);
+				$(sliderSetting.inputTimeFrom).val(__timeUpSpan);
+
+            }
+        });
+
+
 		$(sliderSetting.inputHidden).text( sliderSetting.defaultValueTo + " - " + sliderSetting.defaultValueFrom );
 		$(sliderSetting.inputShowFildFilterTop).val(sliderSetting.defaultValueTo);
 		$(sliderSetting.inputShowFildFilterBottom).val(sliderSetting.defaultValueFrom);
 		$(sliderSetting.inputHiddenTop).val(sliderSetting.defaultValueFrom);
 		$(sliderSetting.inputHiddenBottom).val(sliderSetting.defaultValueTo);
+
+		$(sliderSetting.inputShowFildFilterTopNumber).val(sliderSetting.defaultValueNumberTo);
+		$(sliderSetting.inputShowFildFilterBottomNumber).val(sliderSetting.defaultValueNumberFrom);
+		$(sliderSetting.inputHiddenTopNumber).val(sliderSetting.defaultValueNumberFrom);
+		$(sliderSetting.inputHiddenBottomNumber).val(sliderSetting.defaultValueNumberTo);
+
 	});
 }
 

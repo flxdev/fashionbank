@@ -192,6 +192,30 @@ block content
 										div.js_ui_slider_main
 									
 									button.btn.btn-size-130.btn-black.js-apply-filter Применить
+
+						div.item-filter.number
+							div.wrapp-filter-content.js-item-filter
+								p Кол людей
+								p.fild-filter.js-fild-filter-slider
+									span С
+									input.js_ui_slider_value_bottom(disabled="disabled")
+									span ПО
+									input.js_ui_slider_value_top(disabled="disabled")
+								svg.close.js-close.hidden
+									use(xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-close" xmlns:xlink="http://www.w3.org/1999/xlink")
+							div.item-filter-content
+								form.type-2
+									div.slider_ui.js_ui_slider(data-min='0' data-max='24' data-step='1' data-default-value-to='0' data-default-value-from='24')
+										span С
+										input.js_ui_slider_value_bottom(disabled="disabled")
+
+										span ПО
+										input.js_ui_slider_value_top(disabled="disabled")
+
+										div.js_ui_slider_main-number
+
+									button.btn.btn-size-130.btn-black.js-apply-filter Применить
+
 						div.item-filter.js-chechbox
 							div.wrapp-filter-content.js-item-filter
 								p Направления
