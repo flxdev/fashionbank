@@ -1130,3 +1130,13 @@ input[type='password'] {font-family: arial}
 .menu_categories-content .card .card-title{
 	max-height: 103px;
 }
+
+.article-wrapp .article-wrapp-bg:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.3);
+}
