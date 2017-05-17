@@ -397,6 +397,22 @@
 		max-width: 630px;
 		margin: 0 auto;
 		padding-top: 30px;
+		font-size: 2rem;
+		color: #959595;
+		a {
+			color: #959595;
+			transition: all 0.3s ease-out;
+			&:hover {
+				color: $main_blue;
+			}
+		}
+	}
+	.auth-foto{
+		max-width: 630px;
+		margin: 0 auto;
+		padding-top: 30px;
+		font-size: 1.5rem;
+		font-family: regular;
 		a {
 			color: #000;
 			transition: all 0.3s ease-out;
