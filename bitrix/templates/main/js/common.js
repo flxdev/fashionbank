@@ -814,7 +814,7 @@ function initDropShow () {
 function initCommentsDrop() {
 	$('.comments-wrapp-content').each(function () {
 		var click = $(this).find('.show_all');
-		$(click).on('click', function() {
+		$(click).off('click').on('click', function() {
 			$(this).find('.down').toggleClass('up');
 			$(this).closest('.comments-wrapp-content').find('.container-comments').slideToggle();
 		});
@@ -1169,6 +1169,13 @@ function initSetting() {
 var globalSetting = [];
 initSetting();
 
+function initShare() {
+	var myShare = document.getElementsById('ya-share2');
+	var share = Ya.share2(myShare, {
+
+	})
+}
+
 $( document ).ready(function() {
 	if ($('.js-scroll-content').length) {
 		shadowScroll('.js-scroll-container', '.js-scroll-content', '.js-scroll-opasity');
@@ -1184,7 +1191,7 @@ $( document ).ready(function() {
 		$(this).on('click', function() {
 			swichTabs.call(this);
 		});
-	})
+	});
 
 	initS();
 
@@ -1214,6 +1221,7 @@ $( document ).ready(function() {
 	initChechAll();
 	initAccordionContact();
 	initCommentsDrop();
+	initShare();
 
 	// $('.js-add-favorites').each( function {
 	// 	$(this).on('click', function() {

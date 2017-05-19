@@ -1,0 +1,61 @@
+.map-site{
+  width: 100%;
+}
+
+.wrapp-map-site{
+
+}
+
+.wrapp-map-site_row{
+  font-size: 0;
+}
+
+.wrapp-map-site_row-section{
+  display: inline-block;
+  vertical-align: top;
+  width: 16.6%;
+  padding-bottom: 50px;
+  .link-section{
+    font-family: $font_bb;
+    font-size: 18px;
+    color: black;
+    text-transform: uppercase;
+    transition: all .3s ease-out;
+    letter-spacing: 3px;
+    &:hover{
+      color: #0039de;
+    }
+  }
+}
+
+.wrapp-map-site_row-subsections{
+  display: inline-block;
+  vertical-align: top;
+  width: 83.4%;
+  padding-bottom: 50px;
+  .wrapp-map-site_row-subsection_list{
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-bottom: 25px;
+    padding-right: 20px;
+    .link-subsections{
+      text-transform: uppercase;
+      font-family: $font_m;
+      font-size: 15px;
+      color: black;
+      transition: all .3s ease-out;
+      &:hover{
+        color: #0039de;
+      }
+    }
+  }
+  .wrapp-map-site_row-subsections-box{
+    font-size: 0;
+  }
+}
+
+.line-subsections{
+  border-bottom: 1px solid #eeeeee;
+  margin-bottom: 40px;
+}

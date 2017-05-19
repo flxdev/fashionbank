@@ -1,0 +1,31 @@
+//-- ВНИМАНИЕ! 	к класу .like добавить класс .show
+
+extends _layout
+
+block title
+    title Title of template
+
+block content
+    div.wrapp_page
+        include includes/_card-h-2
+        include includes/_header
+        nav
+            div.max-width-1300
+                ul.breadcrumbs
+                    li
+                        a(href='#') Главная
+                    li
+                        a(href='#') Ошибка 404
+
+        section
+            div.max-width-1300
+                div.title-page-wrapp
+                    h2 Ошибка 404
+        section
+            div.max-width-1300
+                div.error-404
+                    div.search-resault
+                        div.search-resault-none
+                            h3 Страница не найдена
+                            p Такое иногда случается. Самые вероятные причины - устаревшая ссылка или страница была удалена автором. <br>Перейдите на главную страницу и попробуйте начать оттуда.
+                            a(href='#').btn.btn-black.btn-size-225 Вернуться на главную
