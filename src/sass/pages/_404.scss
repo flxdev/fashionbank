@@ -28,6 +28,7 @@
   }
 }
 
+
 .wrapp-map-site_row-subsections{
   display: inline-block;
   vertical-align: top;
@@ -58,4 +59,21 @@
 .line-subsections{
   border-bottom: 1px solid #eeeeee;
   margin-bottom: 40px;
+}
+
+.error-404{
+  .search-resault .search-resault-none h3 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.8rem;
+    font-family: black;
+  }
+  .search-resault .search-resault-none p {
+    padding: 35px 0 40px;
+  }
+  .search-resault .search-resault-none .btn-size-225 {
+    width: 250px;
+    margin-bottom: 50px;
+    display: block;
+  }
 }
