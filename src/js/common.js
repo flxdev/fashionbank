@@ -1170,11 +1170,13 @@ var globalSetting = [];
 initSetting();
 
 function initShare() {
-	var myShare = document.getElementsById('ya-share2');
+	var myShare = document.getElementById('my-share');
 	var share = Ya.share2(myShare, {
-
-	})
-}
+		theme: {
+			services: 'vkontakte,facebook'
+		}
+	});
+};
 
 $( document ).ready(function() {
 	if ($('.js-scroll-content').length) {
