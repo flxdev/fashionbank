@@ -1140,34 +1140,3 @@ input[type='password'] {font-family: arial}
 	height: 100%;
 	background: rgba(0, 0, 0, 0.3);
 }
-
-.error-404{
-	flex-basis: 100%;
-	position: relative;
-	.search-resault {
-		.search-resault-none {
-			h3 {
-				text-transform: uppercase;
-				letter-spacing: 2px;
-				font-size: 1.8rem;
-				font-family: $font_bb;
-			}
-			p {
-				padding: 35px 0 40px;
-			}
-			.btn-size-225 {
-				width: 250px;
-				margin-bottom: 50px;
-				display: block;
-			}
-		}
-	}
-}
-
-.card.specialists-border .wrapp-img{
-	border-radius: 50%;
-}
-
-.specialists .slick-slide img{
-	height: auto;
-}

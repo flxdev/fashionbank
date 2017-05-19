@@ -663,15 +663,6 @@
 	.wrapp_slider-categories-bg-grey .wrapp_tabs-categories p.all {
 		display: none;
 	}
-	.slick-slide .item_img{
-		height: 370px;
-	}
-	.slider .slick-slide{
-		opacity: 0;
-	}
-	.slider .slick-slide.slick-active{
-		opacity: 1;
-	}
 }
 
 @media (max-width: 768px) {
@@ -1180,9 +1171,6 @@
 	}
 	.article-wrapp .article-wrapp-info h1 {
 		font-size: 4.5rem;
-	}
-	.slick-slide .item_img {
-		height: 255px;
 	}
 	
 }

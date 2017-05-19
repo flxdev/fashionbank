@@ -47,26 +47,26 @@
 		visibility: hidden
 
 .slick-slide
-	display: inline-block
-	vertical-align: middle
+	float: left
+	height: 100%
 	min-height: 1px
 	img
-		width: auto !important
-		height: 100%
+		display: block
+		max-width: 100%
+
 	&.slick-loading img
 		display: none
 	&.dragging img
 		pointer-events: none
+	.slick-initialized &
+		display: block
 	.slick-loading &
 		visibility: hidden
 	.slick-vertical &
 		display: block
 		height: auto
 		border: 1px solid transparent
-.slick-initialized
-	display: block
-.slick-slide .item_img
-	height: 570px
+
 .slick-prev,
 .slick-next
 	position: absolute

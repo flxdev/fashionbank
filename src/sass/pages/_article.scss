@@ -20,7 +20,7 @@
 	.article-wrapp-bg-dark {
 		width: 100%;
 		position: absolute;
-		background-color: rgba(33,33,33,1);
+		background-color: rgba(0,0,0,.5);
 		z-index: 2;
 		top: 0;
 		left: 0;
@@ -566,7 +566,7 @@
 				z-index: 100;
 				height: 45px;
 				svg{
-					fill: black;
+					fill: #fff;
 				}
 			}
 			.slider_arrow-next  {
