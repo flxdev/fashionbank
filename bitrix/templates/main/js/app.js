@@ -3918,6 +3918,21 @@ function initShare() {
 	});
 };
 
+function scrollUp() {
+	$('.btn-scroll-top').click(function () {
+		$('body,html').animate({scrollTop:0},800);
+	});
+
+	$(window).scroll(function(){
+		if ( $(document).scrollTop() > 400 ) {
+			$('.container-scroll-top').fadeIn('fast');
+		} else {
+			$('.container-scroll-top').fadeOut('fast');
+		}
+	});
+
+}
+
 $( document ).ready(function() {
 	if ($('.js-scroll-content').length) {
 		shadowScroll('.js-scroll-container', '.js-scroll-content', '.js-scroll-opasity');
@@ -3963,6 +3978,7 @@ $( document ).ready(function() {
 	initChechAll();
 	initAccordionContact();
 	initCommentsDrop();
+	scrollUp();
 	initShare();
 
 	// $('.js-add-favorites').each( function {
