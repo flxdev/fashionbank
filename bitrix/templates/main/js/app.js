@@ -3026,8 +3026,8 @@ function initSliderOne() {
 		dots: false,
 		arrows: true,
 		adaptiveHeight: true,
-		prevArrow: "<button type='button' class='slider_arrow slider_arrow-pre'><svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 15 27' enable-background='new 0 0 15 27' xml:space='preserve'><path fill-rule='evenodd' clip-rule='evenodd' d='M13.8,0L15,1.1L2.7,13.6L15,25.7L13.7,27L0,13.7L13.8,0z'/></svg></button>",
-		nextArrow: "<button type='button' class='slider_arrow slider_arrow-next'><svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 15 27' enable-background='new 0 0 15 27' xml:space='preserve'><path fill-rule='evenodd' clip-rule='evenodd' d='M15,13.7L1.3,27L0,25.7l12.3-12.1L0,1.1L1.2,0L15,13.7z'/></svg></button>",
+		prevArrow: "<button type='button' class='slider_arrow slider_arrow-pre'><div class='wrapper-slider-arrow'><svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 15 27' enable-background='new 0 0 15 27' xml:space='preserve'><path fill-rule='evenodd' clip-rule='evenodd' d='M13.8,0L15,1.1L2.7,13.6L15,25.7L13.7,27L0,13.7L13.8,0z'/></svg></div></button>",
+		nextArrow: "<button type='button' class='slider_arrow slider_arrow-next'><div class='wrapper-slider-arrow'><svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 15 27' enable-background='new 0 0 15 27' xml:space='preserve'><path fill-rule='evenodd' clip-rule='evenodd' d='M15,13.7L1.3,27L0,25.7l12.3-12.1L0,1.1L1.2,0L15,13.7z'/></svg></div></button>",
 	});
 }
 
@@ -3909,15 +3909,6 @@ function initSetting() {
 var globalSetting = [];
 initSetting();
 
-function initShare() {
-	var myShare = document.getElementById('my-share');
-	var share = Ya.share2(myShare, {
-		theme: {
-			services: 'vkontakte,facebook'
-		}
-	});
-};
-
 function scrollUp() {
 	$('.btn-scroll-top').click(function () {
 		$('body,html').animate({scrollTop:0},800);
@@ -3979,7 +3970,6 @@ $( document ).ready(function() {
 	initAccordionContact();
 	initCommentsDrop();
 	scrollUp();
-	initShare();
 
 	// $('.js-add-favorites').each( function {
 	// 	$(this).on('click', function() {

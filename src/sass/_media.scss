@@ -411,7 +411,7 @@
 	.content-wrapp {
 		.block-left {
 			position: relative;
-			padding: 100px 0 0;
+			padding: 30px 0 0;
 			margin: 0 auto;
 		}
 	}
@@ -556,6 +556,10 @@
 	}
 }
 
+.content-wrapp .block-center-text:first-child{
+	padding: 30px 0 0 0;
+}
+
 @media (max-width: 1020px) {
 	.auth {
 		padding: 30px 20px 0
@@ -568,6 +572,11 @@
 		margin: 30px auto 0;
 		width: 385px;
 	}
+
+	.content-wrapp .block-center-text:first-child{
+		padding: 50px 20px 0 20px;
+	}
+
 	.company-content-wrapp {
 		width: 96%;
 	}
@@ -576,8 +585,44 @@
 		display: none;
 	}
 	.content-wrapp .block-center-text {
-		padding: 50px 20px;
+		padding: 30px 0 0;
 	}
+
+	.content-wrapp .block-center-text p:last-child{
+		padding-bottom: 0;
+	}
+	.content-wrapp .block-center-text p.line-bottom{
+		padding: 0 0 45px 0;
+	}
+
+	.block-center-text + .block-center-img-50{
+		padding-top: 40px;
+	}
+
+	.content-wrapp .block-center-text p {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.block-center-text + .block-left{
+		padding: 30px 0 0;
+	}
+	.content-wrapp .block-left a{
+		padding: 0;
+	}
+
+	.content-wrapp .block-center-text h2{
+		padding: 0 20px 20px;
+	}
+
+	.content-wrapp .block-center-img-50 figcaption{
+		padding: 20px 20px 0 20px;
+	}
+
+	.content-wrapp .auth-foto{
+		padding: 30px 20px 0 20px;
+	}
+
 	.wrapp_footer{
 		.footer-menu  {
 			.social_links {
@@ -703,6 +748,9 @@
 	}
 	.wrapp-map-site_row-subsections{
 		padding-bottom: 0;
+	}
+	body{
+		word-wrap: break-word;
 	}
 }
 
@@ -1139,9 +1187,12 @@
 		}
 	}
 	.content-wrapp .block-center-img-50 .slider .slider_arrow {
-		    top: 37%;
+		    top: 0;
 	}
-	
+	.content-wrapp .block-center-citation .slider .slider_arrow, .content-wrapp .block-center-img-50 .slider .slider_arrow{
+		height: 87.5%;
+	}
+
 }
 
 @media (max-width: 650px) {
@@ -1151,8 +1202,11 @@
 }
 
 @media (max-width: 542px) {
+	.content-wrapp .block-center-citation .slider .slider_arrow, .content-wrapp .block-center-img-50 .slider .slider_arrow{
+		height: 84.5%;
+	}
 	.content-wrapp .block-center-img-50 .slider .slider_arrow {
-		    top: 36%;
+		    top: 0;
 	}
 	.company-content-wrapp .content-block .content-right .gallery_foto .wrapp-img {
 		flex-basis: 45%;
