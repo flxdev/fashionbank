@@ -2754,7 +2754,7 @@ function initYandexMap(){
 	myPlacemark0 = new ymaps.Placemark([mapSetting.markerX,mapSetting.markerY], {
 		balloonContent: "" 
 		}, {
-		iconImageHref: "img/map-marker.png", 
+		iconImageHref: "#/local/templates/main/img/map-marker.png",
 		iconImageSize: [27, 35], 
 		iconImageOffset: [0, 0]
 	}); 

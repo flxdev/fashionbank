@@ -362,6 +362,7 @@
 			text-align: center;
 			padding-left: 10px;
 			padding-top: 70px;
+			padding-bottom: 10px;
 			.burger_menu-big-mobile {
 				display: block;
 			}
@@ -392,6 +393,7 @@
 		}
 		.social_links {
 			position: relative;
+			margin-bottom: 80px;
 			// margin: 0 auto;
 			// left: 0;
 			// right: 0;
@@ -585,7 +587,7 @@
 		display: none;
 	}
 	.content-wrapp .block-center-text {
-		padding: 30px 0 0;
+		padding: 30px 20px 0;
 	}
 
 	.content-wrapp .block-center-text p:last-child{
@@ -593,15 +595,11 @@
 	}
 	.content-wrapp .block-center-text p.line-bottom{
 		padding: 0 0 45px 0;
+		margin-bottom: 20px;
 	}
 
 	.block-center-text + .block-center-img-50{
 		padding-top: 40px;
-	}
-
-	.content-wrapp .block-center-text p {
-		padding-left: 20px;
-		padding-right: 20px;
 	}
 
 	.block-center-text + .block-left{
@@ -612,7 +610,8 @@
 	}
 
 	.content-wrapp .block-center-text h2{
-		padding: 0 20px 20px;
+		padding: 20px 0 5px;
+		line-height: 1.2;
 	}
 
 	.content-wrapp .block-center-img-50 figcaption{
@@ -634,6 +633,56 @@
 			}
 		}
 	}
+	.article-wrapp .article-wrapp-info .panel_dop .add_favorites, .article-wrapp .article-wrapp-info .panel_dop .all_article{
+		padding-left: 0;
+	}
+
+	.article-wrapp .article-wrapp-info .panel_dop .all_article svg{
+		margin-right: 0;
+	}
+
+	.content-wrapp .block-center-img-50+.block-center-text{
+		padding: 0 20px 20px;
+	}
+
+	.container-scroll-top{
+		display: none !important;
+	}
+
+	.article-wrapp .article-wrapp-info .panel_dop .share{
+		text-align: center;
+	}
+
+	.article-wrapp .article-wrapp-info .panel_dop .add_favorites .heart{
+		margin-right: 0;
+	}
+
+	.box-read-more_txt{
+		padding: 35px 20px 0;
+	}
+
+	.comments-wrapp{
+		margin-top: 30px;
+	}
+
+	.wrapp_cards-block-1{
+		padding-top: 10px;
+	}
+
+	.wrapp_popup{
+		position: absolute;
+		-webkit-overflow-scrolling: touch;
+		.wrapp_popup-contener{
+			padding-bottom: 70px;
+		}
+	}
+
+	.comments-wrapp-content{
+		.container-comments{
+			padding-top: 80px;
+		}
+	}
+
 }
 
 @media (max-width: 936px) {
@@ -841,7 +890,6 @@
 	}
 	.article-wrapp .article-wrapp-info .panel_dop .all_article {
 		text-align: center;
-		padding-left: 20px;
 		margin-top: 20px;
 	}
 	.content-wrapp .block-center-img-100 figcaption {
@@ -1109,9 +1157,6 @@
 			.panel_dop {
 				flex-direction: column-reverse;
 				align-items: center;
-				.share {
-					display: none;
-				}
 				.add_favorites {
 					margin-top: 15px;
 				}
@@ -1338,6 +1383,10 @@
 	}
 	.favourites .favourites-left .favourites-menu li {
 		display: block;
+	}
+
+	.form-content{
+		padding: 0 20px !important;
 	}
 }
 
