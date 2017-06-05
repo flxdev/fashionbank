@@ -108,6 +108,7 @@
 				padding: 0;
 				margin: 0 0 5px 0;
 				font-size: 2.4rem;
+				word-break: break-all;
 			}
 			.dop_info {
 				font-size: 1.3rem;
@@ -697,7 +698,7 @@
 	.first-block {
 		.content-left {
 			h3 {
-				display: none;
+				//display: none;
 			}
 		}
 	}
@@ -1087,6 +1088,10 @@
 		width: 100%;
 		height: 530px;
 	}
+}
+
+.sticky-container .company-contact{
+	height: inherit;
 }
 
 .company-contact {

@@ -509,7 +509,7 @@
 	// 	height: 140px;
 	// }
 	.specialist-page-first-screen .article-wrapp-info .wrapp-info {
-		padding-bottom: 41px;
+		padding-bottom: 81px;
 	}
 }
 
@@ -801,6 +801,10 @@
 	body{
 		word-wrap: break-word;
 	}
+
+    .article-wrapp .article-wrapp-info .panel_dop .share{
+      margin-bottom: 25px;
+    }
 }
 
 @media (max-width: 700px) {

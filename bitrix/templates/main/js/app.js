@@ -3620,20 +3620,20 @@ function initMenuOther() {
 		}
 	});
 }
-
+FV
 function initReview() {
 	$('.js-select-review').each(function() {
 		$(this).on('click', function() {
 			var __val = $(this).data('review');
 			$('.js-review-input').val(__val);
-			$(this).siblings().css({"background-image" : "url('img/star-y.png')"})
-			$(this).nextAll().css({"background-image" : "url('img/star-g.png')"})
-			$(this).css({"background-image" : "url('img/star-y.png')"});
+			$(this).siblings().css({"background-image" : "url('/local/templates/main/img/star-y.png')"})
+			$(this).nextAll().css({"background-image" : "url('/local/templates/main/img/star-g.png')"})
+			$(this).css({"background-image" : "url('/local/templates/main/img/star-y.png')"});
 		})
 		$(this).on("mouseenter", function() {
-			$(this).css({"background-image" : "url('img/star-y.png')"});
-			$(this).prevAll().css({"background-image" : "url('img/star-y.png')"});
-			$(this).nextAll().css({"background-image" : "url('img/star-g.png')"})
+			$(this).css({"background-image" : "url(''/local/templates/main/img/star-y.png')"});
+			$(this).prevAll().css({"background-image" : "url('/local/templates/main/img/star-y.png')"});
+			$(this).nextAll().css({"background-image" : "url('/local/templates/main/img/star-g.png')"})
 		})
 	})
 	
@@ -3696,46 +3696,76 @@ function initTagResize() {
 
 function initLike() {
 	$('.js-like').each(function() {
-		$(this).attr( "data-like", '1');
-		$(this).on('click', function() {
-			if ($(this).attr('data-like') == '1') {
-				$(this).find('.heart').addClass('added');
-				$(this).attr( "data-like", '0');
-				$(this).toggleClass('show');
-			}
-			else {
-				$(this).find('.heart').removeClass('added');
-				$(this).attr( "data-like", '1');
-				$(this).toggleClass('show');
-			}
-			return false;
-		})
-	})
-	$('.js-add-favorites').each(function() {
-		$(this).attr( "data-like", '1');
-		$(this).on('click', function() {
-			if ($(this).attr('data-like') == '1') {
-				$(this).find('.heart').addClass('added');
-				$(this).attr( "data-like", '0');
-			}
-			else {
-				$(this).find('.heart').removeClass('added');
-				$(this).attr( "data-like", '1');
-			}
-			return false;
-		});
-		// $(this).on('mouseenter', function() {
-		// 	// $(this).find('img').attr( 'src', 'img/icons/heart-2.png' );
-		// })
-		// $(this).on('mouseleave', function() {
-		// 	if ($(this).attr('data-like') == '1') {
-		// 		// $(this).find('img').attr( 'src', 'img/icons/heart1.png' );
-		// 		// $(this).find('span').removeClass('span-noactive');
-		// 	}
-		// })
-	});
+        $(this).attr( "data-like", '1');
+        $(this).on('click', function() {
+            if ($(this).attr('data-like') == '1') {
+                $(this).find('.heart').addClass('add');
+                $(this).attr( "data-like", '0');
+                $(this).toggleClass('show');
+            }
+            else {
+                $(this).find('.heart').removeClass('add');
+                $(this).attr( "data-like", '1');
+                $(this).toggleClass('show');
+            }
+            return false;
+        })
+    })
+    $('.js-add-favorites').each(function() {
+        $(this).attr( "data-like", '1');
+        $(this).on('click', function() {
+            if ($(this).attr('data-like') == '1') {
+                $(this).find('.heart').addClass('add');
+                $(this).attr( "data-like", '0');
+            }
+            else {
+                $(this).find('.heart').removeClass('add');
+                $(this).attr( "data-like", '1');
+            }
+            return false;
+        });
+        // $(this).on('mouseenter', function() {
+        // 	// $(this).find('img').attr( 'src', 'img/icons/heart-2.png' );
+        // })
+        // $(this).on('mouseleave', function() {
+        // 	if ($(this).attr('data-like') == '1') {
+        // 		// $(this).find('img').attr( 'src', 'img/icons/heart1.png' );
+        // 		// $(this).find('span').removeClass('span-noactive');
+        // 	}
+        // })
+    });
 
-	
+    $('.js-like').each(function() {
+        $(this).attr( "data-like", '1');
+        $(this).on('click', function() {
+            if ($(this).attr('data-like') == '1') {
+                $(this).find('.icon-heart').addClass('added');
+                console.log('cdcdcdc');
+                $(this).attr( "data-like", '0');
+                $(this).toggleClass('show');
+            }
+            else {
+                $(this).find('.icon-heart').removeClass('added');
+                $(this).attr( "data-like", '1');
+                $(this).toggleClass('show');
+            }
+            return false;
+        })
+    });
+    $('.js-add-favorites').each(function() {
+        $(this).attr( "data-like", '1');
+        $(this).on('click', function() {
+            if ($(this).attr('data-like') == '1') {
+                $(this).find('.icon-heart').addClass('added');
+                $(this).attr( "data-like", '0');
+            }
+            else {
+                $(this).find('.icon-heart').removeClass('added');
+                $(this).attr( "data-like", '1');
+            }
+            return false;
+        });
+    });
 }
 
 function initFooterHover() {
