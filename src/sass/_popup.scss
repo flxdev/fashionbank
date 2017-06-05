@@ -108,6 +108,13 @@
 			input {
 				display: block;
 				width: 100%;
+				outline: none;
+				&:hover{
+					outline: none;
+				}
+				&:focus{
+					outline: none;
+				}
 			}
 			label {
 				left: 50px;

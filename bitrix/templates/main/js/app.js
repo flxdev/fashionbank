@@ -3620,7 +3620,6 @@ function initMenuOther() {
 		}
 	});
 }
-FV
 function initReview() {
 	$('.js-select-review').each(function() {
 		$(this).on('click', function() {
