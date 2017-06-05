@@ -3,16 +3,8 @@ mixin card-vertical(className,img,type,showCat,videoSlider)
 		div(class=className)
 			a(href="#")
 				div.label.label-orang спецпроект
-				div.like.js-like(data-like='1')
-					// когда отмечано добавляется класс .add к классу .icon-heart
-					.icon-heart
-						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"vviewBox="0 0 16 15" xml:space="preserve">
-						<g>
-						<path d="M8,14.5c-0.1,0-0.1,0-0.2,0C7.5,14.3,0.5,11.2,0.5,5c0-2.5,2-4.5,4.5-4.5c1.1,0,2.2,0.4,3,1.1c0.8-0.7,1.9-1.1,3-1.1 c2.5,0,4.5,2,4.5,4.5c0,6.2-7,9.3-7.3,9.4C8.2,14.4,8.1,14.5,8,14.5z"/>
-						<path d="M11,1c2.2,0,4,1.8,4,4c0,6-7,9-7,9s-7-3-7-9c0-2.2,1.8-4,4-4c1.2,0,2.3,0.5,3,1.4C8.8,1.5,9.8,1,11,1 M11,0 C9.9,0,8.9,0.4,8,1C7.2,0.4,6.1,0,5,0C2.2,0,0,2.2,0,5c0,6.6,7.3,9.8,7.6,9.9C7.8,14.9,7.9,15,8,15s0.3,0,0.4-0.1 C8.7,14.7,16,11.6,16,5C16,2.2,13.8,0,11,0L11,0z"/>
-						</g>
-						</svg>
-					//span.heart
+				div.like.js-like
+					span.heart
 					// img(src='img/icons/heart1.png')
 				if (videoSlider)
 					img.video-play(src='img/video_play.png' alt='')
@@ -35,14 +27,7 @@ mixin card-vertical(className,img,type,showCat,videoSlider)
 			a(href="#" )
 				div.label.label-blue спецпроект
 				div.like.js-like
-					// когда отмечано добавляется класс .add
-					.icon-heart
-						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"vviewBox="0 0 16 15" xml:space="preserve">
-						<g>
-						<path d="M8,14.5c-0.1,0-0.1,0-0.2,0C7.5,14.3,0.5,11.2,0.5,5c0-2.5,2-4.5,4.5-4.5c1.1,0,2.2,0.4,3,1.1c0.8-0.7,1.9-1.1,3-1.1 c2.5,0,4.5,2,4.5,4.5c0,6.2-7,9.3-7.3,9.4C8.2,14.4,8.1,14.5,8,14.5z"/>
-						<path d="M11,1c2.2,0,4,1.8,4,4c0,6-7,9-7,9s-7-3-7-9c0-2.2,1.8-4,4-4c1.2,0,2.3,0.5,3,1.4C8.8,1.5,9.8,1,11,1 M11,0 C9.9,0,8.9,0.4,8,1C7.2,0.4,6.1,0,5,0C2.2,0,0,2.2,0,5c0,6.6,7.3,9.8,7.6,9.9C7.8,14.9,7.9,15,8,15s0.3,0,0.4-0.1 C8.7,14.7,16,11.6,16,5C16,2.2,13.8,0,11,0L11,0z"/>
-						</g>
-						</svg>
+					span.heart
 				div.card-bg(style=strImg)
 				div.wrapp-img-bg-full
 				if (showCat)
@@ -58,15 +43,9 @@ mixin card-vertical(className,img,type,showCat,videoSlider)
 		div(class=className)
 			a(href="#")
 				div.label.label-orang спецпроект
-				div.like.js-like.fvfvf
-					// когда отмечано добавляется класс .add
-					.icon-heart
-						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"vviewBox="0 0 16 15" xml:space="preserve">
-						<g>
-						<path d="M8,14.5c-0.1,0-0.1,0-0.2,0C7.5,14.3,0.5,11.2,0.5,5c0-2.5,2-4.5,4.5-4.5c1.1,0,2.2,0.4,3,1.1c0.8-0.7,1.9-1.1,3-1.1 c2.5,0,4.5,2,4.5,4.5c0,6.2-7,9.3-7.3,9.4C8.2,14.4,8.1,14.5,8,14.5z"/>
-						<path d="M11,1c2.2,0,4,1.8,4,4c0,6-7,9-7,9s-7-3-7-9c0-2.2,1.8-4,4-4c1.2,0,2.3,0.5,3,1.4C8.8,1.5,9.8,1,11,1 M11,0 C9.9,0,8.9,0.4,8,1C7.2,0.4,6.1,0,5,0C2.2,0,0,2.2,0,5c0,6.6,7.3,9.8,7.6,9.9C7.8,14.9,7.9,15,8,15s0.3,0,0.4-0.1 C8.7,14.7,16,11.6,16,5C16,2.2,13.8,0,11,0L11,0z"/>
-						</g>
-						</svg>
+				div.like.js-like
+					span.heart
+					// img(src='img/icons/heart1.png')
 				if (videoSlider)
 					img.video-play(src='img/video_play.png' alt='')
 				div.wrapp-img
