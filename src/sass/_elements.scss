@@ -45,6 +45,9 @@
 	font-size: 1.2rem;
 }
 
+input[type="text"]:focus { outline: none; }
+
+
 // .item-filter-input-checkbox {
 // 	cursor: default;
 // 	input[type=checkbox] {

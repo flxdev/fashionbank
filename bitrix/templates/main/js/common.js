@@ -376,6 +376,7 @@ function initPopup() {
 		var __h = globalpopup = '.js-' + $(this).data('open-popup');
 
 		var top = $(window).scrollTop();
+		console.log(top);
 		window.__prevScroll = top;
 		$("body").css("top", - (top) + 'px');
 
