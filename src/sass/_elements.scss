@@ -18,6 +18,8 @@
 	z-index: 510;
 	transition: all 0.3s ease;
 	margin: 15px 0;
+	box-shadow: none;
+	border-radius: 0;
 }
 .input-border-bottom + label {
 	position: absolute;
@@ -26,6 +28,7 @@
 	margin-top: -50px;
 	color: $grey;
 	transition: all 0.3s ease;
+	box-shadow: none;
 	span {
 		color: red;
 	}
@@ -44,9 +47,6 @@
 	margin-top: -70px;
 	font-size: 1.2rem;
 }
-
-input[type="text"]:focus { outline: none; }
-
 
 // .item-filter-input-checkbox {
 // 	cursor: default;
@@ -219,8 +219,9 @@ input[type="text"]:focus { outline: none; }
 		z-index: 5;
 		li {
 			letter-spacing: 3.5px;
+			color: white;
 			a {
-				color: #c4c3c3;
+				color: white;
 			}
 		}
 	}

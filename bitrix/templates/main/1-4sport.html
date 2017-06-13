@@ -246,6 +246,36 @@
               <p class="text-note success">Ваш отзыв принят в обработку. После прохождения модерации, он будет опубликован на сайте.</p>
             </div>
           </div>
+          <div class="wrapp_popup-contener js-popup-create-account">
+            <div class="wrapp_popup_window hidden">
+              <div class="wrapp_close js-popup-close" data-close-popup="popup-add-comp"><svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54.3 54.4" enable-background="new 0 0 54.3 54.4" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.7,4.8l2.5-2.5l48.8,48.8l-2.5,2.5L0.7,4.8z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M3.2,2.3L5.5,0l48.8,48.8l-2.3,2.3L3.2,2.3z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M49.2,0.4l2.5,2.5L2.5,52.1L0,49.6L49.2,0.4z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M51.6,2.9L54,5.2L4.8,54.4l-2.4-2.4L51.6,2.9z"/></svg></div>
+              <form class="js-form no-pad">
+                <h3>Создать компанию</h3>
+                <div class="form-content">
+                  <input class="input-border-bottom" data-validation="required" type="text">
+                  <label>Название компании<span>*</span></label>
+                  <input class="input-border-bottom" data-validation="required" type="text">
+                  <label>Имя и фамилия<span>*</span></label>
+                  <input class="input-border-bottom" data-validation="email required" type="text">
+                  <label>E-mail<span>*</span></label>
+                  <input class="input-border-bottom" data-validation="required" data-validation-strength="5" type="text">
+                  <label>Телефон<span>*</span></label>
+                </div>
+                <button class="btn btn-size-225 btn-black">Создать</button>
+              </form>
+            </div>
+          </div>
+          <div class="wrapp_popup-contener js-popup-create-account-success">
+            <div class="wrapp_popup_window hidden">
+              <div class="wrapp_close js-popup-close" data-close-popup="popup-create-account-success">
+                <svg>
+                  <use xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-close" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                </svg>
+              </div>
+              <h3>Спасибо за заявку!</h3>
+              <p class="text-note success">Мы свяжемся с Вами в ближайшее время</p>
+            </div>
+          </div>
         </div>
         <div class="search-wrapp hidden js-search">
           <div class="search-wrapp-content">
@@ -1966,7 +1996,7 @@
           <div class="max-width-1300">
             <div class="wrapp_cards-block-1 cards-block-sport cards-block-sport-articles">
               <div class="block-title">
-                <ul class="tags js-tags-resize">
+                <ul class="tags js-tags-resize cards-block-sport-articles-float">
                   <li class="active"> <a href="#"># Все<span>248</span></a></li>
                   <li> <a href="#"># Все<span>248</span></a></li>
                   <li> <a href="#"># Здоровье<span>248</span></a></li>
@@ -1990,6 +2020,9 @@
                   <li> <a href="#"># Все<span>248</span></a></li>
                   <li> <a href="#"># Все<span>248</span></a></li>
                 </ul>
+                <div class="block-btn-add-comp">
+                  <div class="btn btn-size-225 btn-black btn-add-comp js-popup-open" data-open-popup="popup-add-comp">Добавить компанию</div>
+                </div>
               </div>
               <div class="block-filters">
                 <div class="item-filter js-chechbox">
@@ -2782,7 +2815,7 @@
                             <div class="label label-orang">спецпроект</div>
                             <div class="like js-like"><span class="heart"></span>
                               <!-- img(src='img/icons/heart1.png')-->
-                            </div>
+                            </div><img class="video-play" src="img/video_play.png" alt="">
                             <div class="wrapp-img"><img src="img/2.jpg" alt="">
                               <div class="wrapp-img-bg"></div>
                             </div>
@@ -2797,7 +2830,7 @@
                             <div class="label label-orang">спецпроект</div>
                             <div class="like js-like"><span class="heart"></span>
                               <!-- img(src='img/icons/heart1.png')-->
-                            </div>
+                            </div><img class="video-play" src="img/video_play.png" alt="">
                             <div class="wrapp-img"><img src="img/2.jpg" alt="">
                               <div class="wrapp-img-bg"></div>
                             </div>
@@ -2812,7 +2845,7 @@
                             <div class="label label-orang">спецпроект</div>
                             <div class="like js-like"><span class="heart"></span>
                               <!-- img(src='img/icons/heart1.png')-->
-                            </div>
+                            </div><img class="video-play" src="img/video_play.png" alt="">
                             <div class="wrapp-img"><img src="img/2.jpg" alt="">
                               <div class="wrapp-img-bg"></div>
                             </div>
@@ -2827,7 +2860,7 @@
                             <div class="label label-orang">спецпроект</div>
                             <div class="like js-like"><span class="heart"></span>
                               <!-- img(src='img/icons/heart1.png')-->
-                            </div>
+                            </div><img class="video-play" src="img/video_play.png" alt="">
                             <div class="wrapp-img"><img src="img/2.jpg" alt="">
                               <div class="wrapp-img-bg"></div>
                             </div>
@@ -2852,7 +2885,7 @@
                             <div class="label label-orang">спецпроект</div>
                             <div class="like js-like"><span class="heart"></span>
                               <!-- img(src='img/icons/heart1.png')-->
-                            </div>
+                            </div><img class="video-play" src="img/video_play.png" alt="">
                             <div class="wrapp-img"><img src="img/2.jpg" alt="">
                               <div class="wrapp-img-bg"></div>
                             </div>
@@ -2867,7 +2900,7 @@
                             <div class="label label-orang">спецпроект</div>
                             <div class="like js-like"><span class="heart"></span>
                               <!-- img(src='img/icons/heart1.png')-->
-                            </div>
+                            </div><img class="video-play" src="img/video_play.png" alt="">
                             <div class="wrapp-img"><img src="img/2.jpg" alt="">
                               <div class="wrapp-img-bg"></div>
                             </div>
@@ -2882,7 +2915,7 @@
                             <div class="label label-orang">спецпроект</div>
                             <div class="like js-like"><span class="heart"></span>
                               <!-- img(src='img/icons/heart1.png')-->
-                            </div>
+                            </div><img class="video-play" src="img/video_play.png" alt="">
                             <div class="wrapp-img"><img src="img/2.jpg" alt="">
                               <div class="wrapp-img-bg"></div>
                             </div>
@@ -2897,7 +2930,7 @@
                             <div class="label label-orang">спецпроект</div>
                             <div class="like js-like"><span class="heart"></span>
                               <!-- img(src='img/icons/heart1.png')-->
-                            </div>
+                            </div><img class="video-play" src="img/video_play.png" alt="">
                             <div class="wrapp-img"><img src="img/2.jpg" alt="">
                               <div class="wrapp-img-bg"></div>
                             </div>
@@ -2912,7 +2945,7 @@
                             <div class="label label-orang">спецпроект</div>
                             <div class="like js-like"><span class="heart"></span>
                               <!-- img(src='img/icons/heart1.png')-->
-                            </div>
+                            </div><img class="video-play" src="img/video_play.png" alt="">
                             <div class="wrapp-img"><img src="img/2.jpg" alt="">
                               <div class="wrapp-img-bg"></div>
                             </div>

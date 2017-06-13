@@ -858,6 +858,14 @@ input[type='password'] {font-family: arial}
 	padding: 30px 0;
 	.card {
 		flex-basis: 22%;
+		.video-play {
+			position: absolute;
+			z-index: 100;
+			width: 35px;
+			left: 50%;
+			margin-left: -13px;
+			top: 22%;
+		}
 	}
 	//cards-block-2
 	
@@ -902,6 +910,49 @@ input[type='password'] {font-family: arial}
 		color: white !important;
 	}
 }
+.wrapp_slider-video-bg-black .card.text-white:after{
+	content: '';
+	opacity: 0;
+}
+.wrapp_slider-video-bg-black .card.card-big.text-white:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: -moz-linear-gradient(top, rgba(37,37,37,0) 0%, rgba(37,37,37,0) 27%, rgba(37,37,37,0.3) 64%, rgba(37,37,37,0.8) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(37,37,37,0) 0%,rgba(37,37,37,0) 27%,rgba(37,37,37,0.3) 64%,rgba(37,37,37,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(37,37,37,0) 0%,rgba(37,37,37,0) 27%,rgba(37,37,37,0.3) 64%,rgba(37,37,37,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00252525', endColorstr='#cc252525',GradientType=0 );
+	opacity: 1;
+}
+.card.text-white:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: -moz-linear-gradient(top, rgba(37,37,37,0) 0%, rgba(37,37,37,0) 27%, rgba(37,37,37,0.3) 64%, rgba(37,37,37,0.8) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(37,37,37,0) 0%,rgba(37,37,37,0) 27%,rgba(37,37,37,0.3) 64%,rgba(37,37,37,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(37,37,37,0) 0%,rgba(37,37,37,0) 27%,rgba(37,37,37,0.3) 64%,rgba(37,37,37,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00252525', endColorstr='#cc252525',GradientType=0 );
+}
+.card.text-white .card-category{
+	position: relative;
+	z-index: 5;
+	color: white;
+}
+.card.text-white .card-date_like{
+	position: relative;
+	z-index: 5;
+	color: white !important;
+}
+
+.card.text-white:hover .wrapp-img-bg{
+	z-index: 5;
+}
 .wrapp_slider-video-bg-black {
 	background-color: #000;
 	.wrapp_slider {
@@ -920,7 +971,7 @@ input[type='password'] {font-family: arial}
 				z-index: 100;
 			}
 			.like {
-				z-index: -1;
+				z-index: 6;
 			}
 			&:hover {
 				.card-title {
@@ -1149,11 +1200,16 @@ input[type='password'] {font-family: arial}
 	width: 90px;
 	display: none;
 	z-index: 5;
+	&:hover .box-shadow-scroll{
+		background-color: #b1b1b1;
+		opacity: 0.5;
+	}
 	.box-shadow-scroll{
 		position: absolute;
 		width: 90px;
 		height: 100%;
 		transition: all .4s ease-in-out;
+		cursor: pointer;
 	}
 	.btn-scroll-top{
 		position: absolute;
@@ -1165,10 +1221,6 @@ input[type='password'] {font-family: arial}
 		img{
 			width: 100%;
 		}
-	}
-	.btn-scroll-top:hover + .box-shadow-scroll{
-		background-color: #b1b1b1;
-		opacity: 0.5;
 	}
 }
 
@@ -1182,4 +1234,102 @@ input[type='password'] {font-family: arial}
 	font-family: black;
 	letter-spacing: 2px;
 	padding: 50px 0 0 0;
+}
+
+.user_panel .dropdown{
+	padding: 0;
+}
+
+.ymaps-b-zoom_hints-pos_right{
+	top: 10px !important;
+	left: initial !important;
+	right: 5px;
+}
+
+.wrapp_slider-categories-bg-grey .card{
+	margin: 15px 8px 35px;
+}
+
+.block-btn-add-comp{
+	display: inline-block;
+	vertical-align: top;
+	width: 27%;
+	.btn-size-225{
+		padding: 10px 0;
+		float: right;
+	}
+	.btn-add-comp{
+		cursor: pointer;
+	}
+}
+
+.block-link-offer-apply{
+	display: inline-block;
+	vertical-align: top;
+	width: 27%;
+	font-size: 0;
+	.btn-link-contract-offer{
+		background-color: #fff;
+		color: #000;
+		text-transform: uppercase;
+		font-size: 1.4rem;
+		letter-spacing: 1px;
+		-webkit-transition: all .3s ease;
+		transition: all .3s ease;
+		display: inline-block;
+		vertical-align: top;
+		border: 1px solid black;
+		padding: 8px 10px;
+		&:hover{
+			background-color: #0039de;
+			color: #fff;
+			border: 1px solid #0039de;
+		}
+	}
+	.btn-link-apply-now{
+		background-color: #000;
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 1.4rem;
+		letter-spacing: 1px;
+		-webkit-transition: all .3s ease;
+		transition: all .3s ease;
+		display: inline-block;
+		vertical-align: top;
+		border: 1px solid black;
+		padding: 8px 10px;
+		margin-left: 10px;
+		&:hover{
+			background-color: #0039de;
+			color: #fff;
+			border: 1px solid #0039de;
+		}
+	}
+}
+
+.block-float-right{
+	float: right;
+}
+
+.block-title{
+	font-size: 0;
+}
+
+.cards-block-sport-articles-float{
+	display: inline-block;
+	vertical-align: top;
+	width: 73%;
+}
+
+.form-content {
+	padding: 0 50px;
+}
+
+.border-bottom{
+	border-bottom: 4px solid #000;
+}
+
+.specialists .card-horizontal a:hover .wrapp-img-bg-h{
+	border: 7px solid #0039de;
+	background-color: inherit;
 }

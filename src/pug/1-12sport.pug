@@ -1,0 +1,716 @@
+extends _layout
+
+block title
+    title Title of template
+block content
+    div.wrapp_page
+        include includes/_card-h-2
+        include includes/_header
+        nav.max-width-1300
+            ul.breadcrumbs
+                li
+                    a(href='#') Главная
+                li
+                    a(href='#') Спорт
+                li
+                    a(href='#') Статьи
+
+        section
+            div.max-width-1300
+                div.filters-wrapp
+                    h2 Всё о спорте
+                    ul.filters-li
+                        li
+                            a(href='#') Обзор
+                        li.active
+                            a(href='#') Статьи
+                        li
+                            a(href='#') Компании
+                        li
+                            a(href='#') Специалисты
+                        li
+                            a(href='#') Магазины
+                    div.dropdown.js-menu-dropdown
+                        p.js-menu-dropdown-open Сначала
+                            span новые
+                                svg.down
+                                    use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
+                        ul.js-menu-dropdown-dop.dropdown-list
+                            li
+                                a(href='#') Новые
+                            li
+                                a(href='#') Популярные
+                            li
+                                a(href='#') Обсуждаемые
+
+
+        section
+            div.max-width-1300
+                div.wrapp_cards-block-1.cards-block-sport.cards-block-sport-articles
+                    div.block-title
+                        ul.tags.js-tags-resize.cards-block-sport-articles-float
+                            li.active
+                                a(href = '#') # Все
+                                    span 248
+                            li
+                                a(href = '#') # Все
+                                    span 248
+                            li
+                                a(href = '#') # Здоровье
+                                    span 248
+                            li
+                                a(href = '#') # Красота
+                                    span 248
+                            li
+                                a(href = '#') # Красота
+                                    span 248
+                            li
+                                a(href = '#') # Красота
+                                    span 2
+                            li
+                                a(href = '#') # Все
+                                    span 248
+                            li
+                                a(href = '#') # Все
+                                    span 248
+                            li
+                                a(href = '#') # Все
+                                    span 248
+                            li
+                                a(href = '#') # Все
+                                    span 248
+                            li
+                                a(href = '#') # Все
+                                    span 248
+                            li
+                                a(href = '#') # Все
+                                    span 248
+                            li
+                                a(href = '#') # Все
+                                    span 248
+                            li
+                                a(href = '#') # Все
+                                    span 248
+                            li
+                                a(href = '#') # Все
+                                    span 248
+                            li
+                                a(href = '#') # Все
+                                    span 248
+                            li
+                                a(href = '#') # Все
+                                    span 248
+                            li
+                                a(href = '#') # Все
+                                    span 248
+                            li
+                                a(href = '#') # Мода и стиль
+                                    span 248
+                            li
+                                a(href = '#') # Все
+                                    span 248
+                            li
+                                a(href = '#') # Все
+                                    span 248
+                            li
+                                a(href = '#') # Все
+                                    span 248
+                        div.block-link-offer-apply
+                            .block-float-right
+                                a(href='#').btn-link-contract-offer Договор оферты
+                                a(href='#').btn-link-apply-now Подать заявку
+
+
+                    div.block-filters
+                        div.item-filter.js-chechbox
+                            div.wrapp-filter-content.js-item-filter
+                                p Район Минска
+                                p.fild-filter Выбрать район
+                                svg.close.js-close.hidden
+                                    use(xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-close" xmlns:xlink="http://www.w3.org/1999/xlink")
+                            div.item-filter-content
+                                .form.type-1.input-wrapp-pad
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='q')
+                                        label(for='q') Заводской
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='q2')
+                                        label(for='q2') Ленинский
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id ='q3')
+                                        label(for='q3') Московский
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id ='q4')
+                                        label(for='q4') Октябрьский
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id ='q5')
+                                        label(for='q5') Советский
+                                    button.btn.btn-size-130.btn-black.js-apply-filter Применить
+                        div.item-filter.js-chechbox
+                            div.wrapp-filter-content.js-item-filter
+                                p Дополнительные услуги
+                                p.fild-filter Выбрать услуги
+                                svg.close.js-close.hidden
+                                    use(xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-close" xmlns:xlink="http://www.w3.org/1999/xlink")
+                            div.item-filter-content
+                                form.type-1.input-wrapp-pad
+                                    div.input-wrapp
+                                        input.ch(type='checkbox')
+                                        label Заводской
+                                    div.input-wrapp
+                                        input.ch(type='checkbox')
+                                        label Ленинский
+                                    div.input-wrapp
+                                        input.ch(type='checkbox')
+                                        label Московский
+                                    div.input-wrapp
+                                        input.ch(type='checkbox')
+                                        label Октябрьский
+                                    div.input-wrapp
+                                        input.ch(type='checkbox')
+                                        label Советский
+                                    button.btn.btn-size-130.btn-black.js-apply-filter Применить
+
+                        div.item-filter
+                            div.wrapp-filter-content.js-item-filter
+                                p Время работы
+                                p.fild-filter.js-fild-filter-slider
+                                    span С
+                                    input.js_ui_slider_value_bottom(disabled="disabled")
+                                    span ДО
+                                    input.js_ui_slider_value_top(disabled="disabled")
+                                    input(type='text').time-to
+                                    input(type='text').time-from
+                                svg.close.js-close.hidden
+                                    use(xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-close" xmlns:xlink="http://www.w3.org/1999/xlink")
+                            div.item-filter-content
+                                form.type-2
+                                    div.slider_ui.js_ui_slider(data-min='0' data-max='24' data-step='1' data-default-value-to='0' data-default-value-from='24')
+                                        span С
+                                        input.js_ui_slider_value_bottom(disabled="disabled")
+
+                                        span ДО
+                                        input.js_ui_slider_value_top(disabled="disabled")
+
+                                        div.js_ui_slider_main
+
+                                    button.btn.btn-size-130.btn-black.js-apply-filter Применить
+
+                        div.item-filter.number
+                            div.wrapp-filter-content.js-item-filter
+                                p Кол людей
+                                p.fild-filter.js-fild-filter-slider
+                                    span С
+                                    input.js_ui_slider_value_bottom(disabled="disabled")
+                                    span ПО
+                                    input.js_ui_slider_value_top(disabled="disabled")
+                                svg.close.js-close.hidden
+                                    use(xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-close" xmlns:xlink="http://www.w3.org/1999/xlink")
+                            div.item-filter-content
+                                form.type-2
+                                    div.slider_ui.js_ui_slider(data-min='0' data-max='24' data-step='1' data-default-value-to='0' data-default-value-from='24')
+                                        span С
+                                        input.js_ui_slider_value_bottom(disabled="disabled")
+
+                                        span ПО
+                                        input.js_ui_slider_value_top(disabled="disabled")
+
+                                        div.js_ui_slider_main-number
+
+                                    button.btn.btn-size-130.btn-black.js-apply-filter Применить
+
+                        div.item-filter.js-chechbox
+                            div.wrapp-filter-content.js-item-filter
+                                p Направления
+                                p.fild-filter Выбрать направления
+                                svg.close.js-close.hidden
+                                    use(xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-close" xmlns:xlink="http://www.w3.org/1999/xlink")
+                            div.item-filter-content
+                                form.type-1.input-wrapp-pad
+                                    div.input-wrapp
+                                        input.ch(type='checkbox')
+                                        label Заводской
+                                    div.input-wrapp
+                                        input.ch(type='checkbox')
+                                        label Ленинский
+                                    div.input-wrapp
+                                        input.ch(type='checkbox')
+                                        label Московский
+                                    div.input-wrapp
+                                        input.ch(type='checkbox')
+                                        label Октябрьский
+                                    div.input-wrapp
+                                        input.ch(type='checkbox')
+                                        label Советский
+                                    button.btn.btn-size-130.btn-black.js-apply-filter Применить
+                        div.item-filter.item-filter-input-checkbox
+                            div.wrapp-filter-content
+                                p Спортивные игры
+                                input.ch.js-chechbox-one(type='checkbox' id='q1')
+                                label(for='q1') Есть
+                        div.item-filter.next.js-item-filter-menu
+                            div.wrapp-filter-content
+                                svg.down
+                                    use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
+                        div.item-filter-other.hidden
+                            div.row
+                                div.item-filter.js-chechbox
+                                    div.wrapp-filter-content.js-item-filter-inMenu
+                                        p Рейтинг
+                                        p.fild-filter Выбрать рейтинг
+                                        svg.close.js-close.hidden
+                                            use(xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-close" xmlns:xlink="http://www.w3.org/1999/xlink")
+                                    div.item-filter-content
+                                        form.type-1.input-wrapp-pad
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Заводской
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Ленинский
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Московский
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Октябрьский
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Советский
+                                            button.btn.btn-size-130.btn-black.js-apply-filter Применить
+                                div.item-filter.js-chechbox
+                                    div.wrapp-filter-content.js-item-filter-inMenu
+                                        p Аэробика
+                                        p.fild-filter Выбрать направления
+                                        svg.close.js-close.hidden
+                                            use(xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-close" xmlns:xlink="http://www.w3.org/1999/xlink")
+                                    div.item-filter-content
+                                        form.type-1.input-wrapp-pad
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Заводской
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Ленинский
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Московский
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Октябрьский
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Советский
+                                            button.btn.btn-size-130.btn-black.js-apply-filter Применить
+                                div.item-filter.js-chechbox
+                                    div.wrapp-filter-content.js-item-filter-inMenu
+                                        p Банный комплекс
+                                        p.fild-filter Выбрать комплекс
+                                        svg.close.js-close.hidden
+                                            use(xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-close" xmlns:xlink="http://www.w3.org/1999/xlink")
+                                    div.item-filter-content
+                                        form.type-1.input-wrapp-pad
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Заводской
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Ленинский
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Московский
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Октябрьский
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Советский
+                                            button.btn.btn-size-130.btn-black.js-apply-filter Применить
+                                div.item-filter.js-chechbox
+                                    div.wrapp-filter-content.js-item-filter-inMenu
+                                        p Прочие услуги
+                                        p.fild-filter Выбрать
+                                        svg.close.js-close.hidden
+                                            use(xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-close" xmlns:xlink="http://www.w3.org/1999/xlink")
+                                    div.item-filter-content
+                                        form.type-1.input-wrapp-pad
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Заводской
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Ленинский
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Московский
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Октябрьский
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Советский
+                                            button.btn.btn-size-130.btn-black.js-apply-filter Применить
+                            div.row
+                                div.item-filter.js-chechbox
+                                    div.wrapp-filter-content.js-item-filter-inMenu
+                                        p Групповые программы
+                                        p.fild-filter Выбрать программу
+                                        svg.close.js-close.hidden
+                                            use(xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-close" xmlns:xlink="http://www.w3.org/1999/xlink")
+                                    div.item-filter-content
+                                        form.type-1.input-wrapp-pad
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Заводской
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Ленинский
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Московский
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Октябрьский
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Советский
+                                            button.btn.btn-size-130.btn-black.js-apply-filter Применить
+                                div.item-filter.js-chechbox
+                                    div.wrapp-filter-content.js-item-filter-inMenu
+                                        p Боевые искусства
+                                        p.fild-filter Выбрать боевые искусства
+                                        svg.close.js-close.hidden
+                                            use(xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-close" xmlns:xlink="http://www.w3.org/1999/xlink")
+                                    div.item-filter-content
+                                        form.type-1.input-wrapp-pad
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Заводской
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Ленинский
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Московский
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Октябрьский
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Советский
+                                            button.btn.btn-size-130.btn-black.js-apply-filter Применить
+                                div.item-filter.js-chechbox
+                                    div.wrapp-filter-content.js-item-filter-inMenu
+                                        p Танцевальные направления
+                                        p.fild-filter Выбрать направления
+                                        svg.close.js-close.hidden
+                                            use(xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-close" xmlns:xlink="http://www.w3.org/1999/xlink")
+                                    div.item-filter-content
+                                        form.type-1.input-wrapp-pad
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Заводской
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Ленинский
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Московский
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Октябрьский
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Советский
+                                            button.btn.btn-size-130.btn-black.js-apply-filter Применить
+                                div.item-filter.js-chechbox
+                                    div.wrapp-filter-content.js-item-filter-inMenu
+                                        p Направления
+                                        p.fild-filter Выбрать направления
+                                        svg.close.js-close.hidden
+                                            use(xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-close" xmlns:xlink="http://www.w3.org/1999/xlink")
+                                    div.item-filter-content
+                                        form.type-1.input-wrapp-pad
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Заводской
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Ленинский
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Московский
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Октябрьский
+                                            div.input-wrapp
+                                                input.ch(type='checkbox')
+                                                label Советский
+                                            button.btn.btn-size-130.btn-black.js-apply-filter Применить
+                    div.block-filters-mobile
+                        div.block-filters-mobile-header.js-accordion-title
+                            h3.title Фильтры
+                                span.close.hidden Закрыть
+
+                        div.block-filters-mobile-items.js-accordion-content
+                            div.block-filters-mobile-one-item
+                                div.js-accordion-title
+                                    p.title Район Минска
+                                        svg.down
+                                            use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
+                                form.type-1.js-accordion-content
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m')
+                                        label(for='m') Заводской
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m1')
+                                        label(for='m1') Заводской
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m2')
+                                        label(for='m2') Заводской
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m3')
+                                        label(for='m3') Заводской
+                                    div.block-filters-mobile-footer
+                                        button.btn.btn-black.btn-size-225 Применить фильтр
+                                        span.reset-filter.js-reset-form Сбросить все
+                            div.block-filters-mobile-one-item
+                                div.js-accordion-title
+                                    p.title Дополнительные услуги
+                                        svg.down
+                                            use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
+                                form.type-1.js-accordion-content
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m')
+                                        label(for='m') Заводской
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m1')
+                                        label(for='m1') Заводской
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m2')
+                                        label(for='m2') Заводской
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m3')
+                                        label(for='m3') Заводской
+                                    div.block-filters-mobile-footer
+                                        button.btn.btn-black.btn-size-225 Применить фильтр
+                                        span.reset-filter Сбросить все
+                            div.block-filters-mobile-one-item
+                                div.js-accordion-title
+                                    p.title Время работы
+                                        svg.down
+                                            use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
+                                form.type-2
+                                    div.slider_ui.js_ui_slider(data-min='0' data-max='24' data-step='1' data-default-value-to='0' data-default-value-from='24')
+                                        span С
+                                        input.js_ui_slider_value_bottom(disabled="disabled")
+
+                                        span ДО
+                                        input.js_ui_slider_value_top(disabled="disabled")
+
+                                        div.js_ui_slider_main
+                                    div.block-filters-mobile-footer
+                                        button.btn.btn-black.btn-size-225 Применить фильтр
+                                        span.reset-filter Сбросить все
+                            div.block-filters-mobile-one-item
+                                div.js-accordion-title
+                                    p.title Направления
+                                        svg.down
+                                            use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
+                                form.type-1.js-accordion-content
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m')
+                                        label(for='m') Заводской
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m1')
+                                        label(for='m1') Заводской
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m2')
+                                        label(for='m2') Заводской
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m3')
+                                        label(for='m3') Заводской
+                                    div.block-filters-mobile-footer
+                                        button.btn.btn-black.btn-size-225 Применить фильтр
+                                        span.reset-filter Сбросить все
+                            div.block-filters-mobile-one-item
+                                div.js-accordion-title
+                                    p.title Спортивные игры
+                                        svg.down
+                                            use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
+                                form.type-1.js-accordion-content
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m')
+                                        label(for='m') Есть
+                                    div.block-filters-mobile-footer
+                                        button.btn.btn-black.btn-size-225 Применить фильтр
+                                        span.reset-filter Сбросить все
+                            div.block-filters-mobile-one-item
+                                div.js-accordion-title
+                                    p.title Рейтинг
+                                        svg.down
+                                            use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
+                                .form.type-1.js-accordion-content
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m')
+                                        label(for='m') Заводской
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m1')
+                                        label(for='m1') Заводской
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m2')
+                                        label(for='m2') Заводской
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m3')
+                                        label(for='m3') Заводской
+                                    div.block-filters-mobile-footer
+                                        button.btn.btn-black.btn-size-225 Применить фильтр
+                                        span.reset-filter Сбросить все
+                            div.block-filters-mobile-one-item
+                                div.js-accordion-title
+                                    p.title Аэробика
+                                        svg.down
+                                            use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
+                                .form.type-1.js-accordion-content
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m')
+                                        label(for='m') Заводской
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m1')
+                                        label(for='m1') Заводской
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m2')
+                                        label(for='m2') Заводской
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m3')
+                                        label(for='m3') Заводской
+                                    div.block-filters-mobile-footer
+                                        button.btn.btn-black.btn-size-225 Применить фильтр
+                                        span.reset-filter Сбросить все
+                            div.block-filters-mobile-one-item
+                                div.js-accordion-title
+                                    p.title Базовый комплекс
+                                        svg.down
+                                            use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
+                                .form.type-1.js-accordion-content
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m')
+                                        label(for='m') Заводской
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m1')
+                                        label(for='m1') Заводской
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m2')
+                                        label(for='m2') Заводской
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m3')
+                                        label(for='m3') Заводской
+                                    div.block-filters-mobile-footer
+                                        button.btn.btn-black.btn-size-225 Применить фильтр
+                                        span.reset-filter Сбросить все
+                            div.block-filters-mobile-one-item
+                                div.js-accordion-title
+                                    p.title Групповые программы
+                                        svg.down
+                                            use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
+                                .form.type-1.js-accordion-content
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m')
+                                        label(for='m') Заводской
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m1')
+                                        label(for='m1') Заводской
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m2')
+                                        label(for='m2') Заводской
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m3')
+                                        label(for='m3') Заводской
+                                    div.block-filters-mobile-footer
+                                        button.btn.btn-black.btn-size-225 Применить фильтр
+                                        span.reset-filter Сбросить все
+                            div.block-filters-mobile-one-item
+                                div.js-accordion-title
+                                    p.title Боевые искусства
+                                        svg.down
+                                            use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
+                                .form.type-1.js-accordion-content
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m')
+                                        label(for='m') Заводской
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m1')
+                                        label(for='m1') Заводской
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m2')
+                                        label(for='m2') Заводской
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m3')
+                                        label(for='m3') Заводской
+                                    div.block-filters-mobile-footer
+                                        button.btn.btn-black.btn-size-225 Применить фильтр
+                                        span.reset-filter Сбросить все
+                            div.block-filters-mobile-one-item
+                                div.js-accordion-title
+                                    p.title Танцевальные направления
+                                        svg.down
+                                            use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
+                                .form.type-1.js-accordion-content
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m')
+                                        label(for='m') Заводской
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m1')
+                                        label(for='m1') Заводской
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m2')
+                                        label(for='m2') Заводской
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m3')
+                                        label(for='m3') Заводской
+                                    div.block-filters-mobile-footer
+                                        button.btn.btn-black.btn-size-225 Применить фильтр
+                                        span.reset-filter Сбросить все
+                            div.block-filters-mobile-one-item
+                                div.js-accordion-title
+                                    p.title Направления
+                                        svg.down
+                                            use(xlink:href="../img/svg/sprite/sprite.min.svg#up-arrow" xmlns:xlink="http://www.w3.org/1999/xlink")
+                                .form.type-1.js-accordion-content
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m')
+                                        label(for='m') Заводской
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m1')
+                                        label(for='m1') Заводской
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m2')
+                                        label(for='m2') Заводской
+                                    div.input-wrapp
+                                        input.ch(type='checkbox' id='m3')
+                                        label(for='m3') Заводской
+                                    div.block-filters-mobile-footer
+                                        button.btn.btn-black.btn-size-225 Применить фильтр
+                                        span.reset-filter Сбросить все
+
+                    .content-container
+                        +card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+                        +card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+                        +card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+                        a(href="#" style='background-image: url("img/banner-sport.png")').card.card-vertical.banner
+
+                        //- +card-vertical('card card-vertical text-center card-full_bg text-white','', 2, true, false)
+                        +card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+                        +card-vertical('card card-vertical text-center card-full_bg text-white','img/4.jpg', 2, true, false)
+                        +card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+                        +card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+                        +card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+                        +card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+                        +card-vertical('card card-vertical text-center text-black','img/2.jpg', 1, true, false)
+                        +card-vertical('card card-vertical text-center card-full_bg text-white','img/4.jpg', 2, true, false)
+                        div.load_more
+                            a(href='#') +
+                                span Показать ещё
+
+        //- include includes/elements/_go_top
+        include includes/_footer

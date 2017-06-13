@@ -90,6 +90,7 @@
 				display: inline-block;
 				width: 50%;
 				vertical-align: top;
+				padding-right: 50px;
 				li {
 					a {
 						text-transform: uppercase;
@@ -109,6 +110,21 @@
 			}
 		}
 	}
+}
+
+.search-wrapp .search-content form input[type=radio]+label:before{
+	position: absolute;
+	padding: 0;
+	top: 5px;
+	left: 0;
+	width: 17px;
+	height: 17px;
+	background-size: 47%;
+}
+
+.search-wrapp .search-content form input[type=radio]+label{
+	position: relative;
+	padding: 0 40px 0 30px;
 }
 
 input[type='radio'] {
