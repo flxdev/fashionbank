@@ -161,7 +161,11 @@
 	}
 
 	.block-link-offer-apply{
-		width: 35%;
+		width: 27%;
+	}
+
+	.block-link-offer-apply .btn-link-contract-offer, .block-link-offer-apply .btn-link-apply-now{
+		padding: 8px 3px;
 	}
 	
  }
@@ -490,6 +494,14 @@
 			max-height: 350px;
 		}
 	}
+
+	.cards-block-sport-articles-float .tags{
+		width: 65%;
+	}
+
+	.block-link-offer-apply {
+		width: 35%;
+	}
 }
 
 
@@ -718,6 +730,9 @@
 	.block-float-right{
 		float: left;
 	}
+	.cards-block-sport-articles-float .tags{
+		margin-bottom: 15px;
+	}
 }
 
 @media (max-width: 936px) {
@@ -757,6 +772,19 @@
 	}
 	.wrapp-map-site_row-subsections .wrapp-map-site_row-subsection_list{
 		width: 30%;
+	}
+
+
+	.block-btn-add-comp .btn-size-225{
+		float: left;
+	}
+
+	.block-btn-add-comp{
+		float: none;
+	}
+
+	.cards-block-sport-articles-float .tags{
+		margin-bottom: 15px;
 	}
 }
 

@@ -260,6 +260,7 @@
 			padding-top: 0;
 			.title {
 				padding:  20px 0 10px;
+				line-height: 1.3;
 			}
 			.description {
 				font-size: 1.5rem;
@@ -387,12 +388,14 @@
 		}
 		ul{
 			list-style-type: none;
+			padding-left: 13px;
 
 			li{
 				position: relative;
 				font-size: 2rem;
 				font-family: regular;
 				margin-bottom: 5px;
+				padding-left: 20px;
 				p{
 					padding: 2px 0;
 				}
@@ -401,12 +404,12 @@
 			li:before{
 				font-family: 'Montserrat', sans-serif;
 				font-weight: 400;
-				color: $main_blue;
+				color: black;
 				content: "•";
-				font-size: 20px;
+				font-size: 27px;
 				position: absolute;
-				margin-left: -11px;
-				top: 2px;
+				margin-left: -34px;
+				top: -3px;
 			}
 		}
 	}
@@ -1044,4 +1047,18 @@
 
 .specialist-page-first-screen .article-wrapp-info.models-detail .wrapp-info{
 	padding-bottom: 40px;
+}
+
+.content-wrapp .block-center-img-50 .slider .slider_arrow.btn-slider-prev{
+	img{
+		width: 38px;
+		background-size: cover;
+	}
+}
+
+.content-wrapp .block-center-img-50 .slider .slider_arrow.btn-slider-next{
+	img{
+		width: 38px;
+		background-size: cover;
+	}
 }

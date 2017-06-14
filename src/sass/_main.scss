@@ -1251,8 +1251,7 @@ input[type='password'] {font-family: arial}
 }
 
 .block-btn-add-comp{
-	display: inline-block;
-	vertical-align: top;
+	float: right;
 	width: 27%;
 	.btn-size-225{
 		padding: 10px 0;
@@ -1264,8 +1263,7 @@ input[type='password'] {font-family: arial}
 }
 
 .block-link-offer-apply{
-	display: inline-block;
-	vertical-align: top;
+	float: right;
 	width: 27%;
 	font-size: 0;
 	.btn-link-contract-offer{
@@ -1315,7 +1313,7 @@ input[type='password'] {font-family: arial}
 	font-size: 0;
 }
 
-.cards-block-sport-articles-float{
+.cards-block-sport-articles-float .tags{
 	display: inline-block;
 	vertical-align: top;
 	width: 73%;
@@ -1327,9 +1325,4 @@ input[type='password'] {font-family: arial}
 
 .border-bottom{
 	border-bottom: 4px solid #000;
-}
-
-.specialists .card-horizontal a:hover .wrapp-img-bg-h{
-	border: 7px solid #0039de;
-	background-color: inherit;
 }

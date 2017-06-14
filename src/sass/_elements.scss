@@ -98,6 +98,13 @@
 		top: 9px;
 		right: 12px;
 		background-color: transparent;
+		width: 20px;
+		height: 20px;
+		svg{
+			width: 20px;
+			height: 20px;
+			fill: #4e4e4e;
+		}
 	}
 	.email-input + button {
 		svg {
