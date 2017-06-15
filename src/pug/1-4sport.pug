@@ -171,14 +171,14 @@ block content
 										label Советский
 									button.btn.btn-size-130.btn-black.js-apply-filter Применить
 
-						div.item-filter
+						div.item-filter.time
 							div.wrapp-filter-content.js-item-filter
 								p Время работы
 								p.fild-filter.js-fild-filter-slider
 									span С
-									input.js_ui_slider_value_bottom(disabled="disabled")
-									span ДО
 									input.js_ui_slider_value_top(disabled="disabled")
+									span ДО
+									input.js_ui_slider_value_bottom(disabled="disabled")
 									input(type='text').time-to
 									input(type='text').time-from
 								svg.close.js-close.hidden
@@ -187,13 +187,13 @@ block content
 								form.type-2
 									div.slider_ui.js_ui_slider(data-min='0' data-max='24' data-step='1' data-default-value-to='0' data-default-value-from='24')
 										span С
-										input.js_ui_slider_value_bottom(disabled="disabled")
-										
-										span ДО
 										input.js_ui_slider_value_top(disabled="disabled")
-										
+
+										span ДО
+										input.js_ui_slider_value_bottom(disabled="disabled")
+
 										div.js_ui_slider_main
-									
+
 									button.btn.btn-size-130.btn-black.js-apply-filter Применить
 
 						div.item-filter.number
@@ -204,11 +204,13 @@ block content
 									input.js_ui_slider_value_bottom(disabled="disabled")
 									span ПО
 									input.js_ui_slider_value_top(disabled="disabled")
+									input(type='text').number-to
+									input(type='text').number-from
 								svg.close.js-close.hidden
 									use(xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-close" xmlns:xlink="http://www.w3.org/1999/xlink")
 							div.item-filter-content
 								form.type-2
-									div.slider_ui.js_ui_slider(data-min='0' data-max='24' data-step='1' data-default-value-to='0' data-default-value-from='24')
+									div.slider_ui.js_ui_slider(data-min='0' data-max='24' data-step='0.5' data-default-value-to='0' data-default-value-from='24')
 										span С
 										input.js_ui_slider_value_bottom(disabled="disabled")
 

@@ -73,6 +73,27 @@
 				color: #fff;
 				padding-bottom: 20px;
 			}
+			.help-block.form-error{
+				opacity: 0;
+				display: none;
+			}
+			.error_f{
+				display: block;
+				width: 220px;
+				color: red;
+				font-size: 1.3rem;
+				margin-top: 5px;
+			}
+			.message{
+				display: block;
+				width: 220px;
+				color: green;
+				font-size: 1.3rem;
+				margin-top: 5px;
+			}
+			.input-border-bottom-value{
+				border: 1px solid #4e4e4e;
+			}
 			
 		}
 	}

@@ -216,7 +216,7 @@ header {
 }
 .fixedMenu {
 	position: fixed;
-	top: 0;
+	top: -100%;
 	width: 100%;
 	max-width: none;
 	//transition: all 0.5s ease-out;
@@ -225,7 +225,17 @@ header {
 		max-width: 1280px;
    		margin: 0 auto;
 		.burger {
-			top: 25px;
+			top: 28px;
+		}
+		.burgx, .burgx2, .burgx3{
+			width: 23px;
+			height: 2px;
+		}
+		.burgx2{
+			margin-top: 6px;
+		}
+		.burgx3{
+			margin-top: 12px;
 		}
 		.user_panel {
 			top: 25px;
@@ -257,6 +267,7 @@ header {
 }
 .fixedMenu.opacityFixMenu{
 	opacity: 1;
+	top: 0;
 }
 @keyframes topMenuIn {
 	0% {

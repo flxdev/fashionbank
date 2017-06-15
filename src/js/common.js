@@ -288,7 +288,7 @@ function initSliderOne() {
 		dots: false,
 		arrows: true,
 		prevArrow: "<button type='button' class='slider_arrow slider_arrow-pre btn-slider-prev'><img src='./img/prev_shadow.png' alt=''></button>",
-		nextArrow: "<button type='button' class='slider_arrow slider_arrow-next btn-slider-next'><img src='./img/next_shadow.png' alt=''></button>",
+		nextArrow: "<button type='button' class='slider_arrow slider_arrow-next btn-slider-next'></button>",
 	});
 }
 
@@ -325,20 +325,20 @@ function shadowScroll(scrollContainer, scrolling, add) {
 function initBurger() {
 	$('.js-burger').on('click', function() {
 		$('.js-burger-menu').fadeIn(300);
-		$('body').addClass('modal-open');
+		$('body').addClass('modal-open').css("position","absolute");
 		setTimeout( function() { $('#burger_menu').toggleClass('burger-animate') } , 100)
 	});
 
 	$('.js-burger-close').on('click', function() {
 		setTimeout( function() { $('.js-burger-menu').fadeOut(200) } , 100)
-		$('body').removeClass('modal-open');
+		$('body').removeClass('modal-open').css("position","relative");
 		$('#burger_menu').toggleClass('burger-animate')
 	});
 
 	$('.js-burger-menu').on('click', function(e) {
 		if (!$(e.target).closest("#burger_menu").length) {
 			setTimeout( function() { $('.js-burger-menu').fadeOut(200) } , 100)
-			$('body').removeClass('modal-open');
+			$('body').removeClass('modal-open').css("position","relative");
 			$('#burger_menu').toggleClass('burger-animate');
 		}
 	});
@@ -501,6 +501,7 @@ function initSearch() {
 	$('.js-search-open').on('click', function() {
 		$('.js-search').fadeIn(250);
 		$('body').addClass('modal-open');
+		$('.js_site-main_search > .input-border-bottom').focus();
 	});
 	$('.js-search-close').on('click', function() {
 		$('.js-search').fadeOut(250);
@@ -630,7 +631,7 @@ function initFilters() {
 		});
 		$(this).find('.js-close').on('click', function() {
 			__self.find('.fild-filter').text(defaultText);
-			__self.find('form')[0].reset();
+			__self.find('.ch').prop('checked', false);
 			textFilter  = [];
 			$(this).addClass('hidden');
 			return false;
@@ -638,7 +639,7 @@ function initFilters() {
 	});
 }
 
-function initSlidersUi() {
+function initSlidersTime() {
 	$(".js_ui_slider").each(function () {
 		var slider = $(this).find(".js_ui_slider_main");
 		var sliderNumber = $(this).find(".js_ui_slider_main-number");
@@ -654,13 +655,13 @@ function initSlidersUi() {
 
 
 
-		sliderSetting.inputShowFildFilterTop = $(this).closest('.item-filter').find('.js-fild-filter-slider').find('.js_ui_slider_value_bottom');
-		sliderSetting.inputShowFildFilterTopNumber = $(this).closest('.number').find('.js-fild-filter-slider').find('.js_ui_slider_value_bottom');
-		sliderSetting.inputShowFildFilterBottom = $(this).closest('.item-filter').find('.js-fild-filter-slider').find('.js_ui_slider_value_top');
-		sliderSetting.inputShowFildFilterBottomNumber = $(this).closest('.number').find('.js-fild-filter-slider').find('.js_ui_slider_value_top');
+		sliderSetting.inputShowFildFilterTop = $(this).closest('.time').find('.js-fild-filter-slider').find('.js_ui_slider_value_bottom');
+		sliderSetting.inputShowFildFilterTopNumber = $(this).closest('.time').find('.js-fild-filter-slider').find('.js_ui_slider_value_bottom');
+		sliderSetting.inputShowFildFilterBottom = $(this).closest('.time').find('.js-fild-filter-slider').find('.js_ui_slider_value_top');
+		sliderSetting.inputShowFildFilterBottomNumber = $(this).closest('.time').find('.js-fild-filter-slider').find('.js_ui_slider_value_top');
 
-		sliderSetting.inputTimeTo = $(this).closest('.item-filter').find('.js-fild-filter-slider').find('.time-to');
-		sliderSetting.inputTimeFrom = $(this).closest('.item-filter').find('.js-fild-filter-slider').find('.time-from');
+		sliderSetting.inputTimeTo = $(this).closest('.time').find('.js-fild-filter-slider').find('.time-to');
+		sliderSetting.inputTimeFrom = $(this).closest('.time').find('.js-fild-filter-slider').find('.time-from');
 
 
 		// sliderSetting.labelTo = $(this).find(".js_ui_slider_label");
@@ -668,8 +669,8 @@ function initSlidersUi() {
 		sliderSetting.inputHiddenTop = $(this).find(".js_ui_slider_value_top");
 		sliderSetting.inputHiddenBottom = $(this).find(".js_ui_slider_value_bottom");
 
-		sliderSetting.inputHiddenTopNumber = $(this).closest('.number').find(".js_ui_slider_value_top");
-		sliderSetting.inputHiddenBottomNumber = $(this).closest('.number').find(".js_ui_slider_value_bottom");
+		sliderSetting.inputHiddenTopTime = $(this).closest('.time').find(".js_ui_slider_value_top");
+		sliderSetting.inputHiddenBottomTime = $(this).closest('.time').find(".js_ui_slider_value_bottom");
 
 		slider.slider({
 			range: true,
@@ -698,64 +699,98 @@ function initSlidersUi() {
 					var __timeUpSpan = ui.values[ 1 ]
 				}
 
-				$(sliderSetting.inputShowFildFilterTop).val(__timeDown);
-				$(sliderSetting.inputShowFildFilterBottom).val(__timeUp);
-				$(sliderSetting.inputHiddenTop).val(__timeUp);
-				$(sliderSetting.inputHiddenBottom).val(__timeDown);
-				// $(sliderSetting.inputTimeTo).text(__timeDownSpan);
-				// $(sliderSetting.inputTimeFrom).text(__timeUpSpan);
+				// вывод в верхний
+				$(sliderSetting.inputShowFildFilterTop).val(__timeUp);
+				$(sliderSetting.inputShowFildFilterBottom).val(__timeDown);
+				// вывод в нижний
+				$(sliderSetting.inputHiddenTop).val(__timeDown);
+				$(sliderSetting.inputHiddenBottom).val(__timeUp);
+				// вывод в нижний
 				$(sliderSetting.inputTimeTo).val(__timeDownSpan);
 				$(sliderSetting.inputTimeFrom).val(__timeUpSpan);
 
 			}
 		});
 
-		sliderNumber.slider({
-			range: true,
-			min: sliderSetting.min,
-			max: sliderSetting.max,
-			step: sliderSetting.step,
-			values: [ sliderSetting.defaultValueNumberTo, sliderSetting.defaultValueNumberFrom ],
-			slide: function( event, ui ) {
-				// $(sliderSetting.inputHidden).text( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
-				var __timeDownSpan = '';
-				if (ui.values[ 0 ] < 10) {
-					var __timeDownSpan = ui.values[ 0 ]
-				}
-				else {
-					var __timeDownSpan = ui.values[ 0 ]
-				}
-
-				if (ui.values[ 1 ] < 10) {
-					var __timeUpSpan = ui.values[ 1 ]
-				}
-				else {
-					var __timeUpSpan = ui.values[ 1 ]
-				}
-
-				$(sliderSetting.inputShowFildFilterTop).val(__timeDownSpan);
-				$(sliderSetting.inputShowFildFilterBottom).val(__timeUpSpan);
-				$(sliderSetting.inputHiddenTop).val(__timeUpSpan);
-				$(sliderSetting.inputHiddenBottom).val(__timeDownSpan);
-				$(sliderSetting.inputTimeTo).val(__timeDownSpan);
-				$(sliderSetting.inputTimeFrom).val(__timeUpSpan);
-
-			}
-		});
-
-
-		$(sliderSetting.inputHidden).text( sliderSetting.defaultValueTo + " - " + sliderSetting.defaultValueFrom );
-		$(sliderSetting.inputShowFildFilterTop).val(sliderSetting.defaultValueTo);
-		$(sliderSetting.inputShowFildFilterBottom).val(sliderSetting.defaultValueFrom);
-		$(sliderSetting.inputHiddenTop).val(sliderSetting.defaultValueFrom);
-		$(sliderSetting.inputHiddenBottom).val(sliderSetting.defaultValueTo);
-
-		$(sliderSetting.inputShowFildFilterTopNumber).val(sliderSetting.defaultValueNumberTo);
-		$(sliderSetting.inputShowFildFilterBottomNumber).val(sliderSetting.defaultValueNumberFrom);
-		$(sliderSetting.inputHiddenTopNumber).val(sliderSetting.defaultValueNumberFrom);
-		$(sliderSetting.inputHiddenBottomNumber).val(sliderSetting.defaultValueNumberTo);
+		//вывод дефолтное значение
+		$(sliderSetting.inputHiddenTopTime).val(sliderSetting.defaultValueTo);
+		$(sliderSetting.inputHiddenBottomTime).val(sliderSetting.defaultValueFrom);
 
 	});
+}
+
+function initSlidersNumber() {
+	$(".js_ui_slider").each(function () {
+		$(".js_ui_slider").each(function () {
+			var slider = $(this).find(".js_ui_slider_main");
+			var sliderNumber = $(this).find(".js_ui_slider_main-number");
+			var sliderSetting = {};
+			sliderSetting.max = $(this).data("max");
+			sliderSetting.min = $(this).data("min");
+			sliderSetting.step = $(this).data("step");
+			sliderSetting.defaultValueTo = '0'+ $(this).data("default-value-to") +'.00';
+			sliderSetting.defaultValueFrom = $(this).data("default-value-from") +'.00';
+
+			sliderSetting.defaultValueNumberTo = $(this).data("default-value-to");
+			sliderSetting.defaultValueNumberFrom = $(this).data("default-value-from");
+
+
+
+			sliderSetting.inputShowFildFilterTop = $(this).closest('.number').find('.js-fild-filter-slider').find('.js_ui_slider_value_top');
+			sliderSetting.inputShowFildFilterBottom = $(this).closest('.number').find('.js-fild-filter-slider').find('.js_ui_slider_value_bottom');
+
+			sliderSetting.inputNumberTo = $(this).closest('.number').find('.js-fild-filter-slider').find('.number-to');
+			sliderSetting.inputNumberFrom = $(this).closest('.number').find('.js-fild-filter-slider').find('.number-from');
+
+			sliderSetting.inputHiddenTopNumber = $(this).closest('.number').find(".js_ui_slider_value_top");
+			sliderSetting.inputHiddenBottomNumber = $(this).closest('.number').find(".js_ui_slider_value_bottom");
+
+
+			sliderSetting.inputHidden = $(this).find(".js_ui_slider_input");
+			sliderSetting.inputHiddenTop = $(this).find(".js_ui_slider_value_top");
+			sliderSetting.inputHiddenBottom = $(this).find(".js_ui_slider_value_bottom");
+
+			sliderNumber.slider({
+				range: true,
+				min: sliderSetting.min,
+				max: sliderSetting.max,
+				step: sliderSetting.step,
+				values: [ sliderSetting.defaultValueNumberTo, sliderSetting.defaultValueNumberFrom ],
+				slide: function( event, ui ) {
+					// $(sliderSetting.inputHidden).text( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+					var __timeDownSpan = '';
+					if (ui.values[ 0 ] < 10) {
+						var __timeDownSpan = ui.values[ 0 ]
+					}
+					else {
+						var __timeDownSpan = ui.values[ 0 ]
+					}
+
+					if (ui.values[ 1 ] < 10) {
+						var __timeUpSpan = ui.values[ 1 ]
+					}
+					else {
+						var __timeUpSpan = ui.values[ 1 ]
+					}
+
+					// вывод в верхний
+					$(sliderSetting.inputShowFildFilterTop).val(__timeUpSpan);
+					$(sliderSetting.inputShowFildFilterBottom).val(__timeDownSpan);
+					// вывод в нижний слайд
+					$(sliderSetting.inputHiddenTop).val(__timeUpSpan);
+					$(sliderSetting.inputHiddenBottom).val(__timeDownSpan);
+					// вывод в скрытое значение
+					$(sliderSetting.inputNumberTo).val(__timeDownSpan);
+					$(sliderSetting.inputNumberFrom).val(__timeUpSpan);
+
+				}
+			});
+
+			//вывод дефолтное значение
+			$(sliderSetting.inputHiddenTopNumber).val(sliderSetting.defaultValueNumberFrom);
+			$(sliderSetting.inputHiddenBottomNumber).val(sliderSetting.defaultValueNumberTo);
+		});
+	})
 }
 
 function initSticky() {
@@ -1224,7 +1259,9 @@ $( document ).ready(function() {
 	initMenu();
 	initSearch();
 	initFilters();
-	initSlidersUi();
+	// initSlidersUi();
+	initSlidersTime();
+	initSlidersNumber();
 	if ($("#map").length > 0) ymaps.ready(initYandexMap);
 	// if ($("#sticky").length > 0 ) initSticky();
 	if ($("#sticky").length > 0 ) sticky();

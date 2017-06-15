@@ -62,6 +62,12 @@
 	.load_more-sport {
 		padding: 60px 0 0;
 	}
+	.js-tags-resize{
+		padding: 0 15px;
+	}
+	.search-resault{
+		padding: 0 15px;
+	}
 	.block-title {
 		flex-basis: 100%;
 		padding: 40px 0 25px;
@@ -108,7 +114,7 @@
 				padding: 0;
 				margin: 0 0 5px 0;
 				font-size: 2.4rem;
-				word-break: break-all;
+				//word-break: break-all;
 			}
 			.dop_info {
 				font-size: 1.3rem;
@@ -204,7 +210,7 @@
 			}
 		}
 		img {
-			width: 25px;	
+			width: 25px;
 			height: 12px;
 		}
 		&:first-child {
@@ -213,7 +219,7 @@
 		&:last-child {
 			margin-right: 0;
 		}
-		
+
 		&:hover {
 			a {
 				color: $main_blue;
@@ -229,31 +235,54 @@
 				color: #fff;
 			}
 		}
-		
+
 	}
 }
- 
+
+#js_site-smart_filter{
+	width: 100%;
+}
+
+#js_site-smart_filter-mobile{
+	width: 100%;
+}
+
 .block-filters {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	flex-basis: 100%;
-	margin: 0 15px 30px;
-	position: relative;
+	//display: flex;
+	//flex-direction: row;
+	//justify-content: space-between;
+	//align-items: center;
+	//flex-basis: 100%;
+	//margin: 0 15px 30px;
+	//position: relative;
+
 	// padding-bottom: 30px;
+
+	padding: 0 15px 20px;
+	position: relative;
+	width: 100%;
+	font-size: 0;
 	
 	.item-filter  {
-		flex-basis: 20%;
+		//flex-basis: 20%;
+
+
+
 		border-top: 1px solid #c2c2c2;
 		border-bottom: 1px solid #c2c2c2;
 		border-right: 1px solid #c2c2c2;
 		min-height: 60px;
 		cursor:pointer;
+
+
+		display: inline-block;
+		width: 15.8%;
+		vertical-align: top;
 		position: relative;
 		.wrapp-filter-content {
 			padding: 5px 20px;
 			user-select: none;
+			min-height: 60px;
 		}
 		.close {
 			width: 10px;
@@ -261,6 +290,7 @@
 			position: absolute;
 			right: 8px;
 			top: 8px;
+			z-index: 5;
 		}
 		svg.down {
 			width: 20px;
@@ -308,6 +338,7 @@
 		}
 		.item-filter-content {
 			width: 100%;
+			//width: 15.8%;
 			position: absolute;
 			background-color: #fff;
 			min-height: 100px;
@@ -417,7 +448,8 @@
 		}
 	}
 	.item-filter.next {
-		flex-basis: 5%;
+		//flex-basis: 5%;
+		width: 5%;
 	}
 	.item-filter-other {
 		position: absolute;

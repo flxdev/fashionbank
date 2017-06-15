@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width">
     <meta content="IE=9" http-equiv="X-UA-Compatible">
     <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="img/favicon/16x16.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="img/favicon/48x48.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/60x60.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/76x76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/152x152.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="img/favicon/192x192.png">
     <link rel="stylesheet" media="all" href="css/screen.css">
   </head>
   <body>
@@ -2093,12 +2101,12 @@
                     </form>
                   </div>
                 </div>
-                <div class="item-filter">
+                <div class="item-filter time">
                   <div class="wrapp-filter-content js-item-filter">
                     <p>Время работы</p>
                     <p class="fild-filter js-fild-filter-slider"><span>С</span>
-                      <input class="js_ui_slider_value_bottom" disabled="disabled"><span>ДО</span>
-                      <input class="js_ui_slider_value_top" disabled="disabled">
+                      <input class="js_ui_slider_value_top" disabled="disabled"><span>ДО</span>
+                      <input class="js_ui_slider_value_bottom" disabled="disabled">
                       <input class="time-to" type="text">
                       <input class="time-from" type="text">
                     </p>
@@ -2109,8 +2117,8 @@
                   <div class="item-filter-content">
                     <form class="type-2">
                       <div class="slider_ui js_ui_slider" data-min="0" data-max="24" data-step="1" data-default-value-to="0" data-default-value-from="24"><span>С</span>
-                        <input class="js_ui_slider_value_bottom" disabled="disabled"><span>ДО</span>
-                        <input class="js_ui_slider_value_top" disabled="disabled">
+                        <input class="js_ui_slider_value_top" disabled="disabled"><span>ДО</span>
+                        <input class="js_ui_slider_value_bottom" disabled="disabled">
                         <div class="js_ui_slider_main"></div>
                       </div>
                       <button class="btn btn-size-130 btn-black js-apply-filter">Применить</button>
@@ -2123,6 +2131,8 @@
                     <p class="fild-filter js-fild-filter-slider"><span>С</span>
                       <input class="js_ui_slider_value_bottom" disabled="disabled"><span>ПО</span>
                       <input class="js_ui_slider_value_top" disabled="disabled">
+                      <input class="number-to" type="text">
+                      <input class="number-from" type="text">
                     </p>
                     <svg class="close js-close hidden">
                       <use xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-close" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
@@ -2130,7 +2140,7 @@
                   </div>
                   <div class="item-filter-content">
                     <form class="type-2">
-                      <div class="slider_ui js_ui_slider" data-min="0" data-max="24" data-step="1" data-default-value-to="0" data-default-value-from="24"><span>С</span>
+                      <div class="slider_ui js_ui_slider" data-min="0" data-max="24" data-step="0.5" data-default-value-to="0" data-default-value-from="24"><span>С</span>
                         <input class="js_ui_slider_value_bottom" disabled="disabled"><span>ПО</span>
                         <input class="js_ui_slider_value_top" disabled="disabled">
                         <div class="js_ui_slider_main-number"></div>
@@ -3003,7 +3013,7 @@
                           <svg>
                             <use xlink:href="../img/svg/sprite/sprite.min.svg#icon-email" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
                           </svg>
-                        </button>
+                        </button><span class="help-block form-error">You have not given a correct e-mail address</span>
                       </form>
                     </div>
                   </div>

@@ -116,6 +116,7 @@ input[type='password'] {font-family: arial}
 		top: 0;
 		left: 0;
 		z-index: -2;
+		transition: all .6s ease;
 
 	}
 	.card-category {
@@ -277,7 +278,7 @@ input[type='password'] {font-family: arial}
 			color: $main_blue !important;
 		}
 		.wrapp-img-bg-full {
-			background-color: rgba(0,0,0,0.3);
+			display: none;
 		}
 
 	}
@@ -342,6 +343,7 @@ input[type='password'] {font-family: arial}
 	flex-direction: column;
 	justify-content: flex-end;
 	align-items: stretch;
+	overflow: hidden;
 	.card-title {
 		font-size: 5rem;
 		padding-left: 0;
@@ -373,6 +375,7 @@ input[type='password'] {font-family: arial}
 			max-width: 100%;
 			width: 100%;
 			display: block;
+			transition: all .6s ease;
 		}
 		.wrapp-img-bg {
 			position: absolute;
@@ -393,8 +396,11 @@ input[type='password'] {font-family: arial}
 	}
 	&:hover {
 		.wrapp-img {
+			img{
+				transform: scale(1.1);
+			}
 			.wrapp-img-bg {
-				background-color: rgba(0,0,0,0.3);
+				display: none;
 			}
 		}
 	}
@@ -404,6 +410,7 @@ input[type='password'] {font-family: arial}
 	background-repeat: no-repeat;
 	background-position: center center;
 	cursor: pointer;
+	overflow: hidden;
 	a {
 		display: block;
 	}
@@ -453,6 +460,7 @@ input[type='password'] {font-family: arial}
 				max-width: 100%;
 				display: block;
 				width: 100%;
+				transition: all .6s ease;
 			}
 		}
 		.wrapp-img-bg-h {
@@ -496,9 +504,24 @@ input[type='password'] {font-family: arial}
 
 		&:hover {
 			.wrapp-img-bg-h {
-				background-color: rgba(0,0,0,0.3);
+				display: none;
+			}
+			.wrapp-img{
+				img{
+					transform: scale(1.1);
+				}
 			}
 		}
+	}
+}
+
+.specialists{
+	.card-horizontal a:hover .wrapp-img img {
+		transform: scale(1);
+	}
+	.card-horizontal a:hover .wrapp-img-bg-h{
+		background-color: rgba(0,0,0,0.3);
+		display: block;
 	}
 }
 
@@ -860,7 +883,7 @@ input[type='password'] {font-family: arial}
 		flex-basis: 22%;
 		.video-play {
 			position: absolute;
-			z-index: 100;
+			z-index: 99;
 			width: 35px;
 			left: 50%;
 			margin-left: -13px;
@@ -904,10 +927,21 @@ input[type='password'] {font-family: arial}
 	.card-title {
 		color: white !important;
 	}
+	.card-bg{
+		transform: scale(1.1);
+	}
 }
 .card.card-big:hover{
 	.card-title {
 		color: white !important;
+	}
+	.wrapp-img-bg{
+		display: none;
+	}
+}
+.card.card-big{
+	.wrapp-img-bg{
+		display: none;
 	}
 }
 .wrapp_slider-video-bg-black .card.text-white:after{
@@ -1202,20 +1236,20 @@ input[type='password'] {font-family: arial}
 	z-index: 5;
 	&:hover .box-shadow-scroll{
 		background-color: #b1b1b1;
-		opacity: 0.5;
+		opacity: 0.3;
 	}
 	.box-shadow-scroll{
 		position: absolute;
-		width: 90px;
+		width: 50px;
 		height: 100%;
 		transition: all .4s ease-in-out;
 		cursor: pointer;
 	}
 	.btn-scroll-top{
 		position: absolute;
-		bottom: 150px;
-		width: 45px;
-		left: 21px;
+		bottom: 20px;
+		width: 30px;
+		left: 10px;
 		cursor: pointer;
 		z-index: 100;
 		img{
@@ -1325,4 +1359,21 @@ input[type='password'] {font-family: arial}
 
 .border-bottom{
 	border-bottom: 4px solid #000;
+}
+
+.clear_flex{
+	width: 100%;
+}
+
+.clear_flex + form{
+	margin-top: 20px;
+}
+
+.link-disabled{
+	pointer-events: none;
+	cursor: default;
+}
+
+.ya-share2__item {
+	font-family: Arial, sans !important;
 }
