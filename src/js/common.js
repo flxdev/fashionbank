@@ -641,8 +641,8 @@ function initFilters() {
 
 function initSlidersTime() {
 	$(".js_ui_slider").each(function () {
-		var slider = $(this).find(".js_ui_slider_main");
-		var sliderNumber = $(this).find(".js_ui_slider_main-number");
+		var slider = $(this).closest('.time').find(".js_ui_slider_main");
+		var sliderNumber = $(this).closest('.number').find(".js_ui_slider_main");
 		var sliderSetting = {};
 		sliderSetting.max = $(this).data("max");
 		sliderSetting.min = $(this).data("min");
@@ -722,8 +722,8 @@ function initSlidersTime() {
 function initSlidersNumber() {
 	$(".js_ui_slider").each(function () {
 		$(".js_ui_slider").each(function () {
-			var slider = $(this).find(".js_ui_slider_main");
-			var sliderNumber = $(this).find(".js_ui_slider_main-number");
+			var slider = $(this).closest('.time').find(".js_ui_slider_main");
+			var sliderNumber = $(this).closest('.number').find(".js_ui_slider_main");
 			var sliderSetting = {};
 			sliderSetting.max = $(this).data("max");
 			sliderSetting.min = $(this).data("min");
@@ -746,9 +746,9 @@ function initSlidersNumber() {
 			sliderSetting.inputHiddenBottomNumber = $(this).closest('.number').find(".js_ui_slider_value_bottom");
 
 
-			sliderSetting.inputHidden = $(this).find(".js_ui_slider_input");
-			sliderSetting.inputHiddenTop = $(this).find(".js_ui_slider_value_top");
-			sliderSetting.inputHiddenBottom = $(this).find(".js_ui_slider_value_bottom");
+			sliderSetting.inputHidden = $(this).closest('.number').find(".js_ui_slider_input");
+			sliderSetting.inputHiddenTop = $(this).closest('.number').find(".js_ui_slider_value_top");
+			sliderSetting.inputHiddenBottom = $(this).closest('.number').find(".js_ui_slider_value_bottom");
 
 			sliderNumber.slider({
 				range: true,
