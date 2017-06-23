@@ -1,0 +1,7 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {"type": "Feature", "id": 0, "geometry": {"type": "Point", "coordinates": [55.76, 37.64], "center":[55.76,37.64]}, "properties": {"balloonContentHeader": "Адрес 1"}},
+        {"type": "Feature", "id": 1, "geometry": {"type": "Point", "coordinates": [55.765, 37.642], "center":[55.76,37.64]}, "properties": {"balloonContentHeader": "Адрес 2"}}
+    ]
+}

@@ -2738,64 +2738,54 @@ y=function(){x();return l()},H=function(){G=!0;f.off("touchmove",l);f.off("scrol
 
 
 function initYandexMap(){
-	var mapSetting = {};
-	mapSetting.centerX = $("#map").data("center-x");
-	mapSetting.centerY = $("#map").data("center-y");
-	mapSetting.zoom = $("#map").data("zoom");
-	mapSetting.markerX = $("#map").data("marker-x");
-	mapSetting.markerY = $("#map").data("marker-y");
-	var myMap;
-	myMap = new ymaps.Map("map", {
-		center: [mapSetting.centerX,mapSetting.centerY],
-		zoom: 14
-	});
-	myMap.controls.add('zoomControl', { top: 10, left: 5 });
+	var jsonWay = $("#map").data("json-link");
+    var myMap = new ymaps.Map('map', {
+            center: [55.76, 37.64],
+            zoom: 15
+        }),
+        objectManager = new ymaps.ObjectManager({
+            // Чтобы метки начали кластеризоваться, выставляем опцию.
+            clusterize: true,
+            // ObjectManager принимает те же опции, что и кластеризатор.
+            gridSize: 32,
+            clusterDisableClickZoom: true
+        });
 
-	myPlacemark0 = new ymaps.Placemark([mapSetting.markerX,mapSetting.markerY], {
-		hintContent: "Перетащите метку и кликните, чтобы узнать адрес"
-	}, {
+    // Чтобы задать опции одиночным объектам и кластерам,
+    // обратимся к дочерним коллекциям ObjectManager.
+    objectManager.objects.options.set({
+		iconLayout: 'default#image',
 		iconImageHref: "img/map-marker.png",
 		iconImageSize: [27, 35],
 		iconImageOffset: [0, 0],
-		openEmptyBalloon: true
+		openEmptyBalloon: true,
+		hintContent: "Перетащите метку и кликните, чтобы узнать адрес"
 	});
+    objectManager.clusters.options.set('preset', 'islands#greenClusterIcons');
+    myMap.geoObjects.add(objectManager);
+	myMap.behaviors.disable('scrollZoom');
+	myMap.behaviors.disable('drag');
 
-	// Обрабатываем событие открытия балуна на геообъекте:
-	// начинаем загрузку данных, затем обновляем его содержимое.
-	myPlacemark0.events.add('balloonopen', function (e) {
-		myPlacemark0.properties.set('balloonContent', "Идет загрузка данных...");
+    $.ajax({
+        url: "./json/" + jsonWay + ".json"
+    }).done(function(data) {
+        objectManager.add(data);
+    });
 
-		// Имитация задержки при загрузке данных (для демонстрации примера).
-		setTimeout(function () {
-			ymaps.geocode(myPlacemark0.geometry.getCoordinates(), {
-				results: 1
-			}).then(function (res) {
-				var newContent = res.geoObjects.get(0) ?
-					res.geoObjects.get(0).properties.get('name') :
-					'Не удалось определить адрес.';
 
-				// Задаем новое содержимое балуна в соответствующее свойство метки.
-				myPlacemark0.properties.set('balloonContent', newContent);
-			});
-		}, 1500);
-	});
 
-	myMap.geoObjects.add(myPlacemark0);
-	// myMap.behaviors.disable('scrollZoom');
-	// myMap.behaviors.disable('drag');
+    $('#map').on('click', function() {
+        myMap.behaviors.enable('drag');
+    });
 
-	$('#map').on('click', function() {
-		myMap.behaviors.enable('drag');
-	});
-
-	if ($(window).outerWidth(true) < 992) {
-		myMap.behaviors.disable('drag');
-	}
-	$(window).on('resize', function(){
-		if ($(window).outerWidth(true) < 992) {
-			myMap.behaviors.disable('drag');
-		}
-	});
+    if ($(window).outerWidth(true) < 992) {
+        myMap.behaviors.disable('drag');
+    }
+    $(window).on('resize', function(){
+        if ($(window).outerWidth(true) < 992) {
+            myMap.behaviors.disable('drag');
+        }
+    });
 
 }
 
