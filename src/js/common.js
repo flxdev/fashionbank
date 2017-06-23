@@ -8,17 +8,39 @@ function initYandexMap(){
 	var myMap;
 	myMap = new ymaps.Map("map", {
 		center: [mapSetting.centerX,mapSetting.centerY],
-		zoom: 13
+		zoom: 14
 	});
 	myMap.controls.add('zoomControl', { top: 10, left: 5 });
 
 	myPlacemark0 = new ymaps.Placemark([mapSetting.markerX,mapSetting.markerY], {
-		balloonContent: ""
+		hintContent: "Перетащите метку и кликните, чтобы узнать адрес"
 	}, {
-		iconImageHref: "/local/templates/main/img/map-marker.png",
+		iconImageHref: "img/map-marker.png",
 		iconImageSize: [27, 35],
-		iconImageOffset: [0, 0]
+		iconImageOffset: [0, 0],
+		openEmptyBalloon: true
 	});
+
+	// Обрабатываем событие открытия балуна на геообъекте:
+	// начинаем загрузку данных, затем обновляем его содержимое.
+	myPlacemark0.events.add('balloonopen', function (e) {
+		myPlacemark0.properties.set('balloonContent', "Идет загрузка данных...");
+
+		// Имитация задержки при загрузке данных (для демонстрации примера).
+		setTimeout(function () {
+			ymaps.geocode(myPlacemark0.geometry.getCoordinates(), {
+				results: 1
+			}).then(function (res) {
+				var newContent = res.geoObjects.get(0) ?
+					res.geoObjects.get(0).properties.get('name') :
+					'Не удалось определить адрес.';
+
+				// Задаем новое содержимое балуна в соответствующее свойство метки.
+				myPlacemark0.properties.set('balloonContent', newContent);
+			});
+		}, 1500);
+	});
+
 	myMap.geoObjects.add(myPlacemark0);
 	// myMap.behaviors.disable('scrollZoom');
 	// myMap.behaviors.disable('drag');
@@ -281,15 +303,33 @@ function initSliderCustom() {
 }
 
 function initSliderOne() {
-	$('.js-slider-init-one-slide').not('.slick-initialized').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		adaptiveHeight: true,
-		dots: false,
-		arrows: true,
-		prevArrow: "<button type='button' class='slider_arrow slider_arrow-pre btn-slider-prev'><img src='./img/prev_shadow.png' alt=''></button>",
-		nextArrow: "<button type='button' class='slider_arrow slider_arrow-next btn-slider-next'></button>",
-	});
+	function slickInitOne() {
+		$('.js-slider-init-one-slide').not('.slick-initialized').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			adaptiveHeight: true,
+			dots: false,
+			arrows: true,
+			prevArrow: "<button type='button' class='slider_arrow slider_arrow-pre btn-slider-prev'><img src='./img/prev_shadow.png' alt=''></button>",
+			nextArrow: "<button type='button' class='slider_arrow slider_arrow-next btn-slider-next'></button>",
+		});
+	}
+	slickInitOne();
+	var resize = false;
+	function resizeSlick(self) {
+		if (($(self).width() <= 700)) {
+			resize = true;
+		}
+
+		if (($(self).width() > 700)&&(resize)) {
+			slickInitOne();
+			resize = false;
+		}
+	}
+	resizeSlick(window);
+	$(window).on('resize', function(){
+		resizeSlick(this);
+	})
 }
 
 function swichTabs() {

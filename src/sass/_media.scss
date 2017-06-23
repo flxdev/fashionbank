@@ -1458,6 +1458,7 @@
 	.filters-wrapp .filters-li li.active:after {
 		text-align: right;
     	top: 12px;
+		content: '';
 	}
 	.favourites .favourites-left .favourites-menu li {
 		display: block;
