@@ -220,6 +220,19 @@
 		//height: 400px;
 	}
 	.block-left {
+		position: absolute;
+		left: 0;
+		max-width: 200px;
+		width: 200px;
+		text-align: center;
+		//padding: 70px 10px;
+		padding: 25px 10px;
+		&:first-child{
+			padding: 60px 10px;
+		}
+		&:first-child + .block-center-text{
+			padding: 30px 0 0;
+		}
 		a {
 			display: block;
 			color: #000;
@@ -230,13 +243,6 @@
 				}
 			}
 		}
-		position: absolute;
-		left: 0;
-		max-width: 200px;
-		width: 200px;
-		text-align: center;
-		//padding: 70px 10px;
-		padding: 25px 10px;
 		img {
 			border-radius: 50%;
 			border: 6px solid #efefef; 

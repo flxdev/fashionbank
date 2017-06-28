@@ -7,5 +7,6 @@
 // =include lib/jquery.scrollTo.min.js
 // =include lib/jquery.form-validator.min.js
 // =include lib/sticky-kit.min.js
+// =include lib/jquery.ui.touch-punch.min.js
 
 // =include common.js

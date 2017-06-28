@@ -210,7 +210,7 @@ block content
 									use(xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-close" xmlns:xlink="http://www.w3.org/1999/xlink")
 							div.item-filter-content
 								form.type-2
-									div.slider_ui.js_ui_slider(data-min='0' data-max='24' data-step='0.5' data-default-value-to='0' data-default-value-from='24')
+									div.slider_ui.js_ui_slider(data-min='0' data-max='24' data-step='1' data-default-value-to='0' data-default-value-from='24')
 										span С
 										input.js_ui_slider_value_bottom(disabled="disabled")
 
@@ -497,7 +497,7 @@ block content
 									div.block-filters-mobile-footer
 										button.btn.btn-black.btn-size-225 Применить фильтр
 										span.reset-filter Сбросить все
-							div.block-filters-mobile-one-item
+							div.block-filters-mobile-one-item.time
 								div.js-accordion-title
 									p.title Время работы
 										svg.down
@@ -505,15 +505,18 @@ block content
 								form.type-2
 									div.slider_ui.js_ui_slider(data-min='0' data-max='24' data-step='1' data-default-value-to='0' data-default-value-from='24')
 										span С
-										input.js_ui_slider_value_bottom(disabled="disabled")
-										
-										span ДО
 										input.js_ui_slider_value_top(disabled="disabled")
 										
+										span ДО
+										input.js_ui_slider_value_bottom(disabled="disabled")
+
 										div.js_ui_slider_main
 									div.block-filters-mobile-footer
 										button.btn.btn-black.btn-size-225 Применить фильтр
 										span.reset-filter Сбросить все
+								.js-fild-filter-slider
+									input(type='text').time-from
+									input(type='text').time-to
 							div.block-filters-mobile-one-item
 								div.js-accordion-title
 									p.title Направления

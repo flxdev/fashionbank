@@ -444,6 +444,16 @@ input[type='password'] {font-family: arial}
 }
 
 .card-horizontal {
+	&:hover {
+		.wrapp-img-bg-h {
+			display: none;
+		}
+		.wrapp-img{
+			img{
+				transform: scale(1.1);
+			}
+		}
+	}
 	a {
 		display: flex;
 		flex-direction: row;
@@ -501,25 +511,14 @@ input[type='password'] {font-family: arial}
 			z-index: -1;
 			// margin-left: 15px;
 		}
-
-		&:hover {
-			.wrapp-img-bg-h {
-				display: none;
-			}
-			.wrapp-img{
-				img{
-					transform: scale(1.1);
-				}
-			}
-		}
 	}
 }
 
 .specialists{
-	.card-horizontal a:hover .wrapp-img img {
+	.card-horizontal:hover .wrapp-img img {
 		transform: scale(1);
 	}
-	.card-horizontal a:hover .wrapp-img-bg-h{
+	.card-horizontal:hover .wrapp-img-bg-h{
 		background-color: rgba(0,0,0,0.3);
 		display: block;
 	}
@@ -1381,6 +1380,15 @@ input[type='password'] {font-family: arial}
 body .ymaps-map{
 	font-size: 14px;
 	font-weight: bold !important;
+}
+
+body{
+	.map{
+		.ymaps-2-1-50-controls__control{
+			right: 10px !important;
+			left: auto !important;
+		}
+	}
 }
 
 .js-scrollTo-content{

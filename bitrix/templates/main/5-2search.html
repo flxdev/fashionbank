@@ -2273,5 +2273,35 @@
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru-RU" type="text/javascript"></script>
     <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
     <script src="https://yastatic.net/share2/share.js"></script>
+    <script>
+       if (typeof ymaps !== 'undefined') {
+         ymaps.ready(function () {
+           initYandexMap({
+           "type": "FeatureCollection",
+           "features": [
+           {
+              "type": "Feature",
+              "id": 0,
+              "geometry": {
+              "type": "Point",
+              "coordinates": [53.902176022815, 27.550550834988],
+              "center": [53.902176022815, 27.550550834988]
+           },
+           /*"properties": {"balloonContentHeader": "Адрес 1"}*/
+           },
+             {"type": "Feature", "id": 1, "geometry": {"type": "Point", "coordinates": [53.91, 27.56], "center":[53.91,27.56]},
+               /*"properties": {"balloonContentHeader": "Адрес 2"}*/
+            },
+             {"type": "Feature", "id": 2, "geometry": {"type": "Point", "coordinates": [53.90, 27.55], "center":[53.90,27.55]},
+               /*"properties": {"balloonContentHeader": "Адрес 2"}*/
+             },
+             {"type": "Feature", "id": 3, "geometry": {"type": "Point", "coordinates": [53.92, 27.57], "center":[53.92,27.57]},
+               /*"properties": {"balloonContentHeader": "Адрес 2"}*/
+             }
+           ]
+           });
+         });
+    }
+    </script>
   </body>
 </html>
