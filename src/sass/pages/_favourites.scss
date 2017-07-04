@@ -400,3 +400,16 @@
 		width: 20px;
 	}
 }
+
+.favourites-content {
+	.card{
+		.video-play {
+			position: absolute;
+			z-index: 99;
+			width: 35px;
+			left: 50%;
+			margin-left: -13px;
+			top: 22%;
+		}
+	}
+}

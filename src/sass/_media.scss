@@ -614,6 +614,10 @@
 		padding: 30px 20px 0;
 	}
 
+	.content-wrapp .block-left:first-child+.block-center-text {
+		padding: 40px 20px 0;
+	}
+
 	.content-wrapp .block-center-text p:last-child{
 		padding-bottom: 0;
 	}
@@ -1191,7 +1195,8 @@
 			form {
 				input[type=radio]+label {
 					width: 100%;
-					display: inline-block;
+					display: block;
+					margin-top: 0;
 				}
 			}
 		}
@@ -1349,7 +1354,10 @@
 	.article-wrapp .article-wrapp-info h1 {
 		font-size: 4.5rem;
 	}
-	
+
+	.slick-list {
+		min-height: 300px;
+	}
 }
 
 
@@ -1492,6 +1500,12 @@
 
 }
 
+@media (max-width: 400px) {
+	.slick-list{
+		min-height: 200px;
+	}
+}
+
 @media (max-width: 380px) {
 	.content-wrapp .block-center-img-50 .slider .slider_arrow {
 		top: 0;
@@ -1543,6 +1557,18 @@
 	.card-vertical {
 	    min-height: 508px;
 	    max-height: 508px;
+	}
+	.favourites .subscribe .favourites-right_left .check-all:hover svg {
+		fill: #828282;
+	}
+	.favourites .subscribe .favourites-right_left .check-all:hover span a {
+		color: #828282;
+	}
+	.favourites .subscribe .favourites-right_left .check-all:active span a {
+		color: #0039de;
+	}
+	.favourites .subscribe .favourites-right_left .check-all:hover svg {
+		color: #0039de;
 	}
 }
 @media (max-width: 936px) {
