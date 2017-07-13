@@ -443,6 +443,14 @@ input[type='password'] {font-family: arial}
 	width: 100%;
 }
 
+.card-horizontal.round:hover {
+	.wrapp-img{
+		img{
+			transform: scale(1);
+		}
+	}
+}
+
 .card-horizontal {
 	&:hover {
 		.wrapp-img-bg-h {

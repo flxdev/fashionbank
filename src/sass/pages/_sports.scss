@@ -1339,8 +1339,14 @@
 					left: 10px;
 				}
 				.wrapp-img {
-					img {
+					div{
 						height: 60rem;
+						display:flex;
+						justify-content: center;
+						align-items: center;
+					}
+					img {
+						//height: 60rem;
    						margin: 0 auto;	
 					}
 				}

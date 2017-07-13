@@ -1320,7 +1320,16 @@
 	.specialist-page-first-screen .article-wrapp-info{
 		text-align: center;
 	}
-
+	.slick-list{
+		min-height: 25rem;
+	}
+	.gallery-wrapp .gallery-wrapp-content .gallery .right-content .wrapp-img div{
+		height: 25rem;
+	}
+	.gallery-wrapp .gallery-wrapp-content .gallery .right-content .wrapp-img img{
+		height: auto;
+		max-height: 100%;
+	}
 }
 
 @media (max-width: 650px) {
@@ -1371,7 +1380,8 @@
 		padding: 17px 5px 5px;
 	}
 	.gallery-wrapp .gallery-wrapp-content .gallery .right-content .wrapp-img img, .gallery-wrapp .gallery-wrapp-content .gallery .right-youtube-gallery .wrapp-img div {
-		height: 25rem;
+		height: auto;
+		max-height: 100%;
 	}
 	.gallery-wrapp .gallery-wrapp-content .gallery .wrapp_close {
 		right: 0;

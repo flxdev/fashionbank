@@ -761,7 +761,7 @@ function initSlidersTime() {
 
     });
 
-    $(".block-filters-mobile-items .js_ui_slider_main").draggable({
+    $(".block-filters-mobile-one-item .draggable-time").draggable({
         axis: "x",
         containment: "parent"
     });
@@ -785,7 +785,9 @@ function initSlidersNumber() {
 
 
             sliderSetting.inputShowFildFilterTop = $(this).closest('.number').find('.js-fild-filter-slider').find('.js_ui_slider_value_top');
+            sliderSetting.inputShowFildFilterTopNumber = $(this).closest('.number').find('.js-fild-filter-slider').find('.js_ui_slider_value_top');
             sliderSetting.inputShowFildFilterBottom = $(this).closest('.number').find('.js-fild-filter-slider').find('.js_ui_slider_value_bottom');
+            sliderSetting.inputShowFildFilterBottomNumber = $(this).closest('.number').find('.js-fild-filter-slider').find('.js_ui_slider_value_bottom');
 
             sliderSetting.inputNumberTo = $(this).closest('.number').find('.js-fild-filter-slider').find('.number-to');
             sliderSetting.inputNumberFrom = $(this).closest('.number').find('.js-fild-filter-slider').find('.number-from');
@@ -839,7 +841,7 @@ function initSlidersNumber() {
             $(sliderSetting.inputHiddenBottomNumber).val(sliderSetting.defaultValueNumberTo);
         });
     });
-    $(".block-filters-mobile-items .js_ui_slider_main").draggable({
+    $(".block-filters-mobile-one-item .draggable-number").draggable({
         axis: "x",
         containment: "parent"
     });
