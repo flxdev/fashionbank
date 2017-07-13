@@ -1412,3 +1412,12 @@ body{
     }
   }
 }
+
+.wrapp_header .menu_categories li:last-child a {
+	color: #0039de;
+}
+
+.wrapp_header .menu_categories li:last-child a.active{
+	color: #0039de;
+	border-bottom: 3px solid #0039de;
+}
