@@ -499,26 +499,36 @@ input[type='password'] {font-family: arial}
 	flex-direction: row;
 	justify-content: flex-start;
 	align-items: flex-start;
-	flex-wrap: wrap; 
+	flex-wrap: wrap;
+	// TODO for #1 -- changed styles for index menu
 	.wrapp_whats-up {
 		flex-basis: 100%;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		align-items: flex-start;
+		align-items: center;
 		flex-wrap: no-wrap;
 		margin: 40px 15px 35px;
 		max-height: 50px;
-		li {
+		a {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
-			align-items: flex-start;
+			align-items: center;
 			flex-wrap: no-wrap;
 			padding-right: 25px;
+			&:hover{
+				p{
+					color: red;
+				}
+			}
+			p{
+				max-width: 120px;
+			}
 			img {
+				width: 100%;
+				max-height: 50px;
 				max-width: 50px;
-				// float: left;
 				margin-right: 15px;
 			}
 			
