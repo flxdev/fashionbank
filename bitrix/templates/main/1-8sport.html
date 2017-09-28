@@ -249,6 +249,38 @@
               <p class="text-note success">Ваш отзыв принят в обработку. После прохождения модерации, он будет опубликован на сайте.</p>
             </div>
           </div>
+          <!-- TODO for #2 -- modal windows add-->
+          <div class="wrapp_popup-contener js-popup-question">
+            <div class="wrapp_popup_window hidden">
+              <div class="wrapp_close js-popup-close" data-close-popup="popup-question">
+                <svg>
+                  <use xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-close" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                </svg>
+              </div>
+              <h3>Задать вопрос эксперту</h3>
+              <form class="js-form">
+                <input class="js-question-input">
+                <input class="input-border-bottom" data-validation="required" type="text">
+                <label>E-mail<span>*</span></label>
+                <input class="input-border-bottom" data-validation="required" type="text">
+                <label>Вопрос<span>*</span></label>
+                <button class="btn btn-size-225 btn-black">Отправить</button>
+              </form>
+            </div>
+          </div>
+          <div class="wrapp_popup-contener js-popup-question-success">
+            <div class="wrapp_popup_window hidden">
+              <div class="wrapp_close js-popup-close" data-close-popup="popup-question-success">
+                <svg>
+                  <use xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-close" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                </svg>
+              </div>
+              <h3>Спасибо</h3>
+              <p class="text-note success">Ваш отзыв принят в обработку. После прохождения модерации, он будет опубликован на сайте.</p>
+            </div>
+          </div>
+          <!-- END modal
+          -->
         </div>
         <div class="search-wrapp hidden js-search">
           <div class="search-wrapp-content">
@@ -1957,19 +1989,24 @@
         <section class="main-content">
           <div class="scroll-container">
             <div class="sticky-container">
-              <div class="company-contact" id="sticky">
-                <div class="addres"> <img src="img/map-marker.png"><span>Минск, ул. Октябрьская 16 <br> Ленинский район, ст. м. Первомайская</span></div>
-                <div class="time-work">
-                  <p>Пн-пт 7:00 - 22:00</p>
-                  <p>Cб-вс	10:00 - 20:00</p>
-                </div>
-                <div class="other-adres js-scrollTo" data-scroll="el10"> Еще 4 адреса</div>
-                <div class="tel">
-                  <p>+375 29 <span>640-03-03</span></p>
-                  <p>+375 29 <span>641-04-04</span></p>
-                </div><a class="link" href="#">www.mobydick.by</a>
-                <div class="show-map js-scrollTo" data-scroll="el11">Смотреть на карте</div>
-                <button class="btn btn-size-225 btn-black js-popup-open" data-open-popup="popup-backcall">Обратный звонок</button>
+              <!-- TODO #2 changed side button-->
+              <div class="company-contact" style="box-shadow:none;" id="sticky">
+                <button class="btn btn-size-225 btn-black js-popup-open" data-open-popup="popup-question">Вопрос эксперту</button>
+                <!--div.addres-->
+                <!--	img(src='img/map-marker.png')-->
+                <!--	span Минск, ул. Октябрьская 16 <br> Ленинский район, ст. м. Первомайская-->
+                <!--div.time-work-->
+                <!--	p Пн-пт 7:00 - 22:00-->
+                <!--	p Cб-вс	10:00 - 20:00-->
+                <!--div.other-adres.js-scrollTo(data-scroll = 'el10')  Еще 4 адреса-->
+                <!--div.tel-->
+                <!--	p +375 29-->
+                <!--		span 640-03-03-->
+                <!--	p +375 29-->
+                <!--		span 641-04-04-->
+                <!--a.link(href='#') www.mobydick.by-->
+                <!--div.show-map.js-scrollTo(data-scroll = 'el11') Смотреть на карте-->
+                <!--button.btn.btn-size-225.btn-black.js-popup-open(data-open-popup = 'popup-backcall') Обратный звонок-->
               </div>
             </div>
             <div class="max-width-1300">

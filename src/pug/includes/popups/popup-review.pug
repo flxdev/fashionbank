@@ -32,4 +32,31 @@ div.wrapp_popup-contener.js-popup-review-success
 		h3 Спасибо
 		p.text-note.success!= 'Ваш отзыв принят в обработку. После прохождения модерации, он будет опубликован на сайте.'
 
+
+// TODO for #2 -- modal windows add
+div.wrapp_popup-contener.js-popup-question
+	div.wrapp_popup_window.hidden
+		div.wrapp_close.js-popup-close(data-close-popup = 'popup-question')
+			svg
+				use(xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-close" xmlns:xlink="http://www.w3.org/1999/xlink")
+		h3 Задать вопрос эксперту
+		form.js-form
+			input.js-question-input
+			input.input-border-bottom(data-validation="required" type="text")
+			label E-mail
+				span *
+
+			input.input-border-bottom(data-validation="required" type="text")
+			label Вопрос
+				span *
+
+			button.btn.btn-size-225.btn-black Отправить
+div.wrapp_popup-contener.js-popup-question-success
+	div.wrapp_popup_window.hidden
+		div.wrapp_close.js-popup-close(data-close-popup = 'popup-question-success')
+			svg
+				use(xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-close" xmlns:xlink="http://www.w3.org/1999/xlink")
+		h3 Спасибо
+		p.text-note.success!= 'Ваш отзыв принят в обработку. После прохождения модерации, он будет опубликован на сайте.'
+// END modal
 			

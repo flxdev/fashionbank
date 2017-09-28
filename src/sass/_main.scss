@@ -517,6 +517,7 @@ input[type='password'] {font-family: arial}
 			align-items: center;
 			flex-wrap: no-wrap;
 			padding-right: 25px;
+			color: #333;
 			&:hover{
 				p{
 					color: red;
@@ -534,6 +535,7 @@ input[type='password'] {font-family: arial}
 			
 		}
 	}
+	// END changes
 	.card-big {
 		flex-basis: 52%;
 		flex-grow: 2;

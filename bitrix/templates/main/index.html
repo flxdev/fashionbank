@@ -249,6 +249,38 @@
               <p class="text-note success">Ваш отзыв принят в обработку. После прохождения модерации, он будет опубликован на сайте.</p>
             </div>
           </div>
+          <!-- TODO for #2 -- modal windows add-->
+          <div class="wrapp_popup-contener js-popup-question">
+            <div class="wrapp_popup_window hidden">
+              <div class="wrapp_close js-popup-close" data-close-popup="popup-question">
+                <svg>
+                  <use xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-close" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                </svg>
+              </div>
+              <h3>Задать вопрос эксперту</h3>
+              <form class="js-form">
+                <input class="js-question-input">
+                <input class="input-border-bottom" data-validation="required" type="text">
+                <label>E-mail<span>*</span></label>
+                <input class="input-border-bottom" data-validation="required" type="text">
+                <label>Вопрос<span>*</span></label>
+                <button class="btn btn-size-225 btn-black">Отправить</button>
+              </form>
+            </div>
+          </div>
+          <div class="wrapp_popup-contener js-popup-question-success">
+            <div class="wrapp_popup_window hidden">
+              <div class="wrapp_close js-popup-close" data-close-popup="popup-question-success">
+                <svg>
+                  <use xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-close" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                </svg>
+              </div>
+              <h3>Спасибо</h3>
+              <p class="text-note success">Ваш отзыв принят в обработку. После прохождения модерации, он будет опубликован на сайте.</p>
+            </div>
+          </div>
+          <!-- END modal
+          -->
         </div>
         <div class="search-wrapp hidden js-search">
           <div class="search-wrapp-content">
@@ -1930,12 +1962,7 @@
             <div class="wrapp_first-screen">
               <div class="wrapp_cards">
                 <ul class="wrapp_whats-up">
-                  <!--TODO #1 -- ul menu changes (new pictures in img/svg/ *index-icon().svg*)-->
-                  <style>
-                    .wrapp_whats-up a img{
-                    	width: 100%;
-                    }
-                  </style>
+                  <!-- TODO #1 -- ul menu changes (new pictures in img/svg/ *index-icon().svg*)-->
                   <li><a href="#"><img src="/img/svg/index-icon(3).svg" alt="">
                       <p>Мода</p></a></li>
                   <li><a href="#"><img src="/img/svg/index-icon(4).svg" alt="">
