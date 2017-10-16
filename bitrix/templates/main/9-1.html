@@ -1996,53 +1996,250 @@
         <nav>
           <div class="max-width-1300">
             <ul class="breadcrumbs">
-              <li> <a href="#">Главная</a></li>
-              <li><a href="#">Личный кабинет</a></li>
+              <li><a href="#">Главная</a></li>
             </ul>
           </div>
         </nav>
         <section>
-          <div class="max-width-1300">
-            <div class="title-page-wrapp">
-              <h2>Изменение пароля</h2>
+          <div class="content-wrapp max-width-1300">
+            <div class="block-center-citation">
+              <style>
+                .table{
+                	min-width:700px;
+                	display:-webkit-box;
+                	display:-webkit-flex;
+                	display:-ms-flexbox;
+                	display:flex;
+                	padding-bottom: 70px;
+                	padding-top:10px;
+                	position: relative;
+                }
+                .table--wrapper{
+                	padding-top:20px;
+                	padding-bottom:20px;
+                	margin-top:29px;
+                	margin-bottom:20px;
+                }
+                .table--wrapper-outer{
+                	overflow-x: auto;
+                	overflow-y: hidden;
+                }
+                .table__column{
+                	width:20%;
+                	display:-webkit-box;
+                	display:-webkit-flex;
+                	display:-ms-flexbox;
+                	display:flex;
+                	position: relative;
+                	-webkit-box-orient:vertical;
+                	-webkit-box-direction:normal;
+                	-webkit-flex-direction:column;
+                	-ms-flex-direction:column;
+                	flex-direction:column;
+                	border:1px solid #ddd;
+                	margin-left:-1px;
+                	z-index:1;
+                }
+                .table__column:last-child{
+                	margin-left: 20%;
+                }
+                .table__column--first-column{
+                	width:40%;
+                	margin-left:1px
+                }
+                .table__column--active{
+                	-webkit-transform:scale(1.05);
+                	-ms-transform:scale(1.05);
+                	transform:scale(1.05);
+                	border:2px solid #000;
+                	background:#fff;
+                	box-shadow:0 4px 10px 0 rgba(0,0,0,.5);
+                	z-index: 2;
+                	position: absolute;
+                	right: 20%;
+                }
+                .table__column--active .table__cell--first{
+                	border-bottom:0
+                }
+                .table__column--active .table__price,.table__column--active .table__title{
+                	color:#0039de
+                }
+                .table__cell{
+                	height:90px;
+                	display:-webkit-box;
+                	display:-webkit-flex;
+                	display:-ms-flexbox;
+                	display:flex;
+                	-webkit-box-pack:center;
+                	-webkit-justify-content:center;
+                	-ms-flex-pack:center;
+                	justify-content:center;
+                	-webkit-box-align:center;
+                	-webkit-align-items:center;
+                	-ms-flex-align:center;
+                	align-items:center;
+                	-webkit-box-orient:vertical;
+                	-webkit-box-direction:normal;
+                	-webkit-flex-direction:column;
+                	-ms-flex-direction:column;
+                	flex-direction:column;
+                	-webkit-box-flex:1;
+                	-webkit-flex-grow:1;
+                	-ms-flex-positive:1;
+                	flex-grow:1;
+                	padding-left:20px;
+                	padding-right:20px
+                }
+                .table__cell--first{
+                	background:#e9f6f9;
+                	border-bottom:2px solid #000
+                }
+                .table__cell:nth-of-type(odd):not(:first-child){
+                	background-color:#f8f8f8
+                }
+                .table__title{
+                	font-weight:800;
+                	font-size:20px
+                }
+                .table__subtitle{
+                	font-weight:700;
+                	text-transform:uppercase
+                }
+                .table__price{
+                	font-weight:700;
+                	font-size:16px
+                }
+                .table__no,.table__yes{
+                	width:18px;
+                	height:18px;
+                	background-image:url(../img/new-block/yes.png);
+                	background-position:50% 50%;
+                	background-size:contain;
+                	background-repeat:no-repeat
+                }
+                .table__no{
+                	background-image:url(../img/new-block/no.png);
+                	width:12px;
+                	height:12px
+                }
+                .advanced{
+                	font-size: 14px;
+                }
+                
+                .table__column--active .button-cell{
+                	position: relative;
+                	height: 65px;
+                }
+                .button-cell{
+                	position: absolute;
+                	top: 100%;
+                	text-align: center;
+                	left: 0;
+                	right: 0;
+                	margin: auto;
+                	padding: 0;
+                }
+                .button-cell button{
+                	padding: 10px 20px;
+                }
+                .line-top{
+                	border-top: 1px solid darkgrey;
+                }
+              </style>
+              <div class="block-center-citation">
+                <h2>Размещение в каталоге на год</h2>
+                <h4>Каталог моделей FASHIONBANK.BY — это самый большой каталог моделей, объединивший на одной площадке моделей ведущих модельных агентств Беларуси и моделей-free.</h4>
+                <div class="table--wrapper-outer">
+                  <div class="table--wrapper">
+                    <div class="table">
+                      <div class="table__column table__column--first-column">
+                        <div class="table__cell table__cell--first">
+                          <p class="table__subtitle">Тарифный план</p>
+                        </div>
+                        <div class="table__cell">
+                          <p class="table__subtitle">Страница с вашими данными и 15 фотографиями из портфолио</p>
+                        </div>
+                        <div class="table__cell">
+                          <p class="table__subtitle">Профессиональная съемка Model tests, 10 фотографий с профессиональной ретушью</p>
+                        </div>
+                        <div class="table__cell">
+                          <p class="table__subtitle">Неограниченное количество фотографий в вашей галерее</p>
+                        </div>
+                        <div class="table__cell">
+                          <p class="table__subtitle">Размещение в ТОП на главной странице портала</p>
+                        </div>
+                      </div>
+                      <div class="table__column">
+                        <div class="table__cell table__cell--first">
+                          <p class="table__title">MODEL</p>
+                          <p class="table__price">9 руб</p>
+                        </div>
+                        <div class="table__cell">
+                          <div class="table__yes"></div>
+                        </div>
+                        <div class="table__cell">
+                          <div class="table__no"></div>
+                        </div>
+                        <div class="table__cell">
+                          <div class="table__no"></div>
+                        </div>
+                        <div class="table__cell">
+                          <div class="table__no"></div>
+                        </div>
+                        <div class="table__cell button-cell">
+                          <button class="btn btn-black btn-size-150 js-popup-open" data-open-popup="popup-package-request">Выбрать</button>
+                        </div>
+                      </div>
+                      <div class="table__column table__column--active">
+                        <div class="table__cell table__cell--first">
+                          <p class="table__title">MODEL +</p>
+                          <p class="table__price">70 руб</p>
+                        </div>
+                        <div class="table__cell">
+                          <div class="table__yes"></div>
+                        </div>
+                        <div class="table__cell">
+                          <div class="table__yes"></div>
+                        </div>
+                        <div class="table__cell">
+                          <div class="table__no"></div>
+                        </div>
+                        <div class="table__cell">
+                          <div class="table__no"></div>
+                        </div>
+                        <div class="table__cell button-cell">
+                          <button class="btn btn-black btn-size-150 js-popup-open" data-open-popup="popup-package-request">Выбрать</button>
+                        </div>
+                      </div>
+                      <div class="table__column">
+                        <div class="table__cell table__cell--first">
+                          <p class="table__title">MODEL MAX</p>
+                          <p class="table__price">120 руб</p>
+                        </div>
+                        <div class="table__cell">
+                          <div class="table__yes"></div>
+                        </div>
+                        <div class="table__cell">
+                          <div class="table__yes"></div>
+                        </div>
+                        <div class="table__cell">
+                          <div class="table__yes"></div>
+                        </div>
+                        <div class="table__cell">
+                          <div class="table__yes"></div>
+                        </div>
+                        <div class="table__cell button-cell">
+                          <button class="btn btn-black btn-size-150 js-popup-open" data-open-popup="popup-package-request">Выбрать</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-center-text line-top"><span>* Эксперты пакетов <b>Expert+</b> и <b>EXPERT MAX</b>, непродлившие платный пакет, автоматически переходят в бесплатный пакет <b>EXPERT</b>.</span></div>
             </div>
           </div>
         </section>
-        <section>
-          <div class="max-width-1300 favourites">
-            <div class="favourites-left">
-              <ul class="favourites-menu">
-                <li><a href="#">Избранные материалы</a></li>
-                <li><a href="#">Персональные данные</a></li>
-                <li><a class="active" href="#">Сменить пароль</a></li>
-                <li><a href="#">Подписка</a></li>
-                <li><a href="#"> <img src="img/singout.png" alt=""><span>Выход</span></a></li>
-              </ul>
-            </div>
-            <div class="favourites-right personal_data">
-              <div class="favourites-right_left">
-                <h3>Сменить пароль</h3>
-                <form class="js-form js-no-popup">
-                  <div class="input-wrapp">
-                    <input class="input-border-bottom" data-validation="required" data-validation-strength="5" type="password">
-                    <label>Текущий пароль<span>*</span></label>
-                  </div>
-                  <p class="note"> <a class="js-popup-open" data-open-popup="popup-reset-password">Забыли пароль?</a></p>
-                  <div class="input-wrapp">
-                    <input class="input-border-bottom" data-validation="required" data-validation-strength="5" type="password">
-                    <label>Новый пароль<span>*</span></label>
-                  </div>
-                  <div class="input-wrapp">
-                    <input class="input-border-bottom" data-validation="required" data-validation-strength="5" type="password">
-                    <label>Повторите пароль<span>*</span></label>
-                  </div>
-                  <button class="btn btn-size-225 btn-black">Сохранить</button>
-                  <div class="success-pass"><img src="img/success-pass.png"><span>Изменения успешно сохранены</span></div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </section><a class="go_top" href="#"><svg width="135" height="78" viewBox='0 0 135 78' xmlns="http://www.w3.org/2000/svg"><polygon id="svg_15" points="68.0047607421875,1.33746337890625 1.3332672119140625,69.97676086425781 10.269989013671875,78.66026306152344 68.0047607421875,19.217376708984375 125.738037109375,78.66255187988281 134.666748046875,69.97676086425781 "/></svg></a>
         <footer>
           <div class="wrapp_footer-bg-black full-width">
             <div class="max-width-1300">

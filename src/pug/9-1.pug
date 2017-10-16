@@ -1,0 +1,225 @@
+extends _layout
+
+block title
+	title Title of template
+
+block content
+	div.wrapp_page
+		include includes/_card-h-2
+		include includes/_header
+		nav
+			div.max-width-1300
+				ul.breadcrumbs
+					li
+						a(href='#') Главная
+		section
+			div.content-wrapp.max-width-1300
+				.block-center-citation
+					style.
+						.table{
+							min-width:700px;
+							display:-webkit-box;
+							display:-webkit-flex;
+							display:-ms-flexbox;
+							display:flex;
+							padding-bottom: 70px;
+							padding-top:10px;
+							position: relative;
+						}
+						.table--wrapper{
+							padding-top:20px;
+							padding-bottom:20px;
+							margin-top:29px;
+							margin-bottom:20px;
+						}
+						.table--wrapper-outer{
+							overflow-x: auto;
+							overflow-y: hidden;
+						}
+						.table__column{
+							width:20%;
+							display:-webkit-box;
+							display:-webkit-flex;
+							display:-ms-flexbox;
+							display:flex;
+							position: relative;
+							-webkit-box-orient:vertical;
+							-webkit-box-direction:normal;
+							-webkit-flex-direction:column;
+							-ms-flex-direction:column;
+							flex-direction:column;
+							border:1px solid #ddd;
+							margin-left:-1px;
+							z-index:1;
+						}
+						.table__column:last-child{
+							margin-left: 20%;
+						}
+						.table__column--first-column{
+							width:40%;
+							margin-left:1px
+						}
+						.table__column--active{
+							-webkit-transform:scale(1.05);
+							-ms-transform:scale(1.05);
+							transform:scale(1.05);
+							border:2px solid #000;
+							background:#fff;
+							box-shadow:0 4px 10px 0 rgba(0,0,0,.5);
+							z-index: 2;
+							position: absolute;
+							right: 20%;
+						}
+						.table__column--active .table__cell--first{
+							border-bottom:0
+						}
+						.table__column--active .table__price,.table__column--active .table__title{
+							color:#0039de
+						}
+						.table__cell{
+							height:90px;
+							display:-webkit-box;
+							display:-webkit-flex;
+							display:-ms-flexbox;
+							display:flex;
+							-webkit-box-pack:center;
+							-webkit-justify-content:center;
+							-ms-flex-pack:center;
+							justify-content:center;
+							-webkit-box-align:center;
+							-webkit-align-items:center;
+							-ms-flex-align:center;
+							align-items:center;
+							-webkit-box-orient:vertical;
+							-webkit-box-direction:normal;
+							-webkit-flex-direction:column;
+							-ms-flex-direction:column;
+							flex-direction:column;
+							-webkit-box-flex:1;
+							-webkit-flex-grow:1;
+							-ms-flex-positive:1;
+							flex-grow:1;
+							padding-left:20px;
+							padding-right:20px
+						}
+						.table__cell--first{
+							background:#e9f6f9;
+							border-bottom:2px solid #000
+						}
+						.table__cell:nth-of-type(odd):not(:first-child){
+							background-color:#f8f8f8
+						}
+						.table__title{
+							font-weight:800;
+							font-size:20px
+						}
+						.table__subtitle{
+							font-weight:700;
+							text-transform:uppercase
+						}
+						.table__price{
+							font-weight:700;
+							font-size:16px
+						}
+						.table__no,.table__yes{
+							width:18px;
+							height:18px;
+							background-image:url(../img/new-block/yes.png);
+							background-position:50% 50%;
+							background-size:contain;
+							background-repeat:no-repeat
+						}
+						.table__no{
+							background-image:url(../img/new-block/no.png);
+							width:12px;
+							height:12px
+						}
+						.advanced{
+							font-size: 14px;
+						}
+
+						.table__column--active .button-cell{
+							position: relative;
+							height: 65px;
+						}
+						.button-cell{
+							position: absolute;
+							top: 100%;
+							text-align: center;
+							left: 0;
+							right: 0;
+							margin: auto;
+							padding: 0;
+						}
+						.button-cell button{
+							padding: 10px 20px;
+						}
+						.line-top{
+							border-top: 1px solid darkgrey;
+						}
+					div.block-center-citation
+						h2 Размещение в каталоге на год
+						h4 Каталог моделей FASHIONBANK.BY — это самый большой каталог моделей, объединивший на одной площадке моделей ведущих модельных агентств Беларуси и моделей-free.
+						.table--wrapper-outer
+							.table--wrapper
+								.table
+									.table__column.table__column--first-column
+										.table__cell.table__cell--first
+											p.table__subtitle Тарифный план
+										.table__cell
+											p.table__subtitle Страница с вашими данными и 15 фотографиями из портфолио
+										.table__cell
+											p.table__subtitle Профессиональная съемка Model tests, 10 фотографий с профессиональной ретушью
+										.table__cell
+											p.table__subtitle Неограниченное количество фотографий в вашей галерее
+										.table__cell
+											p.table__subtitle Размещение в ТОП на главной странице портала
+									.table__column
+										.table__cell.table__cell--first
+											p.table__title MODEL
+											p.table__price 9 руб
+										.table__cell
+											.table__yes
+										.table__cell
+											.table__no
+										.table__cell
+											.table__no
+										.table__cell
+											.table__no
+										.table__cell.button-cell
+											button.btn.btn-black.btn-size-150.js-popup-open(data-open-popup='popup-package-request') Выбрать
+									.table__column.table__column--active
+										.table__cell.table__cell--first
+											p.table__title MODEL +
+											p.table__price 70 руб
+										.table__cell
+											.table__yes
+										.table__cell
+											.table__yes
+										.table__cell
+											.table__no
+										.table__cell
+											.table__no
+										.table__cell.button-cell
+											button.btn.btn-black.btn-size-150.js-popup-open(data-open-popup='popup-package-request') Выбрать
+									.table__column
+										.table__cell.table__cell--first
+											p.table__title MODEL MAX
+											p.table__price 120 руб
+										.table__cell
+											.table__yes
+										.table__cell
+											.table__yes
+										.table__cell
+											.table__yes
+										.table__cell
+											.table__yes
+										.table__cell.button-cell
+											button.btn.btn-black.btn-size-150.js-popup-open(data-open-popup='popup-package-request') Выбрать
+					.block-center-text.line-top
+						span * Эксперты пакетов <b>Expert+</b> и <b>EXPERT MAX</b>, непродлившие платный пакет, автоматически переходят в бесплатный пакет <b>EXPERT</b>.
+				
+
+		//- include includes/elements/_go_top
+		include includes/_footer
+	
