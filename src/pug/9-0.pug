@@ -34,43 +34,68 @@ block content
 		section
 			div.content-wrapp.max-width-1300.about.line-bottom
 				div.block-left
+					style.
+						.block-left a{
+							padding-bottom: 0!important;
+						}
+						.block-left li{
+							padding-bottom: 0!important;
+						}
+						.block-center-img-50 figcaption{
+							color: darkgrey!important;
+							text-align: left;
+						}
 					ul
 						li.active 
-							a(href='#') О проекте
+							a(href='#') О каталоге
 						li 
-							a(href='#') Рекламодателям
+							a(href='#') Преимущества
 						li 
-							a(href='#') Контакты
+							a(href='#') Пакеты
+						li
+							a(href='#') Заполнить анкету
 				div.block-center-text
-					p.line-bottom Fashionbank.by — мой личный банк экспертов моды, красоты, спорта и здоровья.
-					h2 О проекте 
-					p Fashionbank — это информационный интернет-ресурс, посвященный актуальным событиям в мире моды, культуры, красоты, медиа и светской жизни, а также площадка для развития бизнеса. Достоверная информация, эксклюзивные материалы, оперативность и мнения авторитетных экспертов — это основные преимущества Fashionbanka. Мы рассказываем об успешных людях, чье мнение важно, о личностях, которые решают, каким будет наше завтра. 
+					p.line-bottom Стань моделью вне зависимости от возраста, пола, параметров и внешних данных! Размести свою анкету в Каталоге моделей на портале fashionbank.by
+					h2 О каталоге
+					p Каталог моделей FASHIONBANK.BY — это самый большой каталог моделей, объединивший на одной площадке моделей ведущих модельных агентств Беларуси и моделей-free.
 				div.block-center-img-50
-					div.slider.js-slider-init-one-slide
-						div.item 
-							img(src='img/7-2-full6.jpg' alt='')
-							figcaption Сбалансирвоанное и правильное питание помогает поддерживать фигуру в отличной форме
-						div.item 
-							img(src='img/7-2-full6.jpg' alt='')
-							figcaption Сбалансирвоанное и правильное питание помогает поддерживать фигуру в отличной форме
-						div.item 
-							img(src='img/7-2-full6.jpg' alt='')
-							figcaption Сбалансирвоанное и правильное питание помогает поддерживать фигуру в отличной форме
-						div.item 
-							img(src='img/7-2-full6.jpg' alt='')
+					img(src='img/new-block/model.jpg' alt='')
+					figcaption Офис нашей редакции интернет-журнала Fashionbank в Минске
 				div.block-center-text
-					h3 Команда
-					p Наша команда состоит из профессиональных журналистов и мастеров пера. Мы работаем 27 часа в сутки 7 дней в неделю для того, чтобы вы всегда могли получить акуальную и свежую информацию. В нашем штате работают:
-					ul.three-block
-						li
-							p.title 37
-							p.text Профессиональных журналиста
-						li
-							p.title 5
-							p.text Фотогрофов с большим опытом
-						li
-							p.title 3
-							p.text Дизайнера с отменным вкусом
+					p Сотни моделей уже имеют свои личные страницы в каталоге fashionbank.by в категориях:
+					style.
+						.list-block--two-blocks > *{
+							width: 49%;
+							display: inline-block;
+						}
+						.list-block ul{
+							list-style-type: disc;
+							vertical-align: top;
+							padding-right: 40px;
+						}
+						.list-block p, .list-block li{
+							padding: 0!important;
+							margin: 0!important;
+							vertical-align: top;
+						}
+						.content-wrapp .block-center-img-50+.block-center-text{
+							padding: 0;
+						}
+					.list-block.list-block--two-blocks
+						ul
+							li
+								p Подиумная модель
+							li
+								p Фотомодель
+							li
+								p Фитнесмодель
+						ul
+							li
+								p модель kids
+							li
+								p возрастная модель
+							li
+								p Plus-size модель
 				//@TODO #1 new block start
 				style.
 					.three-block--advances .img-wrapper{
@@ -222,6 +247,9 @@ block content
 						width:12px;
 						height:12px
 					}
+					.advanced{
+						font-size: 14px;
+					}
 				div.block-center-citation
 					h2 Размещение в каталоге на год
 					.table--wrapper
@@ -273,51 +301,31 @@ block content
 									.table__yes
 								.table__cell
 									.table__yes
-					button.btn.btn-black.btn-size-225 Подать заявку
-				//new block	end
-				div.block-center-citation
-					p.citation Желательно придерживаться именно такого порядка, в противном случае после плавания, когда вы расслабились, очень сложно заставить себя пойти в зал.
+					button.btn.btn-black.btn-size-225.js-popup-open(data-open-popup='popup-package-request') Подать заявку
+				.block-center-text
+					span * Эксперты пакетов <b>Expert+</b> и <b>EXPERT MAX</b>, непродлившие платный пакет, автоматически переходят в бесплатный пакет <b>EXPERT</b>.
 				div.block-center-text
-					p Сбалансирвоанное и правильное питание помогает поддерживать фигуру в отличной форме
-
-			div.content-wrapp.max-width-1300.about.line-bottom
-				div.block-center-text
-					h2 Рекламодателям
-				div.block-center-text
-					p Сайт fashionbank.by предлагает как традиционное рекламное размещение (баннеры и брендирование), так и размещение компаний, специалистов и магазинов в каталоге. Мы хорошо знаем нашего читателя и предлагаем именно то рекламное решение, которое будет интересно аудитории и эффективно для рекламодателя.
-					p По всем возникаюбщим вопросам вы можете связаться с нами:
-					p +375 (29) 361 55 87 
-						span.left-padding fashionbank@gmail.com
-					ul.accordion
-						li
-							p.title Медийная реклама
-							p.text Сайт fashionbank.by предлагает как традиционное рекламное размещение (баннеры и брендирование), так и размещение компаний, специалистов и магазинов в каталоге. Мы хорошо знаем нашего читателя и предлагаем именно то рекламное решение, которое будет интересно аудитории и эффективно для рекламодателя.
-						li
-							p.title Размещение в каталоге
-							p.text Сайт fashionbank.by предлагает как традиционное рекламное размещение (баннеры и брендирование), так и размещение компаний, специалистов и магазинов в каталоге. Мы хорошо знаем нашего читателя и предлагаем именно то рекламное решение, которое будет интересно аудитории и эффективно для рекламодателя.
-						li
-							p.title Технические требования
-							p.text Сайт fashionbank.by предлагает как традиционное рекламное размещение (баннеры и брендирование), так и размещение компаний, специалистов и магазинов в каталоге. Мы хорошо знаем нашего читателя и предлагаем именно то рекламное решение, которое будет интересно аудитории и эффективно для рекламодателя.
-			div.content-wrapp.max-width-1300.about
-				div.block-center-text
-					h2 Контактная информация
-					ul.contacts
-						li
-							h3 Офис:
-							p +375 (17) 331-14-08
-							p info@fashionbank.by
-						li
-							h3 Редакция:
-							p +375 (29) 359-66-09
-							p redactor@fashionbank.by
-						li
-							h3 Отдел маркетинга:
-							p +375 (29) 359-67-55
-							p +375 (29) 359-67-39
-							p marketing@fashionbank.by
-						li
-							button.btn.btn-black.btn-size-225 Обратная связь
-				
+					h3 Дополнительно возможно
+					.list-block.list-block--two-blocks
+						ul
+							li
+								p Добавить 15 дополнительных фотографий (5 руб.)
+						ul
+							li
+								p Ваш профиль в позиции ТОП на 6 месяцев <b>(15 руб.)</b> на 12 месяцев <b>(28 руб.)</b>
+			div.content-wrapp.max-width-1300
+				.block-center-citation
+					style.
+						h2 b{
+							margin-top: 40px;
+							margin-bottom: 40px;
+							display: block;
+						}
+						div.content-wrapp.max-width-1300:last-child{
+							margin-bottom: 100px;
+						}
+					h2 <b>Присоединись к нам и получи свой шанс стать популярной моделью!</b>
+					button.btn.btn-black.btn-size-225 Заполнить анкету
 				
 
 		//- include includes/elements/_go_top

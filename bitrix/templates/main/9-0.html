@@ -280,6 +280,43 @@
           </div>
           <!-- END modal
           -->
+          <!--@TODO #4 modal window for request-->
+          <div class="wrapp_popup-contener js-popup-package-request">
+            <div class="wrapp_popup_window hidden">
+              <div class="wrapp_close js-popup-close" data-close-popup="popup-package-request">
+                <svg>
+                  <use xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-close" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                </svg>
+              </div>
+              <h3>Заявка на пакет</h3>
+              <p class="text-note">Заполните форму и мы отправим информацию об оплате</p>
+              <form class="js-form">
+                <input class="input-border-bottom" data-validation="required" type="text">
+                <label>Фамилия<span>*</span></label>
+                <input class="input-border-bottom" data-validation="required" type="text">
+                <label>Имя<span>*</span></label>
+                <input class="input-border-bottom" data-validation="required" type="text">
+                <label>Отчество<span>*</span></label>
+                <input class="input-border-bottom" data-validation="email required" type="text">
+                <label>E-mail<span>*</span></label>
+                <input class="input-border-bottom" data-validation="number required" type="text">
+                <label>Телефон<span>*</span></label>
+                <button class="btn btn-size-225 btn-black">Отправить</button>
+              </form>
+            </div>
+          </div>
+          <div class="wrapp_popup-contener js-popup-package-request-success">
+            <div class="wrapp_popup_window hidden">
+              <div class="wrapp_close js-popup-close" data-close-popup="popup-package-request-success">
+                <svg>
+                  <use xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-close" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                </svg>
+              </div>
+              <h3>Спасибо</h3>
+              <p class="text-note success">Вы успешно заполнили заявку. В ближайшее время у вас будет информация об оплате!</p>
+            </div>
+          </div>
+          <!--#4 modal window for request END-->
         </div>
         <div class="search-wrapp hidden js-search">
           <div class="search-wrapp-content">
@@ -1979,48 +2016,78 @@
         <section>
           <div class="content-wrapp max-width-1300 about line-bottom">
             <div class="block-left">
+              <style>
+                .block-left a{
+                	padding-bottom: 0!important;
+                }
+                .block-left li{
+                	padding-bottom: 0!important;
+                }
+                .block-center-img-50 figcaption{
+                	color: darkgrey!important;
+                	text-align: left;
+                }
+              </style>
               <ul>
-                <li class="active"> <a href="#">О проекте</a></li>
-                <li> <a href="#">Рекламодателям</a></li>
-                <li> <a href="#">Контакты</a></li>
+                <li class="active"> <a href="#">О каталоге</a></li>
+                <li> <a href="#">Преимущества</a></li>
+                <li> <a href="#">Пакеты</a></li>
+                <li><a href="#">Заполнить анкету</a></li>
               </ul>
             </div>
             <div class="block-center-text">
-              <p class="line-bottom">Fashionbank.by — мой личный банк экспертов моды, красоты, спорта и здоровья.</p>
-              <h2>О проекте </h2>
-              <p>Fashionbank — это информационный интернет-ресурс, посвященный актуальным событиям в мире моды, культуры, красоты, медиа и светской жизни, а также площадка для развития бизнеса. Достоверная информация, эксклюзивные материалы, оперативность и мнения авторитетных экспертов — это основные преимущества Fashionbanka. Мы рассказываем об успешных людях, чье мнение важно, о личностях, которые решают, каким будет наше завтра. </p>
+              <p class="line-bottom">Стань моделью вне зависимости от возраста, пола, параметров и внешних данных! Размести свою анкету в Каталоге моделей на портале fashionbank.by</p>
+              <h2>О каталоге</h2>
+              <p>Каталог моделей FASHIONBANK.BY — это самый большой каталог моделей, объединивший на одной площадке моделей ведущих модельных агентств Беларуси и моделей-free.</p>
             </div>
-            <div class="block-center-img-50">
-              <div class="slider js-slider-init-one-slide">
-                <div class="item"> <img src="img/7-2-full6.jpg" alt="">
-                  <figcaption>Сбалансирвоанное и правильное питание помогает поддерживать фигуру в отличной форме</figcaption>
-                </div>
-                <div class="item"> <img src="img/7-2-full6.jpg" alt="">
-                  <figcaption>Сбалансирвоанное и правильное питание помогает поддерживать фигуру в отличной форме</figcaption>
-                </div>
-                <div class="item"> <img src="img/7-2-full6.jpg" alt="">
-                  <figcaption>Сбалансирвоанное и правильное питание помогает поддерживать фигуру в отличной форме</figcaption>
-                </div>
-                <div class="item"> <img src="img/7-2-full6.jpg" alt=""></div>
+            <div class="block-center-img-50"><img src="img/new-block/model.jpg" alt="">
+              <figcaption>Офис нашей редакции интернет-журнала Fashionbank в Минске</figcaption>
+            </div>
+            <div class="block-center-text">
+              <p>Сотни моделей уже имеют свои личные страницы в каталоге fashionbank.by в категориях:</p>
+              <style>
+                .list-block--two-blocks > *{
+                	width: 49%;
+                	display: inline-block;
+                }
+                .list-block ul{
+                	list-style-type: disc;
+                	vertical-align: top;
+                	padding-right: 40px;
+                }
+                .list-block p, .list-block li{
+                	padding: 0!important;
+                	margin: 0!important;
+                	vertical-align: top;
+                }
+                .content-wrapp .block-center-img-50+.block-center-text{
+                	padding: 0;
+                }
+              </style>
+              <div class="list-block list-block--two-blocks">
+                <ul>
+                  <li>
+                    <p>Подиумная модель</p>
+                  </li>
+                  <li>
+                    <p>Фотомодель</p>
+                  </li>
+                  <li>
+                    <p>Фитнесмодель</p>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <p>модель kids</p>
+                  </li>
+                  <li>
+                    <p>возрастная модель</p>
+                  </li>
+                  <li>
+                    <p>Plus-size модель</p>
+                  </li>
+                </ul>
               </div>
-            </div>
-            <div class="block-center-text">
-              <h3>Команда</h3>
-              <p>Наша команда состоит из профессиональных журналистов и мастеров пера. Мы работаем 27 часа в сутки 7 дней в неделю для того, чтобы вы всегда могли получить акуальную и свежую информацию. В нашем штате работают:</p>
-              <ul class="three-block">
-                <li>
-                  <p class="title">37</p>
-                  <p class="text">Профессиональных журналиста</p>
-                </li>
-                <li>
-                  <p class="title">5</p>
-                  <p class="text">Фотогрофов с большим опытом</p>
-                </li>
-                <li>
-                  <p class="title">3</p>
-                  <p class="text">Дизайнера с отменным вкусом</p>
-                </li>
-              </ul>
             </div>
             <!--@TODO #1 new block start-->
             <style>
@@ -2173,6 +2240,9 @@
               	width:12px;
               	height:12px
               }
+              .advanced{
+              	font-size: 14px;
+              }
             </style>
             <div class="block-center-citation">
               <h2>Размещение в каталоге на год</h2>
@@ -2251,64 +2321,39 @@
                   </div>
                 </div>
               </div>
-              <button class="btn btn-black btn-size-225">Подать заявку</button>
+              <button class="btn btn-black btn-size-225 js-popup-open" data-open-popup="popup-package-request">Подать заявку</button>
             </div>
-            <!--new block	end-->
+            <div class="block-center-text"><span>* Эксперты пакетов <b>Expert+</b> и <b>EXPERT MAX</b>, непродлившие платный пакет, автоматически переходят в бесплатный пакет <b>EXPERT</b>.</span></div>
+            <div class="block-center-text">
+              <h3>Дополнительно возможно</h3>
+              <div class="list-block list-block--two-blocks">
+                <ul>
+                  <li>
+                    <p>Добавить 15 дополнительных фотографий (5 руб.)</p>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <p>Ваш профиль в позиции ТОП на 6 месяцев <b>(15 руб.)</b> на 12 месяцев <b>(28 руб.)</b></p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="content-wrapp max-width-1300">
             <div class="block-center-citation">
-              <p class="citation">Желательно придерживаться именно такого порядка, в противном случае после плавания, когда вы расслабились, очень сложно заставить себя пойти в зал.</p>
-            </div>
-            <div class="block-center-text">
-              <p>Сбалансирвоанное и правильное питание помогает поддерживать фигуру в отличной форме</p>
-            </div>
-          </div>
-          <div class="content-wrapp max-width-1300 about line-bottom">
-            <div class="block-center-text">
-              <h2>Рекламодателям</h2>
-            </div>
-            <div class="block-center-text">
-              <p>Сайт fashionbank.by предлагает как традиционное рекламное размещение (баннеры и брендирование), так и размещение компаний, специалистов и магазинов в каталоге. Мы хорошо знаем нашего читателя и предлагаем именно то рекламное решение, которое будет интересно аудитории и эффективно для рекламодателя.</p>
-              <p>По всем возникаюбщим вопросам вы можете связаться с нами:</p>
-              <p>+375 (29) 361 55 87 <span class="left-padding">fashionbank@gmail.com</span></p>
-              <ul class="accordion">
-                <li>
-                  <p class="title">Медийная реклама</p>
-                  <p class="text">Сайт fashionbank.by предлагает как традиционное рекламное размещение (баннеры и брендирование), так и размещение компаний, специалистов и магазинов в каталоге. Мы хорошо знаем нашего читателя и предлагаем именно то рекламное решение, которое будет интересно аудитории и эффективно для рекламодателя.</p>
-                </li>
-                <li>
-                  <p class="title">Размещение в каталоге</p>
-                  <p class="text">Сайт fashionbank.by предлагает как традиционное рекламное размещение (баннеры и брендирование), так и размещение компаний, специалистов и магазинов в каталоге. Мы хорошо знаем нашего читателя и предлагаем именно то рекламное решение, которое будет интересно аудитории и эффективно для рекламодателя.</p>
-                </li>
-                <li>
-                  <p class="title">Технические требования</p>
-                  <p class="text">Сайт fashionbank.by предлагает как традиционное рекламное размещение (баннеры и брендирование), так и размещение компаний, специалистов и магазинов в каталоге. Мы хорошо знаем нашего читателя и предлагаем именно то рекламное решение, которое будет интересно аудитории и эффективно для рекламодателя.</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="content-wrapp max-width-1300 about">
-            <div class="block-center-text">
-              <h2>Контактная информация</h2>
-              <ul class="contacts">
-                <li>
-                  <h3>Офис:</h3>
-                  <p>+375 (17) 331-14-08</p>
-                  <p>info@fashionbank.by</p>
-                </li>
-                <li>
-                  <h3>Редакция:</h3>
-                  <p>+375 (29) 359-66-09</p>
-                  <p>redactor@fashionbank.by</p>
-                </li>
-                <li>
-                  <h3>Отдел маркетинга:</h3>
-                  <p>+375 (29) 359-67-55</p>
-                  <p>+375 (29) 359-67-39</p>
-                  <p>marketing@fashionbank.by</p>
-                </li>
-                <li>
-                  <button class="btn btn-black btn-size-225">Обратная связь</button>
-                </li>
-              </ul>
+              <style>
+                h2 b{
+                	margin-top: 40px;
+                	margin-bottom: 40px;
+                	display: block;
+                }
+                div.content-wrapp.max-width-1300:last-child{
+                	margin-bottom: 100px;
+                }
+              </style>
+              <h2><b>Присоединись к нам и получи свой шанс стать популярной моделью!</b></h2>
+              <button class="btn btn-black btn-size-225">Заполнить анкету</button>
             </div>
           </div>
         </section>

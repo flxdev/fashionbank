@@ -1,0 +1,33 @@
+//@TODO #4 modal window for request
+div.wrapp_popup-contener.js-popup-package-request
+	div.wrapp_popup_window.hidden
+		div.wrapp_close.js-popup-close(data-close-popup='popup-package-request')
+			svg
+				use(xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-close" xmlns:xlink="http://www.w3.org/1999/xlink")
+		h3 Заявка на пакет
+		p.text-note!= 'Заполните форму и мы отправим информацию об оплате'
+		form.js-form
+			input.input-border-bottom(data-validation="required" type="text")
+			label Фамилия
+				span *
+			input.input-border-bottom(data-validation="required" type="text")
+			label Имя
+				span *
+			input.input-border-bottom(data-validation="required" type="text")
+			label Отчество
+				span *
+			input.input-border-bottom(data-validation="email required" type="text")
+			label E-mail
+				span *
+			input.input-border-bottom(data-validation="number required" type="text")
+			label Телефон
+				span *
+			button.btn.btn-size-225.btn-black Отправить
+div.wrapp_popup-contener.js-popup-package-request-success
+	div.wrapp_popup_window.hidden
+		div.wrapp_close.js-popup-close(data-close-popup='popup-package-request-success')
+			svg
+				use(xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-close" xmlns:xlink="http://www.w3.org/1999/xlink")
+		h3 Спасибо
+		p.text-note.success!= 'Вы успешно заполнили заявку. В ближайшее время у вас будет информация об оплате!'
+//#4 modal window for request END

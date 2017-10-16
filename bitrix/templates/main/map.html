@@ -279,6 +279,43 @@
         </div>
         <!-- END modal
         -->
+        <!--@TODO #4 modal window for request-->
+        <div class="wrapp_popup-contener js-popup-package-request">
+          <div class="wrapp_popup_window hidden">
+            <div class="wrapp_close js-popup-close" data-close-popup="popup-package-request">
+              <svg>
+                <use xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-close" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </div>
+            <h3>Заявка на пакет</h3>
+            <p class="text-note">Заполните форму и мы отправим информацию об оплате</p>
+            <form class="js-form">
+              <input class="input-border-bottom" data-validation="required" type="text">
+              <label>Фамилия<span>*</span></label>
+              <input class="input-border-bottom" data-validation="required" type="text">
+              <label>Имя<span>*</span></label>
+              <input class="input-border-bottom" data-validation="required" type="text">
+              <label>Отчество<span>*</span></label>
+              <input class="input-border-bottom" data-validation="email required" type="text">
+              <label>E-mail<span>*</span></label>
+              <input class="input-border-bottom" data-validation="number required" type="text">
+              <label>Телефон<span>*</span></label>
+              <button class="btn btn-size-225 btn-black">Отправить</button>
+            </form>
+          </div>
+        </div>
+        <div class="wrapp_popup-contener js-popup-package-request-success">
+          <div class="wrapp_popup_window hidden">
+            <div class="wrapp_close js-popup-close" data-close-popup="popup-package-request-success">
+              <svg>
+                <use xlink:href="../img/svg/sprite/sprite.min.svg#uEA01-close" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </div>
+            <h3>Спасибо</h3>
+            <p class="text-note success">Вы успешно заполнили заявку. В ближайшее время у вас будет информация об оплате!</p>
+          </div>
+        </div>
+        <!--#4 modal window for request END-->
       </div>
       <div class="search-wrapp hidden js-search">
         <div class="search-wrapp-content">
