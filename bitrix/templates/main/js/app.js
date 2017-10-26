@@ -4908,3 +4908,49 @@ $( document ).ready(function() {
 
 
 });
+
+
+
+
+
+//@todo for #5
+
+var imgChanged = false
+
+var articleWrap = $('.article-wrapp-bg')
+
+
+
+$(window).on('resize', function(){
+
+	if($(window).width() < 768){
+
+		if(articleWrap.data('src') != '' && !imgChanged){
+
+			articleWrap.css('background-image', 'url("'+ articleWrap.data('src') +'")');
+
+			imgChanged = true;
+
+		}
+
+	}
+
+})
+
+
+
+$(document).ready(function(){
+
+	if($(window).width() < 768){
+
+		if(articleWrap.data('src') != '' && !imgChanged){
+
+			articleWrap.css('background-image', 'url("'+ articleWrap.data('src') +'")');
+
+			imgChanged = true;
+
+		}
+
+	}
+
+})
